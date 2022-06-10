@@ -5,7 +5,7 @@
 
 ## 👩‍💻 Development omgevingen
 - Demo: [Frontend](https://kiss-dev.commonground.nu/)
-- Beheer 
+- Beheer: [Common Gateway](https://gateway.kiss-dev.commonground.nu) 
 - Pub: [OpenWeb Concept](https://openweb.kiss-dev.commonground.nu/wp-admin)
 
 ## Open Source
