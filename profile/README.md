@@ -6,7 +6,7 @@
 ## 👩‍💻 Development omgevingen
 - Demo: [Frontend](https://kiss-dev.commonground.nu/)
 - Beheer 
-- Pub: [OpenWeb Concept](https://openweb.kiss-dev.commonground.nu/)
+- Pub: [OpenWeb Concept](https://openweb.kiss-dev.commonground.nu/wp-admin)
 
 ## Open Source
 Als project geloven wij in open source en open community. We kiezen er daarom bewust voor ons project open en eerlijk te draaien. Naast de code zijn ook alle user stories en de roadmap publiek toegankelijk. Overheden en leveranciers wordt gevraagd hier kennis van te nemen en actief bij te dragen.
