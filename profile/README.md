@@ -21,3 +21,33 @@ Overheden en leveranciers kunnen op een aantal manieren bijdragen aan dit projec
 
 ## Roadmap
 Dit project volgt een openbare [roadmap](https://github.com/orgs/Klantinteractie-Servicesysteem/projects/1/views/1), je kunt deze terug vinden onder het bijbehorende board. De roadmap heeft een indicatief karakter en er kunnen geen rechten aan worden ontleend. De product owner stelt in overleg met de product steering group de roadmap vast. Partijen die goede ideeën hebben over de roadmap wordt gevraagd deze aan te dragen. Zie daarvoor [“Bijdragen”](#bijdragen).
+
+## Documentatie
+- Installatie handleiding
+- Architectuur
+
+## API's (Componenten)
+De KISS applicatie maakt onder water gebruik van een groot aantal door de VNG gestandaardiseerde API's. Het is daarmee noodzakelijk dat uw organisatie over deze API's beschikt als u van KISS gebruik wil maken.
+
+- [Haalcentraal KVK](https://github.com/VNG-Realisatie/Haal-Centraal-HR-bevragen) (api sleutel verkrijgen via [Kamer van Koophandel](https://www.kvk.nl/producten-bestellen/koppeling-handelsregister/kvk-api/))
+- [Haalcentraal BRP](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen/) (api sleutel verkrijgen via [RVIG](https://www.rvig.nl/brp/gebruikers-van-de-basisregistratie-personen-brp))
+- [Haalcentraal BAG](https://github.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen) (api sleutel verkrijgen via [Kadaster](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-api-huidige-bevragingen)
+- [ZGW Zaken](https://vng-realisatie.github.io/gemma-zaken/standaard/zaken/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+- [ZGW Catalogi](https://vng-realisatie.github.io/gemma-zaken/standaard/catalogi/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+- [ZGW Documenten](https://vng-realisatie.github.io/gemma-zaken/standaard/documenten/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+- [ZGW Beslutien](https://vng-realisatie.github.io/gemma-zaken/standaard/besluiten/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+- [ZGW Authorisaties](https://vng-realisatie.github.io/gemma-zaken/standaard/autorisaties/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+- [ZGW Notificaties](https://vng-realisatie.github.io/gemma-zaken/standaard/notificaties/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+- [ZGW Zaken](https://vng-realisatie.github.io/gemma-zaken/standaard/zaken/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+- [ZGW Contactmomenten](https://vng-realisatie.github.io/gemma-zaken/standaard/contactmomenten/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+- [ZGW Klanten](https://vng-realisatie.github.io/gemma-zaken/standaard/klanten/) (zelf installeren via bijvoorbeeld [Open Zaak]())
+
+Voor alle bovenstaande API's geld dat KISS tijdens installatie zelf mock's levert, het niet beschikken over een of meerdere van bovenstaande APIS is dus geen belemmering voor het testen of experimenteren met KISS. **Het is wel een belemmering voor in productie name**.
+
+Mocht uw organisatie nu en/of in de toekomst niet beschikken over een of meerdere van bovenstaande API's dan levert de KISS applicatie de mogelijkheid om aan de hand van adapters andere bronnen te koppelen. Meer informatie over het vinden en of zelfstandig ontwikkelen van adapters vind u [hier](). Op dit moment zijn er adapters beschikbaar voor:
+
+- ZDS
+- Stuf
+- SimForm
+- Excellence zaaksysteem (v1 en v2 api)
+- VrijBRP
