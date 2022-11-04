@@ -25,6 +25,7 @@ Dit project volgt een openbare [roadmap](https://github.com/orgs/Klantinteractie
 ## Documentatie
 - Installatie handleiding
 - Architectuur
+- Definition of Done
 
 ## API's (Componenten)
 De KISS applicatie maakt onder water gebruik van een groot aantal door de VNG gestandaardiseerde API's. Het is daarmee noodzakelijk dat uw organisatie over deze API's beschikt als u van KISS gebruik wil maken.
