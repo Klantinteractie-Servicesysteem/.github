@@ -23,11 +23,11 @@ Overheden en leveranciers kunnen op een aantal manieren bijdragen aan dit projec
 Dit project volgt een openbare [roadmap](https://github.com/orgs/Klantinteractie-Servicesysteem/projects/1/views/1), je kunt deze terug vinden onder het bijbehorende board. De roadmap heeft een indicatief karakter en er kunnen geen rechten aan worden ontleend. De product owner stelt in overleg met de product steering group de roadmap vast. Partijen die goede ideeën hebben over de roadmap wordt gevraagd deze aan te dragen. Zie daarvoor [“Bijdragen”](#bijdragen).
 
 ## Documentatie
-- [Installatie handleiding](docs/INSTALLATION.md)
-- [Configuratie](docs/CONFIGURATIE)
-- Architectuur
-- Definition of Done
-- [Security](docs/SECURITY.md)
+- [Installatie handleiding](/docs/INSTALLATION.md)
+- [Configuratie](/docs/CONFIGURATIE.md)
+- [Architectuur](/docs/Architectuur.md)
+- [Definition of Done](/docs/DEFINITIONOFDONE.md)
+- [Security](/docs/SECURITY.md)
 
 ## Interne Componenten
 
@@ -36,7 +36,7 @@ De applicatie KISS bestaat uit de volgende componenten
 -	[MUST]  Backend for frontend (Common Gateway)
 -	[MUST]  Gebruikers Authenticatie (DEX of andere OAuth provider)
 -	[MUST]  Search Index (Elastic search)
--	[MUST]   Database (Postgress / MySQL)
+-	[MUST]  Database (Postgress / MySQL)
 -	[COULD] Cashing (Redis)
 
 Daarnaast word er gebruik gemaakt van een groot aantal VNG Registraties, de benodigde registraties en (voorbeeld) producten die hier invulling aan kunnen staan genoemd onder api’s. Hierbij dient te worden opgemerkt dat geen van deze API’s noodzakelijk is voor het beproeven van KISS. De Common gateway spint per default mock’s op voor de benodigde registers. 
