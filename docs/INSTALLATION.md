@@ -1,12 +1,15 @@
 # Installatie handleiding
 De installatie van KISS bestaad uit twee primaire stappen
 1. Het installeren van de software
-2. Een basis configuratie van de ssoftware
+2. Een basis configuratie van de software
+3. De kiss plugin toevoegen aan een reeds bestaande common gateway installatie
 
 Er Met betrekking tot het installeren van de software zijn er twee manieren om KISS te installeren.
 
 ## Kubernetes (haven)
 Voor installatie op een haven omgeving zijn helm installatie bestanden beschikbaar op Artifacthub. 
+
+Voer vervolgens de basis configuratie stappen uit.
 
 ## Linux (LAMP)
 Het installeren van KISS op een  Linux omgeving vereist enig handwerk
@@ -18,6 +21,25 @@ Het installeren van KISS op een  Linux omgeving vereist enig handwerk
   - Composer: [{min versie] installatie handleiding()
 - [Elastic serach](https://www.elastic.co/) locaal of als saas
 - Een OAuth2 compatable identity provider, bijvoorbeeld [DEX](https://dexidp.io/), [KeyCloack](https://www.keycloak.org/) of ADFS
+
+1. Log in op de bovenstaande lamp machine 
+2. Navigeer naar de www map (doorgaans var/www) `$cd var/www`
+3. Maak een directory voor de gateway aan `$ mkdir gateway` en navigeer daar in `cd gateway`
+4. Installaar de gateway met `$ composer install klantinteractie-servicesysteem/kiss-bundle`
+5. Ga terug naar de hoofdmap `$cd var/www`
+3. Maak een directory voor de frontend aan `$ mkdir frontend` en navigeer daar in `cd frontend`
+4. Installeer de frontend met het commando .....
+
+
+
+Voer vervolgens de basis configuratie stappen uit.
+
+## Toevoegen aan een bestaande Common Gateway installatie
+Ga in het hoofd menu naar plugins en vervollgens plugin toevoegen. Zoek de plugin genaamd "Klantinteractie Service systeem" en klik op toevoegen. 
+
+Voor vervolgens alleen de basis configuratie stappen uit voor registers die u nog niet in het verleden hebt gekoppeld aan uw gateway
+
+Let op! Dit voegt alleen de onderligende services voor KISS toe. Voor het draaien van de applicatie zal de frontend nog los moeten worden geinstaleerd. Zie daarvoor de [frontend documentatie](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend).
 
 ## Basis configuratie
 KISS vereist minimaal een aantal configuraite handelingen na de installatie om te kunnen werken, deze kunnen worden verricht via de gateway admin UI
