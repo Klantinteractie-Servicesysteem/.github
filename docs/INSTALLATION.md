@@ -1,10 +1,15 @@
 # Installatie handleiding
-De installatie van KISS bestaat uit twee primaire stappen
-1. Het installeren van de software
-2. Een basis configuratie van de software
-3. De kiss plugin toevoegen aan een reeds bestaande common gateway installatie
+De installatie van KISS bestaat uit drie primaire stappen
+1. Installeren backend for frontend (common gateway)
+2. Installeren frontend 
+3. Basale applicatie configuratie
 
-Er Met betrekking tot het installeren van de software zijn er twee manieren om KISS te installeren.
+We raden aan om gebruikt te maken van de HELM installatie voor kubernetes waarin bovenstaande stappen zijn geautomatiseerd.
+
+De speciefieke stappen van de installatie hangen af van de omgeving waarop u KISS wilt installeren. Op dit moment ondersteunen we 3 omgevingen
+1. Kubernetes (haven)
+2. Linux Machine
+3. De kiss plugin toevoegen aan een reeds bestaande common gateway installatie
 
 ## Kubernetes (haven)
 Voor installatie op een haven omgeving zijn helm installatie bestanden beschikbaar op [Artifacthub](). 
