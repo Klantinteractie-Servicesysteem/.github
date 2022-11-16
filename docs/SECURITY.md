@@ -22,9 +22,9 @@ Op dit moment maken we gebruik van de volgende tools en aspecten:
   - [Postman](https://github.com/marketplace/actions/newman-action)
 - Unit Testing
   - [PHP Unit](https://github.com/marketplace/actions/phpunit-php-actions)
-- Code Covarage
+- Code Covarage (nu nog handmatig)
   - [CodeCov](https://about.codecov.io/)
-- Maintainability
+- Maintainability (nu nog handmatig)
   - [Bettercodehub](https://bettercodehub.com/)
 
 De resultaten van deze controlles worden (indien mogenlijk), we streven hierbij naar een code covaradge van 80% en een BetterCodehub score van 9 of hoger. 
