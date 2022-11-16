@@ -24,10 +24,11 @@ Na installatie op kubernetes hoeven de basis configuratie stappen alleen te word
 Het installeren van KISS op een  Linux omgeving vereist enig handwerk
 - a.	Randvoorwaarden: Een LAMP machine met daarop:
   - Linux: [min versie]
-  - Apache: [min versie]
-  - MySQL: [min versie]
-  - PHP: [min versie] + extensies
-  - Composer: [{min versie] installatie handleiding()
+  - [Apache](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview): [^2.4]
+  - [MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04): [^5.7]
+  - [PHP](https://www.php.net/manual/en/install.unix.debian.php): [^7.4.0] + extensies
+  - [Composer](https://getcomposer.org/download/): [^2.4.0]
+  - [NPM](https://www.npmjs.com/package/npm): [^9.1]
 - [Elastic serach](https://www.elastic.co/) lokaal of als SAAS  (het is mogelijk om Elastic op de zelfde linux machine te draaien maar niet aanbevolen)
 - Een OAuth2 compatible identity provider, bijvoorbeeld [DEX](https://dexidp.io/), [KeyCloack](https://www.keycloak.org/) of ADFS
 
@@ -38,7 +39,8 @@ Het installeren van KISS op een  Linux omgeving vereist enig handwerk
 5. Ga naar var/www/gateway/config/packadges/doctrine.yaml en geef de [db credentails van mysql op](https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html)
 6. Ga terug naar de hoofdmap `$cd var/www`
 7. Maak een directory voor de frontend aan `$ mkdir frontend` en navigeer daar in `cd frontend`
-8. Installeer de frontend met het commando .....
+8. Installeer de frontend met het commando `npm install Klantinteractie-Servicesysteem/KISS-frontend`
+8. Draai de frontend met het commando `npm run`
 
 
 
