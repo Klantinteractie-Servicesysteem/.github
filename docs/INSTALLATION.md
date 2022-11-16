@@ -1,5 +1,5 @@
 # Installatie handleiding
-De installatie van KISS bestaad uit twee primaire stappen
+De installatie van KISS bestaat uit twee primaire stappen
 1. Het installeren van de software
 2. Een basis configuratie van de software
 3. De kiss plugin toevoegen aan een reeds bestaande common gateway installatie
@@ -7,9 +7,13 @@ De installatie van KISS bestaad uit twee primaire stappen
 Er Met betrekking tot het installeren van de software zijn er twee manieren om KISS te installeren.
 
 ## Kubernetes (haven)
-Voor installatie op een haven omgeving zijn helm installatie bestanden beschikbaar op Artifacthub. 
+Voor installatie op een haven omgeving zijn helm installatie bestanden beschikbaar op [Artifacthub](). 
 
-Voer vervolgens de basis configuratie stappen uit.
+Deze kunnen handmatige worden geïnstalleerd via een helm commando `helm install .....` of via een beheerstool zo als [Rancher](https://www.rancher.com/),[Openshift](https://www.redhat.com/en/technologies/cloud-computing/openshift), [Otomi](https://redkubes.com/category/otomi/) of [Dashkube](https://www.dashkube.com/).
+
+Alle bovenstaande opties laten het toe om tijdens de installatie keuzes te maken met betrekking tot wat er in de installatie word geïnstalleerd of wellicht al beschikbaar is binnen de organisatie (b.v. Elastic) en geven keuzes met betrekking tot database (MySQL, Postgress, MonoDb, CloudDB, MSSQL, Oracle DB). Meer informatie over de installatie opties en hoe deze te gebruiken vind u op artifacthub.
+
+Na installatie op kubernetes hoeven de basis configuratie stappen alleen te worden uitgevoerd als het een productie omgeving betreft. En kan de stap koppelen Elastic worden overgeslagen (tenzij er binnen de installatie voor gekozen is om Elastic  niet mee te installeren)
 
 ## Linux (LAMP)
 Het installeren van KISS op een  Linux omgeving vereist enig handwerk
@@ -19,30 +23,31 @@ Het installeren van KISS op een  Linux omgeving vereist enig handwerk
   - MySQL: [min versie]
   - PHP: [min versie] + extensies
   - Composer: [{min versie] installatie handleiding()
-- [Elastic serach](https://www.elastic.co/) locaal of als saas (het is mogenlijk om elaastic op de zelfde linux machine te draaien maar niet aanbevolen)
-- Een OAuth2 compatable identity provider, bijvoorbeeld [DEX](https://dexidp.io/), [KeyCloack](https://www.keycloak.org/) of ADFS
+- [Elastic serach](https://www.elastic.co/) lokaal of als SAAS  (het is mogelijk om Elastic op de zelfde linux machine te draaien maar niet aanbevolen)
+- Een OAuth2 compatible identity provider, bijvoorbeeld [DEX](https://dexidp.io/), [KeyCloack](https://www.keycloak.org/) of ADFS
 
 1. Log in op de bovenstaande lamp machine 
 2. Navigeer naar de www map (doorgaans var/www) `$cd var/www`
 3. Maak een directory voor de gateway aan `$ mkdir gateway` en navigeer daar in `cd gateway`
-4. Installaar de gateway met `$ composer install klantinteractie-servicesysteem/kiss-bundle`
-5. Ga terug naar de hoofdmap `$cd var/www`
-3. Maak een directory voor de frontend aan `$ mkdir frontend` en navigeer daar in `cd frontend`
-4. Installeer de frontend met het commando .....
+4. Installeer de gateway met `$ composer install klantinteractie-servicesysteem/kiss-bundle`
+5. Ga naar var/www/gateway/config/packadges/doctrine.yaml en geef de [db credentails van mysql op](https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html)
+6. Ga terug naar de hoofdmap `$cd var/www`
+7. Maak een directory voor de frontend aan `$ mkdir frontend` en navigeer daar in `cd frontend`
+8. Installeer de frontend met het commando .....
 
 
 
 Voer vervolgens de basis configuratie stappen uit.
 
 ## Toevoegen aan een bestaande Common Gateway installatie
-Ga in het hoofd menu naar plugins en vervollgens plugin toevoegen. Zoek de plugin genaamd "Klantinteractie Service systeem" en klik op toevoegen. 
+Ga in het hoofd menu naar plugins en vervolgens plugin toevoegen. Zoek de plugin genaamd "Klantinteractie Service systeem" en klik op toevoegen. 
 
 Voor vervolgens alleen de basis configuratie stappen uit voor registers die u nog niet in het verleden hebt gekoppeld aan uw gateway
 
-Let op! Dit voegt alleen de onderligende services voor KISS toe. Voor het draaien van de applicatie zal de frontend nog los moeten worden geinstaleerd. Zie daarvoor de [frontend documentatie](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend).
+Let op! Dit voegt alleen de onderliggende services voor KISS toe. Voor het draaien van de applicatie zal de frontend nog los moeten worden geïnstalleerd. Zie daarvoor de [frontend documentatie](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend).
 
 ## Basis configuratie
-KISS vereist minimaal een aantal configuraite handelingen na de installatie om te kunnen werken, deze kunnen worden verricht via de gateway admin UI
+KISS vereist minimaal een aantal configuratie handelingen na de installatie om te kunnen werken, deze kunnen worden verricht via de gateway admin UI
 
 1. Elasstic search moet worden ingesteld (altijd)
    1. Tijden de installatie is een source aangemaakt voor elastic en toegevoegd aan het dashboard van de Admin UI. Open deze source en voorzie hem van de jusite instellingen voor ellastic op uw omgeving. Onder [configuratie](/docs/CONFIGURATIE.md) kunt u meer informatie vinden over het instellen van sources
@@ -50,13 +55,18 @@ KISS vereist minimaal een aantal configuraite handelingen na de installatie om t
    3. Activeer de elastic search proxy, ga naar endpoints onder het hoofdmenu. In de lijst voor us ziet u een aantaal endpoint met Elastic in de naam. Deze staan na de installatie op niet actief (ellastic is immers nog niet gekoppeld). Open de betreffende endpoints en zet ze op actief.
 4. Koppelen van ZGW en Klanten API (alleen productie)
    1. Ga naar sources in het hoofdmenu
-   2. Open de betreffende sources (met ZGW en/of Klant in de naam), vul de verbindgsgegevens in, test de verbinding en zet deze DAARNA op actief
+   2. Open de betreffende sources (met ZGW en/of Klant in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
    3. Ga naar acties in het hoofdmenu
    4. Open en activeer de acties met ZGW en Klant in de naam
 5. Koppelen SDG  (Optioneel)
 6. Koppelen OpenPUB (Optioneel)
 7. Koppelen Handels Registers, Basis Administratie Gebouwen en Basisregistratie Personen
    1. Ga naar sources in het hoofdmenu
-   2. Open de betreffende sources (met BRP, BAG, KVK HR in de naam), vul de verbindgsgegevens in, test de verbinding en zet deze DAARNA op actief
+   2. Open de betreffende sources (met BRP, BAG, KVK HR in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
    3. Ga naar acties in het hoofdmenu
    4. Open en activeer de acties met BRP, BAG, KVK HR in de naam
+
+## Geavenceerde configuratie
+Het is ook mogenlijk om KISS te koppelen aan zaaksystemen aan de hand van ZDS, STUFF, VrijBRP-STUFF, SIM XML of XLLNCE API. Hiervoor zijn diverse opensource plugins beschickbaar. Kijk in uw admin UI dashboard onder plugins voor meer informatie en de mogenlijkheden van deze plugins.
+
+Ook kunt u zelf (handmatig) bronnen koppelen aan de hand van JSON, XML en SOAP api's. Meet informatie daarover vind u bij configuratie onder bronnen. 
