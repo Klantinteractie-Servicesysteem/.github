@@ -23,11 +23,25 @@ Overheden en leveranciers kunnen op een aantal manieren bijdragen aan dit projec
 Dit project volgt een openbare [roadmap](https://github.com/orgs/Klantinteractie-Servicesysteem/projects/1/views/1), je kunt deze terug vinden onder het bijbehorende board. De roadmap heeft een indicatief karakter en er kunnen geen rechten aan worden ontleend. De product owner stelt in overleg met de product steering group de roadmap vast. Partijen die goede ideeën hebben over de roadmap wordt gevraagd deze aan te dragen. Zie daarvoor [“Bijdragen”](#bijdragen).
 
 ## Documentatie
-- Installatie handleiding
+- [Installatie handleiding](docs/INSTALLATION.md)
+- [Configuratie](docs/CONFIGURATIE)
 - Architectuur
 - Definition of Done
+- [Security](docs/SECURITY.md)
 
-## API's (Componenten)
+## Interne Componenten
+
+De applicatie KISS bestaat uit de volgende componenten
+-	[MUST]  User Interface (vue)
+-	[MUST]  Backend for frontend (Common Gateway)
+-	[MUST]  Gebruikers Authenticatie (DEX of andere OAuth provider)
+-	[MUST]  Search Index (Elastic search)
+-	[MUST]   Database (Postgress / MySQL)
+-	[COULD] Cashing (Redis)
+
+Daarnaast word er gebruik gemaakt van een groot aantal VNG Registraties, de benodigde registraties en (voorbeeld) producten die hier invulling aan kunnen staan genoemd onder api’s. Hierbij dient te worden opgemerkt dat geen van deze API’s noodzakelijk is voor het beproeven van KISS. De Common gateway spint per default mock’s op voor de benodigde registers. 
+
+## API's (externe Componenten)
 De KISS applicatie maakt onder water gebruik van een groot aantal door de VNG gestandaardiseerde API's. Het is daarmee noodzakelijk dat uw organisatie over deze API's beschikt als u van KISS gebruik wil maken.
 
 - [Haalcentraal KVK](https://github.com/VNG-Realisatie/Haal-Centraal-HR-bevragen) (api sleutel verkrijgen via [Kamer van Koophandel](https://www.kvk.nl/producten-bestellen/koppeling-handelsregister/kvk-api/))
@@ -43,9 +57,9 @@ De KISS applicatie maakt onder water gebruik van een groot aantal door de VNG ge
 - [ZGW Contactmomenten](https://vng-realisatie.github.io/gemma-zaken/standaard/contactmomenten/) (zelf installeren via bijvoorbeeld [Open Zaak](https://openzaak.org/))
 - [ZGW Klanten](https://vng-realisatie.github.io/gemma-zaken/standaard/klanten/) (zelf installeren via bijvoorbeeld [Open Zaak](https://openzaak.org/))
 - [Open PUB](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/PUB_publiccode/main/PUB_OAS.json&nocors) (zelf installeren via bijvoorbeeld [Open Webconcept](https://github.com/OpenWebconcept/open-government-publications))
-- [Medewerkers](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml&nocors) (Zelf installeren)
-- [Logging verwerking read](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-read/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors) (Zelf installeren)
-- [Logging verwerking write](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-write/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors) (Zelf installeren)
+- [Medewerkers](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/public/schema/openapi.yaml&nocors) (Zelf installeren, nog geen opensoruce oplossing beschickbaar)
+- [Logging verwerking read](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-read/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors) (Zelf installeren, nog geen opensoruce oplossing beschickbaar)
+- [Logging verwerking write](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-write/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors) (Zelf installeren, nog geen opensoruce oplossing beschickbaar)
 
 Voor alle bovenstaande API's geld dat KISS tijdens installatie zelf mock's levert, het niet beschikken over een of meerdere van bovenstaande APIS is dus geen belemmering voor het testen of experimenteren met KISS. **Het is wel een belemmering voor in productie name**.
 
