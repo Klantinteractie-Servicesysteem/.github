@@ -19,7 +19,7 @@ Het installeren van KISS op een  Linux omgeving vereist enig handwerk
   - MySQL: [min versie]
   - PHP: [min versie] + extensies
   - Composer: [{min versie] installatie handleiding()
-- [Elastic serach](https://www.elastic.co/) locaal of als saas
+- [Elastic serach](https://www.elastic.co/) locaal of als saas (het is mogenlijk om elaastic op de zelfde linux machine te draaien maar niet aanbevolen)
 - Een OAuth2 compatable identity provider, bijvoorbeeld [DEX](https://dexidp.io/), [KeyCloack](https://www.keycloak.org/) of ADFS
 
 1. Log in op de bovenstaande lamp machine 
