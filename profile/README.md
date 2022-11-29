@@ -28,6 +28,7 @@ Dit project volgt een openbare [roadmap](https://github.com/orgs/Klantinteractie
 - [Architectuur](/docs/Architectuur.md)
 - [Definition of Done](/docs/DEFINITIONOFDONE.md)
 - [Security](/docs/SECURITY.md)
+- [Openpub WordPress plugin](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
 
 ## Interne Componenten
 
