@@ -33,10 +33,10 @@ Het klikken op een van deze cards leid naar een overzicht lijst van de verschill
 
 ### Beheren van de openpub_skill lijst
 
-2. Navigeer naar Schemas en navigeer naar het juiste schema (`kiss_openpub_skill`)
-3. Klik op `"+ Object Toevoegen"`
-4. Vul het veld `"Name"` in
-5. Klik op `"Save"`.
+1. Navigeer naar Schemas en navigeer naar het juiste schema (`kiss_openpub_skill`)
+2. Klik op `"+ Object Toevoegen"`
+3. Vul het veld `"Name"` in
+4. Klik op `"Save"`.
 
 _Note:_ je kunt bestaande objecten ook aanpassen vanuit de Gateway UI, de objecten zijn te vinden in het schema (onder de `"+ Object Toevoegen"` knop van stap 3. Dit zal een **nieuw object** aanmaken in de WordPress omgeving.
 
