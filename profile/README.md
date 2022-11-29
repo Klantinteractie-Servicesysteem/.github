@@ -29,6 +29,9 @@ Dit project volgt een openbare [roadmap](https://github.com/orgs/Klantinteractie
 - [Definition of Done](/docs/DEFINITIONOFDONE.md)
 - [Security](/docs/SECURITY.md)
 - [Openpub WordPress plugin](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
+  - [Managing users](https://github.com/Klantinteractie-Servicesysteem/Openpub/blob/master/README.md#managing-users)
+  - [Managing publications](https://github.com/Klantinteractie-Servicesysteem/Openpub/blob/master/README.md#managing-publications)
+  - [Gateway proxy calls](https://github.com/Klantinteractie-Servicesysteem/Openpub/blob/master/README.md#proxy-communication-via-gateway) (**not available in ReDoc**)
 
 ## Interne Componenten
 
