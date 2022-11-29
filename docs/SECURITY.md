@@ -30,4 +30,38 @@ Op dit moment maken we gebruik van de volgende tools en aspecten:
 De resultaten van deze controlles worden (indien mogenlijk), we streven hierbij naar een code covaradge van 80% en een BetterCodehub score van 9 of hoger. 
 
 ## Container hardening
-[Lijst pascal en robert]
+## OSWAP DOcker top 10
+
+### D01 - Secure User Mapping
+All containers are run with non-root users. Instead the containers run with the least privileged user group as possible for the containers.
+
+### D02 - Patch Management Strategy
+Once security bugs have been identified it is up to the product owner to prioritise them. The product owner also decides on security updates being regular patches or emergency patches.
+
+### D03 - Network Segmentation and Firewalling
+The network segmentation is managed by the Kubernetes Container Orchestration Engine. In the default configuration we ensure that only the frontend, the gateway, open web concept and elastic management dashboard (kibana) are exposed. All other traffic remains within the kubernetes cluster. The default network layout is drawn below (todo). It is left up to the discretion of the installing party to only expose other services if needed, or to unexpose services that do not need to be exposed for their use that will be made of the containers.
+
+### D04 - Secure Defaults and Hardening
+All containers are build upon the Alpine operating system, ensuring that the containers contain a minimum of dependencies. Also, the dependencies of the containers are kept to a minimum. Only dependencies that are needed for proper operation of the containers are installed.
+
+All containers also run with the minimum capabilities for the container used, nor can de users in the container request new security privileges.
+
+### D05 - Maintain Security Contexts
+Although the containers for production and other environments have the same default security hardening, we do not mix containers that are used for production with other containers on the same host (note: at the moment of writing we do mix accept and development on the same host, but these will be separated).
+
+### D06 - Protect Secrets
+We do not store production passwords, private keys, certificates or other credentials unencrypted in our repositories or on other locations. All passwords that are mentioned in the repositories are testing defaults that really should not be used in production.
+
+All secrets that are stored in the databases are only reachable after logging in. (todo: iets met secrets die nog zwaarder beveiligd moeten worden)
+
+### D07 - Resource Protection
+All containers have default resource limits in their deployment files, however, these can be overridden by the installing party to allow for higher, or lower, resource limits.
+
+### D08 - Container Image Integrity and Origin
+All images are stored in the GitHub Container Registry managed by the Klantinteractie Servicesysteem organization. These images cannot be overwritten by others than github users that have permission to write images to this organisation. This also means that usually only code changes, dependency updates and other changes can only end up in published images when checked by a organisation administrator.
+
+### D09 - Follow Immutable Paradigm
+The containers run in read-only filesystems as much as possible. However, nginx images are notoriously hard to run in read only filesystems. Therefore we have the PHP images of the gateway hardened with a read only file system, but for nginx images (frontend, dmz) we are still working on a solution to be able to use read-only filesystems.
+
+### D10 - Logging
+All requests to the common gateway are logged by the common gateway in UTC. All logs are read-only and contain information on the requesting party. On top of that, we strongly advise to install loki on the kubernetes clusters of the installing party, where all these logs can also be stored. Loki also stores the Kubernetes logs of the containers.
