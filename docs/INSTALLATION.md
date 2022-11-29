@@ -77,3 +77,27 @@ KISS vereist minimaal een aantal configuratie handelingen na de installatie om t
 Het is ook mogenlijk om KISS te koppelen aan zaaksystemen aan de hand van ZDS, STUFF, VrijBRP-STUFF, SIM XML of XLLNCE API. Hiervoor zijn diverse opensource plugins beschickbaar. Kijk in uw admin UI dashboard onder plugins voor meer informatie en de mogenlijkheden van deze plugins.
 
 Ook kunt u zelf (handmatig) bronnen koppelen aan de hand van JSON, XML en SOAP api's. Meet informatie daarover vind u bij configuratie onder bronnen. 
+
+## Installatie WordPress plugin voor Openpub
+Om publicaties te beheren via een WordPress omgeving, kan de op maat gemaakte Openpub WordPress plugin geïnstalleerd worden.
+
+_Nog niet eerder met WordPress plugins gewerkt? Lees hier de [officiele documentatie](https://wordpress.org/support/article/managing-plugins/)._
+
+1. [Download hier](https://github.com/Klantinteractie-Servicesysteem/Openpub/tree/master/plugins/OpenPub) de Openpub plugin
+2. Volg vervolgens de [Openpub plugin installatie stappen](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
