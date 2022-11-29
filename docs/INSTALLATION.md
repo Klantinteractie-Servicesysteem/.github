@@ -1,18 +1,22 @@
 # Installatie handleiding
+
 De installatie van KISS bestaat uit drie primaire stappen
+
 1. Installeren backend for frontend (common gateway)
-2. Installeren frontend 
+2. Installeren frontend
 3. Basale applicatie configuratie
 
 We raden aan om gebruikt te maken van de HELM installatie voor kubernetes waarin bovenstaande stappen zijn geautomatiseerd.
 
 De speciefieke stappen van de installatie hangen af van de omgeving waarop u KISS wilt installeren. Op dit moment ondersteunen we 3 omgevingen
+
 1. Kubernetes (haven)
 2. Linux Machine
 3. De kiss plugin toevoegen aan een reeds bestaande common gateway installatie
 
 ## Kubernetes (haven)
-Voor installatie op een haven omgeving zijn helm installatie bestanden beschikbaar op [Artifacthub](). 
+
+Voor installatie op een haven omgeving zijn helm installatie bestanden beschikbaar op [Artifacthub]().
 
 Deze kunnen handmatige worden geïnstalleerd via een helm commando `helm install .....` of via een beheerstool zo als [Rancher](https://www.rancher.com/),[Openshift](https://www.redhat.com/en/technologies/cloud-computing/openshift), [Otomi](https://redkubes.com/category/otomi/) of [Dashkube](https://www.dashkube.com/).
 
@@ -21,8 +25,10 @@ Alle bovenstaande opties laten het toe om tijdens de installatie keuzes te maken
 Na installatie op kubernetes hoeven de basis configuratie stappen alleen te worden uitgevoerd als het een productie omgeving betreft. En kan de stap koppelen Elastic worden overgeslagen (tenzij er binnen de installatie voor gekozen is om Elastic  niet mee te installeren)
 
 ## Linux (LAMP)
+
 Het installeren van KISS op een  Linux omgeving vereist enig handwerk
-- a.	Randvoorwaarden: Een LAMP machine met daarop:
+
+- a. Randvoorwaarden: Een LAMP machine met daarop:
   - Linux: [min versie]
   - [Apache](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview): [^2.4]
   - [MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04): [^5.7]
@@ -32,7 +38,7 @@ Het installeren van KISS op een  Linux omgeving vereist enig handwerk
 - [Elastic serach](https://www.elastic.co/) lokaal of als SAAS  (het is mogelijk om Elastic op de zelfde linux machine te draaien maar niet aanbevolen)
 - Een OAuth2 compatible identity provider, bijvoorbeeld [DEX](https://dexidp.io/), [KeyCloack](https://www.keycloak.org/) of ADFS
 
-1. Log in op de bovenstaande lamp machine 
+1. Log in op de bovenstaande lamp machine
 2. Navigeer naar de www map (doorgaans var/www) `$cd var/www`
 3. Maak een directory voor de gateway aan `$ mkdir gateway` en navigeer daar in `cd gateway`
 4. Installeer de gateway met `$ composer install klantinteractie-servicesysteem/kiss-bundle`
@@ -42,18 +48,18 @@ Het installeren van KISS op een  Linux omgeving vereist enig handwerk
 8. Installeer de frontend met het commando `npm install Klantinteractie-Servicesysteem/KISS-frontend`
 8. Draai de frontend met het commando `npm run`
 
-
-
 Voer vervolgens de basis configuratie stappen uit.
 
 ## Toevoegen aan een bestaande Common Gateway installatie
-Ga in het hoofd menu naar plugins en vervolgens plugin toevoegen. Zoek de plugin genaamd "Klantinteractie Service systeem" en klik op toevoegen. 
+
+Ga in het hoofd menu naar plugins en vervolgens plugin toevoegen. Zoek de plugin genaamd "Klantinteractie Service systeem" en klik op toevoegen.
 
 Voor vervolgens alleen de basis configuratie stappen uit voor registers die u nog niet in het verleden hebt gekoppeld aan uw gateway
 
 Let op! Dit voegt alleen de onderliggende services voor KISS toe. Voor het draaien van de applicatie zal de frontend nog los moeten worden geïnstalleerd. Zie daarvoor de [frontend documentatie](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend).
 
 ## Basis configuratie
+
 KISS vereist minimaal een aantal configuratie handelingen na de installatie om te kunnen werken, deze kunnen worden verricht via de gateway admin UI
 
 1. Elasstic search moet worden ingesteld (altijd)
@@ -74,30 +80,16 @@ KISS vereist minimaal een aantal configuratie handelingen na de installatie om t
    4. Open en activeer de acties met BRP, BAG, KVK HR in de naam
 
 ## Geavenceerde configuratie
+
 Het is ook mogenlijk om KISS te koppelen aan zaaksystemen aan de hand van ZDS, STUFF, VrijBRP-STUFF, SIM XML of XLLNCE API. Hiervoor zijn diverse opensource plugins beschickbaar. Kijk in uw admin UI dashboard onder plugins voor meer informatie en de mogenlijkheden van deze plugins.
 
-Ook kunt u zelf (handmatig) bronnen koppelen aan de hand van JSON, XML en SOAP api's. Meet informatie daarover vind u bij configuratie onder bronnen. 
+Ook kunt u zelf (handmatig) bronnen koppelen aan de hand van JSON, XML en SOAP api's. Meet informatie daarover vind u bij configuratie onder bronnen.
 
 ## Installatie WordPress plugin voor Openpub
+
 Om publicaties te beheren via een WordPress omgeving, kan de op maat gemaakte Openpub WordPress plugin geïnstalleerd worden.
 
 _Nog niet eerder met WordPress plugins gewerkt? Lees hier de [officiele documentatie](https://wordpress.org/support/article/managing-plugins/)._
 
 1. [Download hier](https://github.com/Klantinteractie-Servicesysteem/Openpub/tree/master/plugins/OpenPub) de Openpub plugin
 2. Volg vervolgens de [Openpub plugin installatie stappen](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
