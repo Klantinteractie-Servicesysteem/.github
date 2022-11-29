@@ -65,3 +65,5 @@ The containers run in read-only filesystems as much as possible. However, nginx 
 
 #### D10 - Logging
 All requests to the common gateway are logged by the common gateway in UTC. All logs are read-only and contain information on the requesting party. On top of that, we strongly advise to install loki on the kubernetes clusters of the installing party, where all these logs can also be stored. Loki also stores the Kubernetes logs of the containers.
+
+Additional logging is left up to the installing party and the hosting party on which they install their KISS application.
