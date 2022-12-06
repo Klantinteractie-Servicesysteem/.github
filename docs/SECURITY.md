@@ -30,7 +30,7 @@ Op dit moment maken we gebruik van de volgende tools en aspecten:
 - Maintainability (nu nog handmatig)
   - [Bettercodehub](https://bettercodehub.com/)
 
-De resultaten van deze controles worden (indien mogelijk), we streven hierbij naar een code coverage van 80% en een Better Code Hub score van 9 of hoger.
+De resultaten van deze controles worden (indien mogelijk), we streven hierbij naar een code coverage van 80% en een Better Code Hub score van 9 of hoger. De zij in te zien via de [workflow](https://github.com/ConductionNL/commonground-gateway/actions/runs/3564160815)
 
 ## Container hardening
 
