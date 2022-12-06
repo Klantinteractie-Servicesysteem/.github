@@ -35,6 +35,7 @@ Dit project volgt een openbare [roadmap](https://github.com/orgs/Klantinteractie
 - [Architectuur](/docs/Architectuur.md)
 - [Definition of Done](/docs/DEFINITIONOFDONE.md)
 - [Security](/docs/SECURITY.md)
+- [API-documentatie](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json)
 - [Openpub WordPress plugin](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
   - [Managing users](https://github.com/Klantinteractie-Servicesysteem/Openpub/blob/master/README.md#managing-users)
   - [Managing publications](https://github.com/Klantinteractie-Servicesysteem/Openpub/blob/master/README.md#managing-publications)
