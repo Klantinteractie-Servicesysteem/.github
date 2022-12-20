@@ -21,9 +21,9 @@ Aanwezigheid ongewenste variabelen (tokens, secrets etc.) (alleen indien we hier
 Alle handmatige tests zijn uitgevoerd en geslaagd (afgevinkt en bij voorkeur een rapport toegevoegd aan de story)
 
 **Functioneel testen.**
-WCAG. wordt handmatig gecontroleerd m.b.v. lighthouse.
+WCAG. wordt handmatig gecontroleerd m.b.v. lighthouse. De resultaten van deze test vindt u [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/WCAG-Lighthouse-Report-20221219.pdf).<br />
 Pentests (frontend en backend) Wordt periodiek uitgevoerd (maandelijks). We maken de afspraak dat resultaten uit een vorige pentest bij de eerstvolgende story opgelost worden. De oplossing wordt echter pas gecontroleerd bij de volgende pentest.
-Documentatie
+
 
 **Documentatie voor contributors**: code voorzien in code documentatie, dit wordt bij de code review beoordeeld
 
