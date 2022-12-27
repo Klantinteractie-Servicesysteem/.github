@@ -56,28 +56,28 @@ Ga in het hoofdmenu naar plug-ins en vervolgens plug-in toevoegen. Zoek de plug-
 
 Voor vervolgens alleen de basis configuratie stappen uit voor registers die u nog niet in het verleden hebt gekoppeld aan uw gateway
 
-Let op! Dit voegt alleen de onderliggende services voor KISS toe. Voor het draaien van de applicatie zal de frontend nog los moeten worden geïnstalleerd. Zie daarvoor de [frontend documentatie](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend).
+Let op! Dit voegt alleen de onderliggende services voor KISS toe. Voor het draaien van de applicatie zal de frontend nog los moeten worden geïnstalleerd. Zie daarvoor de [frontend documentatie](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend#readme).
 
-## Basis configuratie
+## Basisconfiguratie
 
-KISS vereist minimaal een aantal configuratie handelingen na de installatie om te kunnen werken, deze kunnen worden verricht via de gateway admin UI
+KISS vereist minimaal een aantal configuratie-handelingen na de installatie om te kunnen werken. Deze kunt u uitvoeren via de gateway admin UI
 
-1. Elastic Search moet worden ingesteld (altijd)
-   - Tijdens de installatie is een source aangemaakt voor Elastic en toegevoegd aan het dashboard van de Admin UI. Open deze source en voorzie hem van de juiste instellingen voor Elastic op uw omgeving. Onder [configuratie](/docs/CONFIGURATIE.md) kunt u meer informatie vinden over het instellen van sources
-   - Activeer de Elastic acties, ga naar acties onder het hoofdmenu van de gateway ui. In de lijst voor u ziet u een aantal acties met Elastic in de naam. Deze staan na de installatie op niet actief (Elastic is immers nog niet gekoppeld). Open de betreffende acties en zet ze op actief.
-   - Activeer de Elastic Search proxy, ga naar endpoints onder het hoofdmenu. In de lijst voor u ziet u een aantal endpoints met Elastic in de naam. Deze staan na de installatie op niet actief (Elastic is immers nog niet gekoppeld). Open de betreffende endpoints en zet ze op actief.
-2. Koppelen van ZGW en Klanten API (alleen productie)
-   - Ga naar sources in het hoofdmenu
-   - Open de betreffende sources (met ZGW en/of Klant in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
-   - Ga naar acties in het hoofdmenu
-   - Open en activeer de acties met ZGW en Klant in de naam
-5. Koppelen SDG  (Optioneel)
-6. Koppelen OpenPUB (Optioneel)
-7. Koppelen Handels Registers, Basisregistratie Adressen en Gebouwen en Basisregistratie Personen
-   - Ga naar sources in het hoofdmenu
-   - Open de betreffende sources (met BRP, BAG, KVK, HR in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
-   - Ga naar acties in het hoofdmenu
-   - Open en activeer de acties met BRP, BAG, KVK, HR in de naam
+#### Elastic Search moet worden ingesteld (altijd)
+1. Tijdens de installatie is een source aangemaakt voor Elastic en toegevoegd aan het dashboard van de Admin UI. Open deze source en voorzie hem van de juiste instellingen voor Elastic op uw omgeving. Onder [configuratie](/docs/CONFIGURATIE.md) kunt u meer informatie vinden over het instellen van sources
+2. Activeer de Elastic acties, ga naar acties onder het hoofdmenu van de gateway ui. In de lijst voor u ziet u een aantal acties met Elastic in de naam. Deze staan na de installatie op niet actief (Elastic is immers nog niet gekoppeld). Open de betreffende acties en zet ze op actief.
+3. Activeer de Elastic Search proxy, ga naar endpoints onder het hoofdmenu. In de lijst voor u ziet u een aantal endpoints met Elastic in de naam. Deze staan na de installatie op niet actief (Elastic is immers nog niet gekoppeld). Open de betreffende endpoints en zet ze op actief.
+#### Koppelen van ZGW en Klanten API (alleen productie)
+1. Ga naar sources in het hoofdmenu
+2. Open de betreffende sources (met ZGW en/of Klant in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
+3. Ga naar acties in het hoofdmenu
+4. Open en activeer de acties met ZGW en Klant in de naam
+#### Koppelen SDG  (Optioneel)
+#### Koppelen OpenPUB (Optioneel)
+#### Koppelen Handels Registers, Basisregistratie Adressen en Gebouwen en Basisregistratie Personen
+1. Ga naar sources in het hoofdmenu
+2. Open de betreffende sources (met BRP, BAG, KVK, HR in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
+3. Ga naar acties in het hoofdmenu
+4. Open en activeer de acties met BRP, BAG, KVK, HR in de naam
 
 ## Geavanceerde configuratie
 
