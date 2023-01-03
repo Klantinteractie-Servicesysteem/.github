@@ -104,3 +104,6 @@ _Nog niet eerder met WordPress plug-ins gewerkt? Lees hier de [officiële docume
 
 1. [Download hier](https://github.com/Klantinteractie-Servicesysteem/Openpub/tree/master/plugins/OpenPub) de Openpub plug-in
 2. Volg vervolgens de [Openpub plug-in installatie stappen](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
+
+##  Installatie Dex en OpenLDAP
+De gateway en frontend maken voor gebruikers authenticatie gebruik van OAuth2, dat betekend dat als er nog geen OAuth2 provider op de omgeving aanwezig is (bijvoorbeeld ADFS, DEX of KeyCloack) deze moet worden geinstaleerd. 
