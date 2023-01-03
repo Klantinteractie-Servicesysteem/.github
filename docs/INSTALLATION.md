@@ -22,20 +22,26 @@ Deze kunnen handmatige worden geïnstalleerd via een Helm commando `helm install
 
 Alle bovenstaande opties laten het toe om tijdens de installatie keuzes te maken met betrekking tot wat er in de installatie wordt geïnstalleerd of wellicht al beschikbaar is binnen de organisatie (b.v. Elastic) en geven keuzes met betrekking tot database (MySQL, PostgreSQL MongoDB, CloudDB, MSSQL, Oracle DB). Meer informatie over de installatie opties en hoe deze te gebruiken vindt u op Artifacthub.
 
-Na installatie op Kubernetes hoeven de basis configuratie stappen alleen te worden uitgevoerd als het een productieomgeving betreft. En kan de stap koppelen Elastic worden overgeslagen (tenzij er binnen de installatie voor gekozen is om Elastic niet mee te installeren)
+Na installatie op Kubernetes moeten er basale configuratie handelingen worden uitgevoerd de bestaan uit de volgende stappen
+1-	Inladen fixtures voor Gateway
+2-	Inladen schema’s, endpoints en eventuele test data (laat geen test data in op productie).
+3-	Installeren eventuele afhankelijkheden ([Installatie WordPress plug-in voor Openpub]())
+4-	Koppelen van externe bronnen ([Elastic Search moet worden ingesteld]())
+
+hoeven de basis configuratie stappen alleen te worden uitgevoerd als het een productieomgeving betreft. En kan de stap koppelen Elastic worden overgeslagen (tenzij er binnen de installatie voor gekozen is om Elastic niet mee te installeren)
 
 ## Linux (LAMP)
 
 Het installeren van KISS op een Linux omgeving vereist enig handwerk
 
 - a. Randvoorwaarden: Een LAMP machine met daarop:
-  - Linux: [min versie]
-  - [Apache](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview): [^2.4]
-  - [MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04): [^5.7]
-  - [PHP](https://www.php.net/manual/en/install.unix.debian.php): [^7.4.0] + extensies
-  - [Composer](https://getcomposer.org/download/): [^2.4.0]
-  - [NPM](https://www.npmjs.com/package/npm): [^9.1]
-- [Elastic search](https://www.elastic.co/) lokaal of als SAAS  (het is mogelijk om Elastic op dezelfde linux machine te draaien, maar niet aanbevolen)
+  - Linux: [min versie]
+  - [Apache](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview): [^2.4]
+  - [MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04): [^5.7]
+  - [PHP](https://www.php.net/manual/en/install.unix.debian.php): [^7.4.0] + extensies
+  - [Composer](https://getcomposer.org/download/): [^2.4.0]
+  - [NPM](https://www.npmjs.com/package/npm): [^9.1]
+- [Elastic search](https://www.elastic.co/) lokaal of als SAAS  (het is mogelijk om Elastic op dezelfde linux machine te draaien, maar niet aanbevolen)
 - Een OAuth2 compatible identity provider, bijvoorbeeld [DEX](https://dexidp.io/), [Keycloak](https://www.keycloak.org/) of ADFS
 
 1. Log in op de bovenstaande lamp machine
@@ -58,21 +64,26 @@ Voor vervolgens alleen de basis configuratie stappen uit voor registers die u no
 
 Let op! Dit voegt alleen de onderliggende services voor KISS toe. Voor het draaien van de applicatie zal de frontend nog los moeten worden geïnstalleerd. Zie daarvoor de [frontend documentatie](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend#readme).
 
+## Inladen fixtures voor de gateway
+Om goed te kunnen functioneren heeft de gateway fixtures (basis gegevens) nodig zo als een default applicatie en default organisatie. Het inladen van fixtures reset de gateway en is daarmee een uitermate destructieve actie ten opzichte van data (alle bestaande data wordt verwijderd). 
+
+Daarom moet het inladen van fixtures gebeuren via een command line actie in de container. Te weten ` bin/console hautelook:fixtures:load -n --no-bundles`
 ## Basisconfiguratie
-
+De basis configuratie voor KISS is beschikbaar voor de gateway als plugin, deze plugin is op haar buurt weer afhankenlijk van een aantal andere plugins (zo als ZGW en Klanten). Om de gateway klaar te maken voor gebruikt door KISS is het belangrijk om te controleren of de kiss plugin geinstaleerd is. Ga daarvoor in de Gateway UI naar Plugins en bekijk de geinstalleerde plugins. Staat KISS daar niet tussen? Ga haal de KISS plugin dan op via zoeken en installeer deze.
 KISS vereist minimaal een aantal configuratie-handelingen na de installatie om te kunnen werken. Deze kunt u uitvoeren via de gateway admin UI
-
+Inladen schema’s en voorbeeld data vanuit plugins
+`bin/console commongateway:composer:update`
 #### Elastic Search moet worden ingesteld (altijd)
 1. Tijdens de installatie is een source aangemaakt voor Elastic en toegevoegd aan het dashboard van de Admin UI. Open deze source en voorzie hem van de juiste instellingen voor Elastic op uw omgeving. Onder [configuratie](/docs/CONFIGURATIE.md) kunt u meer informatie vinden over het instellen van sources
 2. Activeer de Elastic acties, ga naar acties onder het hoofdmenu van de gateway ui. In de lijst voor u ziet u een aantal acties met Elastic in de naam. Deze staan na de installatie op niet actief (Elastic is immers nog niet gekoppeld). Open de betreffende acties en zet ze op actief.
 3. Activeer de Elastic Search proxy, ga naar endpoints onder het hoofdmenu. In de lijst voor u ziet u een aantal endpoints met Elastic in de naam. Deze staan na de installatie op niet actief (Elastic is immers nog niet gekoppeld). Open de betreffende endpoints en zet ze op actief.
+
 #### Koppelen van ZGW en Klanten API (alleen productie)
 1. Ga naar sources in het hoofdmenu
 2. Open de betreffende sources (met ZGW en/of Klant in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
 3. Ga naar acties in het hoofdmenu
 4. Open en activeer de acties met ZGW en Klant in de naam
-#### Koppelen SDG  (Optioneel)
-#### Koppelen OpenPUB (Optioneel)
+
 #### Koppelen Handels Registers, Basisregistratie Adressen en Gebouwen en Basisregistratie Personen
 1. Ga naar sources in het hoofdmenu
 2. Open de betreffende sources (met BRP, BAG, KVK, HR in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
