@@ -7,5 +7,6 @@ nav:
   - Configuratie: CONFIGURATIE.md
   - Definition of Done: DEFINITIONOFDONE.md
   - Security: SECURITY.md
+  - OpenPub plougin: openpub.md
 
 theme: readthedocs
