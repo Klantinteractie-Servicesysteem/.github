@@ -30,31 +30,6 @@ Na installatie op Kubernetes moeten er basale configuratie handelingen worden ui
 
 hoeven de basis configuratie stappen alleen te worden uitgevoerd als het een productieomgeving betreft. En kan de stap koppelen Elastic worden overgeslagen (tenzij er binnen de installatie voor gekozen is om Elastic niet mee te installeren)
 
-## Linux (LAMP)
-
-Het installeren van KISS op een Linux omgeving vereist enig handwerk
-
-- a. Randvoorwaarden: Een LAMP machine met daarop:
-  - Linux: [min versie]
-  - [Apache](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview): [^2.4]
-  - [MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04): [^5.7]
-  - [PHP](https://www.php.net/manual/en/install.unix.debian.php): [^7.4.0] + extensies
-  - [Composer](https://getcomposer.org/download/): [^2.4.0]
-  - [NPM](https://www.npmjs.com/package/npm): [^9.1]
-- [Elastic search](https://www.elastic.co/) lokaal of als SAAS  (het is mogelijk om Elastic op dezelfde linux machine te draaien, maar niet aanbevolen)
-- Een OAuth2 compatible identity provider, bijvoorbeeld [DEX](https://dexidp.io/), [Keycloak](https://www.keycloak.org/) of ADFS
-
-1. Log in op de bovenstaande lamp machine
-2. Navigeer naar de www map (doorgaans var/www) `$cd var/www`
-3. Maak een directory voor de gateway aan `$ mkdir gateway` en navigeer daar in `cd gateway`
-4. Installeer de gateway met `$ composer install klantinteractie-servicesysteem/kiss-bundle`
-5. Ga naar var/www/gateway/config/packages/doctrine.yaml en geef de [db credentials van MySQL op](https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html)
-6. Ga terug naar de hoofdmap `$cd var/www`
-7. Maak een directory voor de frontend aan `$ mkdir frontend` en navigeer daar in `cd frontend`
-8. Installeer de frontend met het commando `npm install Klantinteractie-Servicesysteem/KISS-frontend`
-8. Draai de frontend met het commando `npm run`
-
-Voer vervolgens de basis configuratie stappen uit.
 
 ## Toevoegen aan een bestaande Common Gateway installatie
 
@@ -90,11 +65,6 @@ Inladen schema’s en voorbeeld data vanuit plugins
 3. Ga naar acties in het hoofdmenu
 4. Open en activeer de acties met BRP, BAG, KVK, HR in de naam
 
-## Geavanceerde configuratie
-
-Het is ook mogelijk om KISS te koppelen aan zaaksystemen aan de hand van ZDS, STUFF, VrijBRP-STUFF, SIM XML of XLLNCE API. Hiervoor zijn diverse opensource plug-ins beschikbaar. Kijk in uw admin UI-dashboard onder plug-ins voor meer informatie en de mogelijkheden van deze plug-ins.
-
-Ook kunt u zelf (handmatig) bronnen koppelen aan de hand van JSON, XML en SOAP API's. Meet informatie daarover vind u bij configuratie onder bronnen.
 
 ## Installatie WordPress plug-in voor Openpub
 
@@ -106,4 +76,4 @@ _Nog niet eerder met WordPress plug-ins gewerkt? Lees hier de [officiële docume
 2. Volg vervolgens de [Openpub plug-in installatie stappen](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
 
 ##  Installatie Dex en OpenLDAP
-De gateway en frontend maken voor gebruikers authenticatie gebruik van OAuth2, dat betekend dat als er nog geen OAuth2 provider op de omgeving aanwezig is (bijvoorbeeld ADFS, DEX of KeyCloack) deze moet worden geinstaleerd. 
+Deze informatie is nog niet volledig.
