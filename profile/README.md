@@ -12,7 +12,7 @@ KISS Fase 1 wordt in januari afgerond. De doorontwikkeling van KISS ligt bij Dim
 ## Documentatie
 
 - [Documententatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/)
-- [Overzicht API (openapi.json)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json)
+- [Overzicht API's (openapi.json)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json)
 
 ## Interne Componenten
 
