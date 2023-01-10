@@ -11,16 +11,8 @@ KISS Fase 1 wordt in januari afgerond. De doorontwikkeling van KISS ligt bij Dim
 
 ## Documentatie
 
-- [Installatie handleiding](/docs/INSTALLATION.md)
-- [Configuratie](/docs/CONFIGURATIE.md)
-- [Architectuur](/docs/Architectuur.md)
-- [Definition of Done](/docs/DEFINITIONOFDONE.md)
-- [Security](/docs/SECURITY.md)
-- [API-documentatie](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json)
-- [Openpub WordPress plugin](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
-  - [Managing users](https://github.com/Klantinteractie-Servicesysteem/Openpub/blob/master/README.md#managing-users)
-  - [Managing publications](https://github.com/Klantinteractie-Servicesysteem/Openpub/blob/master/README.md#managing-publications)
-  - [Gateway proxy calls](https://github.com/Klantinteractie-Servicesysteem/Openpub/blob/master/README.md#proxy-communication-via-gateway) (**not available in ReDoc**)
+- [Documententatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/)
+- [Overzicht API (openapi.json)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json)
 
 ## Interne Componenten
 
