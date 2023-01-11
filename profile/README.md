@@ -33,14 +33,16 @@ De KISS-applicatie maakt gebruik van een groot aantal door de VNG gestandaardise
 - [Haal Centraal BRP](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen/) 
 - [ZGW Zaken](https://vng-realisatie.github.io/gemma-zaken/standaard/zaken/) 
 - [ZGW Catalogi](https://vng-realisatie.github.io/gemma-zaken/standaard/catalogi/) 
-- [ZGW Documenten](https://vng-realisatie.github.io/gemma-zaken/standaard/documenten/) 
+- [ZGW Documenten](https://vng-realisatie.github.io/gemma-zaken/standaard/documenten/)
 - [ZGW Contactmomenten (uitgebreid voor KISS)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/ContactMomentcontactmomenten-collection) 
 - [ZGW Klanten (uitgebreid voor KISS)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/KlantKlanten-collection) 
 - [SDG Plus (uitbreiding op SDG voor KISS)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/SDGoverigeObjectenSDG-collection)
 - [KISS_openpub_pub](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/Kiss_openpub_pubPub-collection) 
 - [Medewerkers (ontwikkeld voor KISS)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json) 
-- [Inzage voor logging van verwerking](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-read/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors) 
-- [Logging van verwerkingen](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-write/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors) 
+- [ZGW Autorisaties](https://vng-realisatie.github.io/gemma-zaken/standaard/autorisaties/redoc-1.0.0) _(niet in KISS Frontend)_
+- [ZGW Notificaties](https://vng-realisatie.github.io/gemma-zaken/standaard/notificaties/redoc-1.0.1) en [ZGW Notificaties voor consumers](https://vng-realisatie.github.io/gemma-zaken/standaard/notificaties-consumer/redoc-1.0.0-rc1) _(niet in KISS Frontend)_
+- [Inzage API voor logging van verwerkingen](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-read/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors)  _(niet in KISS Frontend)_
+- [Bewerking API voor logging van verwerkingen](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-write/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors)  _(niet in KISS Frontend)_
 
 ## Bouw
 KISS wordt ontwikkeld door ICATT en Conduction, in opdracht van Utrecht, Deventer, Zwolle, Kampen, Haarlemmermeer, Emmen, onder regie van Dimpact.
