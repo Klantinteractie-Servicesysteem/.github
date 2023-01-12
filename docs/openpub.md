@@ -10,7 +10,7 @@ _Let op: we gaan er bij deze stappen van uit:_
 - _dat je een actieve WordPress installatie (versie 6+) hebt draaien, met minimaal een Account met Administrator-rechten._
 - _dat het een Nederlandstalige WordPress is. De Engelse termen staan tussen haakjes._ 
 
-### installeer en activeer de Openpub-plugin en de Advanced Custom Fields-plugin
+### Installeer en activeer de Openpub-plugin en de Advanced Custom Fields-plugin
 1. Ga naar de Openpub-repository binnen Klantinteractie-Servicesysteem, en download de zip van de plugin vanuit de map [Plugins](https://github.com/Klantinteractie-Servicesysteem/Openpub/tree/master/plugins)
 2. Log in als Administrator op je WordPress-omgeving via /wp-admin 
 4. Ga naar Plugins > Nieuwe toevoegen
