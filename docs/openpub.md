@@ -15,11 +15,12 @@ _Let op: we gaan er bij deze stappen van uit:_
 5. Installeer de plugin via "Plugin uploaden", en voeg de gedownloade openpub.zip toe.
 6. Na installatie kun je de plugin activeren.
 7. Installeer vervolgens de ACF-plugin: ga naar Plugins > Nieuwe plugin, en zoek op "Advanced Custom Fields", en installeer de plugin. Activeer deze na succesvolle installatie.
-8. Download het bestand "publication-acf-group.json" [uit de map /plugins/OpenPub](https://github.com/Klantinteractie-Servicesysteem/Openpub/tree/master/plugins/OpenPub) van de Openpub-repository.
+
 
 ### Configureer de Openpup-plugin
-10. Navigeer in WordPress naar "Aangepaste velden" ("Custom Fields") > "Gereedschap" ("Tools").
-11. Upload het bestand publication-acf-group.json, bij het onderdeel "Veldgroepen Importeren" ("Import field groups")
+8. Ga naar Github en download het bestand 'publication-acf-group.json' [uit de map /plugins/OpenPub](https://github.com/Klantinteractie-Servicesysteem/Openpub/tree/master/plugins/OpenPub) van de Openpub-repository
+9. Ga naar WordPress en navigeer naar "Aangepaste velden" ("Custom Fields") > "Gereedschap" ("Tools").
+11. Upload het bestand 'publication-acf-group.json', bij het onderdeel "Veldgroepen Importeren" ("Import field groups")
 12. Log nu eerst in op de Gateway, ga daar naar het Schema "kiss_openpub_type", en controleer bij Objecten dat hier twee objecten staan: Nieuws en Werkinstructie. Als deze er niet staan, maak deze twee objecten dan aan. 
 13. Ga terug naar WordPress, en navigeer in de linkerbalk naar "OpenPub" > "Configuration" en vul de gateway URI bij "API Domain". Vul de  gateway API key bij "API KEY", en sla op
 14. Maak minimmaal één gebruiker aan met de rol "Kiss Redacteur" (zie ook hieronder)
