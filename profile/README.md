@@ -1,7 +1,7 @@
 
 # Klantinteractie Servicesysteem (KISS)
 
-Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontactmedewerkers (KCM) optimaal worden ondersteund in hun werk: het informeren en helpen van burgers en ondernemers die contact opnemen met de gemeente. Doel van KISS is om alle informatie die een KCM nodig heeft voor die taak, zoveel mogelijk binnen KISS zelf te ontsluiten. Het is ontwikkeld als een Common Ground component in opdracht van [Dimpact en de gemeente Utrecht](https://www.dimpact.nl/klantinteractie-servicesysteem) en andere samenwerkende gemeenten.
+Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontactmedewerkers (KCM) optimaal worden ondersteund in hun werk: het informeren en helpen van burgers en ondernemers die contact opnemen met de gemeente. Doel van KISS is om alle informatie die een KCM nodig heeft voor die taak, zoveel mogelijk binnen KISS zelf te ontsluiten. Het is ontwikkeld als een Common Ground component in opdracht van [in opdracht van Utrecht, Deventer, Zwolle, Kampen, Haarlemmermeer, Emmen, onder regie van Dimpact](https://www.dimpact.nl/klantinteractie-servicesysteem).
 
 
 ## Roadmap en doorontwikkeling
