@@ -1,7 +1,7 @@
 
 # Klantinteractie Servicesysteem (KISS)
 
-Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontactmedewerkers (KCM) optimaal worden ondersteund in hun werk: het informeren en helpen van burgers en ondernemers die contact opnemen met de gemeente. Doel van KISS is om alle informatie die een KCM nodig heeft voor die taak, zoveel mogelijk binnen KISS zelf te ontsluiten. Het is ontwikkeld als een Common Ground component in opdracht van [in opdracht van Utrecht, Deventer, Zwolle, Kampen, Haarlemmermeer, Emmen, onder regie van Dimpact](https://www.dimpact.nl/klantinteractie-servicesysteem).
+Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontactmedewerkers (KCM) optimaal worden ondersteund in hun werk: het informeren en helpen van burgers en ondernemers die contact opnemen met de gemeente. Doel van KISS is om alle informatie die een KCM nodig heeft voor die taak, zoveel mogelijk binnen KISS zelf te ontsluiten. Het is ontwikkeld als een Common Ground component in opdracht van [in opdracht van gemeente Utrecht en Dimpact](https://www.dimpact.nl/klantinteractie-servicesysteem).
 
 
 ## Roadmap en doorontwikkeling
@@ -11,7 +11,13 @@ KISS Fase 1 wordt in januari afgerond. De doorontwikkeling van KISS ligt bij Dim
 
 ## Documentatie
 
-- [Documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/)
+- [Documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/):
+- Installatie handleiding
+- Configuratie
+- Architectuur
+- Definition of Done
+- Security
+- OpenPub WordPress-plugin
 - [Overzicht API's (openapi.json)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json)
 
 ## Interne Componenten
@@ -27,7 +33,7 @@ De KISS-applicatie bestaat uit de volgende componenten:
 
 
 ## API's 
-De KISS-applicatie maakt gebruik van een groot aantal door de VNG gestandaardiseerde API's om te communiceren met onderliggende registraties in het eigen gemeentelijke landschap. 
+De KISS-applicatie maakt gebruik van een groot aantal door de VNG gestandaardiseerde API's om te communiceren met onderliggende registraties in het eigen gemeentelijke landschap en met enkele landelijke basisregistraties:
 
 - [KvK apis](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/HandelsregisterPersoonHandelsRegisterBevragen-collection)
 - [Haal Centraal BRP](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen/) 
@@ -45,7 +51,7 @@ De KISS-applicatie maakt gebruik van een groot aantal door de VNG gestandaardise
 - [Bewerking API voor logging van verwerkingen](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-write/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors)  _(niet in KISS Frontend)_
 
 ## Bouw
-KISS wordt ontwikkeld door ICATT en Conduction, in opdracht van Utrecht, Deventer, Zwolle, Kampen, Haarlemmermeer, Emmen, onder regie van Dimpact.
+KISS wordt ontwikkeld door ICATT en Conduction, in opdracht van Utrecht en Dimpact. Utrecht en de Dimpactleden Deventer, Zwolle, Enschede, Kampen, Haarlemmermeer, Emmen en Oost Gelre zijn deelnemers.
 
 ## Licentie
 [European Union Public License](https://opensource.org/licenses/EUPL-1.1)
