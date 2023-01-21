@@ -12,12 +12,12 @@ KISS Fase 1 wordt in januari afgerond. De doorontwikkeling van KISS ligt bij Dim
 ## Documentatie
 
 - [Documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/):
--- [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/)
-- [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/CONFIGURATIE/)
-- [Architectuur](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/Architectuur/)
-- [Definition of Done](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/DEFINITIONOFDONE/)
-- [Security](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/SECURITY/)
-- [OpenPub WordPress-plugin](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/openpub/)
+- - [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/)
+- - [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/CONFIGURATIE/)
+- - [Architectuur](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/Architectuur/)
+- - [Definition of Done](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/DEFINITIONOFDONE/)
+- - [Security](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/SECURITY/)
+- - [OpenPub WordPress-plugin](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/openpub/)
 - [Overzicht API's (openapi.json)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json)
 
 ## Interne Componenten
