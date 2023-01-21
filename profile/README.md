@@ -12,7 +12,7 @@ KISS Fase 1 wordt in januari afgerond. De doorontwikkeling van KISS ligt bij Dim
 ## Documentatie
 
 - [Documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/):
-- - [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/)
+-- [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/)
 - [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/CONFIGURATIE/)
 - [Architectuur](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/Architectuur/)
 - [Definition of Done](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/DEFINITIONOFDONE/)
