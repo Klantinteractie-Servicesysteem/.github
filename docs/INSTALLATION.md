@@ -1,79 +1,83 @@
-# Installatie handleiding
+## Klant Interactie ServiceSysteem (KISS)
+### Installatie handleiding
+#### Inleiding
+KISS is een kubernetes cluster en deze handleiding is gebaseerd op Azure Kubernetes.
+Andere kubernetes providers worden ook ondersteund mits ze haven compliant zijn.
+Deze handleiding is bedoeld voor kubernetes beheerders en biedt een stappenplan om KISS handmatig op een nieuw cluster te installeren.
 
-De installatie van KISS bestaat uit drie primaire stappen
+### Stap 0 - Voorbereidingen
+#### Domein
+Er dient een domeinnaam met wildcard certificaat beschikbaar te zijn.
+Losse certificaten per endpoint worden op dit moment niet in deze handleiding ondersteund.
+Dit certificaat moet als .crt bestand tijdens de handleiding gebruikt worden.
+De opbouw van dit certificaat is als volgt:
 
-1. Installeren backend for frontend (Common Gateway)
-2. Installeren frontend
-3. Basale applicatie configuratie
+> `-----BEGIN CERTIFICATE-----`<br/>
+> inhoud public certificate<br/>
+> `-----END CERTIFICATE-----`<br/>
+> <br/>
+> `-----BEGIN CERTIFICATE-----`<br/>
+> inhoud intermediate certificaten mits aanwezig<br/>
+> `-----END CERTIFICATE-----`<br/>
+> <br/>
+> `-----BEGIN CERTIFICATE-----`<br/>
+> inhoud certificate authority certificate<br/>
+> `-----END CERTIFICATE-----`
 
-We raden aan om gebruikt te maken van de HELM-installatie voor Kubernetes waarin bovenstaande stappen zijn geautomatiseerd.
-
-De specifieke stappen van de installatie hangen af van de omgeving waarop u KISS wilt installeren. Op dit moment ondersteunen we 3 omgevingen
-
-1. Kubernetes (haven)
-2. Linux Machine
-3. De KISS-plug-in toevoegen aan een reeds bestaande common gateway installatie
-
-## Kubernetes (Haven)
-
-Voor installatie op een Haven omgeving zijn helm installatie bestanden beschikbaar op [Artifacthub]().
-
-Deze kunnen handmatige worden geïnstalleerd via een Helm commando `helm install .....` of via een beheertool zo als [Rancher](https://www.rancher.com/),[Openshift](https://www.redhat.com/en/technologies/cloud-computing/openshift), [Otomi](https://redkubes.com/category/otomi/) of [Dashkube](https://www.dashkube.com/).
-
-Alle bovenstaande opties laten het toe om tijdens de installatie keuzes te maken met betrekking tot wat er in de installatie wordt geïnstalleerd of wellicht al beschikbaar is binnen de organisatie (b.v. Elastic) en geven keuzes met betrekking tot database (MySQL, PostgreSQL MongoDB, CloudDB, MSSQL, Oracle DB). Meer informatie over de installatie opties en hoe deze te gebruiken vindt u op Artifacthub.
-
-Na installatie op Kubernetes moeten er basale configuratie handelingen worden uitgevoerd de bestaan uit de volgende stappen
-1-	Inladen fixtures voor Gateway
-2-	Inladen schema’s, endpoints en eventuele test data (laat geen test data in op productie).
-3-	Installeren eventuele afhankelijkheden ([Installatie WordPress plug-in voor Openpub]())
-4-	Koppelen van externe bronnen ([Elastic Search moet worden ingesteld]())
-
-hoeven de basis configuratie stappen alleen te worden uitgevoerd als het een productieomgeving betreft. En kan de stap koppelen Elastic worden overgeslagen (tenzij er binnen de installatie voor gekozen is om Elastic niet mee te installeren)
+Het private certificate dient los als .key bestand opgeslagen te worden.
 
 
-## Toevoegen aan een bestaande Common Gateway installatie
+#### Tools
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)
+- [Helm](https://helm.sh/docs/intro/install/)
+- [Haven](https://haven.commonground.nl/techniek/compliancy-checker)
+- [Powershell](https://learn.microsoft.com/en-us/powershell/)
+- [SqlCmdLets](https://www.cdata.com/drivers/postgresql/powershell/) (trial)
 
-Ga in het hoofdmenu naar plug-ins en vervolgens plug-in toevoegen. Zoek de plug-in genaamd "Klantinteractie Service systeem" en klik op toevoegen.
+#### Haven
+Er dient een haven compliant cluster ingericht te worden.
+Hiervoor zijn referentie implementaties te vinden op de [haven](https://haven.commonground.nl/techniek/aan-de-slag) site.
 
-Voor vervolgens alleen de basis configuratie stappen uit voor registers die u nog niet in het verleden hebt gekoppeld aan uw gateway
+#### Azure
+Bij het volgen van de [Azure](https://haven.commonground.nl/techniek/aan-de-slag/azure) referentie dient met de volgende extra zaken rekening gehouden te worden.
+- minimaal 3 nodes
+- high availability aan zetten
+- local logins met RBAC gebruiken, GEEN Azure Active Directory!
+- Kubernetes version 1.25.4 gebruiken
 
-Let op! Dit voegt alleen de onderliggende services voor KISS toe. Voor het draaien van de applicatie zal de frontend nog los moeten worden geïnstalleerd. Zie daarvoor de [frontend documentatie](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend#readme).
+Per servertype is er een quota aan het maximale aantal cores dat gebruikt mag worden in de regio.
+Als dit overschreven wordt, dan kan dit in het quota scherm aangepast worden:
+https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas.
 
-## Inladen fixtures voor de gateway
-Om goed te kunnen functioneren heeft de gateway fixtures (basis gegevens) nodig zo als een default applicatie en default organisatie. Het inladen van fixtures reset de gateway en is daarmee een uitermate destructieve actie ten opzichte van data (alle bestaande data wordt verwijderd). 
-
-Daarom moet het inladen van fixtures gebeuren via een command line actie in de container. Te weten ` bin/console hautelook:fixtures:load -n --no-bundles`
-## Basisconfiguratie
-De basis configuratie voor KISS is beschikbaar voor de gateway als plugin, deze plugin is op haar buurt weer afhankenlijk van een aantal andere plugins (zo als ZGW en Klanten). Om de gateway klaar te maken voor gebruikt door KISS is het belangrijk om te controleren of de kiss plugin geinstaleerd is. Ga daarvoor in de Gateway UI naar Plugins en bekijk de geinstalleerde plugins. Staat KISS daar niet tussen? Ga haal de KISS plugin dan op via zoeken en installeer deze.
-KISS vereist minimaal een aantal configuratie-handelingen na de installatie om te kunnen werken. Deze kunt u uitvoeren via de gateway admin UI
-Inladen schema’s en voorbeeld data vanuit plugins
-`bin/console commongateway:composer:update`
-#### Elastic Search moet worden ingesteld (altijd)
-1. Tijdens de installatie is een source aangemaakt voor Elastic en toegevoegd aan het dashboard van de Admin UI. Open deze source en voorzie hem van de juiste instellingen voor Elastic op uw omgeving. Onder [configuratie](/docs/CONFIGURATIE.md) kunt u meer informatie vinden over het instellen van sources
-2. Activeer de Elastic acties, ga naar acties onder het hoofdmenu van de gateway ui. In de lijst voor u ziet u een aantal acties met Elastic in de naam. Deze staan na de installatie op niet actief (Elastic is immers nog niet gekoppeld). Open de betreffende acties en zet ze op actief.
-3. Activeer de Elastic Search proxy, ga naar endpoints onder het hoofdmenu. In de lijst voor u ziet u een aantal endpoints met Elastic in de naam. Deze staan na de installatie op niet actief (Elastic is immers nog niet gekoppeld). Open de betreffende endpoints en zet ze op actief.
-
-#### Koppelen van ZGW en Klanten API (alleen productie)
-1. Ga naar sources in het hoofdmenu
-2. Open de betreffende sources (met ZGW en/of Klant in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
-3. Ga naar acties in het hoofdmenu
-4. Open en activeer de acties met ZGW en Klant in de naam
-
-#### Koppelen Handels Registers, Basisregistratie Adressen en Gebouwen en Basisregistratie Personen
-1. Ga naar sources in het hoofdmenu
-2. Open de betreffende sources (met BRP, BAG, KVK, HR in de naam), vul de verbindingsgegevens in, test de verbinding en zet deze DAARNA op actief
-3. Ga naar acties in het hoofdmenu
-4. Open en activeer de acties met BRP, BAG, KVK, HR in de naam
+#### Authenticatie
+Authenticatie in deze handleiding en inrichting gebeurd middels Dex en de OpenLDAP connector. Er bestaan voor Dex vele andere [connectoren](https://dexidp.io/docs/connectors/).
 
 
-## Installatie WordPress plug-in voor Openpub
+### Installatie
+#### Placeholders
+In deze scripts en bijbehorende yaml configuratie bestanden staan "[!ChangeMe!]" placeholders.
+Deze dienen vervangen te worden door wachtwoorden en domeininstellingen.
+> De yaml voorbeeld bestanden staan in /yaml
 
-Om publicaties te beheren via een WordPress omgeving, kan de op maat gemaakte Openpub WordPress plug-in geïnstalleerd worden.
+#### Uitvoeren
+De installatie kan worden uitgevoerd middels onderstaande powershell scripts.
+Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
+
+> [0_prechecks.ps1](/scripts/0_prechecks.ps1)
+
+> [1_install_kiss.ps1](/scripts/1_install_kiss.ps1)
+> 
+> [2_update-elastic.ps1](/scripts/2_update-elastic.ps1)
+> 
+> [3_updateGateway.ps1](/scripts/3_updateGateway.ps1)
+> 
+> [4_update-elastic-relevance.ps1](/scripts/4_update-elastic-relevance.ps1)
+
+#### Installatie WordPress plug-in voor Openpub
+
+Om publicaties te beheren via een WordPress omgeving, kan de op maat gemaakte Openpub WordPress plug-in ge�nstalleerd worden.
 
 _Nog niet eerder met WordPress plug-ins gewerkt? Lees hier de [officiële documentatie](https://wordpress.org/support/article/managing-plugins/)._
 
-1. [Download hier](https://github.com/Klantinteractie-Servicesysteem/Openpub/tree/master/plugins/OpenPub) de Openpub plug-in
-2. Volg vervolgens de [Openpub plug-in installatie stappen](https://github.com/Klantinteractie-Servicesysteem/Openpub#readme)
-
-##  Installatie Dex en OpenLDAP
-Deze informatie is nog niet volledig.
+1. [Download hier](/openPub/) de Openpub plug-in bestanden 
+2. Volg vervolgens de [Openpub plug-in installatie stappen](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/openpub/)

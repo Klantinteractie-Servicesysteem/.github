@@ -1,0 +1,16 @@
+service:
+  type: ClusterIP
+ingress:
+  enabled: true
+  tls: true
+  hostname: "[!ChangeMe!]" #openweb.accept.kiss-demo.nl
+  extraTls:
+    - hosts:
+      - "[!ChangeMe!]" #openweb.accept.kiss-demo.nl
+      secretName: wildcard-kiss-tls
+  ingressClassName: nginx
+  
+mariadb:
+  enabled: true
+wordpressPassword: "[!ChangeMe!]" #zonder ""
+wordpressUsername: "[!ChangeMe!]" #admin@accept.kiss-demo.nl
