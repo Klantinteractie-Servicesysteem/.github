@@ -42,7 +42,7 @@ De KISS-applicatie maakt gebruik van een groot aantal door de VNG gestandaardise
 - [ZGW Catalogi](https://vng-realisatie.github.io/gemma-zaken/standaard/catalogi/) 
 - [ZGW Documenten](https://vng-realisatie.github.io/gemma-zaken/standaard/documenten/)
 
-Een aantal API's zijn onderdeel van de aansluiting op gemeentelijke bronne, en leveren geen data aan de frontend: 
+Een aantal API's zijn onderdeel van de aansluiting op gemeentelijke bronnen, en leveren geen data aan de frontend: 
 - [ZGW Autorisaties](https://vng-realisatie.github.io/gemma-zaken/standaard/autorisaties/redoc-1.0.0)
 - [ZGW Notificaties](https://vng-realisatie.github.io/gemma-zaken/standaard/notificaties/redoc-1.0.1) en [ZGW Notificaties voor consumers](https://vng-realisatie.github.io/gemma-zaken/standaard/notificaties-consumer/redoc-1.0.0-rc1) 
 - [Inzage API voor logging van verwerkingen](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-read/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors)  
