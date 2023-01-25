@@ -8,5 +8,6 @@ nav:
   - Definition of Done: DEFINITIONOFDONE.md
   - Security: SECURITY.md
   - OpenPub: openpub.md
+  - Uitbreidingen van de API's: UITBREIDING-APIS.md
 
 theme: readthedocs
