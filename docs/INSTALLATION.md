@@ -49,7 +49,7 @@ Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas.
 
 #### Authenticatie
-Authenticatie in deze handleiding en inrichting gebeurd middels Dex en de OpenLDAP connector. Er bestaan voor Dex vele andere [connectoren](https://dexidp.io/docs/connectors/).
+Authenticatie in deze handleiding en inrichting gebeurt middels Dex en de OpenLDAP connector. Er bestaan voor Dex vele andere [connectoren](https://dexidp.io/docs/connectors/).
 
 
 ### Installatie
