@@ -1,4 +1,4 @@
-# Openpub plugin.
+# Installatie en configuratie van Openpub plugin
 Met de Openpub-plugin voor WordPress, breidt je WordPress uit voor het beheren en publiceren van nieuwsberichten en werkinstructies (PUB-publicaties) voor de KISS frontend.
 
 ## Installeren en configureren van de plugin
