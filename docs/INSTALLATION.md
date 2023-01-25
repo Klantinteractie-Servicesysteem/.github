@@ -60,7 +60,7 @@ Op deze plekken vult u de wachtwoorden, keys en domeininstellingen in, die horen
 De yaml-voorbeeldbestanden staan in de map [/yaml](https://github.com/Klantinteractie-Servicesysteem/.github/tree/main/docs/yaml)
 
 #### Uitvoeren
-Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
+De installatie kan worden uitgevoerd middels onderstaande powershell scripts. Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
 
 Met het eerste script stellen we een aantal waarden in, waaronder het domein (in dit geval kiss-demo.nl) en de omgeving (in dit geval de accept-omgeving). Daarna doorloopt u met de scripts de volgende vier stappen:
 
