@@ -62,7 +62,7 @@ De yaml-voorbeeldbestanden staan in de map [/yaml](https://github.com/Klantinter
 #### Uitvoeren
 De installatie kan worden uitgevoerd middels onderstaande powershell scripts. Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
 
-Met het eerste script stellen we een aantal waarden in, waaronder het domein (in dit geval kiss-demo.nl) en de omgeving (in dit geval de accept-omgeving). Daarna doorloopt u met de scripts de volgende vier stappen:
+Met het eerste script stellen we een aantal waarden in, waaronder het domein (in dit geval kiss-demo.nl) en de omgeving (in dit geval de accept-omgeving). Daarna doorlopen we met de scripts de volgende vier stappen:
 
 1. Eerst installeren we alle onderdelen van KISS, zoals de CommonGateway, de Kiss-frontend, WordPress en Elastic. 
 2. Vervolgens configureren we elastic, zodat er een admin-account wordt aangemaakt op de Kibana-interface. Ook maken we een een kiss-engine aan (noodzakelijk voor communicatie met de frontend). Binnen die engine maken we een crawler aan voor de gemeentelijke website die we ook starten. 
