@@ -49,7 +49,7 @@ Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas.
 
 #### Authenticatie
-Authenticatie in deze handleiding en inrichting gebeurt middels Dex en de OpenLDAP connector. Er bestaan voor Dex vele andere [connectoren](https://dexidp.io/docs/connectors/).
+De authenticatie van KISS gebeurt m.b.v. Dex. Er bestaan voor Dex vele [connectoren](https://dexidp.io/docs/connectors/), ook voor bijvoorbeeld Active Directory. In deze installatiehandleiding koppelen we OpenLDAP aan Dex. 
 
 
 ### Installatie
@@ -60,8 +60,14 @@ Op deze plekken vult u de wachtwoorden, keys en domeininstellingen in, die horen
 De yaml-voorbeeldbestanden staan in de map [/yaml](https://github.com/Klantinteractie-Servicesysteem/.github/tree/main/docs/yaml)
 
 #### Uitvoeren
-De installatie kan worden uitgevoerd middels onderstaande powershell scripts.
 Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
+
+Met het eerste script stellen we een aantal waarden in, waaronder het domein (in dit geval kiss-demo.nl) en de omgeving (in dit geval de accept-omgeving). Daarna doorloopt u met de scripts de volgende vier stappen:
+
+1. Eerst installeren we alle onderdelen van KISS, zoals de CommonGateway, de Kiss-frontend, WordPress en Elastic. 
+2. Vervolgens configureren we elastic, zodat er een admin-account wordt aangemaakt op de Kibana-interface. Ook maken we een een kiss-engine aan (noodzakelijk voor communicatie met de frontend). Binnen die engine maken we een crawler aan voor de gemeentelijke website die we ook starten. 
+3. Vervolgens configureren we de gateway door de benodigde schema's en endpoints in te regelen. Ook richten we het endpoint naar Elastic in, en zorgen we dat de sync-actions worden gestart naar Elastic en vanuit WordPress.
+4. Tenslotte configureren we de relevance tuning binnen Elastic.
 
 > [0_prechecks.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/0_prechecks.ps1)
 >
@@ -75,7 +81,7 @@ Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
 
 #### Installatie WordPress plugin voor Openpub
 
-Om nieuws en werkinstructies te beheren, maken we in deze installatie gebruik van een WordPress omgeving, uitgebreid met de Openpub WordPress plugin.
+Om nieuws en werkinstructies te beheren, maken we in deze installatie gebruik van een WordPress omgeving, uitgebreid met de Openpub WordPress plugin. In de installatiescripts is er een WordPress-installatie neergezet, en is er een admin-account aangemaakt. Als laatste stap moeten we de OpenPub plugin installeren en configureren.
 
 _Nog niet eerder met WordPress plugins gewerkt? Lees hier de [officiële documentatie](https://wordpress.org/support/article/managing-plugins/)._
 
