@@ -39,6 +39,7 @@ timeout 30
 helm upgrade --install klantinteractie-servicesysteem --namespace $ns --version 1.0.17 klantinteractie-servicesysteem/kiss-frontend -f /yaml/kiss-$env.yaml
 helm upgrade --install user-component --namespace $ns user-component/user-component -f /yaml/user-component-$env.yaml
 helm install wordpress --namespace kiss-wordpress bitnami/wordpress --version 15.2.24 --create-namespace -f /yaml/wordpress-$env.yaml
+kubectl create secret tls --cert $cert --key=$key wildcard-kiss-tls -n kiss-wordpress
 
 Write-Output "Timeout zodat de gateway kan opkomen. als beide klantinteractie-servicesysteem-gateway pods up zijn, kan verder gegaan worden."
 timeout 600
