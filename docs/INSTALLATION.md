@@ -5,7 +5,7 @@ KISS draait in een kubernetes cluster. Deze handleiding is gebaseerd op Azure Ku
 Andere kubernetes providers worden ook ondersteund mits ze haven-compliant zijn.
 Deze handleiding is bedoeld voor kubernetes beheerders en biedt een stappenplan om KISS handmatig op een nieuw cluster te installeren.
 
-### Stap 0 - Voorbereidingen
+### Voorbereidingen
 #### Domein
 Zorg voor een domeinnaam met wildcard-certificaat. Losse certificaten per endpoint worden op dit moment niet in deze handleiding ondersteund.
 Dit certificaat moet als .crt bestand tijdens de handleiding gebruikt worden.
@@ -53,6 +53,8 @@ De authenticatie van KISS gebeurt m.b.v. Dex. Er bestaan voor Dex vele [connecto
 
 
 ### Installatie
+Als het kubernetes cluster is ingericht, kunnen we de onderdelen van KISS gaan installeren.
+
 #### Placeholders
 In de installatiescripts die u hieronder vindt, en in bijbehorende yaml-configuratiebestanden staan "[!ChangeMe!]" placeholders.
 Op deze plekken vult u de wachtwoorden, keys en domeininstellingen in, die horen bij uw eigen installatie-omgeving. 
