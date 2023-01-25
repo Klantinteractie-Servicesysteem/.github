@@ -49,12 +49,12 @@ Een aantal API's zijn onderdeel van de aansluiting op gemeentelijke bronne, en l
 - [Bewerking API voor logging van verwerkingen](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-write/oas-specification/logging-verwerkingen-api/openapi.yaml&nocors) 
 
 
-Enkele van de standaard API's hebben [we uitgebreid](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/UITBREIDING-APIS/).
-- [ZGW Contactmomenten (uitgebreid voor KISS)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/ContactMomentcontactmomenten-collection) 
-- [ZGW Klanten (uitgebreid voor KISS)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/KlantKlanten-collection) 
-- [SDG Plus (uitbreiding op SDG voor KISS)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/SDGoverigeObjectenSDG-collection)
-- [KISS_openpub_pub](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/Kiss_openpub_pubPub-collection) 
-- [Medewerkers (ontwikkeld voor KISS)](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json) 
+Enkele van de standaard API's hebben we uitgebreid ([meer informatie hierover in de documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/UITBREIDING-APIS/)):
+- [Contactmomenten](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/ContactMomentcontactmomenten-collection), uitbreiding van [ZGW Contactmomenten](https://vng-realisatie.github.io/gemma-zaken/standaard/contactmomenten/)
+- [Klanten](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/KlantKlanten-collection), uitbreiding van [ZGW Klanten](https://vng-realisatie.github.io/gemma-zaken/standaard/klanten/)
+- [SDG Plus](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/SDGoverigeObjectenSDG-collection) gebaseerd op [SDG Invoervoorziening](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/maykinmedia/sdg-invoervoorziening/master/src/openapi.yaml)
+- [KISS_openpub_pub](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json#tag/Kiss_openpub_pubPub-collection) gebaseerd op de [bouwblokken van OpenWeb](https://openwebconcept.nl/bouwblokken/) 
+- [Medewerkers](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json), ontwikkeld voor KISS.
 
 De volledige implementatie van alle API's vindt u [in ReDoc](https://redocly.github.io/redoc/?nocors&url=https://kissdevelopment-dimpact.commonground.nu/openapi.json).
 
