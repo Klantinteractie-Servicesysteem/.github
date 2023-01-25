@@ -8,7 +8,7 @@ Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontact
 - [Architectuur](Architectuur.md)
 - [Definition of Done](DEFINITIONOFDONE.md)
 - [Security](SECURITY.md)
-- [OpenPub WordPress-plugin](openpub.md)
+- [Installatie en configuratie van Openpub plugin](openpub.md)
 - [Uitbreidingen op de API's](UITBREIDING-APIS.md)
 
 
