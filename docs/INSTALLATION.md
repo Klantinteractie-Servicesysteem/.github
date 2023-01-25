@@ -57,21 +57,21 @@ In deze handleiding gaan we voor de inrichting van authenticatie uit van Dex en 
 In de installatiescripts die u hieronder vindt, en in bijbehorende yaml-configuratiebestanden staan "[!ChangeMe!]" placeholders.
 Op deze plekken vult u de wachtwoorden, keys en domeininstellingen in, die horen bij uw eigen installatie-omgeving. 
 
-De yaml-voorbeeldbestanden staan in de map [/yaml](./yaml)
+De yaml-voorbeeldbestanden staan in de map [/yaml](https://github.com/Klantinteractie-Servicesysteem/.github/tree/main/docs/yaml)
 
 #### Uitvoeren
 De installatie kan worden uitgevoerd middels onderstaande powershell scripts.
 Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
 
-> [0_prechecks.ps1](./scripts/0_prechecks.ps1)
+> [0_prechecks.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/0_prechecks.ps1)
 >
-> [1_install_kiss.ps1](./scripts/1_install_kiss.ps1)
+> [1_install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/1_install_kiss.ps1)
 > 
-> [2_update-elastic.ps1](./scripts/2_update-elastic.ps1)
+> [2_update-elastic.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/2_update-elastic.ps1)
 > 
-> [3_updateGateway.ps1](./scripts/3_updateGateway.ps1)
+> [3_updateGateway.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/3_updateGateway.ps1)
 > 
-> [4_update-elastic-relevance.ps1](./scripts/4_update-elastic-relevance.ps1)
+> [4_update-elastic-relevance.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/4_update-elastic-relevance.ps1)
 
 #### Installatie WordPress plugin voor Openpub
 
