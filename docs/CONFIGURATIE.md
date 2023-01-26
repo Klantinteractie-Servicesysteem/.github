@@ -1,45 +1,52 @@
 # Configuratie
+Bij de installatie van KISS worden er een groot aantal dingen al geconfigureerd. Maar wat daarna in ieder geval nog moet gebeuren, zijn de gemeentespecifieke zaken, zoals het koppelen aan de eigen bronnen, en het inregelen van verschillende lijstjes met eigen gegevens.  
 
 ## Koppelen van nieuwe bronnen
 
 De Common Gateway als core onder KISS biedt de optie om extra bronnen (applicaties te koppelen) zonder dat het nodig is om hiervoor een ontwikkelpartij in te schakelen of code te schrijven.
 
-Log hiervoor in op de admin omgeving en ga naar het menu item "sources", daar kunt u bestaande bronnen bewerken en nieuwe bronnen toevoegen
+Log hiervoor in op de pagina voor beheer van de Gateway en ga naar het menu item "sources". Daar kunt u bestaande bronnen bewerken en nieuwe bronnen toevoegen
 ![img_2.png](img_2.png)
 
-Voor het toevoegen van een bron klikt u op "Toevoegen", daar kunt u de locatie, de externe API en eventueel autorisatie inregelen.
+Voor het toevoegen van een bron klikt u op "Toevoegen". Daar kunt u de locatie, de externe API en eventueel autorisatie inregelen.
 
 ![img_3.png](img_3.png)
 
-Nadat de bron is toegevoegd is het ook mogelijk om de connectie naar de bron toe te testen, het verdient een warme aanbeveling om dit te doen VOORDAT u verder gaat met de inrichting van de externe bron. U kunt de verbinding naar een bron toe testen door op "test connection" te klikken.
+Nadat de bron is toegevoegd kunt u de connectie naar de bron toe testen. Het verdient een warme aanbeveling om dit te doen VOORDAT u verder gaat met de inrichting van de externe bron. U kunt de verbinding naar een bron toe testen door op "test connection" te klikken.
 
 ![img_4.png](img_4.png)
 
-Als de bron succesvol is toegevoegd en de verbinding getest moet de bron nog worden gekoppeld aan een van de in KISS bekende objecten. Dit gaat door het inregelen van zogenoemde synchronisatie acties. Synchronisaties acties gaan (net als alle andere acties in de gateway) af als zich een EVENT voordoet. Voorbeelden van events voor het synchroniseren van bronnen zijn:
+Als de bron succesvol is toegevoegd en de verbinding is getest, moet de bron nog worden gekoppeld aan een van de in KISS bekende objecten. Dit gaat door het inregelen van zogenoemde synchronisatie-acties. Synchronisaties-acties gaan (net als alle andere acties in de gateway) af als zich een EVENT voordoet. Voorbeelden van events voor het synchroniseren van bronnen zijn:
 
-- Het object veranderd in KISS (bijwerken naar de bron toe)
-- Het object veranderd in de BRON (ophalen vanuit de bron)
+- Het object verandert in KISS (bijwerken naar de bron toe)
+- Het object verandert in de BRON (ophalen vanuit de bron)
 
-## Opzetten van proxies
 
 ## Beheer op Selectielijsten
-
-Op het beheer dashboard vindt u een aantal cards die doorverwijzen naar de diverse beschikbare selectielijsten
+De KISS-frontend maakt gebruik van een aantal lijstjes, die u kunt beheren in de Gateway. Als u inlogt op de pagina voor het beheer van de Gateway, zie u op het Dashboard een aantal cards die doorverwijzen naar de belangrijkste selectielijsten.
 ![img.png](img.png)
 
-Het klikken op een van deze cards leidt naar een overzicht lijst van de verschillende items die onderdeel zijn van deze lijst. Hier kunt u items toevoegen, bewerken (via de details knop) en verwijderen.
+* _ResultaatTypeOmschrijvingGeneriek_: dit lijstje bevat de soorten afhandeling die de KCM bij de afronding kan registreren bij het contactmoment. Bijvoorbeeld Zelfstandig afgehandeld, Doorverbonden. 
+**LET OP:** er is één item op deze lijst die niet aangepast kan worden, en dat is "Contactverzoek gemaakt": deze heeft de frontend nodig voor het registreren van contactverzoeken.
+* _Link_: dit zijn de links naar veel gebruikte websites of applicaties. Deze hebben een url, een title (dat is linktekst) en een category. Alle links worden in de frontend gegroepeerd op Categorie getoond. 
+* _Afdelingsnaam_: dit is de lijst met afdelingsnamen, die gekoppeld kunnen worden aan een Contactverzoek
+* _kiss_openpub_skill_: dit zijn de skills, of categorieën, die aan nieuws en werkinstructies gekoppeld kunnen worden, en waarop je kunt filteren. 
+
+
+
+Met een klik op een van deze cards, komt u op de pagina waar u de items van die lijst, dat zijn de objecten van dat type, kunt bewerken. Dit doet u in de tab Objecten (of Objects). Met de knop "+ Object toevoegen" (Add Object), kunt u een nieuw item aan maken voor die lijst. Door in de lijst op het knop Details bij een object te klikken, kunt u dat specifieke item aanpassen.  
 
 ![img_1.png](img_1.png)
 
-### Beheren van de openpub_skill lijst
+### Beheren van de kiss_openpub_skill lijst
 
-1. Navigeer naar Schemas en navigeer naar het juiste schema (`kiss_openpub_skill`)
+1. Klik op de startpagina (Dashboard) op de Card van `kiss_openpub_skill`, en zorg dat je op dat tab Objecten (Objects) staat.
 2. Klik op `"+ Object Toevoegen"`
 3. Vul het veld `"Name"` in
 4. Klik op `"Save"`.
 
-_Note:_ je kunt bestaande objecten ook aanpassen vanuit de Gateway UI, de objecten zijn te vinden in het schema (onder de `"+ Object Toevoegen"` knop van stap 3. Dit zal een **nieuw object** aanmaken in de WordPress omgeving.
+Hiermee voeg je een nieuw item toe. Dit item zal zichtbaar zijn in WordPress, bij het veld "Skill". Klik eventueel even buiten het veld en weer opnieuw in het veld om de lijst opnieuw op te halen. 
 
-**Koppeling tussen de beheerde lijsten en WordPress**
+_Note:_ je kunt bestaande objecten ook aanpassen vanuit de Gateway UI. Op de tab Objecten (Objects) ziet u alle objecten van dat type onder elkaar. Vandaar uit kunt u een specifiek object bekijken, en eventueel aanpassen. 
 
-Wanneer je WordPress opent (refresh required!) zal die automatisch de geüpdatete lijst van de Gateway ophalen en de Skills updaten. Hier hoef je niets voor te doen.
+
