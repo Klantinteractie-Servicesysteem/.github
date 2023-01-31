@@ -4,7 +4,7 @@ We onderscheiden binnen ons security beleid de volgende punten
 
 ## Pentest
 
-We gebruiken [pentest-tools](https://pentest-tools.com/) tool om bij iedere release een penetratietest uit te voeren, de release wordt alleen uitgeleverd als hier een positief resultaat uit komt. De resultaten van de pen test vindt u [hier]().
+We gebruiken [pentest-tools](https://pentest-tools.com/) tool om bij iedere release een penetratietest uit te voeren, de release wordt alleen uitgeleverd als hier een positief resultaat uit komt. De resultaten van de pentest van december 2022 vindt u [hier](Aggregated_Scan_Results-20221216.pdf).
 
 ## Workflow
 
