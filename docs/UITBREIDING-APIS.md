@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+
 # Uitbreidingen op de API's
 
 Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken, maar deze ook uit te breiden. Binnen het project hebben we de onderstaande  uitbreidingen gedaan. 
