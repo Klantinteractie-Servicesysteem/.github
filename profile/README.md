@@ -20,7 +20,7 @@ De KISS-applicatie bestaat uit de volgende componenten:
 - [MUST]  User Interface (KISS Frontend, Vue)
 - [MUST]  Backend for frontend (.Net)
 - [MUST]  Search Index (Elastic Search)
-- [MUST]  Database (PostgreSQL / MSSQL)
+- [MUST]  Database (PostgreSQL)
 
 
 ## API's 
