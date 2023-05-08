@@ -3,6 +3,5 @@ site_url: https://readthedocs.org/projects/klantinteractie-servicesysteem/
 
 nav:
   - Home: index.md
-  - Uitbreidingen van de API's: UITBREIDING-APIS.md
 
 theme: readthedocs
