@@ -13,14 +13,9 @@ KISS Fase 1 is momenteel verder in ontwikkeling. Fase 1 wordt in september 2023 
 Door gewijzigde inzichten klopt de documentatie zoals die in januari 2023 is opgeleverd niet meer. We werken momenteel aan een nieuwe release, met een bijgewerkte handleiding. De [documentatie van de vorige versie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/) is nog wel beschikbaar, maar is niet meer actueel. 
 
 
-## Interne Componenten
+## Waaruit bestaat KISS-frontend
 
-De KISS-applicatie bestaat uit de volgende componenten:
-
-- [MUST]  User Interface (KISS Frontend, Vue)
-- [MUST]  Backend for frontend (.Net)
-- [MUST]  Search Index (Elastic Search)
-- [MUST]  Database (PostgreSQL)
+De KISS-applicatie bestaat uit een User Interface (Vue) op een Backend for frontend (.Net + PostgreSQL).  Kennisbronnen worden ontsloten m.b.v, een Search Index (Elastic Search). 
 
 
 ## API's 
