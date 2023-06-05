@@ -84,7 +84,7 @@ Met het eerste script stellen we een aantal waarden in, waaronder het domein (in
 
 #### Environment variabelen
 
-##ZGW Zaaksysteem
+## ZGW Zaaksysteem
 Om KISS te koppelen aan een Zgw zaaksysteem (bijvoorbeeld OpenZaak) dienen de volgende variabelen per omgeving ingevuld te worden:
 - ZAKEN_BASE_URL (de url van het zaak systeem, bv https:www.zaaksysteem.nl )
 - ZAKEN_API_KEY (een door het zaaksysteem geleverde apikey voor KISS. Deze moet minimaal 16 karakters lang zijn)
@@ -93,6 +93,6 @@ Om KISS te koppelen aan een Zgw zaaksysteem (bijvoorbeeld OpenZaak) dienen de vo
 
 #### Externe registers
 
-##ZGW Zaaksysteem
-voor de autorisatie bij een zaaksysteem gaat KISS uit van een JWT token dat opgebouwd wordt volgens de specificaties die hier te vinden zijn: ie: https://open-zaak.readthedocs.io/en/latest/client-development/authentication.html
+## ZGW Zaaksysteem
+voor de autorisatie bij een zaaksysteem gaat KISS uit van een JWT token dat opgebouwd wordt volgens de specificaties die hier te vinden zijn: https://open-zaak.readthedocs.io/en/latest/client-development/authentication.html
 
