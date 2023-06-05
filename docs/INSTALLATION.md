@@ -81,11 +81,18 @@ Met het eerste script stellen we een aantal waarden in, waaronder het domein (in
 > 
 > [4_update-elastic-relevance.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/4_update-elastic-relevance.ps1)
 
-#### Installatie WordPress plugin voor Openpub
 
-Om nieuws en werkinstructies te beheren, maken we in deze installatie gebruik van een WordPress omgeving, uitgebreid met de Openpub WordPress plugin. In de installatiescripts is er een WordPress-installatie neergezet, en is er een admin-account aangemaakt. Als laatste stap moeten we de OpenPub plugin installeren en configureren.
+#### Environment variabelen
 
-_Nog niet eerder met WordPress plugins gewerkt? Lees hier de [officiële documentatie](https://wordpress.org/support/article/managing-plugins/)._
+##ZGW Zaaksysteem
+Om KISS te koppelen aan een Zgw zaaksysteem (bijvoorbeeld OpenZaak) dienen de volgende variabelen per omgeving ingevuld te worden:
+- ZAKEN_BASE_URL (de url van het zaak systeem, bv https:www.zaaksysteem.nl )
+- ZAKEN_API_KEY (een door het zaaksysteem geleverde apikey voor KISS. Deze moet minimaal 16 karakters lang zijn)
+- ZAKEN_API_CLIENT_ID (een door het zaaksysteem geleveerd Id voor KISS)
 
-1. [Download hier](./openPub/) de Openpub plugin bestanden. 
-2. Volg vervolgens de [Openpub plugin installatie stappen](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/openpub/)
+
+#### Externe registers
+
+##ZGW Zaaksysteem
+voor de autorisatie bij een zaaksysteem gaat KISS uit van een JWT token dat opgebouwd wordt volgens de specificaties die hier te vinden zijn: ie: https://open-zaak.readthedocs.io/en/latest/client-development/authentication.html
+
