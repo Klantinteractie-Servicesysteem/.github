@@ -31,7 +31,6 @@ Het private certificate dient los als .key bestand opgeslagen te worden.
 - [Helm](https://helm.sh/docs/intro/install/)
 - [Haven](https://haven.commonground.nl/techniek/compliancy-checker)
 - [Powershell](https://learn.microsoft.com/en-us/powershell/)
-- [SqlCmdLets](https://www.cdata.com/drivers/postgresql/powershell/) (trial)
 
 #### Haven
 Er dient een haven-compliant cluster ingericht te worden.
