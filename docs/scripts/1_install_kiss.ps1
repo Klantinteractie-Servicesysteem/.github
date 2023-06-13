@@ -9,7 +9,6 @@ kubectl config current-context
 
 kubectl config set-context --current --namespace=kiss-namespace
 kubectl create secret tls --cert $cert --key=$key wildcard-kiss-tls -n $namespace
-kubectl create secret generic kvk-certs --from-file=./kvk-certs
 
 # Add helm repos
 helm repo add elastic-repo https://helm.elastic.co
