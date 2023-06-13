@@ -10,7 +10,7 @@ KISS Fase 1 is momenteel verder in ontwikkeling. Fase 1 wordt in september 2023 
 
 
 ## Documentatie
-Door gewijzigde inzichten klopt de documentatie zoals die in januari 2023 is opgeleverd niet meer. We werken momenteel aan een nieuwe release, met een bijgewerkte handleiding. De [documentatie van de vorige versie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/) is nog wel beschikbaar, maar is niet meer actueel. 
+Door gewijzigde inzichten klopt de documentatie zoals die in januari 2023 is opgeleverd niet meer. We werken momenteel aan een nieuwe release, met een bijgewerkte handleiding. De [documentatie van de vorige versie](https://kiss-olddocs.readthedocs.io/en/latest/) is nog wel beschikbaar, maar is niet meer actueel. 
 
 
 ## Waaruit bestaat KISS-frontend
