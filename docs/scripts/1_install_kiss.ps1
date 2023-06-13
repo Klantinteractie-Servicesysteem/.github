@@ -1,65 +1,36 @@
-$ns = "kiss-bundle"
-$gw = "klantinteractie-servicesysteem-gateway"
-$env = "accept"
-$domain = "kiss-demo.nl"
-
+$env = "dev"
 $cert = "__$env-kiss-demo_nl.crt"
 $key = "kiss-$env-private.key"
+$namespace = "kiss-namespace"
 
-$gatewayPassword = "[!ChangeMe!]"
+kubectl create namespace $namespace
 
-kubectl create namespace $ns
-kubectl create namespace kiss-wordpress
-kubectl config set-context --current --namespace=$ns
-kubectl create secret tls --cert $cert --key=$key wildcard-kiss-tls -n kiss-wordpress
-kubectl create secret tls --cert $cert --key=$key wildcard-kiss-tls -n kiss-bundle
+kubectl config current-context
 
-
+kubectl config set-context --current --namespace=kiss-namespace
+kubectl create secret tls --cert $cert --key=$key wildcard-kiss-tls -n $namespace
+kubectl create secret generic kvk-certs --from-file=./kvk-certs
 
 # Add helm repos
-helm repo add cert-manager https://charts.jetstack.io
-helm repo add grafana https://grafana.github.io/helm-charts
-helm repo add elastic https://helm.elastic.co
-helm repo add kvaps https://kvaps.github.io/charts
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo add klantinteractie-servicesysteem https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/KISS-frontend/main/helm
-helm repo add user-component https://raw.githubusercontent.com/ConductionNL/user-component/master/api/helm/
-helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add elastic-repo https://helm.elastic.co
+helm repo add ingress-nginx-repo https://kubernetes.github.io/ingress-nginx
+helm repo add kiss-repo-ci https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/KISS-frontend/main/helm
 
 # Install helm charts
 helm repo update
-helm install ingress-nginx --namespace kiss-ingress ingress-nginx/ingress-nginx --create-namespace --version 4.4.2 --set controller.service.externalTrafficPolicy=Local
-helm install cert-manager --namespace kiss-haven --version v1.10.1 cert-manager/cert-manager --create-namespace --set installCRDs=true
-helm install loki --namespace kiss-haven --version 3.8.0 loki/loki --set installCRDs=true
-helm install eck-operator elastic/eck-operator --namespace kiss-elastic --create-namespace --version 2.5.0
-helm install nfs-server-provisioner --namespace kiss-haven kvaps/nfs-server-provisioner  --create-namespace --version 1.4.0
+helm upgrade --install --namespace kiss-namespace ingress-nginx-release ingress-nginx-repo/ingress-nginx --version 4.4.2 `
+ --set controller.service.externalTrafficPolicy=Local --set annotations.nginx.ingress.kubernetes.io/proxy-buffer-size=16k
+helm upgrade --install eck-operator elastic-repo/eck-operator --version 2.5.0
 
-Write-Output "Timeout zodat nginx tijd heeft om ready te worden, dit endpoint is nodig voor de kiss-frontend"
-timeout 30
-helm upgrade --install klantinteractie-servicesysteem --namespace $ns --version 1.0.17 klantinteractie-servicesysteem/kiss-frontend -f /yaml/kiss-$env.yaml
-helm upgrade --install user-component --namespace $ns user-component/user-component -f /yaml/user-component-$env.yaml
-helm install wordpress --namespace kiss-wordpress bitnami/wordpress --version 15.2.24 --create-namespace -f /yaml/wordpress-$env.yaml
-kubectl create secret tls --cert $cert --key=$key wildcard-kiss-tls -n kiss-wordpress
-
-Write-Output "Timeout zodat de gateway kan opkomen. als beide klantinteractie-servicesysteem-gateway pods up zijn, kan verder gegaan worden."
-timeout 600
-$gwPod = kubectl get pods --selector=app.kubernetes.io/name=gateway -o jsonpath='{.items[0].metadata.name}'
-$gwPod2 = kubectl get pods --selector=app.kubernetes.io/name=gateway -o jsonpath='{.items[1].metadata.name}'
-$ucPod = kubectl get pods --selector=app.kubernetes.io/name=user-component -o jsonpath='{.items[0].metadata.name}'
-
-#Update schema's
-kubectl exec --stdin --tty --namespace $ns $gwPod -c $gw-php -- bin/console doctrine:schema:update -f
-kubectl exec --stdin --tty --namespace $ns $ucPod -c user-component-php -- bin/console doctrine:schema:update -f
-kubectl exec --stdin --tty --namespace $ns $ucPod -c user-component-php -- bin/console hautelook:fixtures:load -n
-
-#Add gateway authentication
-Import-Module PostgreSQLCmdlets
-Start-Process kubectl 'port-forward klantinteractie-servicesysteem-postgresql-0 5433:5432'
-$sqlKiss = Connect-PostgreSQL  -User commonground-gateway -Password $gatewayPassword -Database commonground-gateway -Server localhost -Port 5433
-Add-PostgreSQL -Connection $sqlKiss -Table authentication -Columns @("id", "name", "authenticate_url", "token_url", "secret", "client_id", "scopes") -Values @('c69c8f11-a470-4fc8-b3ed-58d67e966cab','dex', "https://$env.$domain/dex/auth", "https://$env.$domain/dex/token", '[!ChangeMe!]', 'kiss', 'a:4:{i:0;s:6:"openid";i:1;s:5:"email";i:2;s:6:"groups";i:3;s:7:"profile";}')
-
-kubectl exec --stdin --tty -n $ns $gwPod -- bin/console commongateway:initialize -data
-kubectl exec --stdin --tty -n $ns $gwPod -c klantinteractie-servicesysteem-gateway-php -- bin/console cache:clear
-kubectl exec --stdin --tty -n $ns $gwPod2 -c klantinteractie-servicesysteem-gateway-php -- bin/console cache:clear
-
-Write-Output "Klaar"
+helm upgrade --install kiss-ci-release kiss-repo-ci/kiss-frontend --version 1.0.35 `
+--values [local dir]\kiss.template.yaml `
+--set elasticstack.credentials.password=[password], `
+env.HAAL_CENTRAAL_API_KEY=[apikey], `
+env.POSTGRES_PASSWORD=[db_pass], `
+env.OIDC_CLIENT_ID=f73cab23-1291-40c3-b2ba-263634ddd262, `
+env.OIDC_AUTHORITY=https://login.microsoftonline.com/0571c846-217a-43f0-baa6-a9f8a19865a8/v2.0, `
+env.KVK_BASE_URL=https://api.kvk.nl/test/api/v1, `
+env.KVK_API_KEY=l7xx1f2691f2520d487b902f4e0b57a0b197, `
+env.HAAL_CENTRAAL_BASE_URL=https://proefomgeving.haalcentraal.nl/haalcentraal/api, `
+env.POSTGRES_USER=kiss.bff, `
+env.POSTGRES_DB=kiss.bff
