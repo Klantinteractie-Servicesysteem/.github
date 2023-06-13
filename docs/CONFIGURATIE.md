@@ -1,6 +1,7 @@
 # Configuratie
 Bij de installatie van KISS worden er een groot aantal dingen al geconfigureerd. Maar wat daarna in ieder geval nog moet gebeuren, zijn de gemeentespecifieke zaken, zoals het koppelen aan de eigen bronnen, en het inregelen van verschillende lijstjes met eigen gegevens.  
 
+
 ## Configuratie van uw Identity Provider
 Bij de installatie van KISS regelt u de koppeling met uw OpenIDConnect Identity Provider. Daarnaast moet u in uw Identity Provider configureren dat gebruikers die in moeten kunnen loggen bij KISS in ieder geval een 'klantcontactmedewerker'-rol hebben. Een rol is in dit geval een claim van het type `role` of `roles` (beiden worden ondersteund). De waarde die correspondeert met een kiss-medewerker kunt u instellen tijdens de installatie. Standaard is dit `Klantcontactmedewerker`. Voor medewerkers die beheertaken op KISS uitvoeren, is een aparte rol ingeregeld. Ook de naam van deze rol kunt u instellen tijdens de installatie. Standaard is dit `Redacteur`. 
 ### Voorbeeldinrichting in Azure Active Directory
@@ -30,6 +31,20 @@ Als u gebruik maakt van Azure Active Directory als Identity Provider, kunt u dit
 
 
 ## Koppelen van nieuwe bronnen
-nog aan te vullen
+#### Environment variabelen
+_**ZGW Zaaksysteem**_
+
+Om KISS te koppelen aan een Zgw zaaksysteem (bijvoorbeeld Open Zaak) dienen de volgende variabelen per omgeving ingevuld te worden:
+
+
+- ZAKEN_BASE_URL (de url van het zaak systeem, bv https://www.zaaksysteem.nl )
+- ZAKEN_API_KEY (een door het zaaksysteem geleverde apikey voor KISS. Deze moet **minimaal 16 karakters** lang zijn)
+- ZAKEN_API_CLIENT_ID (een door het zaaksysteem geleveerd Id voor KISS)
+
+#### Externe registers
+_**ZGW Zaaksysteem**_
+
+Voor de autorisatie bij een zaaksysteem gaat KISS uit van een JWT token dat opgebouwd wordt volgens de specificaties die hier te vinden zijn: [https://open-zaak.readthedocs.io/en/latest/client-development/authentication.html](https://open-zaak.readthedocs.io/en/latest/client-development/authentication.html)
+
 
 
