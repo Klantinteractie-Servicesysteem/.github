@@ -64,7 +64,7 @@ We doorlopen met de scripts de volgende drie stappen:
 
 1. Eerst installeren we alle onderdelen van KISS, de Kiss-frontend, BFF en Elastic. 
 2. Vervolgens configureren we elastic, zodat er een admin-account wordt aangemaakt op de Kibana-interface. Ook maken we een een kiss-engine aan (noodzakelijk voor communicatie met de frontend). Binnen die engine maken we een crawler aan voor de gemeentelijke website die we ook starten. 
-3. Tenslotte configureren we de relevance tuning binnen Elastic.
+3. (LET OP! Deze stap doen we pas nadat de medewerkers of kennisartikelen zijn geindexeerd) Tenslotte configureren we de relevance tuning binnen Elastic. 
 
 > [1_install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/1_install_kiss.ps1)
 > 
