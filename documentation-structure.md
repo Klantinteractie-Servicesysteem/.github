@@ -5,7 +5,7 @@ Op deze pagina staat per repository welke documenatie-bestanden we maken.
 ## .Github
 Hier staat de algemene documentatie voor het project KISS. Main locatie voor documentatie is: [https://github.com/Klantinteractie-Servicesysteem/.github/tree/main/docs](https://github.com/Klantinteractie-Servicesysteem/.github/tree/main/docs)
 
-### README.md
+#### README.md
 Dit is de pagina die je ziet als je op https://github.com/Klantinteractie-Servicesysteem/ terecht komt. 
 Deze staat: https://github.com/Klantinteractie-Servicesysteem/.github/tree/main/profile
 
@@ -23,7 +23,7 @@ Introducerende tekst, daaronder de hoofdstukken:
  ## .Github/docs
  Hier staat alle overkoepelende documentatie voor KISS. Met deze documentatie moet iemand, die aan de slag wil met KISS in principe het hele project up en running krijgen (binnenhalen, installeren, en configureren). Daarnaast moet hier een beheerhandleiding staan voro zover van toepassing
  
-### INSTALLATION.md
+#### INSTALLATION.md
 <details>
 <summary>Indeling</summary>
   
@@ -35,7 +35,7 @@ Introducerende tekst, daaronder de hoofdstukken:
 -  Installatie 
  </details>
  
- ### CONFIGURATION.md
+ #### CONFIGURATION.md
  <details>
 <summary>Indeling</summary>
   
@@ -49,7 +49,7 @@ Introducerende tekst, daaronder de hoofdstukken:
 ## KISS-frontend
 Dit is de repository voor de KISS frontend en de BFF. Hier zetten we de noodzakelijke bestanden neer. 
 
-### README.md
+#### README.md
 Belangrijke info die je moet weten als je met deze repo aan de slag gaat  
 
 <details>
