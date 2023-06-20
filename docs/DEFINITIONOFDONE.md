@@ -13,12 +13,13 @@ Alle Automatische tests zijn uitgevoerd en geslaagd (zichtbaar als badges op de 
 - Snyk (vulnerability en OWASP scanning)
 - Dependabot (security issues in packages)
 - Super-linter (code volgens afspraak geformatteerd)
+- Unit tests (in ontwikkeling)
 
-### Unit Tests
+### Unit tests
 Nieuwe unit tests worden toegevoegd:
 - voor code die, wanneer niet correct geïmplementeerd, kan leiden tot kritieke fouten die moeilijk te detecteren zijn
 - voor code die moeilijk te begrijpen is zonder uitvoerbare voorbeelden
-- Voor code die breed hergebruikt wordt binnen de applicatie
+- voor code die breed hergebruikt wordt binnen de applicatie
 
 ### Handmatige tests
 - Alle handmatige tests zijn aantoonbaar uitgevoerd op basis van een testscipt per userstory
@@ -28,8 +29,15 @@ Nieuwe unit tests worden toegevoegd:
 ### Pentest
 Pentests (frontend en backend) wordt periodiek uitgevoerd (wekelijks)
 
+### Errorlogging
+Errorlogging is ingeregeld
+
 ### Documentatie
 Documentatie is compleet en actueel:
 - Documentatie voor ontwikkelaars staat in de code
 - Voor overige documentatie zie Read the docs
+
+### CI/CD
+- Er is een werkende CI/CD straat
+- Kubernetes / Docker / Helm
 
