@@ -1,12 +1,12 @@
 # Definition of Done
 
-De aanpassingen staan op de dev omgeving (<https://kiss-dev.commonground.nu/>) en voldoen aan alle acceptatiecriteria.
+De aanpassingen staan op een devevelopmentomgeving https://dev.kiss-demo.nl/ en productieomgeving https://prod.kiss-demo.nl/ en voldoen aan alle acceptatiecriteria.
 
 **De applicatie voldoet aan de ontwerpprincipes van Gebruiker Centraal.**
 De eindgebruiker is betrokken is gedurende het hele project betrokken bij ontwerp en specificatie. De applicatie wordt regelmatig getest door de gebruikers.
 
 **Code is gereviewd zijn door een andere developer.**
-Er wordt ontwikkeld in feature branches en gedeployed vanaf de development branch. Zodoende is in GitHub inzichtelijk wie aan een story gewerkt heeft en wie een pull request approved heeft.
+Er wordt ontwikkeld in feature branches en gedeployed vanaf de development branch. Zodoende is inzichtelijk wie aan een story gewerkt heeft en wie een pull request approved heeft.
 
 **Automatische tests**
 Alle Automatische tests zijn uitgevoerd en geslaagd (zichtbaar als badges op de README)
