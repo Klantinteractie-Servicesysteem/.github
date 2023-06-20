@@ -3,5 +3,10 @@ site_url: https://readthedocs.org/projects/klantinteractie-servicesysteem/
 
 nav:
   - Home: index.md
-
+  - Installatie: INSTALLATION.md
+  - Configuratie: CONFIGURATIE.md
+  - Definition of Done: DEFINITIONOFDONE.md
+  - Security: SECURITY.md
+  - Uitbreidingen van de API's: UITBREIDING-APIS.md
+  
 theme: readthedocs
