@@ -2,32 +2,34 @@
 
 De aanpassingen staan op een devevelopmentomgeving https://dev.kiss-demo.nl/ en productieomgeving https://prod.kiss-demo.nl/ en voldoen aan alle acceptatiecriteria.
 
-**De applicatie voldoet aan de ontwerpprincipes van Gebruiker Centraal.**
+### De applicatie voldoet aan de ontwerpprincipes van Gebruiker Centraal
 De eindgebruiker is betrokken is gedurende het hele project betrokken bij ontwerp en specificatie. De applicatie wordt regelmatig getest door de gebruikers.
 
-**Code is gereviewd zijn door een andere developer.**
+### Code is gereviewd zijn door een andere developer
 Er wordt ontwikkeld in feature branches en gedeployed vanaf de development branch. Zodoende is inzichtelijk wie aan een story gewerkt heeft en wie een pull request approved heeft.
 
-**Automatische tests**
+### Automatische tests
 Alle Automatische tests zijn uitgevoerd en geslaagd (zichtbaar als badges op de README)
+- Snyk (vulnerability en OWASP scanning)
+- Dependabot (security issues in packages)
+- Super-linter (code volgens afspraak geformatteerd)
 
-**Unit Tests (Nieuwe unit tests worden toegevoegd naar inzicht van de developer.)**
-Snyk (vulnerability en OWASP scanning)
-Docker vulnerablity check
-Better  Code Hub (code quality)
-Aanwezigheid ongewenste variabelen (tokens, secrets etc.) (alleen indien we hier een tool voor kunnen vinden, anders schrappen we dit uit de DoD en wordt het eventueel een audit/review onderdeel)
+### Unit Tests
+Nieuwe unit tests worden toegevoegd:
+- voor code die, wanneer niet correct geïmplementeerd, kan leiden tot kritieke fouten die moeilijk te detecteren zijn
+- voor code die moeilijk te begrijpen is zonder uitvoerbare voorbeelden
+- Voor code die breed hergebruikt wordt binnen de applicatie
 
-**Handmatige tests**
-Alle handmatige tests zijn uitgevoerd en geslaagd (afgevinkt en bij voorkeur een rapport toegevoegd aan de story)
+### Handmatige tests
+- Alle handmatige tests zijn aantoonbaar uitgevoerd op basis van een testscipt per userstory
+- Bij oplevering wordt een integratietest doorlopen op basis van een testscript
+- WCAG wordt handmatig gecontroleerd m.b.v. lighthouse. De resultaten van deze test vindt u [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/WCAG-Lighthouse-Report-20221219.pdf).
 
-**Functioneel testen.**
-WCAG. wordt handmatig gecontroleerd m.b.v. lighthouse. De resultaten van deze test vindt u [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/WCAG-Lighthouse-Report-20221219.pdf).<br />
-Pentests (frontend en backend) Wordt periodiek uitgevoerd (maandelijks). We maken de afspraak dat resultaten uit een vorige pentest bij de eerstvolgende story opgelost worden. De oplossing wordt echter pas gecontroleerd bij de volgende pentest.
+### Pentest
+Pentests (frontend en backend) wordt periodiek uitgevoerd (wekelijks). 
 
+### Documentatie
+Documentatie is compleet en actueel:
+- Documentatie voor ontwikkelaars staat in de code
+- Voor overige documentatie zie Read the docs
 
-**Documentatie voor contributors**: code voorzien in code documentatie, dit wordt bij de code review beoordeeld
-
-**Documentatie voor eindgebruikers**: is geen onderdeel van het project?
-
-**Documentatie voor implementatiepartners**: Changes.md is aangevuld met release notes aan de hand van symantic versioning en per release werken we een implementatie handleiding bij
-De DoD is een waarborg voor (een deel van) de architectuurkaders
