@@ -50,17 +50,17 @@ Voor de autorisatie bij een zaaksysteem gaat KISS uit van een JWT token dat opge
 KISS maakt gebruik van Elasticsearch voor het ontsluiten van doorzoekbare bronnen. Dit zijn: Kennisartikelen (PDC-producten), websitepagina's en ook medewerkers.  Om te zorgen dat de informatie van deze bronnen opd e juiste manier in KISS terecht komt moet u een aantal zaken regelen
 
 ### Engine met de naam 'kiss-engine'
-_Deze stap wordt automatisch uitgevoerd in het installatiescript ['NaamScriptEnEenLInk' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
+_Deze stap wordt automatisch uitgevoerd in het installatiescript ['2_update-elastic.ps1' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
 
 - Ga in de Kibana-interface van de Elastic-installatie naar Enterprise Search > App Search > Engines. 
 - Maak een nieuwe engine aan, en noem deze kiss-engine; **Let op!** Zorg dat de **Engine language** ingesetld staat op **Dutch**
 
 ### Crawler
-_Deze stap wordt automatisch uitgevoerd in het installatiescript ['NaamScriptEnEenLInk' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
+_Deze stap wordt automatisch uitgevoerd in het installatiescript ['2_update-elastic.ps1' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
 
 Het doorzoeken van een website binnen KISS wordt mogelijk door de website te crawlen vanuit Elastic Search. Hiervoor maak je binnen de engine een crawler aan. Als u het installatiescript 'NaamScriptEnEenLInk' hebt gebruikt, is er een eenvoudige crawler aangemaakt op het hele domein van uw website. Het is aan te raden om verder overleg te hebben met uw websitebeheerder, over het verdere finetunen van de crawler. Mogelijk zijn er aanpassingen nodig in uw robots.txt, of zijn er aanvullende filterinstellingen nodig. 
 
-Op het moment dat de crawler de eerste keer gedraaid heeft, wordt het engine schema uitgebreid met de [velden die horen biJa de crawler](https://www.elastic.co/guide/en/app-search/current/web-crawler-reference.html#web-crawler-reference-web-crawler-schema).
+Op het moment dat de crawler de eerste keer gedraaid heeft, wordt het engine schema uitgebreid met de [velden die horen bij de crawler](https://www.elastic.co/guide/en/app-search/current/web-crawler-reference.html#web-crawler-reference-web-crawler-schema).
 
 ### Syncen van bronnen
 De eerste keer dat er via de synctool Kennisartikelen (PDC-producten) of Medewekers worden geindexeerd in Elastic, wordt het Engine Schema uitgebreid met een aantal velden. Dit zijn: 
@@ -69,7 +69,7 @@ De eerste keer dat er via de synctool Kennisartikelen (PDC-producten) of Medewek
 - `object`
 
 ### Relevance Tuning
-_Deze stap wordt automatisch uitgevoerd in het installatiescript ['NaamScriptEnEenLInk' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
+_Deze stap wordt automatisch uitgevoerd in het installatiescript ['3_update-elastic-relevance.ps1' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
 
 Om de informatie uit de Kennisartikelen en websites doorzoekbaar te maken, moeten deze velden opgenomen zijn in het Engine Schema. Let op: zijn er nieuwe velden toegevoegd aan het Engine Schema, bijvoorbeeld omdat er een nieuw type bron wordt toegevoegd? Dan moeten deze velden doorzoekbaar gemaakt worden. Dit kunt u doen m.b.v. de knop 'Update search settings' op de pagina Manage engine schema. U kunt ook op de pagina Relevance Tuning aangeven dat een schemaveld doorzoekbaar moet zijn. 
 
