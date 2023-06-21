@@ -5,8 +5,8 @@ De aanpassingen staan op een devevelopmentomgeving https://dev.kiss-demo.nl/ en 
 ### De applicatie voldoet aan de ontwerpprincipes van Gebruiker Centraal
 De eindgebruiker is betrokken is gedurende het hele project betrokken bij ontwerp en specificatie. De applicatie wordt regelmatig getest door de gebruikers.
 
-### Code is gereviewd zijn door een andere developer
-Er wordt ontwikkeld in feature branches en gedeployed vanaf de development branch. Zodoende is inzichtelijk wie aan een story gewerkt heeft en wie een pull request approved heeft.
+### Code is gereviewd door een andere developer
+Er wordt ontwikkeld in feature branches en gedeployed vanaf de main branch. Zodoende is inzichtelijk wie aan een story gewerkt heeft en wie een pull request approved heeft.
 
 ### Automatische tests
 Alle Automatische tests zijn uitgevoerd en geslaagd (zichtbaar als badges op de README)
@@ -29,13 +29,13 @@ Nieuwe unit tests worden toegevoegd:
 ### Pentest
 Pentests (frontend en backend) wordt periodiek uitgevoerd (wekelijks)
 
-### Errorlogging
-Errorlogging is ingeregeld
+### Error logging
+Error logging is ingeregeld
 
 ### Documentatie
 Documentatie is compleet en actueel:
 - Documentatie voor ontwikkelaars staat in de code
-- Voor overige documentatie zie Read the docs
+- Voor overige documentatie zie [Readthedocs](https://kiss-klantinteractie-servicesysteem.readthedocs.io/)
 
 ### CI/CD
 - Er is een werkende CI/CD straat
