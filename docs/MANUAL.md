@@ -15,18 +15,17 @@ Nieuwsberichten en werkinstructies zijn berichten die van belang kunnen zijn voo
 
 Op onderstaande afbeelding is de overzichtspagina van de nieuwsberichten en werkinstructies beheer te zien.
 
-(Afbeelding van de overzichtspagina) 
-
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Nieuws-en-werkinstructies-beheer-overzicht.jpg.jpg)
 
 
 ### Nieuwsbericht of werkinstructie toevoegen
 Voeg een nieuwsbericht of werkinstructie toe door rechts bovenaan op de "toevoegen" te drukken.
 
-(Afbeelding met "toevoegen" omringd)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Nieuws-en-werkinstructies-beheer-toevoegen.jpg)
 
 Vervolgens kom je op onderstaand scherm.
 
-(Detailpagina van het toevoegen van een bericht)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Nieuws-en-werkinstructies-beheer-toevoegen-detail.jpg)
 
 Hieronder wordt elk invoerveld gedefiniëerd.
 
@@ -49,11 +48,13 @@ Hieronder wordt elk invoerveld gedefiniëerd.
 ### Nieuwsbericht of werkinstructie wijzigen
 Een nieuwsbericht of werkinstructie kan je wijzigen door op het pijltje te klikken dat rechts in de tabel te zien is.
 
-(Afbeelding met "toevoegen" omringd)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Nieuws-en-werkinstructies-beheer-wijzigen.jpg)
+
 
 Vervolgens kom je op onderstaand scherm. 
 
-(Detailpagina van de het wijzigen van een bericht)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Nieuws-en-werkinstructies-beheer-wijzigen-detail.jpg)
+
 
 Hieronder wordt elk invoerveld gedefiniëerd.
 
@@ -76,12 +77,12 @@ Hieronder wordt elk invoerveld gedefiniëerd.
 ### Nieuwsbericht of werkinstructie verwijderen
 Een nieuwsbericht of werkinstructie kan je verwijderen door op het prullenbak icoontje te klikken dat rechts in de tabel te zien is.
 
-(Afbeelding met prullenbak icoontje omringd)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Nieuws-en-werkinstructies-beheer-verwijderen.jpg)
+
 
 Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit bericht wilt verwijderen?". Hierbij klik je op 'ok'
 
-(Afbeelding van de pop-up.)
-
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Nieuws-en-werkinstructies-beheer-verwijderen-popup.jpg)
 
 ## Skills
 Op de pagina 'Skills' kan je de skills beheren. Skills kunnen bijvoorbeeld de verschillende afdelingen binnen het klantcontactcentrum zijn, zoals 'burgerzaken' of 'werk en inkomen'.
@@ -90,45 +91,52 @@ De skills die je hier aanmaakt kunnen vervolgens als filter gebruikt worden bij 
 
 Het kan zijn dat jouw gemeente niet werkt met skills. In dat geval hoef je hier niets te doen.
 
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Skills-beheer-overzicht.jpg)
+
 ### Skill toevoegen
 Een skill voeg je toe door op het plusje te klikken dat rechts onder in beeld staat.
 
-(Screenshot van het scherm met het plusje omringd)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Skills-beheer-toevoegen.jpg)
 
 Vervolgens kom je op onderstaand scherm. Hier kan je de naam van de skill invullen. Druk op 'opslaan' om de skill toe te voegen.
 
-(Screenshot van de detailpagina)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Skills-beheer-toevoegen-detail.jpg)
+
 
 ### Skill wijzigen
 Een skill wijzig je door op de naam van de skill te klikken.
 
-(Screenshot van het scherm met de naam omringd)
+![inage](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Skills-beheer-wijzigen.jpg)
+
 
 Vervolgens kom je op onderstaand scherm. Hier kan je de naam van de skill wijzigen. Klik op 'opslaan' om de wijziging door te voeren.
 
-(Screenshot van de detailpagina) 
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Skills-beheer-wijzigen-detail.jpg)
 
 ### Skill verwijderen
 Een skill kan je verwijderen door op het prullenbak icoontje te klikken dat rechts van de skill staat. 
 
-(Afbeelding met prullenbak icoontje omringd)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Skills-beheer-verwijderen.jpg)
+
 
 Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit bericht wilt verwijderen?". Hierbij klik je op 'ok' 
 
-(Afbeelding van de pop-up.)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Skills-beheer-verwijderen-popup.jpg)
 
 
 ## Links
 Op de pagina 'links' kan je de lijst met veelgebruikte links beheren. Hier kan je alle links neerzetten die voor jouw klantcontactmedewerkers handig zijn om altijd snel bij de hand te kunnen hebben. Denk bijvoorbeeld aan links naar bepaalde systemen of formulieren.
 
-(Afbeelding van de "links" pagina)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Links-beheer-overzicht.jpg)
 
 ### Links toevoegen
 Een link voeg je toe door op het plusje te klikken dat rechts onder in beeld staat.
 
-(Screenshot van het scherm met het plusje omringd)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Links-beheer-toevoegen.jpg)
 
 Vervolgens kom je op onderstaand scherm. Hier kan je de titel, URL en de categorie van de link toevoegen.
+
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Links-beheer-toevoegen-detail.jpg)
 
 **titel:** De naam waarmee de link in de lijst komt te staan.
 
@@ -137,14 +145,18 @@ Vervolgens kom je op onderstaand scherm. Hier kan je de titel, URL en de categor
 **categorie:** De categorie waarin de link hoort. Als de link bij een al bestaande categorie hoort, typ je de naam van die cateorie in. Als je een andere categorie typt, wordt er automatisch een nieuwe categorie aangemaakt waar deze link onder valt.
 
 Druk op 'opslaan' om de link toe te voegen.
-(Screenshot van de detailpagina)
+
 
 ### Links wijzigen
 Een link wijzig je door op de naam van de link te klikken.
-(Screenshot van het scherm met de naam omringd)
+
+![9mage](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Links-beheer-wijzigen.jpg)
+
 
 Vervolgens kom je op onderstaand scherm. Hier kan je de link wijzigen. Klik op 'opslaan' om de wijziging door te voeren.
-(Screenshot van de detailpagina) 
+
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Links-beheer-wijzigen-detail.jpg)
+
 
 **titel:** De naam waarmee de link in de lijst komt te staan.
 
@@ -154,31 +166,42 @@ Vervolgens kom je op onderstaand scherm. Hier kan je de link wijzigen. Klik op '
 
 ### Links verwijderen
 Een link kan je verwijderen door op het prullenbak icoontje te klikken dat rechts van de link staat. 
-(Afbeelding met prullenbak icoontje omringd)
 
-Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u deze link wilt verwijderen?". Hierbij klik je op 'ok' (Afbeelding van de pop-up.)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Links-beheer-verwijderen.jpg)
+
+Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u deze link wilt verwijderen?". Hierbij klik je op 'ok' 
+
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Links-beheer-verwijderen-popup.jpg)
 
 ## Gespreksresultaten
 Op de pagina 'Gespreksresultaten' kan je de lijst met gespreksresultaten beheren. Met deze gespreksresultaten kunnen klantcontactmedewerkers aan het einde van hun contactmoment aangeven wat er met het gesprek is gebeurd, bijvoorbeeld zelfstandig afgehandeld of doorverbonden.
 
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer.jpg)
+
 ### Gespreksresultaat toevoegen
 Een gespreksresultaat voeg je toe door op het plusje te klikken dat rechts onder in beeld staat.
 
-(Screenshot van het scherm met het plusje omringd)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer-toevoegen.jpg)
 
 Vervolgens kom je op onderstaand scherm. Hier kan je de naam van het gespreksresultaat invullen. Druk op 'opslaan' om het gespreksesultaat toe te voegen.
-(Screenshot van de detailpagina)
+
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer-toevoegen-detail.jpg)
 
 
 ### Gespreksresultaat wijzigen
 Een gespreksresultaat wijzig je door op de naam van het gespreksresultaat te klikken.
-(Screenshot van het scherm met de naam omringd)
+
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer-wijzigen.jpg)
 
 Vervolgens kom je op onderstaand scherm. Hier kan je de naam van het gespreksresultaat wijzigen. Klik op 'opslaan' om de wijziging door te voeren.
-(Screenshot van de detailpagina) 
+
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer-wijzigen-detail.jpg)
 
 ### Gespreksresultaat verwijderen
 Een gespreksresultaat kan je verwijderen door op het prullenbak icoontje te klikken dat rechts van het gespreksresultaat staat. 
-(Afbeelding met prullenbak icoontje omringd)
 
-Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit gespreksresultaat wilt verwijderen?". Hierbij klik je op 'ok' (Afbeelding van de pop-up.)
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer-verwijderen.jpg)
+
+Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit gespreksresultaat wilt verwijderen?". Hierbij klik je op 'ok' 
+
+![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer-verwijderen-popup.jpg)
