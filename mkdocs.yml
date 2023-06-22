@@ -7,6 +7,5 @@ nav:
   - Configuratie: CONFIGURATIE.md
   - Definition of Done: DEFINITIONOFDONE.md
   - Security: SECURITY.md
-  - Uitbreidingen van de API's: UITBREIDING-APIS.md
   
 theme: readthedocs
