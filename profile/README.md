@@ -25,15 +25,18 @@ De KISS-applicatie bestaat uit een User Interface (Vue) op een Backend for front
 
 
 ## API's 
-De KISS-applicatie maakt gebruik van een groot aantal door de VNG gestandaardiseerde API's om te communiceren met onderliggende registraties in het eigen gemeentelijke landschap en met enkele landelijke basisregistraties:
+De KISS-applicatie maakt gebruik van enkele landelijke basisregistraties. Daarnaast implementeert KISS verschillende standaarden uit het domein van Common Ground, die zijn ontwikkeld onder de vlag van VNG, en waarvan sommige inmiddels ook [door VNG gestandaardiseerd zijn](https://www.gemmaonline.nl/index.php/Ontwikkelagenda_API-standaarden).  
 
 - [KvK apis](https://developers.kvk.nl/documentation/zoeken-api)
 - [Haal Centraal BRP Personen bevragen](https://brp-api.github.io/Haal-Centraal-BRP-bevragen/) 
-- [ZGW Zaken](https://vng-realisatie.github.io/gemma-zaken/standaard/zaken/) 
-- [ZGW Catalogi](https://vng-realisatie.github.io/gemma-zaken/standaard/catalogi/) 
-- [ZGW Documenten](https://vng-realisatie.github.io/gemma-zaken/standaard/documenten/)
-- [Objecttype API](https://github.com/maykinmedia/objecttypes-api)
+- [ZGW Zaken](https://open-zaak.dev.kiss-demo.nl/zaken/api/v1/schema/) 
+- [ZGW Catalogi](https://open-zaak.dev.kiss-demo.nl/catalogi/api/v1/schema/) 
+- [ZGW Documenten](https://open-zaak.dev.kiss-demo.nl/documenten/api/v1/schema/)
+- [Objecttype API](https://objecten.dev.kiss-demo.nl/api/v2/schema/)
 - [Objecten API](https://github.com/maykinmedia/objects-api)
+- [Klanten API](https://open-klant.dev.kiss-demo.nl/klanten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
+- [Contactmomenten API](https://open-klant.dev.kiss-demo.nl/contactmomenten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
+- SDG-plus: voor het syncen van kennisartikelen maken we gebruik van een aangepaste versie van de API van de SDG-invoervoorziening **LINK VOLGT**
 
 
 ## Bouw
