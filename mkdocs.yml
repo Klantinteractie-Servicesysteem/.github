@@ -5,6 +5,7 @@ nav:
   - Home: index.md
   - Installatie: INSTALLATION.md
   - Configuratie: CONFIGURATIE.md
+  - Handleiding beheer: MANUAL.md
   - Definition of Done: DEFINITIONOFDONE.md
   - Security: SECURITY.md
   
