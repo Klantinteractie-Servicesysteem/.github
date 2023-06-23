@@ -14,6 +14,7 @@ KISS Fase 1 is momenteel verder in ontwikkeling. Fase 1 wordt in september 2023 
 - [Documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/):
   - [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/)
   - [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/CONFIGURATIE/)
+  - [Handleiding beheer](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/MANUAL/)
   - [Definition of Done](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/DEFINITIONOFDONE/)
   - [Security](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/SECURITY/)
   - [Documentatie-archief](https://kiss-oldDocs.readthedocs.io/)
