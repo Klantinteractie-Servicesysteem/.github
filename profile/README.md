@@ -37,7 +37,7 @@ De KISS-applicatie maakt gebruik van enkele landelijke basisregistraties. Daarna
 - [Objecten API](https://github.com/maykinmedia/objects-api)
 - [Klanten API](https://open-klant.dev.kiss-demo.nl/klanten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
 - [Contactmomenten API](https://open-klant.dev.kiss-demo.nl/contactmomenten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
-- SDG-plus: voor het syncen van kennisartikelen maken we gebruik van een aangepaste versie van de API van de SDG-invoervoorziening **LINK VOLGT**
+- [SDG-plus](https://sdgtest.icatt-services.nl/openapi/1.3.0/openapi.json): voor het syncen van kennisartikelen maken we gebruik van een aangepaste versie van de API van [de SDG-invoervoorziening (versie 1.3.0)](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/maykinmedia/sdg-invoervoorziening/1.3.0/src/openapi.yaml&nocors). 
 
 
 ## Bouw
