@@ -14,7 +14,7 @@ Nieuwsberichten en werkinstructies zijn berichten die van belang kunnen zijn voo
 
 Op onderstaande afbeelding is de overzichtspagina van het beheer van nieuwsberichten en werkinstructies te zien.
 
-![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Nieuws-en-werkinstructies-beheer-overzicht.jpg.jpg)
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/Nieuws-en-werkinstructies-beheer-overzicht.jpg.jpg)
 
 
 ### Nieuwsbericht of werkinstructie toevoegen
