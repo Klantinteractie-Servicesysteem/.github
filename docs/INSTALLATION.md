@@ -46,16 +46,16 @@ Bij het volgen van de [Azure](https://haven.commonground.nl/techniek/aan-de-slag
 
 Per servertype is er een quota aan het maximale aantal cores dat gebruikt mag worden in de regio.
 Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
-https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas.
+[https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas](https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas).
 
 #### Authenticatie
-De authenticatie van KISS gebeurt m.b.v.Azure Active Directory.
+De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
 
 ### Installatie
 Als het kubernetes cluster is ingericht, kunnen we de onderdelen van KISS gaan installeren.
 
 #### Placeholders
-De yaml-voorbeeldbestanden staan in https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/blob/main/helm/kiss-frontend/kiss.template.yaml
+De yaml-voorbeeldbestanden staan in [https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/blob/main/helm/kiss-frontend/kiss.template.yaml](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/blob/main/helm/kiss-frontend/kiss.template.yaml)
 
 #### Uitvoeren
 De installatie kan worden uitgevoerd middels onderstaande powershell scripts. Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
