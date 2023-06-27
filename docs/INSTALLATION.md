@@ -38,6 +38,7 @@ Hiervoor zijn referentie-implementaties te vinden op de [haven](https://haven.co
 
 #### Azure
 Bij het volgen van de [Azure](https://haven.commonground.nl/techniek/aan-de-slag/azure) referentie dient met de volgende extra zaken rekening gehouden te worden.
+
 - minimaal 3 nodes
 - high availability aan zetten
 - local logins met RBAC gebruiken, GEEN Azure Active Directory!
