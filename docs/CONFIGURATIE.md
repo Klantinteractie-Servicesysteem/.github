@@ -11,7 +11,7 @@ Als u gebruik maakt van Azure Active Directory als Identity Provider, kunt u dit
   
     ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-01.png)
   
-1. Navigeer naar App roles, kies Create app role en vol de benodigde velden in. Belangrijk is dat u kiest voor Users/Groups als Allowed member types en bij Value kiest voor de rol die u bij de installatie geconfigureerd hebt (standaard `Klantcontactmedewerker`).
+1. Navigeer naar App roles, kies Create app role en vul de benodigde velden in. Belangrijk is dat u kiest voor Users/Groups bij Allowed member types en bij Value kiest voor de rol die u bij de installatie geconfigureerd hebt (standaard `Klantcontactmedewerker`).
 
     ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-02.png)
 
