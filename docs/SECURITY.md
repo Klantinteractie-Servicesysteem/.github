@@ -1,7 +1,7 @@
 # Security considerations
 
-## Snyk Settings
-Snyk is configured to automatically check every Pull Request on new vulnerabilities
+## Snyk
+Snyk is configured to automatically check every Pull Request on new vulnerabilities<a href="https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/SECURITY.md" target="_blank">.</a>
 
 ### Vulnerabilities
 #### Anti-forgery token validation disabled 
