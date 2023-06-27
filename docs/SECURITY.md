@@ -1,10 +1,6 @@
 # Security considerations
 
-## Snyk
-### Register for access
-https://app.snyk.io/invite/link/accept?invite=2293c621-01b0-4a56-bd91-d022ce60f945&utm_source=link_invite&utm_medium=referral&utm_campaign=product-link-invite&from=link_invite
-
-## Settings
+## Snyk Settings
 Snyk is configured to automatically check every Pull Request on new vulnerabilities
 
 ### Vulnerabilities
