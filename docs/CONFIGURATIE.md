@@ -1,33 +1,35 @@
 # Configuratie
-Bij de installatie van KISS worden er een groot aantal dingen al geconfigureerd. Maar wat daarna in ieder geval nog moet gebeuren, zijn de gemeentespecifieke zaken, zoals het koppelen aan de eigen bronnen, en het inregelen van verschillende lijstjes met eigen gegevens.  
+Bij de installatie van KISS worden er een groot aantal dingen al geconfigureerd. Op deze pagina staan verschillende onderdelen van de configuratie toegelicht.
 
 
 ## Configuratie van uw Identity Provider
 Bij de installatie van KISS regelt u de koppeling met uw OpenIDConnect Identity Provider. Daarnaast moet u in uw Identity Provider configureren dat gebruikers die in moeten kunnen loggen bij KISS in ieder geval een 'klantcontactmedewerker'-rol hebben. Een rol is in dit geval een claim van het type `role` of `roles` (beiden worden ondersteund). De waarde die correspondeert met een kiss-medewerker kunt u instellen tijdens de installatie. Standaard is dit `Klantcontactmedewerker`. Voor medewerkers die beheertaken op KISS uitvoeren, is een aparte rol ingeregeld. Ook de naam van deze rol kunt u instellen tijdens de installatie. Standaard is dit `Redacteur`. 
+
 ### Voorbeeldinrichting in Azure Active Directory
 Als u gebruik maakt van Azure Active Directory als Identity Provider, kunt u dit op de volgende manier inrichten.
 1. Bij de installatie van KISS heeft u een App Registration aangemaakt. Ga binnen Azure AD naar App registrations en klik op de applicatie.
   
-    ![image](https://github.com/Klantinteractie-Servicesysteem/.github/assets/104420825/ed03cc61-ff31-4030-875f-fca89ba01381)
+    ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-01.png)
   
-1. Navigeer naar App roles, kie Create app role en vol de benodigde velden in. Belangrijk is dat u kiest voor Users/Groups als Allowed member types en bij Value kiest voor de rol die u bij de installatie geconfigureerd hebt (standaard `Klantcontactmedewerker`).
+1. Navigeer naar App roles, kies Create app role en vol de benodigde velden in. Belangrijk is dat u kiest voor Users/Groups als Allowed member types en bij Value kiest voor de rol die u bij de installatie geconfigureerd hebt (standaard `Klantcontactmedewerker`).
 
-    ![image](https://github.com/Klantinteractie-Servicesysteem/.github/assets/104420825/313a6637-2ea7-49ec-9792-4a8e961b8127)
+    ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-02.png)
 
 1. Herhaal de vorige stap voor de rol die u tijdens de installatie heeft geconfigureerd voor medewerkers die beheertaken uitvoeren (standaard `Redacteur`)
 1. Nu kunt u deze rollen toekennen aan gebruikers of groepen uit uw organisatie. Hiervoor moet u eerst terug naar Azure Active Directory. Navigeer daar naar Enterprise applications.
 
-    ![image](https://github.com/Klantinteractie-Servicesysteem/.github/assets/104420825/dd22f150-358b-4a1c-b994-b9601e28b72b)
+    ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-03.png)
 
 1. In dit scherm vindt u een applicatie met dezelfde naam als de App registration die u eerder heeft aangemaakt. Klik op de applicatie.
 
-    ![image](https://github.com/Klantinteractie-Servicesysteem/.github/assets/104420825/baefd96c-e3a7-4ef6-abd7-d158a6bf1356)
+    ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-04.png)
 
 1. Navigeer naar Users and groups, en klik op Add user/group.
 
-    ![image](https://github.com/Klantinteractie-Servicesysteem/.github/assets/104420825/5c211af6-08eb-4511-b744-9ef4ea81d572)
+    ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-05.png)
 
 1. In dit scherm kunt u de rollen die u eerder gedefinieerd heeft, toekennen aan individuele gebruikers en - als uw licentie van Active Directory dit toestaat - groepen.
+
 
 
 ## Koppelen van nieuwe bronnen
