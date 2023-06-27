@@ -10,6 +10,7 @@ Er wordt ontwikkeld in feature branches en gedeployed vanaf de main branch. Zodo
 
 ### Automatische tests
 Alle Automatische tests zijn uitgevoerd en geslaagd (zichtbaar als badges op de README)
+
 - Snyk (vulnerability en OWASP scanning)
 - Dependabot (security issues in packages)
 - Super-linter (code volgens afspraak geformatteerd)
@@ -17,6 +18,7 @@ Alle Automatische tests zijn uitgevoerd en geslaagd (zichtbaar als badges op de 
 
 ### Unit tests
 Nieuwe unit tests worden toegevoegd:
+
 - voor code die, wanneer niet correct geïmplementeerd, kan leiden tot kritieke fouten die moeilijk te detecteren zijn
 - voor code die moeilijk te begrijpen is zonder uitvoerbare voorbeelden
 - voor code die breed hergebruikt wordt binnen de applicatie
@@ -34,10 +36,11 @@ Error logging is ingeregeld
 
 ### Documentatie
 Documentatie is compleet en actueel:
+
 - Documentatie voor ontwikkelaars staat in de code
 - Voor overige documentatie zie [Readthedocs](https://kiss-klantinteractie-servicesysteem.readthedocs.io/)
 
 ### CI/CD
 - Er is een werkende CI/CD straat
-- Kubernetes / Docker / Helm
+- De applicatie kan draaien in een Haven Compliant Cluster, conform de checks zoals beschreven op [https://haven.commonground.nl/techniek/compliancy-checker](https://haven.commonground.nl/techniek/compliancy-checker)
 
