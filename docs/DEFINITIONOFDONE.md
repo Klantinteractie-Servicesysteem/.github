@@ -26,7 +26,7 @@ Nieuwe unit tests worden toegevoegd:
 ### Handmatige tests
 - Alle handmatige tests zijn aantoonbaar uitgevoerd op basis van een testscipt per userstory
 - Bij oplevering wordt een integratietest doorlopen op basis van een testscript
-- WCAG wordt handmatig gecontroleerd m.b.v. lighthouse. De resultaten van deze test vindt u [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/WCAG-Lighthouse-Report-20221219.pdf)
+- WCAG wordt handmatig gecontroleerd m.b.v. lighthouse. De resultaten van deze test vindt u [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/WCAG-Lighthouse-Report-20230627.pdf)
 
 ### Pentest
 Pentests (frontend en backend) wordt periodiek uitgevoerd (wekelijks)
