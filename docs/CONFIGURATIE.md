@@ -35,6 +35,10 @@ Als u gebruik maakt van Azure Active Directory als Identity Provider, kunt u dit
 
 ## Koppelen van nieuwe bronnen
 ### Environment variabelen
+_**Organisatie Id voor ZGW APIs**_
+Verschillende ZGW APIs, waaronder de Klant en Contactmoment APIs, vragen om een identificatienummer van de organisatie.
+- ORGANISATIE_IDS (valide RSIN nummer)
+
 _**ZGW Zaaksysteem**_
 
 Om KISS te koppelen aan een Zgw zaaksysteem (bijvoorbeeld Open Zaak) dienen de volgende variabelen per omgeving ingevuld te worden:
