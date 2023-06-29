@@ -51,6 +51,10 @@ Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 #### Authenticatie
 De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
 
+#### Configuratie
+
+
+
 ### Installatie
 Als het kubernetes cluster is ingericht, kunnen we de onderdelen van KISS gaan installeren.
 
