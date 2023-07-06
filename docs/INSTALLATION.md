@@ -51,7 +51,82 @@ Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 #### Authenticatie
 De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
 
-#### Configuratie
+### Configuratie: variabelen
+Voor elke installatie zijn een aantal environment variabelen nodig. Per ondderdeel van KISS geven we aan welke variabelen gevuld moeten worden.  
+
+#### Authenticatie
+Voor Authenticatie maakt KISS gebruik van een OpenIDConnect Identity Provider. 
+
+| Variabele  | Uitleg  |  In installatiescript  |
+|---|---|---|
+| oidcClientId  |   |  |
+| oidcClientSecret  |   |  |
+
+#### Database
+Er zijn verschillende gegevens die binnen KISS zelf worden opgeslagen, zoals Nieuws en Werkinstructies, Links, en managementinformatie. 
+
+| Variabele  | Uitleg  |  In installatiescript  |
+|---|---|---|
+| postgresDb  |   |  |
+| postgresPassword  |   |  |
+| postgresUser  |   |  |
+
+
+#### Organisatie RSIN
+Bij het opslaan van contactmomenten moet het RSIN van de organisatie worden meegestuurd. Deze stelt u in bij ORGANISATIE_IDS
+
+| Variabele  | Uitleg  |  In installatiescript  |
+|---|---|---|
+| ORGANISATIE_IDS  |   |  |
+
+#### Feedback op Kennisartikelen
+Vanuit KISS kan een KCM feedback geven op een kennisartikel. Deze informatie wordt gemaild naar één centraal mailadres
+
+| Variabele  | Uitleg  |  In installatiescript  |
+|---|---|---|
+| EMAIL_ENABLE_SSL  | Gaat de mail via SSL true/false  |  |
+| EMAIL_HOST  |   |  |
+| EMAIL_PASSWORD  |   |  |
+| EMAIL_PORT  |   |  |
+| EMAIL_USERNAME  |   |  |
+| FEEDBACK_EMAIL_FROM  |   |  |
+| FEEDBACK_EMAIL_TO  |   |  |
+
+
+| imageTag  | Dit is de verwijzing naar de versie Build van KISS-frontend respository  |  |
+
+
+
+| elasticPassword  |   |  |
+| enterprise_search_private_api  |   |  |
+| enterprise_search_public_api  |   |  |
+| enterprise_search_url  |   |  |
+| haalCentraalApiKey  |   |  |
+| haalCentraalBaseUrl |   |  |
+| kvkApiKey  |   |  |
+| kvkBaseUrl  |   |  |
+
+| klanten_base_url |   |  |
+| klanten_client_id  |   |  |
+| klanten_client_secret  |   |  |
+| CONTACTMOMENTEN_API_CLIENT_ID  |   |  |
+| CONTACTMOMENTEN_API_KEY  |   |  |
+| CONTACTMOMENTEN_BASE_URL  |   |  |
+
+
+| OBJECTEN_BASE_URL  |   |  |
+| OBJECTEN_TOKEN  |   |  |
+| OBJECTTYPES_BASE_URL  |   |  |
+| OBJECTTYPES_TOKEN  |   |  |
+| SDG_API_KEY  |   |  |
+| SDG_BASE_URL  |   |  |
+| ZAKEN_API_CLIENT_ID  |   |  |
+| ZAKEN_API_KEY  |   |  |
+| ZAKEN_BASE_URL  |   |  |
+
+
+
+
 
 
 
