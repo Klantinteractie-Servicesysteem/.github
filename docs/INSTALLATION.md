@@ -108,12 +108,12 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 
 | Variabele | Uitleg |  
 |---|---|
-| imageTag | Dit is de verwijzing naar de versie Build van KISS-frontend respository |
+| imageTag | Dit is de verwijzing naar de Build-versie van de <br />KISS-frontend repository |
 | haalCentraalBaseUrl | URL van de Haal Centraal API om de BRP te bevragen |
 | haalCentraalApiKey | Key om de Haal Centraal API te bevragen |
 | kvkBaseUrl | URL van de KvK-API om het Handelsregister te bevragen | 
 | kvkApiKey | Key om de Kvk-API te bevragen |
-| enterprise_search_url | URL van de API waarop KISS de elastic instantie kan bevragen | 
+| enterprise_search_url | URL van de API waarop KISS de elastic instantie <br />kan bevragen | 
 | elasticPassword | Nodig om de Elastic API te bevragen |
 | enterprise_search_private_api | Nodig om de Elastic API te bevragen |
 | enterprise_search_public_api | Nodig om de Elastic API te bevragen |
