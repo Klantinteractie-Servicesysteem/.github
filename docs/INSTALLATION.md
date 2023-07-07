@@ -103,7 +103,7 @@ KISS gebruikt de SDG-api  om Kennisartikelen (PDC-producten) mee op te halen, en
 
 KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek op te halen en naar Elastic te pushen.
 
-**Let op**: alle API-keys die KISS nodig heeft om externe registers te bevragen moeten **minimaal 16 karakters** lang zijn
+**Let op**: Sommige  API-keys en Secretes die KISS nodig heeft om externe registers te bevragen moeten **minimaal 16 karakters** lang zijn. 
 
 
 | Variabele | Uitleg |  
@@ -119,10 +119,10 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 | enterprise_search_public_api | Nodig om de Elastic API te bevragen |
 | klanten_base_url | URL van de Klanten API voor het gebruikte klantenregister |
 | klanten_client_id | clientId voor het gebruikte klantenregister |
-| klanten_client_secret | secret voor het gebruikte klantenregister |
+| klanten_client_secret | secret voor het gebruikte klantenregister, deze moet **minimaal 16 karakters** lang zijn |
 | CONTACTMOMENTEN_BASE_URL  | RL van de Contactmomenten API voor het gebruikte Contactmomentenregister  |
 | CONTACTMOMENTEN_API_CLIENT_ID | clientId voor het gebruikte Contactmomentenregister |
-| CONTACTMOMENTEN_API_KEY  | API key te gebruiken door KISS voor het gebruikte Contactmomentenregister |
+| CONTACTMOMENTEN_API_KEY  | API key te gebruiken door KISS voor het gebruikte Contactmomentenregister, deze moet **minimaal 16 karakters** lang zijn. |
 | OBJECTEN_BASE_URL  | URL van de Objecten API  |
 | OBJECTEN_TOKEN  |  Token van de Objecten API |
 | OBJECTTYPES_BASE_URL  | URL van de Objecttype API  |
@@ -131,7 +131,7 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 | SDG_API_KEY  | URL van de API voor Kennisartikelen  |
 | ZAKEN_BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn |
 | ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
-| ZAKEN_API_KEY  | API Key van de ZGW API's  |
+| ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet **minimaal 16 karakters** lang zijn |
 
 
 ### Installatie
