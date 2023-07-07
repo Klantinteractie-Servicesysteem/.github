@@ -52,14 +52,14 @@ Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
 
 ### Configuratie: environment variabelen
-Voor elke installatie zijn een aantal environment variabelen nodig. Per ondderdeel van KISS geven we aan welke variabelen gevuld moeten worden. In de hieronder genoemde innstallatiescripts, en in values.yaml zijn in sommige gevallen al default waarden ingevuld.
+Voor elke installatie zijn een aantal environment variabelen nodig. Per onderdeel van KISS geven we aan welke variabelen gevuld moeten worden. In de hieronder genoemde innstallatiescripts, en in values.yaml zijn in sommige gevallen al default waarden ingevuld.
 
 #### Authenticatie
 Voor Authenticatie maakt KISS gebruik van een OpenIDConnect Identity Provider. 
 
 | Variabele | Uitleg |  
 |---|---|
-| oidcAuthority | URL van de OpenID Connect Identity Provider
+| oidcAuthority | URL van de OpenID Connect Identity Provider |
 | oidcClientId | Voor toegang tot de OpenID Connect Identity Provider |
 | oidcClientSecret | OpenID Connect Identity Provider | 
 
@@ -77,14 +77,14 @@ Er zijn verschillende gegevens die binnen KISS zelf worden opgeslagen, zoals Nie
 Verschillende ZGW APIs, waaronder de Klant en Contactmoment APIs, vragen om een identificatienummer van de organisatie.
 
 | Variabele | Uitleg |  
-|---|---|---|
+|---|---|
 | ORGANISATIE_IDS | RSIN van de organisatie die de Contactmomenten registreert |
 
 #### Feedback op Kennisartikelen
 Vanuit KISS kan een KCM feedback geven op een kennisartikel. Deze informatie wordt gemaild naar één centraal mailadres
 
 | Variabele | Uitleg |
-|---|---|---|
+|---|---|
 | FEEDBACK_EMAIL_FROM | Het afzenderadres van de mail met feedback erin | 
 | FEEDBACK_EMAIL_TO | Het adres waar de mail met feedback naar toe moet | 
 | EMAIL_ENABLE_SSL | Gaat de mail via SSL true/false |
@@ -107,8 +107,8 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 
 
 | Variabele | Uitleg |  
-|---|---|-
-| imageTag | Dit is de verwijzing naar de versie Build van KISS-frontend respository  
+|---|---|
+| imageTag | Dit is de verwijzing naar de versie Build van KISS-frontend respository |
 | haalCentraalBaseUrl | URL van de Haal Centraal API om de BRP te bevragen |
 | haalCentraalApiKey | Key om de Haal Centraal API te bevragen |
 | kvkBaseUrl | URL van de KvK-API om het Handelsregister te bevragen | 
@@ -132,8 +132,6 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 | ZAKEN_BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn |
 | ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
 | ZAKEN_API_KEY  | API Key van de ZGW API's  |
-
-
 
 
 ### Installatie
