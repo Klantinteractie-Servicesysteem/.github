@@ -122,7 +122,7 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 | klanten_client_secret | secret voor het gebruikte klantenregister, deze <br />moet **minimaal 16 karakters** lang zijn |
 | CONTACTMOMENTEN_BASE_URL  | URL van de Contactmomenten API voor het gebruikte <br />Contactmomentenregister  |
 | CONTACTMOMENTEN_API_CLIENT_ID | clientId voor het gebruikte Contactmomentenregister |
-| CONTACTMOMENTEN_API_KEY  | API key te gebruiken door KISS voor het gebruikte Contactmomentenregister, deze <br />moet **minimaal 16 karakters** lang zijn. |
+| CONTACTMOMENTEN_API_KEY  | API key te gebruiken door KISS voor het gebruikte <br />Contactmomentenregister, deze moet **minimaal 16 karakters** lang zijn. |
 | OBJECTEN_BASE_URL  | URL van de Objecten API  |
 | OBJECTEN_TOKEN  |  Token van de Objecten API |
 | OBJECTTYPES_BASE_URL  | URL van de Objecttype API  |
