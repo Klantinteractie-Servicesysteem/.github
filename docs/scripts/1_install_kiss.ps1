@@ -23,13 +23,44 @@ helm upgrade --install eck-operator elastic-repo/eck-operator --version 2.5.0
 
 helm upgrade --install kiss-ci-release kiss-repo-ci/kiss-frontend --version 1.0.35 `
 --values [local dir]\kiss.template.yaml `
---set elasticstack.credentials.password=[password], `
-env.HAAL_CENTRAAL_API_KEY=[apikey], `
-env.POSTGRES_PASSWORD=[db_pass], `
-env.OIDC_CLIENT_ID=f73cab23-1291-40c3-b2ba-263634ddd262, `
-env.OIDC_AUTHORITY=https://login.microsoftonline.com/0571c846-217a-43f0-baa6-a9f8a19865a8/v2.0, `
-env.KVK_BASE_URL=https://api.kvk.nl/test/api/v1, `
-env.KVK_API_KEY=l7xx1f2691f2520d487b902f4e0b57a0b197, `
-env.HAAL_CENTRAAL_BASE_URL=https://proefomgeving.haalcentraal.nl/haalcentraal/api, `
-env.POSTGRES_USER=kiss.bff, `
-env.POSTGRES_DB=kiss.bff
+--set image.tag=$(imageTag), `
+elasticstack.credentials.password=$(elasticPassword), `
+env.OIDC_CLIENT_SECRET=$(oidcClientSecret), `
+env.OIDC_CLIENT_ID=$(oidcClientId), `
+env.OIDC_AUTHORITY=$(oidcAuthority), `
+env.KVK_BASE_URL=$(kvkBaseUrl), `
+env.KVK_API_KEY=$(kvkApiKey), `
+env.HAAL_CENTRAAL_API_KEY=$(haalCentraalApiKey), `
+env.HAAL_CENTRAAL_BASE_URL=$(haalCentraalBaseUrl), `
+env.POSTGRES_PASSWORD=$(postgresPassword), `
+env.POSTGRES_USER=$(postgresUser), `
+env.POSTGRES_DB=$(postgresDb), `
+env.ENTERPRISE_SEARCH_BASE_URL=$(enterprise_search_url), `
+env.ENTERPRISE_SEARCH_PRIVATE_API_KEY=$(enterprise_search_private_api), `
+env.ENTERPRISE_SEARCH_PUBLIC_API_KEY=$(enterprise_search_public_api), `
+env.ZAKEN_BASE_URL=$(ZAKEN_BASE_URL), `
+env.ZAKEN_API_KEY=$(ZAKEN_API_KEY), `
+env.ZAKEN_API_CLIENT_ID=$(ZAKEN_API_CLIENT_ID), `
+env.KLANTEN_BASE_URL=$(klanten_base_url), `
+env.KLANTEN_CLIENT_ID=$(klanten_client_id), `
+env.KLANTEN_CLIENT_SECRET=$(klanten_client_secret), `
+env.EMAIL_HOST=$(EMAIL_HOST), `
+env.EMAIL_PORT=$(EMAIL_PORT), `
+env.EMAIL_USERNAME=$(EMAIL_USERNAME), `
+env.EMAIL_PASSWORD=$(EMAIL_PASSWORD), `
+env.EMAIL_ENABLE_SSL=$(EMAIL_ENABLE_SSL), `
+env.FEEDBACK_EMAIL_FROM=$(FEEDBACK_EMAIL_FROM), `
+env.FEEDBACK_EMAIL_TO=$(FEEDBACK_EMAIL_TO), `
+env.CONTACTMOMENTEN_BASE_URL=$(CONTACTMOMENTEN_BASE_URL), `
+env.CONTACTMOMENTEN_API_KEY=$(CONTACTMOMENTEN_API_KEY), `
+env.CONTACTMOMENTEN_API_CLIENT_ID=$(CONTACTMOMENTEN_API_CLIENT_ID), `
+env.OBJECTEN_BASE_URL=$(OBJECTEN_BASE_URL), `
+env.OBJECTEN_TOKEN=$(OBJECTEN_TOKEN), `
+env.OBJECTTYPES_BASE_URL=$(OBJECTTYPES_BASE_URL), `
+env.OBJECTTYPES_TOKEN=$(OBJECTTYPES_TOKEN), `
+env.SDG_BASE_URL=$(SDG_BASE_URL), `
+env.SDG_API_KEY=$(SDG_API_KEY), `
+global.postgresql.auth.username=$(postgresUser), `
+global.postgresql.auth.password=$(postgresPassword), `
+global.postgresql.auth.database=$(postgresDb), `
+global.postgresql.auth.postgresPassword=$(postgresPassword)env.ORGANISATIE_IDS=$(ORGANISATIE_IDS)
