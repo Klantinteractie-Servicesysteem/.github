@@ -88,7 +88,7 @@ Om de zoekresultaten te beïnvloeden, moet u vervolgens de Relevance Tuning inst
 | Schemaveld   | Hoort bij Website-schema | Doorzoeken  | Relevantie |
 |--------|--------|--------|--------|
 | title | Ja | Ja | 9 |
-|meta_descriptioNee| Ja | Ja | 7 | 
+|meta_descriptio| Ja | Ja | 7 | 
 |  meta_keywords | Ja | Ja | 4 | 
 | headings | Ja | Ja | 2 |
 | additional_urls | Ja | Ja | 1 |
