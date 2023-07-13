@@ -105,7 +105,7 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 
 **Let op**: Sommige  API-keys en Secretes die KISS nodig heeft om externe registers te bevragen moeten **minimaal 16 karakters** lang zijn. 
 
-
+**Kiss frontend**
 | Variabele | Uitleg |  
 |---|---|
 | imageTag | Dit is de verwijzing naar de Build-versie van de <br />KISS-frontend repository |
@@ -123,15 +123,25 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 | CONTACTMOMENTEN_BASE_URL  | URL van de Contactmomenten API voor het gebruikte <br />Contactmomentenregister  |
 | CONTACTMOMENTEN_API_CLIENT_ID | clientId voor het gebruikte Contactmomentenregister |
 | CONTACTMOMENTEN_API_KEY  | API key te gebruiken door KISS voor het gebruikte <br />Contactmomentenregister, deze moet **minimaal <br />16 karakters** lang zijn. |
-| OBJECTEN_BASE_URL  | URL van de Objecten API  |
-| OBJECTEN_TOKEN  |  Token van de Objecten API |
-| OBJECTTYPES_BASE_URL  | URL van de Objecttype API  |
-| OBJECTTYPES_TOKEN  | Token van de Objecttype API  |
-| SDG_BASE_URL  | URL van de API waarmee Kennisartikelen <br />(PDC-producten) kunnen worden opgehaald door KISS |
-| SDG_API_KEY  | URL van de API voor Kennisartikelen  |
 | ZAKEN_BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn |
 | ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
 | ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
+
+**Kiss Elastic Sync Tool**
+| Variabele | Uitleg |  
+|---|---|
+| enterprise_search_url | URL van de API waarop KISS de elastic instantie <br />kan bevragen | 
+| enterprise_search_private_api | Nodig om de Elastic API te vullen |
+| MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers gevonden kunnen worden |
+| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers gevonden kunnen worden |
+| MEDEWERKER_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype 'Medewerker' gevonden kan worden |
+| MEDEWERKER_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype 'Medewerker' gevonden kan worden |
+| VAC_OBJECTEN_BASE_URL | URL van de Objecten API waar de VAC's gevonden kunnen worden |
+| VAC_OBJECTEN_TOKEN |  Token van de Objecten API waar de VAC's gevonden kunnen worden |
+| VAC_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype 'VAC' gevonden kan worden |
+| VAC_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype 'VAC' gevonden kan worden |
+| SDG_BASE_URL  | URL van de API waarmee Kennisartikelen <br />(PDC-producten) kunnen worden opgehaald door KISS |
+| SDG_API_KEY  | URL van de API voor Kennisartikelen  |
 
 
 ### Installatie
