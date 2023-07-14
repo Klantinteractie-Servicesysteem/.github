@@ -95,17 +95,18 @@ Vanuit KISS kan een KCM feedback geven op een kennisartikel. Deze informatie wor
 
 
 #### Gekoppelde bronnen
-Er zijn diverse bronnen die vanuit KISS via API's bevraagd worden. Sommige worden alleen geraadpleegd, zoals de KvK-API en de API voor Haal Centraal BRP Personen bevragen. 
+Er zijn diverse bronnen die vanuit KISS via API's bevraagd worden. Sommige worden alleen geraadpleegd, zoals de KvK-API en de API voor Haal Centraal BRP Personen bevragen. Andere registraties worden niet alleen geraadpleegd, maar er worden ook gegevens in weggeschreven. Dit zijn in ieder geval een Klanten- en Contactmomentenregister, zoals Open Klant, en een Zaaksysteem (m.b.v. ZGW API's) zoals Open Zaak. 
 
-Andere registraties worden niet alleen geraadpleegd, maar er worden ook gegevens in weggeschreven. Dit zijn in ieder geval een Zaaksysteem (m.b.v. ZGW API's) zoals Open Zaak, en een Klanten- en Contactmomentenregister, zoals Open Klant. 
-
-KISS gebruikt de SDG-api  om Kennisartikelen (PDC-producten) mee op te halen, en naar Elastic te pushen. 
-
-KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek op te halen en naar Elastic te pushen.
+Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden. 
+- KISS gebruikt de SDG-api  om Kennisartikelen (PDC-producten) mee op te halen, en naar Elastic te pushen.
+- KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek op te halen en naar Elastic te pushen.
+- KISS gebruikt op dit moment de Objecten API om de Vraag Antwoord Combinaties (VAC) op te halen en naar Elastic te pushen. 
 
 **Let op**: Sommige  API-keys en Secretes die KISS nodig heeft om externe registers te bevragen moeten **minimaal 16 karakters** lang zijn. 
 
-**Kiss frontend**
+**_Gekoppelde bronnen: KISS-frontend_**
+
+Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-frontend.
 | Variabele | Uitleg |  
 |---|---|
 | imageTag | Dit is de verwijzing naar de Build-versie van de <br />KISS-frontend repository |
@@ -127,7 +128,10 @@ KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek
 | ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
 | ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
 
-**Kiss Elastic Sync Tool**
+**_Gekoppelde bronnen: KISS-Elastic-Sync_**
+
+KISS-Elastic-Sync is het component dat zorgt dat de gekoppelde bronnen die via Elasticsearch ontsloten worden in KISS, naar de juiste Indexen worde gepushed, met de benodigde gegevens hieraan toegevoegd. Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-Elastic-Sync.
+
 | Variabele | Uitleg |  
 |---|---|
 | enterprise_search_url | URL van de API waarop KISS de elastic instantie <br />kan bevragen | 
