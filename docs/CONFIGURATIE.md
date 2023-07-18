@@ -10,7 +10,7 @@ KISS gebruikt de claims uit uw Identity Provider om de gegevens van de ingelogde
 
 - Voorletters => given_name
 - Achternaam => family_name indien beschikbaar, anders name indien beschikbaar, anders http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
-- Omdat voorvoegsel niet beschikbaar is, voegt KISS die bij de Achternaam.
+- Op dit moment doen we niets met Tussenvoegsel, omdat er geen voorvoegsel-claim bestaat. In de huidige implementatie komt tussenvoegsel alleen in het contactoment, als het onderdeel is van de Achternaam.
 
 ### Voorbeeldinrichting in Azure Active Directory
 Als u gebruik maakt van Azure Active Directory als Identity Provider, kunt u dit op de volgende manier inrichten.
