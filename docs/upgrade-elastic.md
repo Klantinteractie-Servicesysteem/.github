@@ -16,7 +16,7 @@ Een PowerShell-script wordt gebruikt om de kritieke fouten op te lossen. Hier is
 
 Een nieuwe token kunt u verkrijgen door een call naar Elasticsearch te doen. Dit kan via Kibana Dev Tools of Postman. 
 
-*Screenshot van Postman zal later worden toegevoegd*
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/feature/elastic-upgrade/docs/images/token-postman.png)
 
 ### Stap 4: Voer het PowerShell-script uit
 
