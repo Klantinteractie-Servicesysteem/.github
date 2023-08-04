@@ -8,11 +8,7 @@ Voordat u de upgrade uitvoert, moet u alle kritieke fouten in Kibana's Upgrade A
 
 [Voorbeeld overview](https://kibana.dev.kiss-demo.nl/app/management/stack/upgrade_assistant/overview).
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/criticals-kibana.png)
-
-<br><br><br>
-
-<img src="https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/criticals-kibana.png" alt="Kibana Upgrade Assistant" style="border:10px solid black">
-
+<br><br>
 ### Stap 2: PowerShell Script
 
 Een PowerShell-script wordt gebruikt om de kritieke fouten op te lossen. Hier is de [PowerShell-script voor de patch](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/elastic/patch-criticals.ps1). Let op: het is cruciaal dat u de token in dit PowerShell-script aanpast naar een recente token.
