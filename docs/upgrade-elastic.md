@@ -7,8 +7,6 @@
 Voordat u de upgrade uitvoert, moet u alle kritieke fouten in Kibana's Upgrade Assistant oplossen. 
 
 [Voorbeeld overview](https://kibana.dev.kiss-demo.nl/app/management/stack/upgrade_assistant/overview).
-![Kibana Upgrade Assistant](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/criticals-elastic.png)
-![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/Nieuws-en-werkinstructies-beheer-toevoegen.jpg)
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/criticals-elastic.png)
 ### Stap 2: PowerShell Script
 
