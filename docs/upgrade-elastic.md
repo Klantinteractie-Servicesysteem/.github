@@ -32,17 +32,23 @@ Na het uitvoeren van de upgrade, moet u Kibana enige tijd geven om op te starten
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-migrations.png)
 
-### Stap 7: Voer de migraties uit
+### Stap 7:Voer de port forward uit
 
 Om de migraties uit te voeren, moet EnterpriseSearch in 'alleen-lezen' modus worden gezet. Dit kan worden gedaan door een API-call te maken naar de bestaande pod van Enterprise Search. Dit kan worden gedaan door de pod te portforwarden. 
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-port-forward.png)
 
-### Stap 8: Wacht tot de pod de migraties uitvoert en de oude pod afsluit
+### Stap 8: Voer de migraties uit
+
+Zodra het portforwarden succesvol is voltooid, kunt u de API-aanroep uitvoeren naar de bestaande pod van Enterprise Search.
+
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-port-forward.png)
+
+### Stap 9: Wacht tot de pod de migraties uitvoert en de oude pod afsluit
 
 Na het uitvoeren van de migraties, moet u even wachten tot de pod de migraties heeft voltooid en de oude pod heeft afgesloten.
 <br><br>
-### Stap 9: Zet 'alleen-lezen' op false
+### Stap 10: Zet 'alleen-lezen' op false
 
 Doe een port forward naar de nieuwe pod en zet 'alleen-lezen' op 'false'.
 
