@@ -30,7 +30,6 @@ Zodra alle kritieke fouten zijn opgelost, kunt u de upgrade naar versie 8.9.0 ui
 
 Na het uitvoeren van de upgrade, moet u Kibana enige tijd geven om op te starten. De Enterprise Search-pod kan mogelijk niet direct meegaan vanwege aanstaande migraties. 
 
-*Screenshot van de migraties zal later worden toegevoegd*
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-migrations.png)
 
 ### Stap 7: Voer de migraties uit
