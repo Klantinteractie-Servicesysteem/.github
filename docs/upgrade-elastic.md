@@ -7,7 +7,7 @@
 Voordat u de upgrade uitvoert, moet u alle kritieke fouten in Kibana's Upgrade Assistant oplossen. 
 
 [Voorbeeld overview](https://kibana.dev.kiss-demo.nl/app/management/stack/upgrade_assistant/overview).
-![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/criticals-kibana.png)
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-criticals-kibana.png)
 
 ### Stap 2: PowerShell Script
 
@@ -16,7 +16,7 @@ Een PowerShell-script wordt gebruikt om de kritieke fouten op te lossen. Hier is
 ### Stap 3: Verkrijgen van een nieuwe token
 
 Een nieuwe token kunt u verkrijgen door een call naar Elasticsearch te doen. Dit kan via Kibana Dev Tools of Postman. 
-![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/token-postman.png)
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-token-postman.png)
 
 ### Stap 4: Voer het PowerShell-script uit
 
@@ -31,14 +31,14 @@ Zodra alle kritieke fouten zijn opgelost, kunt u de upgrade naar versie 8.9.0 ui
 Na het uitvoeren van de upgrade, moet u Kibana enige tijd geven om op te starten. De Enterprise Search-pod kan mogelijk niet direct meegaan vanwege aanstaande migraties. 
 
 *Screenshot van de migraties zal later worden toegevoegd*
-![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/token-postman.png)
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-token-postman.png)
 
 ### Stap 7: Voer de migraties uit
 
 Om de migraties uit te voeren, moet EnterpriseSearch in 'alleen-lezen' modus worden gezet. Dit kan worden gedaan door een API-call te maken naar de bestaande pod van Enterprise Search. Dit kan worden gedaan door de pod te portforwarden. 
 
 *Screenshot van de port forward zal later worden toegevoegd*
-![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/token-postman.png)
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-token-postman.png)
 
 ### Stap 8: Wacht tot de pod de migraties uitvoert en de oude pod afsluit
 
@@ -51,4 +51,4 @@ Doe een port forward naar de nieuwe pod en zet 'alleen-lezen' op 'false'.
 Zodra alle stappen zijn voltooid, zou de upgrade van Elasticsearch, Kibana en EnterpriseSearch naar versie 8.9.0 succesvol moeten zijn. 
 
 *Let op: de screenshots om bepaalde stappen te illustreren zullen later worden toegevoegd.*
-![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/token-postman.png)
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-token-postman.png)
