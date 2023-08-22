@@ -42,7 +42,7 @@ Om de migraties uit te voeren, moet EnterpriseSearch in 'alleen-lezen' modus wor
 
 Zodra het portforwarden succesvol is voltooid, kunt u de API-aanroep uitvoeren naar de bestaande pod van Enterprise Search door deze op 'alleen-lezen' te zetten.
 
-![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-port-forward.png)
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-read-only.png)
 
 ### Stap 9: Wacht tot de pod de migraties uitvoert en de oude pod afsluit
 
@@ -53,6 +53,3 @@ Na het uitvoeren van de migraties, moet u even wachten tot de pod de migraties h
 Doe een port forward naar de nieuwe pod en zet 'alleen-lezen' op 'false'.
 
 Zodra alle stappen zijn voltooid, zou de upgrade van Elasticsearch, Kibana en EnterpriseSearch naar versie 8.9.0 succesvol moeten zijn. 
-
-*Let op: de screenshots om bepaalde stappen te illustreren zullen later worden toegevoegd.*
-![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-token-postman.png)
