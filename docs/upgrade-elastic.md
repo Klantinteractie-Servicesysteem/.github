@@ -40,7 +40,7 @@ Om de migraties uit te voeren, moet EnterpriseSearch in 'alleen-lezen' modus wor
 
 ### Stap 8: Voer de migraties uit
 
-Zodra het portforwarden succesvol is voltooid, kunt u de API-aanroep uitvoeren naar de bestaande pod van Enterprise Search door de EnterpriseSearch pod op 'alleen-lezen' te zetten.
+Zodra het portforwarden succesvol is voltooid, kunt u de API-aanroep uitvoeren naar de bestaande pod van Enterprise Search door deze op 'alleen-lezen' te zetten.
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/elastic-port-forward.png)
 
