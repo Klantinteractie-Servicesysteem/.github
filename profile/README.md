@@ -1,23 +1,47 @@
 
-# Welkom! 👋
+# Klantinteractie Servicesysteem (KISS)
 
-## 🙋‍♀️ Wat is Klantinteractie Servicesysteem (kiss)
+Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontactmedewerkers (KCM) optimaal worden ondersteund in hun werk: het informeren en helpen van burgers en ondernemers die contact opnemen met de gemeente. Doel van KISS is om alle informatie die een KCM nodig heeft voor die taak, zoveel mogelijk binnen KISS zelf te ontsluiten. Het is ontwikkeld als een Common Ground component in opdracht van [de gemeente Utrecht en Dimpact](https://www.dimpact.nl/klantinteractie-servicesysteem).
 
-## 👩‍💻 Development omgevingen
-- Demo: [Frontend](https://kiss-dev.commonground.nu/)
-- Beheer: [Common Gateway](https://gateway.kiss-dev.commonground.nu) 
-- Pub: [OpenWeb Concept](https://openweb.kiss-dev.commonground.nu/wp-admin)
 
-## Open Source
-Als project geloven wij in open source en open community. We kiezen er daarom bewust voor ons project open en eerlijk te draaien. Naast de code zijn ook alle user stories en de roadmap publiek toegankelijk. Overheden en leveranciers wordt gevraagd hier kennis van te nemen en actief bij te dragen.
+## Roadmap en doorontwikkeling
 
-## Bijdragen
-Overheden en leveranciers kunnen op een aantal manieren bijdragen aan dit project
+KISS Fase 1 is momenteel verder in ontwikkeling. Fase 1 wordt in september 2023 afgerond. De doorontwikkeling van KISS ligt bij Dimpact. 
 
-- *Actief bijdragen aan discussies*.  Alle discussies van dit project worden gevoerd in de [discussie pagina](https://github.com/orgs/Klantinteractie-Servicesysteem) het staat iedereen vrij om discussie op te starten of hierin te participeren, maar de product owner neemt samen met de product steering group het eindbesluit. Eindbesluiten die niet tot user stories leiden worden vastgelegd in de [DESIGN.md](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/blob/main/DESIGN.md).
-- *Participeren in de product steering group*. De product steering group overlegt tweewekelijks en stelt de [roadmap](https://github.com/orgs/Klantinteractie-Servicesysteem/projects/1/views/1) van het project vast.  Het is in principe voor alle overheden en leveranciers mogelijk om deel te nemen aan de product steering group, het eindoordeel over deelname ligt echter bij de product owner.  Als je het interessant vind om deel te nemen aan de product steering group kan je contact opnemen met ……
-- *Indienen van feature requests*. Iedereen kan feature request indienen, je hoeft hiervoor geen lid te zijn van de product steering group of te beschikken over ontwikkelcapaciteit.  Feature request worden besproken door de product steering group die bepaald of en waar ze op de [roadmap](https://github.com/orgs/Klantinteractie-Servicesysteem/projects/1/views/1) komen. Hierbij kan gevraagd worden om toelichting of een ureninschatting door leveranciers
-- *Bijdrage van code*. Het staat iedere partij vrij om code voor te dragen aan het project door middel van een pull request. Let er wel op dat het voordragen van code niet automatisch leidt tot het accepteren hiervan. Lees de contributing.md voor een beschrijving van het aanleverproces en daaraan verbonden eisen.
 
-## Roadmap
-Dit project volgt een openbare [roadmap](https://github.com/orgs/Klantinteractie-Servicesysteem/projects/1/views/1), je kunt deze terug vinden onder het bijbehorende board. De roadmap heeft een indicatief karakter en er kunnen geen rechten aan worden ontleend. De product owner stelt in overleg met de product steering group de roadmap vast. Partijen die goede ideeën hebben over de roadmap wordt gevraagd deze aan te dragen. Zie daarvoor [“Bijdragen”](#bijdragen).
+## Documentatie
+
+- [Documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/):
+  - [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/)
+  - [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/CONFIGURATIE/)
+  - [Handleiding beheer](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/MANUAL/)
+  - [Definition of Done](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/DEFINITIONOFDONE/)
+  - [Security](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/SECURITY/)
+  - [Documentatie-archief](https://kiss-oldDocs.readthedocs.io/)
+
+
+## Waaruit bestaat KISS-frontend
+
+De KISS-applicatie bestaat uit een User Interface (Vue) op een Backend for frontend (.Net + PostgreSQL).  Kennisbronnen worden ontsloten m.b.v, een Search Index (Elastic Search). 
+
+
+## API's 
+De KISS-applicatie maakt gebruik van enkele landelijke basisregistraties. Daarnaast implementeert KISS verschillende standaarden uit het domein van Common Ground, die zijn ontwikkeld onder de vlag van VNG, en waarvan sommige inmiddels ook [door VNG gestandaardiseerd zijn](https://www.gemmaonline.nl/index.php/Ontwikkelagenda_API-standaarden).  
+
+- [KvK apis](https://developers.kvk.nl/documentation/zoeken-api)
+- [Haal Centraal BRP Personen bevragen](https://brp-api.github.io/Haal-Centraal-BRP-bevragen/) 
+- [ZGW Zaken](https://open-zaak.dev.kiss-demo.nl/zaken/api/v1/schema/) 
+- [ZGW Catalogi](https://open-zaak.dev.kiss-demo.nl/catalogi/api/v1/schema/) 
+- [ZGW Documenten](https://open-zaak.dev.kiss-demo.nl/documenten/api/v1/schema/)
+- [Objecttype API](https://objecten.dev.kiss-demo.nl/api/v2/schema/)
+- [Objecten API](https://github.com/maykinmedia/objects-api)
+- [Klanten API](https://open-klant.dev.kiss-demo.nl/klanten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
+- [Contactmomenten API](https://open-klant.dev.kiss-demo.nl/contactmomenten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
+- [SDG-plus](https://sdgtest.icatt-services.nl/openapi/1.3.0/openapi.json): voor het syncen van kennisartikelen maken we gebruik van een aangepaste versie van de API van [de SDG-invoervoorziening (versie 1.3.0)](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/maykinmedia/sdg-invoervoorziening/1.3.0/src/openapi.yaml&nocors). 
+
+
+## Bouw
+KISS wordt ontwikkeld door ICATT, in opdracht van Utrecht en Dimpact. 
+
+## Licentie
+[European Union Public License](https://opensource.org/licenses/EUPL-1.1)
