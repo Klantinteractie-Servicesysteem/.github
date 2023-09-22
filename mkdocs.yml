@@ -5,7 +5,12 @@ nav:
   - Home: index.md
   - Installatie: INSTALLATION.md
   - Configuratie: CONFIGURATIE.md
-  - Handleiding beheer: manual/MANUAL.md
+  - Handleiding beheer: 
+     - Inleiding: manual/INDEX.md
+     - Nieuws en werkinstructies: manual/NIEUWS-WERKINSTRUCTIES.md
+     - Skills: manual/SKILLS.md
+     - Links: manual/LINKS.md
+     - Gespreksresultaten: manual/GESPREKSRESULTATEN.md
   - Gespreksresultaten: manual/GESPREKSRESULTATEN.md
   - Nieuws en werkinstructies: manual/NIEUWS-WERKINSTRUCTIES.md
   - Skills: manual/SKILLS.md
