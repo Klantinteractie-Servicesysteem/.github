@@ -1,11 +1,17 @@
-site_name: Klantinteractie Servicesysteem
-site_url: https://readthedocs.org/projects/klantinteractie-servicesysteem/
+site_name: Syps Documentatie
+site_url: https://readthedocs.org/projects/Syps-Documentatie
 
 nav:
   - Home: index.md
   - Installatie: INSTALLATION.md
   - Configuratie: CONFIGURATIE.md
-  - Handleiding beheer: MANUAL.md
+  - Handleiding beheer: 
+     - manual/INDEX.md
+     - Nieuws en werkinstructies: manual/NIEUWS-WERKINSTRUCTIES.md
+     - Skills: manual/SKILLS.md
+     - Links: manual/LINKS.md
+     - Gespreksresultaten: manual/GESPREKSRESULTATEN.md
+     
   - Definition of Done: DEFINITIONOFDONE.md
   - Security: SECURITY.md
   
