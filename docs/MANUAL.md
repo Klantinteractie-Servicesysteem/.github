@@ -207,3 +207,63 @@ Een gespreksresultaat kan je verwijderen door op het prullenbak icoontje te klik
 Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit gespreksresultaat wilt verwijderen?". Hierbij klik je op 'ok' 
 
 ![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer-verwijderen-popup.jpg)
+
+
+## Formulieren contactverzoek
+Bij ‘Formulieren contactverzoek’ kan een beheerder van KISS formuliertjes aanmaken, die kunnen worden gebruikt in Contactverzoeken. Het zijn eenvoudige formuliertjes, die een aantal extra vragen bevatten, waarmee je de KCM ondersteunt om al zoveel mogelijk relevante informatie mee geeft met het Contactverzoek. Dit zijn dus aanvullende vragen, op de vaste Contactverzoek-velden. 
+
+Met de Vaste Contactverzoek velden geeft een KCM aan: 
+
+1.	Voor wie het Contactverzoek is: een afdeling, een groep of een medewerker
+2.	Een omschrijving waarover het gaat: dit is een toelichtingenveld waar informatie in staat, die alléén voor de collega is. 
+3.	Met wie men contact moet opnemen: naam en contactgegevens van degene die teruggebeld (of teruggemaild, etc.) moet worden.
+
+Met een Contactverzoekformuliertje (of Vragensets) kan een KCM door een onderwerp te kiezen mee vragen stellen aan de klant, en zo een completer Contactverzoek invullen. Bijvoorbeeld: gaat een contactverzoek over een Parkeerbon? Dan is het handig om het nummer van de parkeerbon ook mee te geven. De klant voor wie het Contactverzoek wordt gemaakt, heeft dat meestal al bij de hand als hij contact opneemt met de gemeente. 
+
+Bij beheer kun je deze formuliertjes aanmaken en beheren. 
+In het overzicht zie je de titel van het Contactverzoek, en de afdeling voor wie dit contactverzoek zou zijn. `
+ 
+
+### Formulier toevoegen
+Voeg een nieuw formulier toe door rechts bovenaan op de "Toevoegen" te drukken.
+ 
+In het volgende scherm moet je de Titel van het formulier opgeven. Deze titel beschrijft het onderwerp van het contactverzoek. Bijvoorbeeld: WMO, of Vraag voor Werk en inkomen.
+Daaronder selecteer je de afdeling die bij deze contactverzoeken hoort. Deze lijst afdelingen, is dezelfde lijst afdelingen die een KCM gebruikt om aan te geven welke afdeling een Contactverzoek moet oppakken. 
+
+Om een vraag toe te voegen, kies je eerst het vraagtype. Er zijn vier soorten vraagtypes: 
+
+| Vraagtype | Uitleg |  
+|---|---|
+| Open vraag kort	| Invoerveld over één regel	 | 
+| Open vraag lang	| Invoerveld over meerdere regels |  	 
+| Dropdown	| Keuzelijst, waarin de KCM maar één optie kan kiezen	 | 
+| Checkbox	| Keuzelijst waarin de KCM één of meer opties kan kiezen	|  
+
+Door in het veld Vraag toevoegen te klikken, klapt er een keuzelijst uit. Door één van de vraagtypes te kiezen, wordt er een vraag van dat vraagtype toegevoegd. 
+
+- Voor alle vraagtypes geldt dat je de vraagtekst moet invullen. Dit is de tekst die in het uiteindelijke formulier boven het invoerveld komt te staan.
+- Voor de Dropdown en de Checkbox moet je daarnaast óók minimaal twee antwoordopties opgeven. 
+ 
+Met de knop Antwoordoptie Toevoegen kun je nog een optie toevoegen. De antwoordopties komen in het formulier in dezelfde volgorde waarin je ze bij aanmaken invoert.
+     
+
+Als je alle vragen hebt ingesteld, klik je op Opslaan om het formulier op te slaan. Het formulier is meteen zichtbaar voor de KCM bij het aanmaken van een Contactverzoek. 
+ 
+### Formulier wijzigen
+Je kunt een formuliertje  wijzigen door op het pijltje te klikken dat rechts in de tabel te zien is.
+ 
+Je komt in bewerkscherm van het formulier. Hier kun je bestaande vraagteksten wijzigen, de tekst van antwoord opties wijzigen en nieuwe vragen toevoegen. Ook kun je vragen of antwoord opties verwijderen. 
+Als je bijvoorbeeld de volgorde van antwoordopties in een meerkeuzevraag (dropdown of checkbox) wilt wijzigen, kun je de bestaande tekstjes verplaatsen. 
+ 
+Een vraag verwijder je door met de muis náást de vraag op het prullenbakje te klikken. Deze verschijnt als je met je muis achter het veld gaat staan.  
+Een antwoordoptie verwijder je weer, door met de muist náást de antwoordoptie op het prullenbakje te klikken. 
+ 
+Sla je je wijzigingen op met de Opslaan knop onderaan het formulier. Je wijzigingen zijn meteen zichtbaar, voor de KCM die een nieuw contactverzoek gaat aanmaken. Als een KCM al bezig was om met dat formulier een Contactverzoek te maken, kan die dat nog wel afmaken.
+
+### Formulier verwijderen
+Je kunt een formulier verwijderen door op het prullenbak icoontje te klikken dat rechts in de tabel te zien is.
+ 
+Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit contactformulier wilt verwijderen?". Hierbij klik je op 'ok' om het verwijderen te bevestigen. 
+ 
+Het formulier is niet meer beschikbaar voor de KCM die een nieuw Contactverzoek gaat maken. Als een KCM al bezig was om met dat formulier een Contactverzoek te maken, kan die dat nog wel afmaken. 
+
