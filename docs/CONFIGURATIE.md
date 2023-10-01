@@ -2,6 +2,29 @@
 Bij de installatie van KISS worden er een groot aantal dingen al geconfigureerd. Op deze pagina staan verschillende onderdelen van de configuratie toegelicht.
 
 
+## Configuratie t.b.v. Objecten API
+KISS maakt voor de koppeling met verschillende registraties gebruik van de Objecten API. Om objecten van een bepaald objecttype op te kunnen halen, moet het de URL weten van dat objecttype in de Objecttype API. Zie ook [de Installatiehandleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/) en de [documentatie bij KISS-Elastic-Sync](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync/blob/main/README.md) 
+
+### URL configureerbaar
+Voor een aantal objecttypen kunt u de URL van het objecttype instellen m.b.v. environment variabelen. 
+
+| Variabele |  Toelichting |
+|---|---|
+| INTERNE_TAAK_OBJECT_TYPE_URL |  De interne taak is onderdeel van een Contactverzoek |
+| GROEPEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Groepen op te halen <br/> voor gebruik in Contactverzoeken |
+| AFDELINGEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Afdelingen op te halen <br/>voor gebruik in Contactverzoeken, Formulieren contactverzoek en <br />registratie van Contactmomenten en  |
+| SDG_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Kennisartikelen op te halen; <br/>dit objecttype is gebaseerd op de SDG Invoervoorziening |
+
+
+### URL nog niet configureerbaar
+Voor een aantal objecttype is de URL nog niet configureerbaar. In die gevallen zal KISS zelf de Objecttype API gaan bevragen om de URL op te halen. Hiervoor is het van belang dat de objecttypen in uw registratie de juiste naam hebben.
+
+| Naam Objecttype |  Toelichting |
+|---|---|
+| VAC | Dit zijn de Vraag Antwoord Combinaties die via Elasticsearch ontsloten worden. |
+| Medewerker | Dit zijn de medewerkers die via Elasticsearch ontsloten worden. <br />Deze medewerkers worden ook gebruikt in Contactverzoeken |
+
+
 ## Configuratie van uw Identity Provider
 Bij de installatie van KISS regelt u de koppeling met uw OpenIDConnect Identity Provider. Daarnaast moet u in uw Identity Provider configureren dat gebruikers die in moeten kunnen loggen bij KISS in ieder geval een 'klantcontactmedewerker'-rol hebben. Een rol is in dit geval een claim van het type `role` of `roles` (beiden worden ondersteund). De waarde die correspondeert met een kiss-medewerker kunt u instellen tijdens de installatie. Standaard is dit `Klantcontactmedewerker`. Voor medewerkers die beheertaken op KISS uitvoeren, is een aparte rol ingeregeld. Ook de naam van deze rol kunt u instellen tijdens de installatie. Standaard is dit `Redacteur`. 
 
