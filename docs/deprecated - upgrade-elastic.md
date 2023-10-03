@@ -1,3 +1,5 @@
+# Deprecated and replaced by ECK
+
 # Handleiding voor het upgraden van Elasticsearch, Kibana en EnterpriseSearch 
 
 ## Van versie 7.17.6 naar 8.9.0
