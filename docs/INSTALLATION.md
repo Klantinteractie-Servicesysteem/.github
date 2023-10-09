@@ -158,3 +158,6 @@ De yaml-voorbeeldbestanden staan in [https://github.com/Klantinteractie-Services
 De installatie kan worden uitgevoerd middels onderstaande powershell script. Ook zonder powershell zijn de commands in het script handmatig uit te voeren.
 
 [install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/install_kiss.ps1)
+
+#### Aanpassingen
+Hoe een config en/of secrets moeten worden aangepast staat beschreven in MAINTENANCE.md
