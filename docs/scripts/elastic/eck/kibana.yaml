@@ -1,0 +1,13 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: kiss
+spec:
+  version: 8.9.0
+  count: 1
+  elasticsearchRef:
+    name: kiss
+  enterpriseSearchRef:
+    name: kiss
+  config:
+    server.publicBaseUrl: https://$KIBANA_DOMAIN

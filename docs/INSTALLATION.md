@@ -52,7 +52,7 @@ Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
 
 ### Configuratie: environment variabelen
-Voor elke installatie zijn een aantal environment variabelen nodig. Per onderdeel van KISS geven we aan welke variabelen gevuld moeten worden. In de hieronder genoemde innstallatiescripts, en in values.yaml zijn in sommige gevallen al default waarden ingevuld.
+Voor elke installatie zijn een aantal environment variabelen nodig. Per onderdeel van KISS geven we aan welke variabelen gevuld moeten worden. In  het hieronder genoemde installatiescript, en in values.yaml zijn in sommige gevallen al default waarden ingevuld.
 
 #### Authenticatie
 Voor Authenticatie maakt KISS gebruik van een OpenIDConnect Identity Provider. 
@@ -157,4 +157,7 @@ De yaml-voorbeeldbestanden staan in [https://github.com/Klantinteractie-Services
 #### Uitvoeren
 De installatie kan worden uitgevoerd middels onderstaande powershell script. Ook zonder powershell zijn de commands in het script handmatig uit te voeren.
 
-[1_install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/1_install_kiss.ps1)
+[install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/install_kiss.ps1)
+
+#### Aanpassingen
+Hoe een config en/of secrets moeten worden aangepast staat beschreven in MAINTENANCE.md
