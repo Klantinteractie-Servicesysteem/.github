@@ -41,7 +41,7 @@ De KISS-applicatie maakt gebruik van enkele landelijke basisregistraties. Daarna
 
 
 ## Bouw
-KISS wordt ontwikkeld door ICATT, in opdracht van Utrecht en Dimpact. 
+KISS wordt ontwikkeld door ICATT menselijk digitaal, in opdracht van Utrecht en Dimpact. 
 
 ## Licentie
 [European Union Public License](https://opensource.org/licenses/EUPL-1.1)
