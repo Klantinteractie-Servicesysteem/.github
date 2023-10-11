@@ -6,7 +6,7 @@ Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontact
 
 ## Roadmap en doorontwikkeling
 
-KISS Fase 1 is momenteel verder in ontwikkeling. Fase 1 wordt in september 2023 afgerond. De doorontwikkeling van KISS ligt bij Dimpact. 
+KISS Fase 1 is momenteel verder in ontwikkeling. Fase 1 wordt in september 2023 afgerond. De doorontwikkeling van KISS ligt bij de community KISS. 
 
 
 ## Documentatie
