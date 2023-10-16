@@ -33,7 +33,7 @@ De KISS-applicatie maakt gebruik van enkele landelijke basisregistraties. Daarna
 - [ZGW Zaken](https://open-zaak.dev.kiss-demo.nl/zaken/api/v1/schema/) 
 - [ZGW Catalogi](https://open-zaak.dev.kiss-demo.nl/catalogi/api/v1/schema/) 
 - [ZGW Documenten](https://open-zaak.dev.kiss-demo.nl/documenten/api/v1/schema/)
-- [Objecttype API](https://objecten.dev.kiss-demo.nl/api/v2/schema/) voor Afdeling, Groep, Medewerker, VAC en Contactverzoek als interne taak 
+- [Objecttype API](https://objecten.dev.kiss-demo.nl/api/v2/schema/) voor Afdeling, Groep, Medewerker, VAC en Contactverzoek als interne taak ([zie](https://github.com/open-objecten/objecttypes/tree/main/community-concepts) 
 - [Objecten API](https://github.com/maykinmedia/objects-api)
 - [Klanten API](https://open-klant.dev.kiss-demo.nl/klanten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
 - [Contactmomenten API](https://open-klant.dev.kiss-demo.nl/contactmomenten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
