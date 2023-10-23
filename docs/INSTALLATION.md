@@ -137,14 +137,14 @@ KISS-Elastic-Sync is het component dat zorgt dat de gekoppelde bronnen die via E
 |---|---|
 | enterprise_search_url | URL van de API waarop KISS de elastic instantie <br />kan bevragen | 
 | enterprise_search_private_api | Nodig om de Elastic API te vullen |
-| MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers gevonden kunnen worden |
-| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers gevonden kunnen worden |
-| MEDEWERKER_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype 'Medewerker' gevonden kan worden |
-| MEDEWERKER_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype 'Medewerker' gevonden kan worden |
-| VAC_OBJECTEN_BASE_URL | URL van de Objecten API waar de VAC's gevonden kunnen worden |
-| VAC_OBJECTEN_TOKEN |  Token van de Objecten API waar de VAC's gevonden kunnen worden |
-| VAC_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype 'VAC' gevonden kan worden |
-| VAC_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype 'VAC' gevonden kan worden |
+| MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers gevonden <br />kunnen worden |
+| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers gevonden <br />kunnen worden |
+| MEDEWERKER_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
+| MEDEWERKER_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
+| VAC_OBJECTEN_BASE_URL | URL van de Objecten API waar de VAC's gevonden <br />kunnen worden |
+| VAC_OBJECTEN_TOKEN |  Token van de Objecten API waar de VAC's gevonden <br />kunnen worden |
+| VAC_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype 'VAC' <br />gevonden kan worden |
+| VAC_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype 'VAC' <br />gevonden kan worden |
 | SDG_BASE_URL  | URL van de API waarmee Kennisartikelen <br />(PDC-producten) kunnen worden opgehaald door KISS |
 | SDG_API_KEY  | URL van de API voor Kennisartikelen  |
 
