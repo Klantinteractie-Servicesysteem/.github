@@ -33,13 +33,13 @@ De KISS-applicatie maakt gebruik van enkele landelijke basisregistraties. Daarna
 - [ZGW Zaken](https://open-zaak.dev.kiss-demo.nl/zaken/api/v1/schema/) 
 - [ZGW Catalogi](https://open-zaak.dev.kiss-demo.nl/catalogi/api/v1/schema/) 
 - [ZGW Documenten](https://open-zaak.dev.kiss-demo.nl/documenten/api/v1/schema/)
-- [Objecttype API](https://objecten.dev.kiss-demo.nl/api/v2/schema/) voor Afdeling, Groep, Medewerker, VAC en Contactverzoek als interne taak ([zie](https://github.com/open-objecten/objecttypes/tree/main/community-concepts) 
+- [Objecttype API](https://objecten.dev.kiss-demo.nl/api/v2/schema/) voor Afdeling, Groep, Medewerker, VAC en Contactverzoek als interne taak ([zie ook de Community concepts binnen Objecttypes, bij Open Objecten](https://github.com/open-objecten/objecttypes/tree/main/community-concepts) 
 - [Objecten API](https://github.com/maykinmedia/objects-api)
 - [Klanten API](https://open-klant.dev.kiss-demo.nl/klanten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
 - [Contactmomenten API](https://open-klant.dev.kiss-demo.nl/contactmomenten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
 - [SDG-plus](https://sdgtest.icatt-services.nl/openapi/1.3.0/openapi.json): voor het syncen van kennisartikelen maken we gebruik van een aangepaste versie van de API van [de SDG-invoervoorziening (versie 1.3.0)](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/maykinmedia/sdg-invoervoorziening/1.3.0/src/openapi.yaml&nocors).
 
-Daar waar de API-standaarden ontoereikend zijn of ontbreken breiden we de API's uit volgens het vastgesteld ontwerpprincipe "afwijkenking van de standaard" VNG/Dimpact 16 juni 2023.
+Daar waar de API-standaarden ontoereikend zijn of ontbreken breiden we de API's uit volgens het vastgesteld ontwerpprincipe "afwijkeking van de standaard" VNG/Dimpact 16 juni 2023.
 
 
 ## Bouw
