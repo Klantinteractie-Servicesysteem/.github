@@ -6,6 +6,7 @@ nav:
   - Installatie: INSTALLATION.md
   - Configuratie: CONFIGURATIE.md
   - Handleiding beheer: MANUAL.md
+  - Architectuur: Architectuur.md
   - Definition of Done: DEFINITIONOFDONE.md
   - Security: SECURITY.md
   
