@@ -207,7 +207,7 @@ Een gespreksresultaat kan je verwijderen door op het prullenbak icoontje te klik
 
 Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit gespreksresultaat wilt verwijderen?". Hierbij klik je op 'ok' 
 
-![image](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/images/Gespreksresultaten-beheer-verwijderen-popup.jpg)
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/Gespreksresultaten-beheer-verwijderen-popup.jpg)
 
 
 ## Formulieren contactverzoek
@@ -219,9 +219,9 @@ Met de Vaste Contactverzoek velden geeft een KCM aan:
 2.	Een omschrijving waarover het gaat: dit is een toelichtingenveld waar informatie in staat, die alléén voor de collega is. 
 3.	Met wie men contact moet opnemen: naam en contactgegevens van degene die teruggebeld (of teruggemaild, etc.) moet worden.
 
-Met een Contactverzoekformuliertje (of Vragensets) kan een KCM door een onderwerp te kiezen mee vragen stellen aan de klant, en zo een completer Contactverzoek invullen. Bijvoorbeeld: gaat een contactverzoek over een Parkeerbon? Dan is het handig om het nummer van de parkeerbon ook mee te geven. De klant voor wie het Contactverzoek wordt gemaakt, heeft dat meestal al bij de hand als hij contact opneemt met de gemeente. 
+Met een Contactverzoekformuliertje (of Vragenset) kan een KCM door een onderwerp te kiezen meer vragen stellen aan de klant, en zo een completer Contactverzoek invullen. Bijvoorbeeld: gaat een contactverzoek over een Parkeerbon? Dan is het handig om het nummer van de parkeerbon ook mee te geven. De klant voor wie het Contactverzoek wordt gemaakt, heeft dat meestal al bij de hand als hij contact opneemt met de gemeente. 
 
-Bij beheer kun je deze formuliertjes aanmaken en beheren. 
+Bij beheer kun je deze formuliertjes (vragensets) aanmaken en beheren. 
 In het overzicht zie je de titel van het Contactverzoek, en de afdeling voor wie dit contactverzoek zou zijn. `
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/Contactverzoek-beheren-01.png)
