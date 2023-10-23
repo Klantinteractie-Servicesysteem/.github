@@ -5,6 +5,9 @@ De aanpassingen staan op een devevelopmentomgeving [https://dev.kiss-demo.nl/](h
 ### De applicatie voldoet aan de ontwerpprincipes van Gebruiker Centraal
 De eindgebruiker is betrokken is gedurende het hele project betrokken bij ontwerp en specificatie. De applicatie wordt regelmatig getest door de gebruikers.
 
+### De applicatie voldoet aan de AVG
+Er is een DPIA opgesteld voor de applicatie. Deze kunt u [hier inzien](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/ICATT-KISS-Data-Processing-Impact-Assessment-(DPIA).pdf).
+
 ### Code is gereviewd door een andere developer
 Er wordt ontwikkeld in feature branches en gedeployed vanaf de main branch. Zodoende is inzichtelijk wie aan een story gewerkt heeft en wie een pull request approved heeft.
 
