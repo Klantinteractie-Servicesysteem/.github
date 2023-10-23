@@ -38,7 +38,7 @@ De KISS-applicatie maakt gebruik van enkele landelijke basisregistraties. Daarna
 - [Contactmomenten API](https://open-klant.dev.kiss-demo.nl/contactmomenten/api/v1/schema/), zoals geïmplementeerd in v0.1 van [Open Klant](https://github.com/maykinmedia/open-klant); waarbij we zijn uitgegaan van de standaard (dus niet de afwijkingen op de standaard, die zijn gemarkeerd is de specificatie)
 - [SDG-plus](https://sdgtest.icatt-services.nl/openapi/1.3.0/openapi.json): voor het syncen van kennisartikelen maken we gebruik van een aangepaste versie van de API van [de SDG-invoervoorziening (versie 1.3.0)](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/maykinmedia/sdg-invoervoorziening/1.3.0/src/openapi.yaml&nocors).
 
-Daar waar de API-standaarden ontoereikend zijn of ontbreken breiden we de API's uit volgens het vastgesteld ontwerpprincipe "afwijkeking van de standaard" VNG/Dimpact 16 juni 2023 ([zie: 20230616-PodiumD-flow-afwijkingen-standaarden.pdf](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/20230616-PodiumD-flow-afwijkingen-standaarden.pdf)).
+Daar waar de API-standaarden ontoereikend zijn of ontbreken breiden we de API's uit volgens het vastgesteld ontwerpprincipe "afwijking van de standaard" VNG/Dimpact 16 juni 2023 ([zie: 20230616-PodiumD-flow-afwijkingen-standaarden.pdf](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/20230616-PodiumD-flow-afwijkingen-standaarden.pdf)).
 
 
 ## Bouw
