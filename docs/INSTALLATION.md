@@ -107,6 +107,7 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 **_Gekoppelde bronnen: KISS-frontend_**
 
 Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-frontend.
+
 | Variabele | Uitleg |  
 |---|---|
 | imageTag | Dit is de verwijzing naar de Build-versie van de <br />KISS-frontend repository |
