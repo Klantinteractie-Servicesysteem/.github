@@ -12,8 +12,8 @@ Voor een aantal objecttypen kunt u de URL van het objecttype instellen m.b.v. en
 |---|---|
 | INTERNE_TAAK_OBJECT_TYPE_URL |  De interne taak is onderdeel van een Contactverzoek |
 | GROEPEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Groepen op te halen <br/> voor gebruik in Contactverzoeken |
-| AFDELINGEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Afdelingen op te halen <br/>voor gebruik in Contactverzoeken, Formulieren contactverzoek en <br />registratie van Contactmomenten en  |
-| SDG_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Kennisartikelen op te halen; <br/>dit objecttype is gebaseerd op de SDG Invoervoorziening |
+| AFDELINGEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Afdelingen op te halen <br/>voor gebruik in Contactverzoeken, Formulieren contactverzoek <br />en registratie van Contactmomenten  |
+| SDG_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Kennisartikelen op te halen; <br/>dit objecttype is gebaseerd op het object `product` in de <br />SDG Invoervoorziening |
 
 
 ### URL nog niet configureerbaar
