@@ -137,8 +137,8 @@ KISS-Elastic-Sync is het component dat zorgt dat de gekoppelde bronnen die via E
 |---|---|
 | enterprise_search_url | URL van de API waarop KISS de elastic instantie <br />kan bevragen | 
 | enterprise_search_private_api | Nodig om de Elastic API te vullen |
-| MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers gevonden <br />kunnen worden |
-| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers gevonden <br />kunnen worden |
+| MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers <br />gevonden kunnen worden |
+| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers <br />gevonden kunnen worden |
 | MEDEWERKER_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
 | MEDEWERKER_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
 | VAC_OBJECTEN_BASE_URL | URL van de Objecten API waar de VAC's gevonden <br />kunnen worden |
