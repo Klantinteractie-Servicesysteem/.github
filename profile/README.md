@@ -6,7 +6,7 @@ Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontact
 
 ## Roadmap en doorontwikkeling
 
-KISS Fase 1 is momenteel verder in ontwikkeling. Fase 1 wordt in september 2023 afgerond. De doorontwikkeling van KISS ligt bij de community KISS. 
+KISS Fase 1 is in september 2023 opgeleverd. De doorontwikkeling van KISS ligt bij de gemeentelijke samenwerking. Neem bij interesse voor deelname aan de samenwerking of voor overige vragen contact op met Moniek Koerhuis, Community Manager KISS, via m.koerhuis@enschede.nl of Astrid Brantjes, Product Owner KISS via astrid.brantjes@utrecht.nl.
 
 
 ## Documentatie
