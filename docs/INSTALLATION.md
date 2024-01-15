@@ -46,7 +46,6 @@ Bij het volgen van de [Azure](https://haven.commonground.nl/techniek/aan-de-slag
 
 Per servertype is er een quota aan het maximale aantal cores dat gebruikt mag worden in de regio.
 Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
-[https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas](https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas).
 
 #### Authenticatie
 De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
