@@ -5,6 +5,9 @@ De aanpassingen staan op een devevelopmentomgeving [https://dev.kiss-demo.nl/](h
 ### De applicatie voldoet aan de ontwerpprincipes van Gebruiker Centraal
 De eindgebruiker is betrokken is gedurende het hele project betrokken bij ontwerp en specificatie. De applicatie wordt regelmatig getest door de gebruikers.
 
+### De applicatie voldoet aan de AVG
+Er is een DPIA opgesteld voor de applicatie. Deze kunt u [hier inzien](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/ICATT-KISS-Data-Processing-Impact-Assessment-(DPIA).pdf).
+
 ### Code is gereviewd door een andere developer
 Er wordt ontwikkeld in feature branches en gedeployed vanaf de main branch. Zodoende is inzichtelijk wie aan een story gewerkt heeft en wie een pull request approved heeft.
 
@@ -26,10 +29,10 @@ Nieuwe unit tests worden toegevoegd:
 ### Handmatige tests
 - Alle handmatige tests zijn aantoonbaar uitgevoerd op basis van een testscipt per userstory
 - Bij oplevering wordt een integratietest doorlopen op basis van een testscript
-- WCAG wordt handmatig gecontroleerd m.b.v. lighthouse. De resultaten van deze test vindt u [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/WCAG-Lighthouse-Report-20230627.pdf)
+- WCAG wordt handmatig gecontroleerd m.b.v. lighthouse. De resultaten van deze test vindt u [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/WCAG-Lighthouse-Report-20231010.pdf)
 
 ### Pentest
-Pentests (frontend en backend) wordt periodiek uitgevoerd (wekelijks). Een voorbeeld van een rapport staat [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/Website_Scanner-https___prod.kiss-demo.nl-20230628-0907.pdf).
+Pentests (frontend en backend) wordt periodiek uitgevoerd (wekelijks). Een voorbeeld van een rapport staat [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/Website_Scanner-https___prod.kiss-demo.nl-20230628-0907.pdf).
 
 ### Error logging
 Error logging is ingeregeld

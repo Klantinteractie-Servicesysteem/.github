@@ -2,6 +2,29 @@
 Bij de installatie van KISS worden er een groot aantal dingen al geconfigureerd. Op deze pagina staan verschillende onderdelen van de configuratie toegelicht.
 
 
+## Configuratie t.b.v. Objecten API
+KISS maakt voor de koppeling met verschillende registraties gebruik van de Objecten API. Om objecten van een bepaald objecttype op te kunnen halen, moet het de URL weten van dat objecttype in de Objecttype API. Zie ook [de Installatiehandleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/) en de [documentatie bij KISS-Elastic-Sync](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync/blob/main/README.md) 
+
+### URL configureerbaar
+Voor een aantal objecttypen kunt u de URL van het objecttype instellen m.b.v. environment variabelen. 
+
+| Variabele |  Toelichting |
+|---|---|
+| INTERNE_TAAK_OBJECT_TYPE_URL |  De interne taak is onderdeel van een Contactverzoek |
+| GROEPEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Groepen op te halen <br/> voor gebruik in Contactverzoeken |
+| AFDELINGEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Afdelingen op te halen <br/>voor gebruik in Contactverzoeken, Formulieren <br />contactverzoek en registratie van Contactmomenten  |
+| SDG_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Kennisartikelen op te halen; <br/>dit objecttype is gebaseerd op het object `product` <br />in de SDG Invoervoorziening |
+
+
+### URL nog niet configureerbaar
+Voor een aantal objecttype is de URL nog niet configureerbaar. In die gevallen zal KISS zelf de Objecttype API gaan bevragen om de URL op te halen. Hiervoor is het van belang dat de objecttypen in uw registratie de juiste naam hebben.
+
+| Naam Objecttype |  Toelichting |
+|---|---|
+| VAC | Dit zijn de Vraag Antwoord Combinaties die via Elasticsearch ontsloten worden. |
+| Medewerker | Dit zijn de medewerkers die via Elasticsearch ontsloten worden. <br />Deze medewerkers worden ook gebruikt in Contactverzoeken |
+
+
 ## Configuratie van uw Identity Provider
 Bij de installatie van KISS regelt u de koppeling met uw OpenIDConnect Identity Provider. Daarnaast moet u in uw Identity Provider configureren dat gebruikers die in moeten kunnen loggen bij KISS in ieder geval een 'klantcontactmedewerker'-rol hebben. Een rol is in dit geval een claim van het type `role` of `roles` (beiden worden ondersteund). De waarde die correspondeert met een kiss-medewerker kunt u instellen tijdens de installatie. Standaard is dit `Klantcontactmedewerker`. Voor medewerkers die beheertaken op KISS uitvoeren, is een aparte rol ingeregeld. Ook de naam van deze rol kunt u instellen tijdens de installatie. Standaard is dit `Redacteur`. 
 
@@ -39,79 +62,30 @@ Als u gebruik maakt van Azure Active Directory als Identity Provider, kunt u dit
 1. In dit scherm kunt u de rollen die u eerder gedefinieerd heeft, toekennen aan individuele gebruikers en - als uw licentie van Active Directory dit toestaat - groepen.
 
 
-
-## Koppelen van nieuwe bronnen
-### Environment variabelen
-_**Organisatie Id voor ZGW APIs**_
-Verschillende ZGW APIs, waaronder de Klant en Contactmoment APIs, vragen om een identificatienummer van de organisatie.
-- ORGANISATIE_IDS (valide RSIN nummer)
-
-_**ZGW Zaaksysteem**_
-
-Om KISS te koppelen aan een Zgw zaaksysteem (bijvoorbeeld Open Zaak) dienen de volgende variabelen per omgeving ingevuld te worden:
-
-
-- ZAKEN_BASE_URL (de url van het zaak systeem, bv https://www.zaaksysteem.nl )
-- ZAKEN_API_KEY (een door het zaaksysteem geleverde apikey voor KISS. Deze moet **minimaal 16 karakters** lang zijn)
-- ZAKEN_API_CLIENT_ID (een door het zaaksysteem geleveerd Id voor KISS)
-
-### Externe registers
-_**ZGW Zaaksysteem**_
-
-Voor de autorisatie bij een zaaksysteem gaat KISS uit van een JWT token dat opgebouwd wordt volgens de specificaties die hier te vinden zijn: [https://open-zaak.readthedocs.io/en/latest/client-development/authentication.html](https://open-zaak.readthedocs.io/en/latest/client-development/authentication.html)
 ## Configuratie van Elasticsearch voor KISS
-
-KISS maakt gebruik van Elasticsearch voor het ontsluiten van doorzoekbare bronnen. Dit zijn: Kennisartikelen (PDC-producten), websitepagina's en ook medewerkers.  Om te zorgen dat de informatie van deze bronnen opd e juiste manier in KISS terecht komt moet u een aantal zaken regelen
-
-### Engine met de naam 'kiss-engine'
-_Deze stap wordt automatisch uitgevoerd in het installatiescript ['2_update-elastic.ps1' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
-
-- Ga in de Kibana-interface van de Elastic-installatie naar Enterprise Search > App Search > Engines. 
-- Maak een nieuwe engine aan, en noem deze kiss-engine; **Let op!** Zorg dat de **Engine language** ingesetld staat op **Dutch**
+Met behulp van [KISS-Elastic-Sync tool](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync) is het mogelijk om websites en een aantal gestructureerde bronnen doorzoekbaar te maken vanuit KISS. De eerste keer dat u deze tool gebruikt, wordt er een meta-engine aangemaakt met de naam `kiss-engine`.
 
 ### Crawler
-_Deze stap wordt automatisch uitgevoerd in het installatiescript ['2_update-elastic.ps1' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
-
-Het doorzoeken van een website binnen KISS wordt mogelijk door de website te crawlen vanuit Elastic Search. Hiervoor maak je binnen de engine een crawler aan. Als u het installatiescript 'NaamScriptEnEenLInk' hebt gebruikt, is er een eenvoudige crawler aangemaakt op het hele domein van uw website. Het is aan te raden om verder overleg te hebben met uw websitebeheerder, over het verdere finetunen van de crawler. Mogelijk zijn er aanpassingen nodig in uw robots.txt, of zijn er aanvullende filterinstellingen nodig. 
+Het doorzoeken van een website binnen KISS wordt mogelijk door de website te crawlen vanuit Elastic Search. Hiervoor gebruikt u de [KISS-Elastic-Sync tool](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync). Het is aan te raden om verder overleg te hebben met uw websitebeheerder, over het verdere finetunen van de crawler. Mogelijk zijn er aanpassingen nodig in uw robots.txt, is het raadzaam een KISS-specifieke sitemap.xml op te stellen of zijn er aanvullende filterinstellingen nodig. 
 
 Op het moment dat de crawler de eerste keer gedraaid heeft, wordt het engine schema uitgebreid met de [velden die horen bij de crawler](https://www.elastic.co/guide/en/app-search/current/web-crawler-reference.html#web-crawler-reference-web-crawler-schema).
 
 ### Syncen van bronnen
-De eerste keer dat er via de synctool Kennisartikelen (PDC-producten) of Medewekers worden geindexeerd in Elastic, wordt het Engine Schema uitgebreid met een aantal velden. Dit zijn: 
+De eerste keer dat er via de synctool Kennisartikelen (PDC-producten), Medewerkers of VACs worden geindexeerd in Elastic, wordt het Engine Schema uitgebreid met een aantal velden. Dit zijn: 
 - `object_bron`
 - `object_meta`
-- `object`
+
+- De velden die bij de bron horen: voor elk property in het schema van de bron, wordt een property aangemaakt binnen de KISS-engine, voorafgegaan door de waarde van `objectbron`. 
 
 ### Relevance Tuning
-_Deze stap wordt automatisch uitgevoerd in het installatiescript ['3_update-elastic-relevance.ps1' uit de installatiehandleiding](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/INSTALLATION.md)_
+Om de informatie uit de Kennisartikelen en websites doorzoekbaar te maken, moeten deze velden opgenomen zijn in het Engine Schema, en doorzoekbaar gezet in de Relevance tuning. Let op: zijn er nieuwe velden toegevoegd aan het Engine Schema, bijvoorbeeld omdat er een nieuw type bron wordt toegevoegd? Dan moeten deze velden doorzoekbaar gemaakt worden, door op knop 'Update search settings' te klikken, op de pagina Manage engine schema. U kunt ook op de pagina Relevance Tuning aangeven dat een schemaveld doorzoekbaar moet zijn. 
 
-Om de informatie uit de Kennisartikelen en websites doorzoekbaar te maken, moeten deze velden opgenomen zijn in het Engine Schema. Let op: zijn er nieuwe velden toegevoegd aan het Engine Schema, bijvoorbeeld omdat er een nieuw type bron wordt toegevoegd? Dan moeten deze velden doorzoekbaar gemaakt worden. Dit kunt u doen m.b.v. de knop 'Update search settings' op de pagina Manage engine schema. U kunt ook op de pagina Relevance Tuning aangeven dat een schemaveld doorzoekbaar moet zijn. 
+Om de zoekresultaten te beïnvloeden, moet u vervolgens de Relevance Tuning instellen. [Zie ook de documentatie van Elasticsearch](https://www.elastic.co/guide/en/app-search/current/relevance-tuning-guide.html)
 
+Elasticsearch zal binnen de meta-engine voor elk property van een object (een VAC, een medewerker of een Kennisartikel) een property aanmaken. Bijvoorbeeld `Kennisartikel.vertalingen.bezwaarEnBeroep` of `VAC.trefwoorden.trefwoord`. Elasticsearch zal ook zelf voor deze property's aangeven of ze doorzoekbaar moeten zijn of niet. Websitepagina's worden door de crawler aan de meta-engine toegevoegd, en zijn vindbaar via de velden van [het crawler-schema](https://www.elastic.co/guide/en/app-search/8.9/web-crawler-reference.html#web-crawler-reference-web-crawler-schema).
 
-Om de zoekresultaten te beïnvloeden, moet u vervolgens de Relevance Tuning instellen. We gaan uit van onderstaande instellingen voor Relevantie. Tijdens de instalatie worden deze instellingen scriptmatig ingesteld. U kunt dit altijd handmatig wijzigen. 
+Door vervolgens de relevantie van specifieke velden hoger te zetten, kunt u ervoor zorgen dat deze zwaarder meetellen in het zoekresultaat. Door de properties `VAC.trefwoorden.trewoord`, en `Kennisartikel.vertalingen.trefwoorden.trefwoord` hogere relevantiescore te geven, zullen de trefwoorden zwaarder meetellen.  
 
+Doordat elke bron eigen properties krijgt in de meta-engine, kunt u specifieke bronnen zwaarder laten wegen. Als `VAC.trefwoorden.trewoord` een hogere relevantiescore heeft dan `Kennisartikel.vertalingen.trefwoorden.trefwoord`, zullen de VAC's hoger in het zoekresultaat staan.
 
-
-| Schemaveld   | Hoort bij Website-schema | Doorzoeken  | Relevantie |
-|--------|--------|--------|--------|
-| title | Ja | Ja | 9 |
-|meta_descriptio| Ja | Ja | 7 | 
-|  meta_keywords | Ja | Ja | 4 | 
-| headings | Ja | Ja | 2 |
-| additional_urls | Ja | Ja | 1 |
-| body_content | Ja | Ja | 1 |
-| links | Ja | Ja | 1 |
-| url_path | Ja | Ja | 1 |
-| object_meta | Nee | Ja | 7 | 
-| object | Nee | Ja | 6 | 0 |
-| url_path_dir1 | Ja | Nee| 0 |
-| url_path_dir2 | Ja | Nee| 0 |
-|  url_path_dir3 | Ja | Nee| 0 |
-| domains | Ja | Nee| 0 |
-| last_crawled_at | Ja  | Nee| 0 |
-| url | Ja | Nee| 0 |
-| url_host | Ja | Nee| 0 |
-| url_port | Ja | Nee| 0 |
-| url_scheme | Ja | Nee| 0 |
-| self | Nee | Nee| 0 |
-| object_bron| Nee | Nee| 0 |
+Alle property's van het type text worden standaard doorzoekbaar gemaakt. Het is raadzaam deze standaard instellingen na te lopen. Vooral bij Kennisartikelen (waarvan het object gebaseerd is op de API van de SDG invoervoorziening) zijn er veel text property's, die niet relevant zijn voor de zoekresultaten.

@@ -51,7 +51,7 @@ Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
 
 ### Configuratie: environment variabelen
-Voor elke installatie zijn een aantal environment variabelen nodig. Per onderdeel van KISS geven we aan welke variabelen gevuld moeten worden. In de hieronder genoemde innstallatiescripts, en in values.yaml zijn in sommige gevallen al default waarden ingevuld.
+Voor elke installatie zijn een aantal environment variabelen nodig. Per onderdeel van KISS geven we aan welke variabelen gevuld moeten worden. In  het hieronder genoemde installatiescript, en in values.yaml zijn in sommige gevallen al default waarden ingevuld.
 
 #### Authenticatie
 Voor Authenticatie maakt KISS gebruik van een OpenIDConnect Identity Provider. 
@@ -106,6 +106,7 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 **_Gekoppelde bronnen: KISS-frontend_**
 
 Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-frontend.
+
 | Variabele | Uitleg |  
 |---|---|
 | imageTag | Dit is de verwijzing naar de Build-versie van de <br />KISS-frontend repository |
@@ -135,14 +136,14 @@ KISS-Elastic-Sync is het component dat zorgt dat de gekoppelde bronnen die via E
 |---|---|
 | enterprise_search_url | URL van de API waarop KISS de elastic instantie <br />kan bevragen | 
 | enterprise_search_private_api | Nodig om de Elastic API te vullen |
-| MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers gevonden kunnen worden |
-| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers gevonden kunnen worden |
-| MEDEWERKER_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype 'Medewerker' gevonden kan worden |
-| MEDEWERKER_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype 'Medewerker' gevonden kan worden |
-| VAC_OBJECTEN_BASE_URL | URL van de Objecten API waar de VAC's gevonden kunnen worden |
-| VAC_OBJECTEN_TOKEN |  Token van de Objecten API waar de VAC's gevonden kunnen worden |
-| VAC_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype 'VAC' gevonden kan worden |
-| VAC_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype 'VAC' gevonden kan worden |
+| MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers <br />gevonden kunnen worden |
+| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers <br />gevonden kunnen worden |
+| MEDEWERKER_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
+| MEDEWERKER_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
+| VAC_OBJECTEN_BASE_URL | URL van de Objecten API waar de VAC's gevonden <br />kunnen worden |
+| VAC_OBJECTEN_TOKEN |  Token van de Objecten API waar de VAC's gevonden <br />kunnen worden |
+| VAC_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype 'VAC' <br />gevonden kan worden |
+| VAC_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype 'VAC' <br />gevonden kan worden |
 | SDG_BASE_URL  | URL van de API waarmee Kennisartikelen <br />(PDC-producten) kunnen worden opgehaald door KISS |
 | SDG_API_KEY  | URL van de API voor Kennisartikelen  |
 
@@ -154,16 +155,9 @@ Als het kubernetes cluster is ingericht, kunnen we de onderdelen van KISS gaan i
 De yaml-voorbeeldbestanden staan in [https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/blob/main/helm/kiss-frontend/kiss.template.yaml](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/blob/main/helm/kiss-frontend/kiss.template.yaml)
 
 #### Uitvoeren
-De installatie kan worden uitgevoerd middels onderstaande powershell scripts. Ook zonder powershell zijn de commands in deze scripts handmatig uit te voeren.
+De installatie kan worden uitgevoerd middels onderstaande powershell script. Ook zonder powershell zijn de commands in het script handmatig uit te voeren.
 
-We doorlopen met de scripts de volgende drie stappen:
+[install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/install_kiss.ps1)
 
-1. Eerst installeren we alle onderdelen van KISS, de Kiss-frontend, BFF en Elastic. 
-2. Vervolgens configureren we elastic, zodat er een admin-account wordt aangemaakt op de Kibana-interface. Ook maken we een een kiss-engine aan (noodzakelijk voor communicatie met de frontend). Binnen die engine maken we een crawler aan voor de gemeentelijke website die we ook starten. 
-3. (LET OP! Deze stap doen we pas nadat de medewerkers of kennisartikelen zijn geindexeerd) Tenslotte configureren we de relevance tuning binnen Elastic. 
-
-> [1_install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/1_install_kiss.ps1)
-> 
-> [2_update-elastic.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/2_update-elastic.ps1)
-> 
-> [3_update-elastic-relevance.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/3_update-elastic-relevance.ps1)
+#### Aanpassingen
+Hoe een config en/of secrets moeten worden aangepast staat beschreven in MAINTENANCE.md
