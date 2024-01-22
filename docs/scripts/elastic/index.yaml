@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  kiss:
+  kiss-elastic:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-01-22T13:44:14.5590044+01:00"
-    description: A Helm chart for Kubernetes
-    digest: c29f35e951eb393e1fc2c6cf2d3168d358c47328312a4ead4d4917755999c26a
-    name: kiss
+    created: "2024-01-22T13:54:23.0166709+01:00"
+    description: A Helm chart for setting up everything in ECK that kiss needs
+    digest: 9ed1ef6470f4c20bdf6ce5cf1640808357421e52ff5c5aeaf84c666672ee15b9
+    name: kiss-elastic
     type: application
     urls:
-    - kiss-0.1.0.tgz
+    - kiss-elastic-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-22T13:44:14.5578769+01:00"
+generated: "2024-01-22T13:54:23.0155149+01:00"
