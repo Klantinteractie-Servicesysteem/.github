@@ -1,0 +1,3 @@
+kubernetesClusterDomain: cluster.local
+kibanaDomain: www.my-website.nl
+nameOverride: kiss
