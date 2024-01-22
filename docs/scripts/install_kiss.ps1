@@ -24,7 +24,7 @@ kubectl create secret tls --cert $cert --key=$key wildcard-kiss-tls -n $namespac
 # Install elastic components
 kubectl create -f https://download.elastic.co/downloads/eck/2.9.0/crds.yaml
 kubectl apply -f https://download.elastic.co/downloads/eck/2.9.0/operator.yaml
-helm upgrade --set kibanaDomain=$kibanaHost --install kiss-elastic .\ --version 0.1.0
+helm upgrade --set kibanaDomain=$kibanaHost --install kiss-elastic kiss-elastic/kiss-elastic --version 0.1.0
 
 $POSTGRES_PASSWORD = 'ChangeThis'
 $ELASTIC_PASSWORD = kubectl get secret kiss-es-elastic-user -o go-template='{{.data.elastic | base64decode }}'
