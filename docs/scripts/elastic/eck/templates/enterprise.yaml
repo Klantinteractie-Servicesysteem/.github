@@ -11,4 +11,4 @@ spec:
   count: 1
   elasticsearchRef:
     name: kiss
-  version: 8.9.0
+  version: {{ .Values.elasticVersion }}
