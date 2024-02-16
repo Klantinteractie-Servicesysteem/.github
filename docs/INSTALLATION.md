@@ -7,7 +7,7 @@ Deze handleiding is bedoeld voor kubernetes beheerders en biedt een stappenplan 
 
 ### Voorbereidingen
 #### Domein
-Zorg voor een domeinnaam met wildcard-certificaat. Losse certificaten per endpoint worden op dit moment niet in deze handleiding ondersteund.
+Bij gebruik van de Helm-Charts uit deze repository zorg voor een domeinnaam met wild-card certificaat (bij gebruik van losse certificaten per endpoint: pas de Helm-Chart aan).
 Dit certificaat moet als .crt bestand tijdens de handleiding gebruikt worden.
 De opbouw van dit certificaat is als volgt:
 
