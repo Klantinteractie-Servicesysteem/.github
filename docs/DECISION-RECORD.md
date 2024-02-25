@@ -1,12 +1,11 @@
 
-# Aanvullende gegevens bij Contactmomenten. 
+# Ontwerpbeslissingen.
+Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken. Daar waar er vanuit het project een informatiebehoefte was, die nog geen plek heeft in de standaarden, maar waar nog geen (plek binnen de) standaard voor was, is een ontwerpbeslissing genomen wat hiermee te den. Op het moment dat er een gegevensbehoefte is binnen de applicatie, waarvoor nog geen (volledige) gegevensstandaard beschikbaar is, is de eerste vervolgvraag of deze gegevens ook beschikaar moeten zijn voor ándere applicaties binnen het landschap. Als dat niet het geval is, dan kunnen de gegevens binnen de applicatie zelf worden opgeslagen. Moeten de gegevens ook beschikbaar zijn voor andere applicaties, dan kiezen we ervoor om op basis van een gegevensontwerp een Objecttype aan te maen in de Objectenregistratie.  
 
-Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken. Daar waar er vanuit het project een informatiebehoefte was, die nog geen plek heeft in de standaarden, maar waar nog geen (plek binnen de) standaard voor was, is een ontwerpbeslissing genomen wat hiermee te den. Op het moment dat er een gegevensbehoefte is binnen de applicatie, waarvoor nog geen (volledige) gegevensstandaard beschikbaar is, is de eerste vervolgvraag of deze gegevens ook beschikaar moeten zijn voor ándere applicaties binnen het landschap. Als dat niet het geval is, dan kunnen de gegevens binnen de applicatie zelf worden opgeslagen. 
 
-Voor de onderstaande gegevens is tijdens fase 1C deze afweging gemaakt, en besloten de gegevens op te slaan binnen KISS zelf. De behoefte bij deze gegevens is die naar managementinformatie over de werkzaamheden van het KCC. 
-
-## Contactmomentdetails
-De gegevens van een contactoment die binnen KISS worden verzameld, en die niet in het Contactmomentenregister passen, worden opgeslagen binnen KISS, en zijn op te vragen via de Contactmomentdetails API. Deze API is in eerste insantie zeer rudimentair van opzet: 
+### Contactmomentdetails
+Voor de onderstaande gegevens is tijdens fase 1C deze afweging gemaakt, en besloten de gegevens op te slaan binnen KISS zelf. Het gaat om gegevens van een contactoment niet in het Contactmomentenregister passen. De behoefte bij deze gegevens is die naar managementinformatie over de werkzaamheden van het KCC. 
+Ze worden opgeslagen binnen KISS, en zijn op te vragen via de Contactmomentdetails API. Deze API is in eerste insantie zeer rudimentair van opzet: 
 - de toegang is gebaseerd op de rol `redacteur` binnen KISS (zie ook: [CONFIGURATIE.md](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/CONFIGURATIE.md)
 - de API geeft altijd de laatste 1000 records terug. 
 
