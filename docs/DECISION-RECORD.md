@@ -1,12 +1,12 @@
 
 # Ontwerpbeslissingen.
-Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken. Daar waar er vanuit het project een informatiebehoefte was, die nog geen plek heeft in de standaarden, maar waar nog geen (plek binnen de) standaard voor was, is een ontwerpbeslissing genomen wat hiermee te den. Op het moment dat er een gegevensbehoefte is binnen de applicatie, waarvoor nog geen (volledige) gegevensstandaard beschikbaar is, is de eerste vervolgvraag of deze gegevens ook beschikaar moeten zijn voor ándere applicaties binnen het landschap. Als dat niet het geval is, dan kunnen de gegevens binnen de applicatie zelf worden opgeslagen. Moeten de gegevens ook beschikbaar zijn voor andere applicaties, dan kiezen we ervoor om op basis van een gegevensontwerp een Objecttype aan te maen in de Objectenregistratie.  
+Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken. Daar waar er vanuit het project een informatiebehoefte was, die nog geen plek heeft in de standaarden, maar waar nog geen (plek binnen de) standaard voor was, is een ontwerpbeslissing genomen wat hiermee te doen (zie ook [20230616-PodiumD-flow-afwijkingen-standaarden.pdf](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/20230616-PodiumD-flow-afwijkingen-standaarden.pdf). Op het moment dat er een gegevensbehoefte is binnen de applicatie, waarvoor nog geen (volledige) gegevensstandaard beschikbaar is, is de eerste vervolgvraag of deze gegevens ook beschikaar moeten zijn voor ándere applicaties binnen het landschap. Als dat niet het geval is, dan kunnen de gegevens binnen de applicatie zelf worden opgeslagen. Moeten de gegevens ook beschikbaar zijn voor andere applicaties, dan kiezen we ervoor om op basis van een gegevensontwerp een Objecttype aan te maen in de Objectenregistratie.  
 
-
+## Contactmomenten
 ### Contactmomentdetails
 Voor de onderstaande gegevens is tijdens fase 1C deze afweging gemaakt, en besloten de gegevens op te slaan binnen KISS zelf. Het gaat om gegevens van een contactoment niet in het Contactmomentenregister passen. De behoefte bij deze gegevens is die naar managementinformatie over de werkzaamheden van het KCC. 
 Ze worden opgeslagen binnen KISS, en zijn op te vragen via de Contactmomentdetails API. Deze API is in eerste insantie zeer rudimentair van opzet: 
-- de toegang is gebaseerd op de rol `redacteur` binnen KISS (zie ook: [CONFIGURATIE.md](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/CONFIGURATIE.md)
+- de toegang is gebaseerd op de rol `redacteur` binnen KISS (zie ook: [CONFIGURATIE.md](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/CONFIGURATIE.md))
 - de API geeft altijd de laatste 1000 records terug. 
 
 | Property  | Type | Toelichting |
@@ -20,6 +20,16 @@ Bij VAC's is dit de vraag. Bij Kennisartikelen is dit de titel van het artikel p
 | `verantwoordelijkeAfdeling` | string | Dit is de afdeling voor wie het contactmoment is afgehandeld. Deze moet de KCM kiezen in het afhandelscherm. Waar mogelijk wordt deze vooringevuld vanuit de gekozen bron bij `vraag` | 
 | `gespreksId` | string (uuid) | Een klant kan meerdere vragen stellen binnen één interactie met een Klantcontactmedewerker (KCM). Voor iedere vraag wordt een contactmoment aangemaakt. We hebben het property `gespreksId` toegevoegd. In het geval van 2 of meer vragen binnen één interactie, worden de vragen aan elkaar verbonden, doordat al deze contactmomenten hetzelfde `gespreksId` krijgen | 
 
+## Contactverzoeken 
 
+### Contactverzoek als interneTaak
+Voor Contactverzoeken is nog niet een éénduidige standaard. Sommige gemeenten zien een contactverzoek (terugbelverzoek) als een Zaak. Voor meerdere gemeenten binnen de projectgroep van KISS is dat geen optie. Binnen de [nieuwe standaard Klantinteracties](https://vng-realisatie.github.io/klantinteracties/) is het concept Interne taak geintroduceerd dat ingezet kan worden voor het Contactverzoek (zie bv. [C9167 - Klant belt KCC met een vraag die niet direct beantwoord kan worden en maakt een terugbelverzoek](https://vng-realisatie.github.io/klantinteracties/achtergronddocumentatie/artefacten/9167.html). 
+
+Vooruitlopend op deze standaard is voor KISS een nieuw objecttype voor de interne taak ingericht. Omdat een contactverzoek in zijn geheel afhankelijk is van meerdere nieuwe objecten (betrokkene, actor) die nog niet uitgewerkt zijn als standaard (op moment van ontwikkelen, mei-juni 2023) is er voor gekozen om deze objecten als subobject op te nemen in het objecttype interne taak. Dit objecttype is als community concept beschikbaar bij [de Community concepts binnen Objecttypes, bij Open Objecten](https://github.com/open-objecten/objecttypes/tree/main/community-concepts). 
+
+### afdelingen en groepen
+Een Contactverzoek moet binnen de eigen organisatie worden opgepakt. Binnen Klantinteracties is hiervoor het Actor-object beschikbaar, die van het soort `medewerker`, `organisatorische eenheid` of `geautomatiseerde actor` kan zijn (zie [Gegevenswoordenbek Klantinteracties, 2023-10-19T10:33:57.000+02:00](https://vng-realisatie.github.io/klantinteracties/informatiemodel/gegevenswoordenboek). KISS maakt gebruik van de eerste twee soorten. Binnen de gebruikersgroep was de behoefte om bij organisatorische eenheid onderscheid te kunnen maken tussen Afdeling of Groep. Daarom zijn er ook twee objecttypen hiervoor gemaakt: afdeling en groep. Ook deze objecttypen staan bij [de Community concepts](https://github.com/open-objecten/objecttypes/tree/main/community-concepts).
+
+### medewerkers
 
  
