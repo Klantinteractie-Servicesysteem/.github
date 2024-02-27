@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  kiss-elastic:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2024-01-23T09:44:25.870031+01:00"
+    description: A Helm chart for setting up everything in ECK that kiss needs
+    digest: b457487d30b37f6dba37dd7c8ae2c2bac6553406b775bf3a7f6ab3415aade709
+    name: kiss-elastic
+    type: application
+    urls:
+    - kiss-elastic-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-23T09:44:25.8689141+01:00"

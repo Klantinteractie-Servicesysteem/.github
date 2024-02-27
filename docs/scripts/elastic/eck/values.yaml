@@ -1,0 +1,4 @@
+kubernetesClusterDomain: cluster.local
+kibanaDomain: www.my-website.nl
+nameOverride: kiss
+elasticVersion: 8.9.0
