@@ -29,12 +29,8 @@ Voor een aantal objecttype is de URL nog niet configureerbaar. In die gevallen z
 Bij de installatie van KISS regelt u de koppeling met uw OpenIDConnect Identity Provider. Daarnaast moet u in uw Identity Provider configureren dat gebruikers die in moeten kunnen loggen bij KISS in ieder geval een 'klantcontactmedewerker'-rol hebben. Een rol is in dit geval een claim van het type `role` of `roles` (beiden worden ondersteund). De waarde die correspondeert met een kiss-medewerker kunt u instellen tijdens de installatie. Standaard is dit `Klantcontactmedewerker`. Voor medewerkers die beheertaken op KISS uitvoeren, is een aparte rol ingeregeld. Ook de naam van deze rol kunt u instellen tijdens de installatie. Standaard is dit `Redacteur`. 
 
 ### Claims uit uw Identity provider
-KISS gebruikt de claims uit uw Identity Provider om de gegevens van de ingelogde Klantcontactmedewerker toe te voegen aan de Contactmomenten en Contactverzoeken die vanuit KISS worden geregistreerd. 
-De claim die gebruikt wordt als identificatie van de medewerker naar de verschillende registers kunt u configureren met een tweetal environment variabelen:
-| Variabele |  Toelichting |
-|---|---|
-| OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM | De naam van de claim die gebruikt moet worden als identificatie van de medewerker. Default is `email` |
-| OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE | De huidige ZGW standaard hanteert een maximale lengte van 24 karakters voor het identificatieveld voor de medewerker. Als u de hierboven genoemde claim wilt afkappen op 24 karakters, vult u voor deze variabele de waarde `24` in. |
+KISS gebruikt de claims uit uw Identity Provider om de gegevens van de ingelogde Klantcontactmedewerker toe te voegen aan de Contactmomenten en Contactverzoeken die vanuit KISS worden geregistreerd.
+Zie [de installatiehandleiding](INSTALLATION.md) voor hoe u dit configureert.
 
 Er is in JWT geen standaard claim voor voorletters of voorvoegsel (tussenvoegsel). KISS gebruikt daarom deze mapping:
 - Voorletters => given_name
