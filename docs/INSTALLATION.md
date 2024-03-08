@@ -60,10 +60,10 @@ Voor Authenticatie maakt KISS gebruik van een OpenIDConnect Identity Provider.
 | Variabele | Uitleg |  
 |---|---|
 | oidcAuthority | URL van de OpenID Connect Identity Provider |
-| oidcClientId | Voor toegang tot de OpenID Connect Identity Provider |
+| oidcClientId | Voor toegang tot de OpenID Connect <br />Identity Provider |
 | oidcClientSecret | OpenID Connect Identity Provider | 
-| OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM | De OIDC-claim die gebruikt moet worden als identificatie van de medewerker in de verschillende registers. Standaard is dit `email` |
-| OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE | Optioneel kan de claim die hierboven ingevuld is, afgekapt worden op een maximaal aantal karakters. Dit is bijvoorbeeld nodig als KISS gebruikt wordt in combinatie met OpenKlant / OpenZaak, en de claim mogelijk waardes kan bevatten die langer zijn dan 24 karakters. Hanteer in dat geval de waarde `24`. |
+| OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM | De OIDC-claim die gebruikt moet worden als <br />identificatie van de medewerker in de <br />verschillende registers. Standaard is dit `email` |
+| OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE | Optioneel kan de claim die hierboven ingevuld is, <br />afgekapt worden op een maximaal aantal karakters. <br />Dit is bijvoorbeeld nodig als KISS gebruikt wordt in <br />combinatie met OpenKlant / OpenZaak, en de claim <br />mogelijk waardes kan bevatten die langer zijn dan <br />24 karakters. Hanteer in dat geval de waarde `24`. |
 
 #### Database
 Er zijn verschillende gegevens die binnen KISS zelf worden opgeslagen, zoals Nieuws en Werkinstructies, Links, en managementinformatie. 
