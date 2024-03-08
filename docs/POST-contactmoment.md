@@ -1,3 +1,5 @@
+# Uitbreiding van de POST van een Contactmoment
+
 Bij de integratie met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, was het uitgangspunt dat KISS zoveel mogelijk onveranderd zou blijven. Dit bleek voor de registratie van een Contactverzoek in de e-Suite helaas niet haalbaar. Daarom is de  POST-data van een Contactmoment vanuit KISS uitgebreid.
 
 ### Aanleiding
