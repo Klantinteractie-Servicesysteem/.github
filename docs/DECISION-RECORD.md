@@ -27,9 +27,36 @@ Voor Contactverzoeken is nog niet een éénduidige standaard. Sommige gemeenten 
 
 Vooruitlopend op deze standaard is voor KISS een nieuw objecttype voor de interne taak ingericht. Omdat een contactverzoek in zijn geheel afhankelijk is van meerdere nieuwe objecten (betrokkene, actor) die nog niet uitgewerkt zijn als standaard (op moment van ontwikkelen, mei-juni 2023) is er voor gekozen om deze objecten als subobject op te nemen in het objecttype interne taak. Dit objecttype is als community concept beschikbaar bij [de Community concepts binnen Objecttypes, bij Open Objecten](https://github.com/open-objecten/objecttypes/tree/main/community-concepts). 
 
-### afdelingen en groepen
+### Afdelingen en groepen
 Een Contactverzoek moet binnen de eigen organisatie worden opgepakt. Binnen Klantinteracties is hiervoor het Actor-object beschikbaar, die van het soort `medewerker`, `organisatorische eenheid` of `geautomatiseerde actor` kan zijn (zie [Gegevenswoordenbek Klantinteracties, 2023-10-19T10:33:57.000+02:00](https://vng-realisatie.github.io/klantinteracties/informatiemodel/gegevenswoordenboek). KISS maakt gebruik van de eerste twee soorten. Binnen de gebruikersgroep was de behoefte om bij organisatorische eenheid onderscheid te kunnen maken tussen Afdeling of Groep. Daarom zijn er ook twee objecttypen hiervoor gemaakt: afdeling en groep. Ook deze objecttypen staan bij [de Community concepts](https://github.com/open-objecten/objecttypes/tree/main/community-concepts).
 
-### medewerkers
+Bij de opzet van deze objecten zijn we uitgegaan van de volgende uitgangspunten: 
+
+- Een afdeling heeft een naam en een id
+- Een groep behoort altijd tot één afdeling, en een afdeling kan meerdere groepen bevatten. 
+- Een medewerker hoort bij 1 of meer afdelingen, en bij 0 of meer groepen. 
+
+Bij de integratie van KISS met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, blijkt dat de hierarchische relatie tussen afdelingen en groepen niet altijd bestaat. Groepen zijn daar een ander soort verzameling van medewerkers. Daarom is er een aanpassing gedaan in het groep-object, om te zorgen dat het `afdelingId` niet verplicht is (zie [PR 13](https://github.com/open-objecten/objecttypes/pull/13))
+
+
+### Medewerkers en smoelenboek
+Een KCM wil kunnen zoeken in bronnen met informatie, maar ook kunnen zoeken naar informatie over collega’s [#96](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/96). Ook hier is nog geen standaard voor. In KISS Fase 1B is een voorzet gedaan voor een Medewerker API (gebaseerd op  de [HR-JSON-standaarden van HR Open Standards](https://www.hropenstandards.org/)). In KISS Fase 1C is deze verplaatst naar de Objecten API ( zie [de Community concepts](https://github.com/open-objecten/objecttypes/tree/main/community-concepts).) De objecten van het smoelenboek zijn geindexeerd in Elastic. Bij het doorzetten van een contactverzoek naar een medewerker, gebruiken we de gegevens uit Elastic.
+
+Bij de integratie van KISS met de e-Suite (in gebruikt bij Dimpact-gemeenten), blijkt dat de naam van een medewerker niet altijd beschikbaar is in de onderdelen `voornaam`, `voorvoegselAchternaam` en `achternaam`. Daarom zijn de properties `voornaam` en `achternaam` niet langer verplicht, en is het property `volledigeNaam` toegevoegd. (zie [PR 13](https://github.com/open-objecten/objecttypes/pull/13))
+
+## Zoeken in bronnen 
+### Kennisartikelen en VAC's
+Een KCM wil kunnen zoeken in bronnen om de vraag van een klant te kunnen beantwoorden (zie [#22](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/22)). Voor Kennisartikelen / productpagina's en VAC's zijn ook nog geen defintieve standaarden. Binnen KISS Fase 1C hebben we voor deze twee bronnen objectdefinties gemaakt in overleg met architecten van Dimpact.  
+
+- Het object PDC - Kennisartikel is gebaseerd op de API voor [de SDG-invoervoorziening](https://github.com/maykinmedia/sdg-invoervoorziening)  ([versie 1.7.2](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/maykinmedia/sdg-invoervoorziening/1.7.2/src/openapi.yaml&nocors)). Daar zijn properties aan toegevoegd t.b.v. de behoeften van een KCM (interne informatie, informatie over contact opnemen, informatie over bijzonderheden, trefwoorden en verantwoordelijke afdeling). 
+- Het object VAC is gebaseerd op een vergelijking van PDC - Kennisartikel, met de structuur van VAC's in SDU-catalougs. 
+
+Beide objecten staan bij [de Community concepts](https://github.com/open-objecten/objecttypes/tree/main/community-concepts). 
+
+
+## Contactmoment: de uitgebreide POST
+KISS schrijft Contactmomenten weg m.b.v de VNG Contactmomenten API zoals deze is geïmplementeerd in Open Klant v0.5-pre. In een eerdere versie van KISS waren de gegevens die nu in Contactmomentdetails zitten, onderdeel van het uitgebreide Contactmoment. Omdat in KISS 1C de weg is gekozen om bestaande standaarden niet uit te breiden, zijn deze gegevens verplaatst naar Contactmomentdetails. Maar: ze zijn nog steeds onderdeel van de POST die KISS doet op de Contactmomenten API.  het ontvangende register negeeert deze onderdelen, en registreert alleen het object zoals gedefinieerde in de Contactmomenten API. 
+
+Bij de integratie met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, is een additionele uitbreiding gedaan van de POST-data in contactmoment. 
 
  
