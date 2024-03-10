@@ -59,4 +59,9 @@ KISS schrijft Contactmomenten weg m.b.v de VNG Contactmomenten API zoals deze is
 
 Bij de integratie met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, is een additionele [uitbreiding gedaan van de POST-data in contactmoment](POST-contactmoment.md). 
 
+## Zaken: het zaakdetailscherm
+In onderstaande afbeelding is gedocumenteerd welke gegevens uit de verschillen ZGW-objecten worden gebruikt in het Zaak-detailscherm. 
+
+![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/add-decision-record/docs/images/MappingZaakDetail.png)
+
  
