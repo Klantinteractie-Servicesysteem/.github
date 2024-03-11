@@ -1,6 +1,6 @@
 
 # Ontwerpbeslissingen.
-Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken. Daar waar er vanuit het project een informatiebehoefte was, maar waar nog geen (plek binnen de) standaard voor was, is een ontwerpbeslissing genomen wat hiermee te doen (zie ook [20230616-PodiumD-flow-afwijkingen-standaarden.pdf](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/20230616-PodiumD-flow-afwijkingen-standaarden.pdf)). Op het moment dat er een gegevensbehoefte is binnen de applicatie, waarvoor nog geen (volledige) gegevensstandaard beschikbaar is, is de eerste vervolgvraag of deze gegevens ook beschikaar moeten zijn voor ándere applicaties binnen het landschap. Als dat niet het geval is, dan kunnen de gegevens binnen de applicatie zelf worden opgeslagen. Moeten de gegevens ook beschikbaar zijn voor andere applicaties, dan kiezen we ervoor om op basis van een gegevensontwerp een Objecttype aan te maken in de Objectenregistratie.  
+KISS is ontwikkeld met een eindgebruikersgroep van Klantcontactmedewerkers (KCMs) van verschillende gemeenten. Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken. Daar waar er vanuit de gebruikersgroep een informatiebehoefte was, maar waar nog geen (plek binnen de) standaard voor was, is een ontwerpbeslissing genomen wat hiermee te doen (zie ook [20230616-PodiumD-flow-afwijkingen-standaarden.pdf](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/20230616-PodiumD-flow-afwijkingen-standaarden.pdf)). Op het moment dat er een gegevensbehoefte is binnen de applicatie, waarvoor nog geen (volledige) gegevensstandaard beschikbaar is, is de eerste vervolgvraag of deze gegevens ook beschikaar moeten zijn voor ándere applicaties binnen het landschap. Als dat niet het geval is, dan kunnen de gegevens binnen de applicatie zelf worden opgeslagen. Moeten de gegevens ook beschikbaar zijn voor andere applicaties, dan kiezen we ervoor om op basis van een gegevensontwerp een Objecttype aan te maken in de Objectenregistratie.  
 
 ## Contactmomenten
 ### Contactmomentdetails
@@ -35,7 +35,7 @@ Bij de opzet van deze objecten zijn we uitgegaan van de volgende uitgangspunten:
 - Een groep behoort altijd tot één afdeling, en een afdeling kan meerdere groepen bevatten. 
 - Een medewerker hoort bij 1 of meer afdelingen, en bij 0 of meer groepen. 
 
-Bij de integratie van KISS met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, blijkt dat de hierarchische relatie tussen afdelingen en groepen niet altijd bestaat. Groepen zijn daar een ander soort verzameling van medewerkers. Daarom is er een aanpassing gedaan in het groep-object, om te zorgen dat het `afdelingId` niet verplicht is (zie [PR 13](https://github.com/open-objecten/objecttypes/pull/13))
+Bij de integratie van KISS met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, blijkt dat de hierarchische relatie tussen afdelingen en groepen niet altijd bestaat. Groepen zijn daar een ander soort verzameling van medewerkers. Daarom is er een aanpassing gedaan in het groep-object, om te zorgen dat het `afdelingId` niet verplicht is (zie [PR 13](https://github.com/open-objecten/objecttypes/pull/13)).
 
 
 ### Medewerkers en smoelenboek
@@ -45,10 +45,10 @@ Bij de integratie van KISS met de e-Suite (in gebruikt bij Dimpact-gemeenten), b
 
 ## Zoeken in bronnen 
 ### Kennisartikelen / productpagina's (PDC) en VAC's
-Een KCM wil kunnen zoeken in bronnen om de vraag van een klant te kunnen beantwoorden (zie [#22](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/22)). Voor Kennisartikelen / productpagina's en VAC's zijn ook nog geen defintieve standaarden. Binnen KISS Fase 1C hebben we voor deze twee bronnen objectdefinties gemaakt in overleg met architecten van Dimpact.  
+Een KCM wil kunnen zoeken in bronnen om de vraag van een klant te kunnen beantwoorden (zie [#22](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/22)). Voor Kennisartikelen / productpagina's en VAC's zijn ook nog geen defintieve standaarden. Binnen KISS Fase 1C hebben we voor deze twee bronnen objectdefinties gemaakt, gebsaseerd op standaarden in wording in overleg met architecten van Dimpact.  
 
 - Het object PDC - Kennisartikel is gebaseerd op de API voor [de SDG-invoervoorziening](https://github.com/maykinmedia/sdg-invoervoorziening)  ([versie 1.7.2](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/maykinmedia/sdg-invoervoorziening/1.7.2/src/openapi.yaml&nocors)). Daar zijn properties aan toegevoegd t.b.v. de behoeften van een KCM (interne informatie, informatie over contact opnemen, informatie over bijzonderheden, trefwoorden en verantwoordelijke afdeling). 
-- Het object VAC is gebaseerd op een vergelijking van PDC - Kennisartikel, met de structuur van VAC's in SDU-catalougs. 
+- Het object VAC is gebaseerd op een vergelijking van PDC - Kennisartikel, met de structuur van VAC's in SDU-catalogus. 
 
 Beide objecten staan bij [de Community concepts](https://github.com/open-objecten/objecttypes/tree/main/community-concepts). 
 
