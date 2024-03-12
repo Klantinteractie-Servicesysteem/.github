@@ -63,4 +63,6 @@ In onderstaande afbeelding is gedocumenteerd welke gegevens uit de verschillen Z
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/add-decision-record/docs/images/MappingZaakDetail.png)
 
- 
+ ## Logging voor verwerking
+Omdat er nog geen definitieve standaard voor logging voor verwerking was in KISS Fase 1c, is er een voorbereiding gedaan t.b.v. een API voor verwerkingslogging, om de algemene werking alvast op te zetten totdat er een standaard beschikbaar is. Elke keer dat er een api call wordt gedaan naar externe systemen loggen we UserID, datum/tijd, het api-endpoint dat werd aangeroepen, en de methode waarmee het endpoint werd aangeroepen. Deze logging staat los van de errorlogging. Er is een zeer basaal API-endpoint voor ingericht. 
+
