@@ -110,12 +110,12 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 
 Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-frontend.
 
-| Variabele | Uitleg |  
+| Variabele | Uitleg |
 |---|---|
 | imageTag | Dit is de verwijzing naar de Build-versie van de <br />KISS-frontend repository |
 | haalCentraalBaseUrl | URL van de Haal Centraal API om de BRP te bevragen |
 | haalCentraalApiKey | Key om de Haal Centraal API te bevragen |
-| kvkBaseUrl | URL van de KvK-API om het Handelsregister te bevragen | 
+| kvkBaseUrl | URL van de KvK-API om het Handelsregister te bevragen. Dit is het pad voorafgaand aan het versienummer, bijvoorbeeld `https://api.kvk.nl/test/api` | 
 | kvkApiKey | Key om de Kvk-API te bevragen |
 | enterprise_search_url | URL van de API waarop KISS de elastic instantie <br />kan bevragen | 
 | elasticPassword | Nodig om de Elastic API te bevragen |
