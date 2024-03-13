@@ -37,6 +37,7 @@ Er is in JWT geen standaard claim voor voorletters of voorvoegsel (tussenvoegsel
 - Achternaam => family_name indien beschikbaar, anders name indien beschikbaar, anders http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
 - Op dit moment doen we niets met Tussenvoegsel, omdat er geen voorvoegsel-claim bestaat. In de huidige implementatie komt tussenvoegsel alleen in het contactoment, als het onderdeel is van de Achternaam.
 
+
 ### Voorbeeldinrichting in Azure Active Directory
 Als u gebruik maakt van Azure Active Directory als Identity Provider, kunt u dit op de volgende manier inrichten.
 1. Bij de installatie van KISS heeft u een App Registration aangemaakt. Ga binnen Azure AD naar App registrations en klik op de applicatie.
