@@ -11,7 +11,9 @@ Ze worden opgeslagen binnen KISS, en zijn op te vragen via de Contactmomentdetai
 
 | Property  | Type | Toelichting |
 |--------|--------|--------|
-| `vraag` | string (uri) | De URL's van geraadpleegde bronnen (Kennisbankartikelen / productpagina's, Vraag-Antwoord Combinaties (VAC) en nieuws/werkinstructies) slaan we op in het property `onderwerpLinks`. Voor Managementinformatie is dit niet specifiek genoeg. Daarom kan een KCM één van de bronnen selecteren bij "Vraag". De titel van deze deze bron wordt opgeslagen in `vraag`. <br />Bij VAC's is dit de vraag. Bij Kennisartikelen / productpagina's is dit de titel van het artikel plus één van de geraadpleegde subonderdelen binnen het artikel. Deze wordt in KISS ook gebruikt in de weergave van Contactmomenten: hiermee kan een KCM zien wat de vraag van de klant was. |
+| `vraag` | string (uri) | De URL's van geraadpleegde bronnen <br/>
+(Kennisbankartikelen / productpagina's, Vraag-Antwoord Combinaties (VAC) <br/>
+en nieuws/werkinstructies) slaan we op in het property `onderwerpLinks`. Voor Managementinformatie is dit niet specifiek genoeg. Daarom kan een KCM één van de bronnen selecteren bij "Vraag". De titel van deze deze bron wordt opgeslagen in `vraag`. <br />Bij VAC's is dit de vraag. Bij Kennisartikelen / productpagina's is dit de titel van het artikel plus één van de geraadpleegde subonderdelen binnen het artikel. Deze wordt in KISS ook gebruikt in de weergave van Contactmomenten: hiermee kan een KCM zien wat de vraag van de klant was. |
 | `specifiekeVraag` | string | In het afhandelscherm kan een KCM de eigenlijke klantvraag invullen. Bijvoorbeeld omdat de `vraag` de eigenlijke vraag niet echt dekt. Of omdat het een nieuwe vraag is, die nog niet in de bron is verwerkt (sticker in je paspoort). Ook deze informatie is in te zien door de KCM bij het bekijken van Contactmomenten. | 
 | `gespreksresultaat` | string  | Hierin slaan we het  gespreksresultaat van het contactmoment op, bijvoorbeeld 'Doorverbonden' of 'Zelfstandig afgehandeld'.  | 
 | `startdatum` | string (date-time) | De tijd waar op het Contactmoment is gestart. Samen met `einddatum` bepaaalt dit de gespreksduur. | 
