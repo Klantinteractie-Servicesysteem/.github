@@ -299,3 +299,10 @@ Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit contactform
  
 Het formulier is niet meer beschikbaar voor de KCM die een nieuw Contactverzoek gaat maken. Als een KCM al bezig was om met dat formulier een Contactverzoek te maken, kan die dat nog wel afmaken. 
 
+## Kanalen
+Op de pagina 'kanalen' kan je de lijst met kanalen beheren. Met deze kanalen kunnen klantcontactmedewerkers aan het einde van hun contactmoment aangeven via welk kanaal het contact heeft plaatsgevonden, bijvoorbeeld telefonisch of via e-mail.
+
+Er is een default lijst met kanalen. Als je zelf geen kanalen toevoegt of alle kanalen verwijderd, dan  wordt deze default lijst gebruikt op het contactmoment afhandelscherm.
+
+### Gespreksresultaat toevoegen, wijzigen en verwijderen
+Het beheerscherm voor kanalen is is alleen toegankelijk met de redactierol en is te vinden via 'Beheer' > 'Kanalen' in het hoofdmenu.
