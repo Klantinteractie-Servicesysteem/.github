@@ -306,4 +306,6 @@ Er is een default lijst met kanalen. Als je zelf geen kanalen toevoegt of alle k
 De default lijst bestaat uit: telefoon, e-mail, contactformulier, Twitter, Facebook, LinkedIn, live chat, Instagram, WhatsApp
 
 ### Gespreksresultaat toevoegen, wijzigen en verwijderen
-Het beheerscherm voor kanalen is is alleen toegankelijk met de redactierol en is te vinden via het Beheer scherm.
+Het beheerscherm voor kanalen is is alleen toegankelijk met de redactierol en is te vinden onder Beheer.
+
+Let op, Wanneer men KISS gebruikt in combinatie met een bron, met een vaste lijst kanalen (bijvoorbeeld de e-Suite), zorg er dan voor dat beide lijsten exact overeenkomen. let daarbij ook op hoofdletters, spaties en streepjes.
