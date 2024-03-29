@@ -302,7 +302,8 @@ Het formulier is niet meer beschikbaar voor de KCM die een nieuw Contactverzoek 
 ## Kanalen
 Op de pagina 'kanalen' kan je de lijst met kanalen beheren. Met deze kanalen kunnen klantcontactmedewerkers aan het einde van hun contactmoment aangeven via welk kanaal het contact heeft plaatsgevonden, bijvoorbeeld telefonisch of via e-mail.
 
-Er is een default lijst met kanalen. Als je zelf geen kanalen toevoegt of alle kanalen verwijderd, dan  wordt deze default lijst gebruikt op het contactmoment afhandelscherm.
+Er is een default lijst met kanalen. Als je zelf geen kanalen toevoegt of alle kanalen verwijdert, dan wordt automatisch deze default lijst gebruikt op het contactmoment afhandelscherm.
+De default lijst bestaat uit: telefoon, e-mail, contactformulier, Twitter, Facebook, LinkedIn, live chat, Instagram, WhatsApp
 
 ### Gespreksresultaat toevoegen, wijzigen en verwijderen
-Het beheerscherm voor kanalen is is alleen toegankelijk met de redactierol en is te vinden via 'Beheer' > 'Kanalen' in het hoofdmenu.
+Het beheerscherm voor kanalen is is alleen toegankelijk met de redactierol en is te vinden via het Beheer scherm.
