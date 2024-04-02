@@ -6,6 +6,7 @@ Als beheerder van KISS kan je de volgende zaken beheren:
 - Links
 - Gespreksresultaten
 - Formulier contactverzoeken
+- Kanalen
 
 Per onderwerp leggen wij uit wat de mogelijkheden zijn en hoe je de werkzaamheden uitvoert. Om deze taken te kunnen uitvoeren moet je de rol `Redacteur` hebben (zie ook [Configuratie](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/CONFIGURATIE.md)).
 
@@ -305,7 +306,7 @@ Op de pagina 'kanalen' kan je de lijst met kanalen beheren. Met deze kanalen kun
 Er is een default lijst met kanalen. Als je zelf geen kanalen toevoegt of alle kanalen verwijdert, dan wordt automatisch deze default lijst gebruikt op het contactmoment afhandelscherm.
 De default lijst bestaat uit: telefoon, e-mail, contactformulier, Twitter, Facebook, LinkedIn, live chat, Instagram, WhatsApp
 
-### Gespreksresultaat toevoegen, wijzigen en verwijderen
-Het beheerscherm voor kanalen is is alleen toegankelijk met de redactierol en is te vinden onder Beheer.
+### Kanalen toevoegen, wijzigen en verwijderen
+Het toevoegen, wijzigen of verwijderen van Kanalen gaat op een gelijksoortige manier als het toevoegen, wijzigen of verwijderen van gespreksresultaten. Let op: het kan zijn dat het Register waarin de contactmomenten worden 
 
 Let op, Wanneer men KISS gebruikt in combinatie met een bron, met een vaste lijst kanalen (bijvoorbeeld de e-Suite), zorg er dan voor dat beide lijsten exact overeenkomen. let daarbij ook op hoofdletters, spaties en streepjes.
