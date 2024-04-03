@@ -303,10 +303,10 @@ Het formulier is niet meer beschikbaar voor de KCM die een nieuw Contactverzoek 
 ## Kanalen
 Op de pagina 'kanalen' kan je de lijst met kanalen beheren. Met deze kanalen kunnen klantcontactmedewerkers aan het einde van hun contactmoment aangeven via welk kanaal het contact heeft plaatsgevonden, bijvoorbeeld telefonisch of via e-mail.
 
-Er is een default lijst met kanalen. Als je zelf geen kanalen toevoegt of alle kanalen verwijdert, dan wordt automatisch deze default lijst gebruikt op het contactmoment afhandelscherm.
-De default lijst bestaat uit: telefoon, e-mail, contactformulier, Twitter, Facebook, LinkedIn, live chat, Instagram, WhatsApp
+Als je zelf geen kanalen toevoegt of alle kanalen verwijdert, dan zal KISS automatisch een standaardlijst gebruiken in het afhandelscherm van contactmomenten. Deze lijst bevat de volgende kanalen: telefoon, e-mail, contactformulier, Twitter, Facebook, LinkedIn, live chat, Instagram, WhatsApp. 
+
 
 ### Kanalen toevoegen, wijzigen en verwijderen
-Het toevoegen, wijzigen of verwijderen van Kanalen gaat op een gelijksoortige manier als het toevoegen, wijzigen of verwijderen van gespreksresultaten. Let op: het kan zijn dat het Register waarin de contactmomenten worden 
+Het toevoegen, wijzigen of verwijderen van kanalen gaat op een gelijksoortige manier als het toevoegen, wijzigen of verwijderen van gespreksresultaten.  
 
-Let op, Wanneer men KISS gebruikt in combinatie met een bron, met een vaste lijst kanalen (bijvoorbeeld de e-Suite), zorg er dan voor dat beide lijsten exact overeenkomen. let daarbij ook op hoofdletters, spaties en streepjes.
+Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kanalen aanwezig zijn (geconfigureerd of een vaste lijst kanalen), dan moet je ervoor zorgen dat de lijst in KISS exact overeenkomt met de lijst in het register. Let daarbij ook op hoofdletters, kleine, spaties en streepjes.
