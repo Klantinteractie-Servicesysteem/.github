@@ -63,6 +63,18 @@ In onderstaande afbeelding is gedocumenteerd welke gegevens uit de verschillen Z
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/add-decision-record/docs/images/MappingZaakDetail.png)
 
- ## Logging voor verwerking
+## Logging voor verwerking
 Omdat er nog geen definitieve standaard voor logging voor verwerking was in KISS Fase 1c, is er een voorbereiding gedaan t.b.v. een API voor verwerkingslogging, om de algemene werking alvast op te zetten totdat er een standaard beschikbaar is. Elke keer dat er een api call wordt gedaan naar externe systemen loggen we UserID, datum/tijd, het api-endpoint dat werd aangeroepen, en de methode waarmee het endpoint werd aangeroepen. Deze logging staat los van de errorlogging. Er is een zeer basaal API-endpoint voor ingericht. 
+
+## Autorisatie
+KISS is ontwikkeld met het oog op gebruik van een aantal api's (Klanten API, Contactmomenten, ZGW API's, Objecten API en Objecttypen API ). Daarom is bij de ontwikkeling aangesloten op enkele registers aangesloten, die deze API's implementeren, namelijk: Open Zaak, Open Objecten en Objecttypen en Open Klant (v.01). Deze API's en registers gaan ervan uit dat autorisatie door de aanroepende applicatie wordt gefaciliteert en niet door het register zelf. Daarom  gebeurt het inrichten van de autorisatie op applicatieniveau en niet op gebruikersniveau. En daarom worden er géén user tokens meegestuurd vanuit KISS naar de onderliggende registers, tenzij dat vereist wordt om specifieke redenen zoals bv. logging. 
+
+Bij de eerste implementatie van KISS binnen een gemeente, moet KISS koppelen met een ouder register, de e-Suite. Deze kan de autorisatie (wat een gebruiker mag zien en doen) op gebruikerniveau. Om een fijnmaziger autorisatie op gebruikersniveau mogelijk te maken bij deze aansluiting, ontstaat de noodzaak om wel bij elk request een token met de userid mee te kunnen sturen. 
+
+Hierop is de koppeling met Overige Objecten aangepast: met moet namelijk, afhankelijk van configuratie per objecttype, mogelijk zijn om de calls naar het onderliggende register ófwel te voorzien van een token, ófwel van een token met user-id. 
+
+
+
+
+
 
