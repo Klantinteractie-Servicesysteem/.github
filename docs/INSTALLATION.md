@@ -130,6 +130,7 @@ Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan 
 | ZAKEN_BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn |
 | ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
 | ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
+| NIETNATUURLIJKPERSOONIDENTIFIER  | Afhankelijk van de gebruikte bron (bijvoorbeeld OpenKlant of de e-Suite) kan je hiermee aangeven welk gegeven gebruikt wordt om KvK gegevens aan klanten in het klantregister te koppelen als het gaat om 'niet natuurlijke personen'. Hiervoor kan monenteel rsin of kvknummer gebruikt worden. Als deze variable leeg gelaten wordt of ontbreekt bij de installatie, zal 'rsin' gebruikt worden als default. Als men de e-Suite als register gebruikt dient hier 'kvknummer' ingevuld te worden.   |
 
 **_Gekoppelde bronnen: KISS-Elastic-Sync_**
 
