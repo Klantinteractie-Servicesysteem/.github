@@ -124,13 +124,14 @@ Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan 
 | klanten_base_url | URL van de Klanten API voor het gebruikte klantenregister |
 | klanten_client_id | clientId voor het gebruikte klantenregister |
 | klanten_client_secret | secret voor het gebruikte klantenregister, deze <br />moet **minimaal 16 karakters** lang zijn |
+| NIETNATUURLIJKPERSOONIDENTIFIER  | Afhankelijk van de gebruikte bron (bijvoorbeeld Open Klant of de e-Suite) kan je hiermee aangeven welk gegeven gebruikt wordt om KvK-gegevens aan klanten in het klantregister te koppelen als het gaat om 'niet natuurlijke personen'. Op dit moment kan je hiervoor het RSIN (`rsin`) of het KvK-nummer (`kvkNummer`) gebruiken. RSIN is de default: als deze variable leeg gelaten wordt of ontbreekt bij de installatie, zal `rsin` gebruikt worden. Als je de e-Suite als register gebruikt, moet je hier  `kvkNummer` invullen. Let op, de spelling moet exact overeen komen met de spelling van het property in [de KvK-API's](https://developers.kvk.nl/apis)   |
 | CONTACTMOMENTEN_BASE_URL  | URL van de Contactmomenten API voor het gebruikte <br />Contactmomentenregister  |
 | CONTACTMOMENTEN_API_CLIENT_ID | clientId voor het gebruikte Contactmomentenregister |
 | CONTACTMOMENTEN_API_KEY  | API key te gebruiken door KISS voor het gebruikte <br />Contactmomentenregister, deze moet **minimaal <br />16 karakters** lang zijn. |
 | ZAKEN_BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn |
 | ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
 | ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
-| NIETNATUURLIJKPERSOONIDENTIFIER  | Afhankelijk van de gebruikte bron (bijvoorbeeld OpenKlant of de e-Suite) kan je hiermee aangeven welk gegeven gebruikt wordt om KvK gegevens aan klanten in het klantregister te koppelen als het gaat om 'niet natuurlijke personen'. Hiervoor kan monenteel rsin of kvknummer gebruikt worden. Als deze variable leeg gelaten wordt of ontbreekt bij de installatie, zal 'rsin' gebruikt worden als default. Als men de e-Suite als register gebruikt dient hier 'kvkNummer' ingevuld te worden. let op, dat de spelling exact overeen moet komen met die van de KvK api   |
+
 
 **_Gekoppelde bronnen: KISS-Elastic-Sync_**
 
