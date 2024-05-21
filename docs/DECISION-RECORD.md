@@ -63,6 +63,18 @@ In onderstaande afbeelding is gedocumenteerd welke gegevens uit de verschillen Z
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/add-decision-record/docs/images/MappingZaakDetail.png)
 
- ## Logging voor verwerking
+## Logging voor verwerking
 Omdat er nog geen definitieve standaard voor logging voor verwerking was in KISS Fase 1c, is er een voorbereiding gedaan t.b.v. een API voor verwerkingslogging, om de algemene werking alvast op te zetten totdat er een standaard beschikbaar is. Elke keer dat er een api call wordt gedaan naar externe systemen loggen we UserID, datum/tijd, het api-endpoint dat werd aangeroepen, en de methode waarmee het endpoint werd aangeroepen. Deze logging staat los van de errorlogging. Er is een zeer basaal API-endpoint voor ingericht. 
+
+## Autorisatie
+KISS is ontwikkeld met het oog op gebruik van een aantal api's (Klanten API, Contactmomenten, ZGW API's, Objecten API en Objecttypen API ). Deze API's e gaan ervan uit dat autorisatie door de aanroepende applicatie wordt gefaciliteert en niet door het register zelf. Daarom  gebeurt het inrichten van de autorisatie op applicatieniveau en niet op gebruikersniveau. En daarom worden er géén user tokens meegestuurd vanuit KISS naar de onderliggende registers, tenzij dat vereist wordt om specifieke redenen zoals bv. logging. 
+
+Bij de eerste implementatie van KISS binnen een gemeente, moet KISS koppelen met een ouder register, de e-Suite. Deze kan de autorisatie (wat een gebruiker mag zien en doen) op gebruikerniveau. Als KISS op de e-Suite koppelt met gebruikmaking van de bestaande 'autorisatie-op-applicatieniveau', dan kan een KISS-gebruiker zaken en contacten zien, die deze gebruiker in de e-Suite niet mag zien. Om dat te voorkomen moet KISS dus een fijnmaziger autorisatie op gebruikersniveau mogelijk kunnen maken bij aansluiting op een onderliggen register. Hierdoor is de noodzaak onstaan om wél bij elk request userid mee te kunnen sturen in een JWT-token. 
+
+Hierop is de koppeling met Overige Objecten aangepast: met moet namelijk, afhankelijk van configuratie per objecttype, mogelijk zijn om de calls naar het onderliggende register ófwel te voorzien van een token, ófwel van een token met user-id. 
+
+
+
+
+
 
