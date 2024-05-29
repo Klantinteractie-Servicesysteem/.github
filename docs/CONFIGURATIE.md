@@ -11,10 +11,10 @@ Voor een aantal objecttypen kunt u de URL van het objecttype instellen m.b.v. en
 | Variabele |  Toelichting |
 |---|---|
 | INTERNE_TAAK_OBJECT_TYPE_URL |  De interne taak is onderdeel van een Contactverzoek |
+| INTERNE_TAAK_TYPE_VERSION | De versie van het objecttype die gebruikt wordt in de API-aanroepen. Standaard ingesteld op `1`. |
 | GROEPEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Groepen op te halen <br/> voor gebruik in Contactverzoeken |
 | AFDELINGEN_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Afdelingen op te halen <br/>voor gebruik in Contactverzoeken, Formulieren <br />contactverzoek en registratie van Contactmomenten  |
 | SDG_OBJECT_TYPE_URL | Objecttype dat gebruikt wordt om Kennisartikelen op te halen; <br/>dit objecttype is gebaseerd op het object `product` <br />in de SDG Invoervoorziening |
-
 
 ### URL nog niet configureerbaar
 Voor een aantal objecttype is de URL nog niet configureerbaar. In die gevallen zal KISS zelf de Objecttype API gaan bevragen om de URL op te halen. Hiervoor is het van belang dat de objecttypen in uw registratie de juiste naam hebben.
