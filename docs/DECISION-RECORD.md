@@ -29,13 +29,9 @@ Vooruitlopend op deze standaard is voor KISS een nieuw objecttype voor de intern
 ### Afdelingen en groepen
 Een Contactverzoek moet binnen de eigen organisatie worden opgepakt. Binnen Klantinteracties is hiervoor het Actor-object beschikbaar, die van het soort `medewerker`, `organisatorische eenheid` of `geautomatiseerde actor` kan zijn (zie [Gegevenswoordenbek Klantinteracties, 2023-10-19T10:33:57.000+02:00](https://vng-realisatie.github.io/klantinteracties/informatiemodel/gegevenswoordenboek). KISS maakt gebruik van de eerste twee soorten. Binnen de gebruikersgroep was de behoefte om bij organisatorische eenheid onderscheid te kunnen maken tussen Afdeling of Groep. Daarom zijn er ook twee objecttypen hiervoor gemaakt: afdeling en groep. Ook deze objecttypen staan bij [de Community concepts](https://github.com/open-objecten/objecttypes/tree/main/community-concepts).
 
-Bij de opzet van deze objecten zijn we uitgegaan van de volgende uitgangspunten: 
+Bij de opzet van deze objecten zijn we uitgegaan van een hierarchische relatie tussen AFdeling, Groep en Medewerker. Bij de integratie van KISS met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, blijkt dat de hierarchische relatie tussen afdelingen en groepen niet altijd bestaat. Groepen zijn daar een ander soort verzameling van medewerkers. Daarom is er een aanpassing gedaan in het groep-object, om te zorgen dat het `afdelingId` niet verplicht is (zie [PR 13](https://github.com/open-objecten/objecttypes/pull/13)).
 
-- Een afdeling heeft een naam en een id
-- Een groep behoort altijd tot één afdeling, en een afdeling kan meerdere groepen bevatten. 
-- Een medewerker hoort bij 1 of meer afdelingen, en bij 0 of meer groepen. 
-
-Bij de integratie van KISS met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, blijkt dat de hierarchische relatie tussen afdelingen en groepen niet altijd bestaat. Groepen zijn daar een ander soort verzameling van medewerkers. Daarom is er een aanpassing gedaan in het groep-object, om te zorgen dat het `afdelingId` niet verplicht is (zie [PR 13](https://github.com/open-objecten/objecttypes/pull/13)).
+Op plekken waar we naar afdelingen zoeken (bv. afdeling bij kennisartikelen, of bij medewerker) is de afdeling/groepsnaam gekozen als zoeksleutel. Dit is gedaan op basis van de toen beschikbare (test)data. Daarin was alleen naam altijd aanwezig, identificatie niet altijd. 
 
 
 ### Medewerkers en smoelenboek
