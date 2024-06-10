@@ -76,7 +76,7 @@ Er zijn verschillende gegevens die binnen KISS zelf worden opgeslagen, zoals Nie
 
 
 #### Organisatie RSIN
-Verschillende ZGW APIs, waaronder de Klant en Contactmoment APIs, vragen om een identificatienummer van de organisatie.
+Verschillende ZGW APIs, waaronder de Klant en Contactmoment APIs, vragen om een identificatienummer, RSIN, van de eigen organisatie. Dit RSIN moet worden meegegeven bij registratie van specifieke objecten. 
 
 | Variabele | Uitleg |  
 |---|---|
@@ -97,10 +97,10 @@ Vanuit KISS kan een KCM feedback geven op een kennisartikel. Deze informatie wor
 
 
 #### Gekoppelde bronnen
-Er zijn diverse bronnen die vanuit KISS via API's bevraagd worden. Sommige worden alleen geraadpleegd, zoals de KvK-API en de API voor Haal Centraal BRP Personen bevragen. Andere registraties worden niet alleen geraadpleegd, maar er worden ook gegevens in weggeschreven. Dit zijn in ieder geval een Klanten- en Contactmomentenregister, zoals Open Klant, en een Zaaksysteem (m.b.v. ZGW API's) zoals Open Zaak. 
+Er zijn diverse bronnen die vanuit KISS via API's bevraagd worden. Sommige worden alleen geraadpleegd, zoals de KvK-API en de API voor Haal Centraal BRP Personen bevragen, en de Objecten API voor het ophalen van Afdelingen, Groepen en Medewerkers. Andere registraties worden niet alleen geraadpleegd, maar er worden ook gegevens in weggeschreven. Dit zijn in ieder geval een Klanten- en Contactmomentenregister, zoals Open Klant, het Objecten Register zoals Open Objecten, en een Zaaksysteem (m.b.v. ZGW API's) zoals Open Zaak. 
 
 Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden. 
-- KISS gebruikt de SDG-api  om Kennisartikelen (PDC-producten) mee op te halen, en naar Elastic te pushen.
+- KISS gebruikt de Objecten API om Kennisartikelen (PDC-producten) mee op te halen, en naar Elastic te pushen.
 - KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek op te halen en naar Elastic te pushen.
 - KISS gebruikt op dit moment de Objecten API om de Vraag Antwoord Combinaties (VAC) op te halen en naar Elastic te pushen. 
 
@@ -131,7 +131,26 @@ Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan 
 | ZAKEN_BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn |
 | ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
 | ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
-
+| AFDELINGEN_BASE_URL  | URL waar de KISS-frontend de Afdelingen vandaan kan halen.  |
+| AFDELINGEN_OBJECT_TYPE_URL | URL waar het Objecttype Afdeling te vinden is |
+| AFDELINGEN_TOKEN | Token waarmee KISS zich kan identificeren bij de Objecten API (waar de afdelingen staan)<br /> **LET OP: niet te gebruiken** in combinatie met AFDELINGEN_CLIENT_SECRET en AFDELINGEN_CLIENT_ID |
+| AFDELINGEN_CLIENT_SECRET | Client Secret waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met AFDELINGEN_TOKEN |
+| AFDELINGEN_CLIENT_ID | Client ID waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met AFDELINGEN_TOKEN |
+|  |  |
+| GROEPEN_BASE_URL  | URL waar de KISS-frontend de Groepen vandaan kan halen.  |
+| GROEPEN_OBJECT_TYPE_URL | URL waar het Objecttype Groep te vinden is |
+| GROEPEN_TOKEN | Token waarmee KISS zich kan identificeren bij de Objecten API (waar de afdelingen staan)<br /> **LET OP: niet te gebruiken** in combinatie met GROEPEN_CLIENT_SECRET en GROEPEN_CLIENT_ID |
+| GROEPEN_CLIENT_SECRET | Client Secret waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met GROEPEN_TOKEN |
+| GROEPEN_CLIENT_ID | Client ID waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met GROEPEN_TOKEN |
+|  |  |
+| INTERNE_TAAK_BASE_URL  | URL waar de KISS-frontend de Interne Taken vandaan kan halen.  |
+| INTERNE_TAAK_OBJECT_TYPE_URL | URL waar het Objecttype Interne Taak te vinden is |
+| INTERNE_TAAK_TYPE_VERSION | Versienummer van het Objecttype Interne Taak, in de objectenregistratie waar KISS de Interne Taken wegschrijft |
+| INTERNE_TAAK_TOKEN | Token waarmee KISS zich kan identificeren bij de Objecten API (waar de afdelingen staan)<br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_CLIENT_SECRET en INTERNE_TAAK_CLIENT_ID |
+| INTERNE_TAAK_CLIENT_SECRET | Client Secret waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_TOKEN |
+| INTERNE_TAAK_CLIENT_ID | Client ID waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_TOKEN |
+|    |    |
+|    |    |
 
 **_Gekoppelde bronnen: KISS-Elastic-Sync_**
 
