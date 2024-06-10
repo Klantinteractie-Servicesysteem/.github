@@ -48,8 +48,8 @@ Per servertype is er een quota aan het maximale aantal cores dat gebruikt mag wo
 Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 [https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas](https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas).
 
-#### Authenticatie
-De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
+#### Authenticatie van de ingelogde gebruiker
+De authenticatie van gebruikers binnen KISS gebeurt m.b.v. Azure Active Directory.
 
 ### Configuratie: environment variabelen
 Voor elke installatie zijn een aantal environment variabelen nodig. Per onderdeel van KISS geven we aan welke variabelen gevuld moeten worden. In  het hieronder genoemde installatiescript, en in values.yaml zijn in sommige gevallen al default waarden ingevuld.
