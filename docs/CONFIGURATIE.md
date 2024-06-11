@@ -7,7 +7,7 @@ KISS maakt voor de koppeling met verschillende registraties gebruik van de Objec
 
 ### Authenticatie bij de Objecten API
 In de meeste gevallen identificeert KISS zich bij de Objectenregistratie m.b.v. een TOKEN.
-In sommige gevallen is het nodig om de authenticatie in de Objecten API, voor Afdelingen, Groepen en Interne Taken, in te regelen m.b.v. een client secret en een client id. Dit is bv. het geval als je KISS gebruikt i.c.m. de e-Suite. Afhankelijk van de situatie moet je dus een Token inregelen, en in andere gevallen een id+secret. **NOOIT ALLEBEI!**
+In sommige gevallen is het nodig om de authenticatie in de Objecten API, voor Afdelingen, Groepen en Interne Taken, Medewerkers in te regelen m.b.v. een client secret en een client id. Dit is bv. het geval als je KISS gebruikt i.c.m. de e-Suite. Afhankelijk van de situatie moet je dus een Token inregelen, en in andere gevallen een id+secret. **NOOIT ALLEBEI!**
 
 Dit heeft invloed op de volgende Environment Variabelen: 
 
@@ -28,7 +28,13 @@ AFDELINGEN_CLIENT_SECRET <br/>AFDELINGEN_CLIENT_ID
 GROEPEN_TOKEN
 
 - Bij gebruik in combinatie met de e-suite, met een in de e-suite ingesteld secret en id
-GROEPEN_CLIENT_SECRET <br/> GROEPEN_CLIENT_ID 
+GROEPEN_CLIENT_SECRET <br/> GROEPEN_CLIENT_ID
+
+- Bij gebruik in combinatie met OverigeObjecten met een in OverigeObjecten ingesteld token<br/> 
+MEDEWERKER_OBJECTEN_TOKEN
+
+- Bij gebruik in combinatie met de e-suite, met een in de e-suite ingesteld secret en id
+MEDEWERKER_OBJECTEN_CLIENT_SECRET <br/> MEDEWERKER_OBJECTEN_CLIENT_ID 
 
 ### URL configureerbaar
 Voor een aantal objecttypen kunt u de URL van het objecttype instellen m.b.v. environment variabelen. 
