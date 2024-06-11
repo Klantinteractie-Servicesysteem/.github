@@ -133,22 +133,18 @@ Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan 
 | ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
 | AFDELINGEN_BASE_URL  | URL waar de KISS-frontend de Afdelingen vandaan kan halen.  |
 | AFDELINGEN_OBJECT_TYPE_URL | URL waar het Objecttype Afdeling te vinden is |
-| AFDELINGEN_TOKEN | Token waarmee KISS zich kan identificeren bij de Objecten API (waar de afdelingen staan)<br /> **LET OP: niet te gebruiken** in combinatie met AFDELINGEN_CLIENT_SECRET en AFDELINGEN_CLIENT_ID |
-| AFDELINGEN_CLIENT_SECRET | Client Secret waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met AFDELINGEN_TOKEN |
-| AFDELINGEN_CLIENT_ID | Client ID waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met AFDELINGEN_TOKEN |
+| AFDELINGEN_TOKEN | Token van de Objecten API waar de afdelingen staan |
 |  |  |
 | GROEPEN_BASE_URL  | URL waar de KISS-frontend de Groepen vandaan kan halen.  |
 | GROEPEN_OBJECT_TYPE_URL | URL waar het Objecttype Groep te vinden is |
-| GROEPEN_TOKEN | Token waarmee KISS zich kan identificeren bij de Objecten API (waar de afdelingen staan)<br /> **LET OP: niet te gebruiken** in combinatie met GROEPEN_CLIENT_SECRET en GROEPEN_CLIENT_ID |
-| GROEPEN_CLIENT_SECRET | Client Secret waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met GROEPEN_TOKEN |
-| GROEPEN_CLIENT_ID | Client ID waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met GROEPEN_TOKEN |
+| GROEPEN_TOKEN | Token van de Objecten API waar de groepen staan  |
 |  |  |
 | INTERNE_TAAK_BASE_URL  | URL waar de KISS-frontend de Interne Taken vandaan kan halen.  |
 | INTERNE_TAAK_OBJECT_TYPE_URL | URL waar het Objecttype Interne Taak te vinden is |
 | INTERNE_TAAK_TYPE_VERSION | Versienummer van het Objecttype Interne Taak, in de objectenregistratie waar KISS de Interne Taken wegschrijft |
-| INTERNE_TAAK_TOKEN | Token waarmee KISS zich kan identificeren bij de Objecten API (waar de afdelingen staan)<br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_CLIENT_SECRET en INTERNE_TAAK_CLIENT_ID |
-| INTERNE_TAAK_CLIENT_SECRET | Client Secret waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_TOKEN |
-| INTERNE_TAAK_CLIENT_ID | Client ID waarmee KISS zich kan identificeren bij het Objecten register  <br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_TOKEN |
+| INTERNE_TAAK_TOKEN | Token van de Objecten API waar de interne taken staan<br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_CLIENT_SECRET en INTERNE_TAAK_CLIENT_ID |
+| INTERNE_TAAK_CLIENT_SECRET | Client Secret van de Objecten API waar de interne taken staan <br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_TOKEN |
+| INTERNE_TAAK_CLIENT_ID | Client ID van de Objecten API waar de interne taken staan  <br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_TOKEN |
 |    |    |
 |    |    |
 
@@ -162,8 +158,8 @@ KISS-Elastic-Sync is het component dat zorgt dat de gekoppelde bronnen die via E
 | enterprise_search_private_api | Nodig om de Elastic API te vullen |
 | MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers <br />gevonden kunnen worden |
 | MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers <br />gevonden kunnen worden<br/>**LET OP: niet te gebruiken** in combinatie met MEDEWERKER_OBJECTEN_CLIENT_SECRET en MEDEWERKER_OBJECTEN_CLIENT_ID  |
-| MEDEWERKER_OBJECTEN_CLIENT_ID |  Token van de Objecten API waar de medewerkers <br />gevonden kunnen worden<br/>**LET OP: niet te gebruiken** in combinatie met MEDEWERKER_OBJECTEN_TOKEN |
-| MEDEWERKER_OBJECTEN_CLIENT_SECRET |  Token van de Objecten API waar de medewerkers <br />gevonden kunnen worden<br/>**LET OP: niet te gebruiken** in combinatie met MEDEWERKER_OBJECTEN_TOKEN |
+| MEDEWERKER_OBJECTEN_CLIENT_ID |  Client ID van de Objecten API waar de medewerkers <br />gevonden kunnen worden<br/>**LET OP: niet te gebruiken** in combinatie met MEDEWERKER_OBJECTEN_TOKEN |
+| MEDEWERKER_OBJECTEN_CLIENT_SECRET |  Client Secret van de Objecten API waar de medewerkers <br />gevonden kunnen worden<br/>**LET OP: niet te gebruiken** in combinatie met MEDEWERKER_OBJECTEN_TOKEN |
 | MEDEWERKER_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
 | MEDEWERKER_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
 | VAC_OBJECTEN_BASE_URL | URL van de Objecten API waar de VAC's gevonden <br />kunnen worden |
