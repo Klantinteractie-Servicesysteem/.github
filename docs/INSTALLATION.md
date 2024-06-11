@@ -48,8 +48,8 @@ Per servertype is er een quota aan het maximale aantal cores dat gebruikt mag wo
 Als dit overschreden wordt, dan kan dit in het quota scherm aangepast worden:
 [https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas](https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas).
 
-#### Authenticatie
-De authenticatie van KISS gebeurt m.b.v. Azure Active Directory.
+#### Authenticatie van de ingelogde gebruiker
+De authenticatie van gebruikers binnen KISS gebeurt m.b.v. een OIDC koppeling met bijvoorbeeld Azure Active Directory.
 
 ### Configuratie: environment variabelen
 Voor elke installatie zijn een aantal environment variabelen nodig. Per onderdeel van KISS geven we aan welke variabelen gevuld moeten worden. In  het hieronder genoemde installatiescript, en in values.yaml zijn in sommige gevallen al default waarden ingevuld.
@@ -76,7 +76,7 @@ Er zijn verschillende gegevens die binnen KISS zelf worden opgeslagen, zoals Nie
 
 
 #### Organisatie RSIN
-Verschillende ZGW APIs, waaronder de Klant en Contactmoment APIs, vragen om een identificatienummer van de organisatie.
+Verschillende ZGW APIs, waaronder de Klant en Contactmoment APIs, vragen om een identificatienummer, RSIN, van de eigen organisatie. Dit RSIN moet worden meegegeven bij registratie van specifieke objecten. 
 
 | Variabele | Uitleg |  
 |---|---|
@@ -97,10 +97,10 @@ Vanuit KISS kan een KCM feedback geven op een kennisartikel. Deze informatie wor
 
 
 #### Gekoppelde bronnen
-Er zijn diverse bronnen die vanuit KISS via API's bevraagd worden. Sommige worden alleen geraadpleegd, zoals de KvK-API en de API voor Haal Centraal BRP Personen bevragen. Andere registraties worden niet alleen geraadpleegd, maar er worden ook gegevens in weggeschreven. Dit zijn in ieder geval een Klanten- en Contactmomentenregister, zoals Open Klant, en een Zaaksysteem (m.b.v. ZGW API's) zoals Open Zaak. 
+Er zijn diverse bronnen die vanuit KISS via API's bevraagd worden. Sommige worden alleen geraadpleegd, zoals de KvK-API en de API voor Haal Centraal BRP Personen bevragen, en de Objecten API voor het ophalen van Afdelingen, Groepen en Medewerkers. Andere registraties worden niet alleen geraadpleegd, maar er worden ook gegevens in weggeschreven. Dit zijn in ieder geval een Klanten- en Contactmomentenregister, zoals Open Klant, het Objecten Register zoals Open Objecten, en een Zaaksysteem (m.b.v. ZGW API's) zoals Open Zaak. 
 
 Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden. 
-- KISS gebruikt de SDG-api  om Kennisartikelen (PDC-producten) mee op te halen, en naar Elastic te pushen.
+- KISS gebruikt de Objecten API om Kennisartikelen (PDC-producten) mee op te halen, en naar Elastic te pushen.
 - KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek op te halen en naar Elastic te pushen.
 - KISS gebruikt op dit moment de Objecten API om de Vraag Antwoord Combinaties (VAC) op te halen en naar Elastic te pushen. 
 
@@ -131,7 +131,22 @@ Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan 
 | ZAKEN_BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn |
 | ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
 | ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
-
+| AFDELINGEN_BASE_URL  | URL waar de KISS-frontend de Afdelingen vandaan kan halen.  |
+| AFDELINGEN_OBJECT_TYPE_URL | URL waar het Objecttype Afdeling te vinden is |
+| AFDELINGEN_TOKEN | Token van de Objecten API waar de afdelingen staan |
+|  |  |
+| GROEPEN_BASE_URL  | URL waar de KISS-frontend de Groepen vandaan kan halen.  |
+| GROEPEN_OBJECT_TYPE_URL | URL waar het Objecttype Groep te vinden is |
+| GROEPEN_TOKEN | Token van de Objecten API waar de groepen staan  |
+|  |  |
+| INTERNE_TAAK_BASE_URL  | URL waar de KISS-frontend de Interne Taken vandaan kan halen.  |
+| INTERNE_TAAK_OBJECT_TYPE_URL | URL waar het Objecttype Interne Taak te vinden is |
+| INTERNE_TAAK_TYPE_VERSION | Versienummer van het Objecttype Interne Taak, in de objectenregistratie waar KISS de Interne Taken wegschrijft |
+| INTERNE_TAAK_TOKEN | Token van de Objecten API waar de interne taken staan<br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_CLIENT_SECRET en INTERNE_TAAK_CLIENT_ID |
+| INTERNE_TAAK_CLIENT_SECRET | Client Secret van de Objecten API waar de interne taken staan <br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_TOKEN |
+| INTERNE_TAAK_CLIENT_ID | Client ID van de Objecten API waar de interne taken staan  <br /> **LET OP: niet te gebruiken** in combinatie met INTERNE_TAAK_TOKEN |
+|    |    |
+|    |    |
 
 **_Gekoppelde bronnen: KISS-Elastic-Sync_**
 
@@ -142,7 +157,9 @@ KISS-Elastic-Sync is het component dat zorgt dat de gekoppelde bronnen die via E
 | enterprise_search_url | URL van de API waarop KISS de elastic instantie <br />kan bevragen | 
 | enterprise_search_private_api | Nodig om de Elastic API te vullen |
 | MEDEWERKER_OBJECTEN_BASE_URL | URL van de Objecten API waar de medewerkers <br />gevonden kunnen worden |
-| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers <br />gevonden kunnen worden |
+| MEDEWERKER_OBJECTEN_TOKEN |  Token van de Objecten API waar de medewerkers <br />gevonden kunnen worden<br/>**LET OP: niet te gebruiken** in combinatie met MEDEWERKER_OBJECTEN_CLIENT_SECRET en MEDEWERKER_OBJECTEN_CLIENT_ID  |
+| MEDEWERKER_OBJECTEN_CLIENT_ID |  Client ID van de Objecten API waar de medewerkers <br />gevonden kunnen worden<br/>**LET OP: niet te gebruiken** in combinatie met MEDEWERKER_OBJECTEN_TOKEN |
+| MEDEWERKER_OBJECTEN_CLIENT_SECRET |  Client Secret van de Objecten API waar de medewerkers <br />gevonden kunnen worden<br/>**LET OP: niet te gebruiken** in combinatie met MEDEWERKER_OBJECTEN_TOKEN |
 | MEDEWERKER_OBJECTTYPES_BASE_URL | URL van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
 | MEDEWERKER_OBJECTTYPES_TOKEN | Token van de Objecttype API waar het objecttype <br />'Medewerker' gevonden kan worden |
 | VAC_OBJECTEN_BASE_URL | URL van de Objecten API waar de VAC's gevonden <br />kunnen worden |
