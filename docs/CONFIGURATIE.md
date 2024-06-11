@@ -19,18 +19,6 @@ INTERNE_TAAK_CLIENT_SECRET<br/>
 INTERNE_TAAK_CLIENT_ID
 
 - Bij gebruik in combinatie met OverigeObjecten met een in OverigeObjecten ingesteld token<br/> 
-AFDELINGEN_TOKEN
-
-- Bij gebruik in combinatie met de e-suite, met een in de e-suite ingesteld secret en id
-AFDELINGEN_CLIENT_SECRET <br/>AFDELINGEN_CLIENT_ID 
-
-- Bij gebruik in combinatie met OverigeObjecten met een in OverigeObjecten ingesteld token<br/> 
-GROEPEN_TOKEN
-
-- Bij gebruik in combinatie met de e-suite, met een in de e-suite ingesteld secret en id
-GROEPEN_CLIENT_SECRET <br/> GROEPEN_CLIENT_ID
-
-- Bij gebruik in combinatie met OverigeObjecten met een in OverigeObjecten ingesteld token<br/> 
 MEDEWERKER_OBJECTEN_TOKEN
 
 - Bij gebruik in combinatie met de e-suite, met een in de e-suite ingesteld secret en id
