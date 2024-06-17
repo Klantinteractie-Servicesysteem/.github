@@ -2,3 +2,16 @@ kubernetesClusterDomain: cluster.local
 kibanaDomain: www.my-website.nl
 nameOverride: kiss
 elasticVersion: 8.9.0
+privateApiKey: ""
+publicApiKey: ""
+
+eck-operator:
+  managedNamespaces:
+    - lab3
+  createClusterScopedResources: false
+  config:
+    # no RBAC access to cluster-wide storage classes, hence disable storage class validation
+    validateStorageClass: false
+  installCRDs: false
+  webhook:
+    enabled: false
