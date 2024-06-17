@@ -7,7 +7,7 @@ publicApiKey: ""
 
 eck-operator:
   managedNamespaces:
-    - lab3
+    - kiss-elastic
   createClusterScopedResources: false
   config:
     # no RBAC access to cluster-wide storage classes, hence disable storage class validation
