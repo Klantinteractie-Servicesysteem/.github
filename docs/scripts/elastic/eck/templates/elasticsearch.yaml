@@ -12,6 +12,12 @@ spec:
       - ingest
       - master
       node.store.allow_mmap: false
-    count: 3
+    count: {{ .Values.elasticsearchCount }}
     name: default
+    podTemplate:
+      spec:
+        {{- with .Values.nodeSelector }}
+        nodeSelector:
+          {{- toYaml . | nindent 10 }}
+        {{- end }}
   version: {{ .Values.elasticVersion }}

@@ -1,9 +1,8 @@
-kubernetesClusterDomain: cluster.local
 kibanaDomain: www.my-website.nl
 nameOverride: kiss
 elasticVersion: 8.9.0
-privateApiKey: ""
-publicApiKey: ""
+elasticsearchCount: 3
+nodeSelector: {}
 
 eck-operator:
   managedNamespaces:
