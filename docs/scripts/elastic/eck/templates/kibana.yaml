@@ -12,4 +12,10 @@ spec:
     name: kiss
   enterpriseSearchRef:
     name: kiss
+  podTemplate:
+    spec:
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
   version: {{ .Values.elasticVersion }}
