@@ -183,3 +183,17 @@ De installatie kan worden uitgevoerd middels onderstaande powershell script. Ook
 
 #### Aanpassingen
 Hoe een config en/of secrets moeten worden aangepast staat beschreven in MAINTENANCE.md
+
+### Gekoppelde bronnen
+
+#### KISS-Elastic-Sync
+KISS-Elastic-Sync is het component dat zorgt voor het creëren van de benodigde engines in een Elasticsearch-installatie, zodat gekoppelde bronnen eenvoudig door KISS doorzoekbaar zijn. Het ondersteunt zowel websites als gestructureerde bronnen door respectievelijk een crawler en een index te gebruiken.
+
+Meer informatie over de KISS-Elastic-Sync tool en hoe deze te installeren, is te vinden op de volgende URL:
+[KISS-Elastic-Sync](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync/blob/main/README.md)
+
+### Cronjobs
+Naast de sync tool zijn er ook cronjobs die ingesteld moeten worden voor het regelmatig synchroniseren van data.
+
+Meer informatie over de benodigde cronjobs en hoe deze in te stellen, is te vinden op de volgende URL:
+[KISS-Elastic-Sync Cronjobs](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync/blob/main/deploy/README.md)
