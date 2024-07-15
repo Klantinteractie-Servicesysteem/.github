@@ -1,14 +1,58 @@
 apiVersion: v1
 entries:
+  eck-operator:
+  - apiVersion: v2
+    appVersion: 2.9.0
+    created: "2024-07-11T17:45:37.9692462+02:00"
+    dependencies:
+    - condition: installCRDs
+      name: eck-operator-crds
+      repository: ""
+      version: 2.9.0
+    description: Elastic Cloud on Kubernetes (ECK) operator
+    digest: 005deefb0ad5ee17da204b70c2a55f5688e38224e310f81817a8809f6b463059
+    home: https://github.com/elastic/cloud-on-k8s
+    icon: https://helm.elastic.co/icons/eck.png
+    keywords:
+    - Logstash
+    - Elasticsearch
+    - Kibana
+    - APM Server
+    - Beats
+    - Enterprise Search
+    - Elastic Stack
+    - Operator
+    kubeVersion: '>=1.21.0-0'
+    maintainers:
+    - email: eck@elastic.co
+      name: Elastic
+    name: eck-operator
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/scripts/elastic/eck-operator-2.9.0.tgz
+    version: 2.9.0
   kiss-elastic:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-07-11T17:45:37.9757239+02:00"
+    dependencies:
+    - name: eck-operator
+      repository: '@elastic'
+      version: ~2.9.0
+    description: A Helm chart for setting up everything in ECK that kiss needs
+    digest: 5aa55bdae2505af56eebc5407ca1b445e42cc8b2d74ac9d409f6172826fef4fc
+    name: kiss-elastic
+    urls:
+    - https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/scripts/elastic/kiss-elastic-1.0.0-alpha.1.tgz
+    version: 1.0.0-alpha.1
+  - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-01-23T09:44:25.870031+01:00"
+    created: "2024-07-11T17:45:37.9697907+02:00"
     description: A Helm chart for setting up everything in ECK that kiss needs
     digest: b457487d30b37f6dba37dd7c8ae2c2bac6553406b775bf3a7f6ab3415aade709
     name: kiss-elastic
     type: application
     urls:
-    - kiss-elastic-0.1.0.tgz
+    - https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/scripts/elastic/kiss-elastic-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-23T09:44:25.8689141+01:00"
+generated: "2024-07-11T17:45:37.9654334+02:00"
