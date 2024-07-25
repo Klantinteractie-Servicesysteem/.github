@@ -47,4 +47,4 @@ Daar waar de API-standaarden ontoereikend zijn of ontbreken breiden we de API's 
 KISS wordt ontwikkeld door ICATT menselijk digitaal, in opdracht van Utrecht en Dimpact. 
 
 ## Licentie
-[European Union Public License](https://opensource.org/licenses/EUPL-1.1)
+[European Union Public License](https://opensource.org/licenses/EUPL-1.2)
