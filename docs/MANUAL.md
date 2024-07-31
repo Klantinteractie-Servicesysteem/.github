@@ -320,3 +320,7 @@ KISS hanteert een standaardlijst Kanalen, waaruit je kunt kiezen bij het registr
 Het toevoegen, wijzigen of verwijderen van kanalen gaat op een gelijksoortige manier als het toevoegen, wijzigen of verwijderen van Skills of gespreksresultaten.  
 
 Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kanalen aanwezig zijn (geconfigureerd of een vaste lijst kanalen), let dan goed op of het van belang is dat de schrijfwijze van een kanaal in KISS exact moet overeenkomen met kanaal in het bronregister. In dat geval moet je ook letten op hoofdletters, kleine, spaties en streepjes.
+
+
+## Zoekfunctionaliteit
+KISS biedt de mogelijkheid om te zoeken in de gemeentelijke website, in het smoelenboek van de gemeente, in kennisartikelen en in Vraag-AntwoordCombinaties (VAC's). Deze bronnen dienen te worden toegevoegd door een technisch beheerder, in het kubernetes cluster. Als de standaard installatieprocedure gevolgd wordt, worden de bronnen elk uur gesynchroniseerd. Bij onverwachte resultaten of foutmeldingen kunt u de beheerder van het kubernetes cluster vragen om de logging in te zien van de laatste synchronisatiepoging (job) van de [KISS-Elastic-Sync tool](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync). Daarin is terug te vinden hoe de synchronisatiepoging is verlopen.
