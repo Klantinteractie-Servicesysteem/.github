@@ -108,7 +108,7 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 
 **_Gekoppelde bronnen: KISS-frontend_**
 
-Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-frontend.
+Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-frontend. Voor variabelen met `__0__` als tussenvoegsel geldt dat er een lijst opgebouwd kan worden. Het eerste item van de lijst heeft `__0__` als tussenvoegsel, het tweede item `__1__`, en zo verder
 
 | Variabele | Uitleg |
 |---|---|
@@ -128,9 +128,11 @@ Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan 
 | CONTACTMOMENTEN_BASE_URL  | URL van de Contactmomenten API voor het gebruikte <br />Contactmomentenregister  |
 | CONTACTMOMENTEN_API_CLIENT_ID | clientId voor het gebruikte Contactmomentenregister |
 | CONTACTMOMENTEN_API_KEY  | API key te gebruiken door KISS voor het gebruikte <br />Contactmomentenregister, deze moet **minimaal <br />16 karakters** lang zijn. |
-| ZAKEN_BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn |
-| ZAKEN_API_CLIENT_ID  | clientId van de ZGW API's |
-| ZAKEN_API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
+| ZAAKSYSTEEM__0__BASE_URL  |  URL waar de verschillende ZGW API's te benaderen zijn. Er kunnen meerdere zaakystemen toegevoegd worden. |
+| ZAAKSYSTEEM__0__API_CLIENT_ID  | clientId van de ZGW API's |
+| ZAAKSYSTEEM__0__API_KEY  | API Key van de ZGW API's, deze moet <br />**minimaal 16 karakters** lang zijn |
+| ZAAKSYSTEEM__0__DEEPLINK_URL | Url van het zaaksysteem waarachter een kenmerk van een zaak geplakt kan worden om ernaar te deeplinken |
+| ZAAKSYSTEEM__0__DEEPLINK_PROPERTY | Naam van het kenmerk van de zaak dat achter de deeplink url geplakt moet worden om naar de zaak te deeplinken in het zaaksysteem |
 | AFDELINGEN_BASE_URL  | URL waar de KISS-frontend de Afdelingen vandaan kan halen.  |
 | AFDELINGEN_OBJECT_TYPE_URL | URL waar het Objecttype Afdeling te vinden is |
 | AFDELINGEN_TOKEN | Token van de Objecten API waar de afdelingen staan |
