@@ -108,7 +108,7 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 
 **_Gekoppelde bronnen: KISS-frontend_**
 
-Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-frontend. Voor variabelen met `__0__` als tussenvoegsel geldt dat er een lijst opgebouwd kan worden. Het eerste item van de lijst heeft `__0__` als tussenvoegsel, het tweede item `__1__`, en zo verder
+Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-frontend. Voor variabelen met `__0__` als tussenvoegsel geldt dat er een lijst opgebouwd kan worden. Het eerste item van de lijst heeft `__0__` als tussenvoegsel, het tweede item `__1__`, en zo verder.
 
 | Variabele | Uitleg |
 |---|---|
