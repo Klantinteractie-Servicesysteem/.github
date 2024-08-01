@@ -2,23 +2,27 @@
 
 ## Inhoudsopgave
 
-1. [Inleiding](#inleiding)
-2. [Voorbereidingen](#voorbereidingen)
-   - [Domein](#domein)
-   - [Tools](#tools)
-   - [Haven](#haven)
-   - [Azure](#azure)
-   - [Authenticatie](#authenticatie)
-3. [Configuratie: Environment Variabelen](#configuratie-environment-variabelen)
-   - [Authenticatie](#authenticatie)
-   - [Database](#database)
-   - [Organisatie RSIN](#organisatie-rsin)
-   - [Feedback op Kennisartikelen](#feedback-op-kennisartikelen)
-   - [Gekoppelde Bronnen](#gekoppelde-bronnen)
-4. [Installatie](#installatie)
-   - [Placeholders](#placeholders)
-   - [Uitvoeren](#uitvoeren)
-   - [Aanpassingen](#aanpassingen)
+- [Klantinteractie Servicesysteem (KISS) Installatie Handleiding](#klantinteractie-servicesysteem-kiss-installatie-handleiding)
+  - [Inhoudsopgave](#inhoudsopgave)
+  - [Inleiding](#inleiding)
+  - [Voorbereidingen](#voorbereidingen)
+    - [Domein](#domein)
+    - [Tools](#tools)
+    - [Haven](#haven)
+    - [Authenticatie](#authenticatie)
+  - [Configuratie: Environment Variabelen](#configuratie-environment-variabelen)
+    - [Authenticatie](#authenticatie-1)
+    - [Database](#database)
+    - [Organisatie RSIN](#organisatie-rsin)
+    - [Feedback op Kennisartikelen](#feedback-op-kennisartikelen)
+    - [Gekoppelde Bronnen](#gekoppelde-bronnen)
+      - [KISS-frontend](#kiss-frontend)
+      - [KISS-Elastic-Sync](#kiss-elastic-sync)
+  - [Installatie](#installatie)
+    - [Placeholders](#placeholders)
+    - [Uitvoeren](#uitvoeren)
+      - [KISS-Elastic-Sync](#kiss-elastic-sync-1)
+    - [Cronjobs](#cronjobs)
 
 ---
 
@@ -57,17 +61,14 @@ Installeer de volgende tools:
 
 ### Haven
 
-Zorg voor een haven-compliant cluster. Referentie-implementaties zijn te vinden op de [Haven](https://haven.commonground.nl/techniek/aan-de-slag) site.
+KISS kan op een haven-compliant cluster geïnstallleerd worden. Referentie-implementaties van haven-compliant clusters zijn te vinden op de [Haven](https://haven.commonground.nl/techniek/aan-de-slag) site.
 
-### Azure
-
-Bij het volgen van de [Azure](https://haven.commonground.nl/techniek/aan-de-slag/azure) referentie:
+Bij het volgen van de [Azure](https://haven.commonground.nl/techniek/aan-de-slag/azure) referentie moet men rekening houden met de volgende extra zaken:
 
 - Minimaal 3 nodes
 - High availability aanzetten
 - Local logins met RBAC gebruiken, GEEN Azure Active Directory!
 
-Meer informatie over quota aanpassingen: [Azure Quota](https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/myQuotas).
 
 ### Authenticatie
 
@@ -81,27 +82,31 @@ Hieronder staan de benodigde environment variabelen per onderdeel van KISS.
 
 | Variabele                                | Uitleg                                                    |
 | ---------------------------------------- | --------------------------------------------------------- |
-| `oidcAuthority`                          | URL van de OpenID Connect Identity Provider               |
+| `oidcAuthority`                          | URL van de OpenID Connect Identity Provider                 |
 | `oidcClientId`                           | Voor toegang tot de OpenID Connect Identity Provider      |
 | `oidcClientSecret`                       | Secret voor de OpenID Connect Identity Provider           |
-| `OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM`    | Identificatie van de medewerker <br/> (`email` standaard) |
-| `OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE` | Optioneel afkappen van de claim <br/> (bijv. `24`)        |
+| `OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM`    | Identificatie van de medewerker in regsiters <br/> (default waarde is `email`) <details> <summary>Meer informatie </summary> Bij het wegschrijven van gegevens naar bv. Open Klant of Open Zaak is een `medewerkerIdentificatie.identificatie` verplicht. Verschillende gemeenten gebruiken hier verschillende waardes voor. Bij een koppeling met bv. de e-Suite is het van belang dat hier de e-Suite gebruikersnaam in staat van de ingelogde KCM. </details>|
+| `OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE` | Optioneel afkappen van de claim <br/> (bijv. `24`) <details> <summary>Meer informatie </summary> Binnen ZGW mag een `medewerkerIdentificatie.identificatie` niet langer zijn dan 24 karakters. Met deze variabele kun je ervoor zorgen dat de uiteindelijk waarde wordt afgekapt na 24 tekens. </details>       |
+|  |  |
 
 ### Database
 
 | Variabele          | Uitleg                                |
 | ------------------ | ------------------------------------- |
 | `postgresDb`       | Naam van de database bij KISS         |
-| `postgresUser`     | Gebruikersnaam voor toegang tot de DB |
+| `postgresUser`     | Gebruikersnaam voor toegang van KISS tot de DB |
 | `postgresPassword` | Wachtwoord van de postgresUser        |
+|  |  |
 
 ### Organisatie RSIN
 
 | Variabele         | Uitleg                                                           |
 | ----------------- | ---------------------------------------------------------------- |
-| `ORGANISATIE_IDS` | RSIN van de organisatie die de <br/> Contactmomenten registreert |
+| `ORGANISATIE_IDS` | RSIN van de organisatie die de <br/> Contactmomenten registreert <details> <summary>Meer informatie </summary>Verschillende ZGW APIs, waaronder de Klant en Contactmoment APIs, vragen om een identificatienummer, RSIN, van de eigen organisatie. Dit RSIN moet worden meegegeven bij registratie van specifieke objecten. </details>|
+|  |  |
 
 ### Feedback op Kennisartikelen
+<details> <summary>Meer informatie </summary>Vanuit KISS kan een KCM feedback geven op een kennisartikel. Deze informatie wordt gemaild naar één centraal e-mailadres. Dit configureer je met onderstaande variabelen. </details>
 
 | Variabele             | Uitleg                                  |
 | --------------------- | --------------------------------------- |
@@ -112,65 +117,83 @@ Hieronder staan de benodigde environment variabelen per onderdeel van KISS.
 | `EMAIL_PORT`          | Poortnummer van de mailverbinding       |
 | `EMAIL_USERNAME`      | Gebruikersnaam voor de mailserver       |
 | `EMAIL_PASSWORD`      | Wachtwoord voor de mailserver           |
+|  |  |
 
 ### Gekoppelde Bronnen
 
-Er zijn diverse API's die vanuit KISS bevraagd worden. Hieronder staan de environment variabelen per gekoppelde bron.
+Er zijn diverse API's die vanuit KISS bevraagd worden. Hieronder staan de environment variabelen per gekoppelde bron. 
+**Let op**: Sommige API-keys en Secrets die KISS nodig heeft om externe registers te bevragen moeten **minimaal 16 karakters** lang zijn. 
+
+<details> <summary>Meer informatie </summary>Er zijn diverse bronnen die vanuit KISS via API's bevraagd worden. Sommige worden alleen geraadpleegd, zoals de KvK-API en de API voor Haal Centraal BRP Personen bevragen, en de Objecten API voor het ophalen van Afdelingen, Groepen en Medewerkers. Andere registraties worden niet alleen geraadpleegd, maar er worden ook gegevens in weggeschreven. Dit zijn in ieder geval een Klanten- en Contactmomentenregister, zoals Open Klant, het Objecten Register zoals Open Objecten, en een Zaaksysteem (m.b.v. ZGW API's) zoals Open Zaak.
+
+Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
+
+- KISS gebruikt de Objecten API om Kennisartikelen (PDC-producten) mee op te halen, en naar Elastic te pushen.
+- KISS gebruikt op dit moment de Objecten API om de Medewerkers in het Smoelenboek op te halen en naar Elastic te pushen.
+- KISS gebruikt op dit moment de Objecten API om de Vraag Antwoord Combinaties (VAC) op te halen en naar Elastic te pushen.</details>
+
 
 #### KISS-frontend
 
-| Variabele                         | Uitleg                                                                                       |
-| --------------------------------- | -------------------------------------------------------------------------------------------- |
-| `imageTag`                        | Verwijzing naar de Build-versie van de <br/> KISS-frontend                                   |
-| `haalCentraalBaseUrl`             | URL van de Haal Centraal API                                                                 |
-| `haalCentraalApiKey`              | Key voor de Haal Centraal API                                                                |
-| `kvkBaseUrl`                      | URL van de KvK-API                                                                           |
-| `kvkApiKey`                       | Key voor de KvK-API                                                                          |
-| `enterprise_search_url`           | URL van de API voor de elastic instantie                                                     |
-| `elasticPassword`                 | Wachtwoord voor de Elastic API                                                               |
-| `enterprise_search_private_api`   | Private API key voor Elastic                                                                 |
-| `enterprise_search_public_api`    | Public API key voor Elastic                                                                  |
-| `klanten_base_url`                | URL van de Klanten API                                                                       |
-| `klanten_client_id`               | ClientId voor de Klanten API                                                                 |
-| `klanten_client_secret`           | Secret voor de Klanten API <br/> (min. 16 karakters)                                         |
-| `NIETNATUURLIJKPERSOONIDENTIFIER` | Identifier voor 'niet natuurlijke personen' <br/> (`rsin` of `kvkNummer`)                    |
-| `CONTACTMOMENTEN_BASE_URL`        | URL van de Contactmomenten API                                                               |
-| `CONTACTMOMENTEN_API_CLIENT_ID`   | ClientId voor de Contactmomenten API                                                         |
-| `CONTACTMOMENTEN_API_KEY`         | Key voor de Contactmomenten API <br/> (min. 16 karakters)                                    |
-| `ZAKEN_BASE_URL`                  | URL van de ZGW API's                                                                         |
-| `ZAKEN_API_CLIENT_ID`             | ClientId voor de ZGW API's                                                                   |
-| `ZAKEN_API_KEY`                   | API Key voor de ZGW API's <br/> (min. 16 karakters)                                          |
-| `AFDELINGEN_BASE_URL`             | URL van de Afdelingen API                                                                    |
-| `AFDELINGEN_OBJECT_TYPE_URL`      | URL van het Objecttype Afdeling                                                              |
-| `AFDELINGEN_TOKEN`                | Token voor de Afdelingen API                                                                 |
-| `GROEPEN_BASE_URL`                | URL van de Groepen API                                                                       |
-| `GROEPEN_OBJECT_TYPE_URL`         | URL van het Objecttype Groep                                                                 |
-| `GROEPEN_TOKEN`                   | Token voor de Groepen API                                                                    |
-| `INTERNE_TAAK_BASE_URL`           | URL van de Interne Taken API                                                                 |
-| `INTERNE_TAAK_OBJECT_TYPE_URL`    | URL van het Objecttype Interne Taak                                                          |
-| `INTERNE_TAAK_TYPE_VERSION`       | Versienummer van het Objecttype Interne Taak                                                 |
-| `INTERNE_TAAK_TOKEN`              | Token voor de Interne Taken API <br/> **(niet te gebruiken met CLIENT_SECRET en CLIENT_ID)** |
-| `INTERNE_TAAK_CLIENT_SECRET`      | Client Secret voor de Interne Taken API <br/> **(niet te gebruiken met TOKEN)**              |
-| `INTERNE_TAAK_CLIENT_ID`          | Client ID voor de Interne Taken API <br/> **(niet te gebruiken met TOKEN)**                  |
+| Variabele                               | Uitleg                                                                                                                           |
+| ---------------------------------       | --------------------------------------------------------------------------------------------                                     |
+| `imageTag`                              | Verwijzing naar de Build-versie van de KISS-frontend                                                                             |
+| `HOST`                                  | <mark> wat is dit precies </mark> <details> <summary>Meer informatie </summary> bijvoorbeeld `kiss.mijngemeente.nl` </details>   |
+| `HAAL_CENTRAAL_BASE_URL`                | URL van de Haal Centraal API  <details> <summary>Meer informatie </summary>Bijvoorbeeld: `https://proefomgeving.haalcentraal.nl/haalcentraal/api` </details> |
+| `HAAL_CENTRAAL_API_KEY`                 | Key voor de Haal Centraal API                                                                                                    |
+| `KVK_BASE_URL`                          | URL van de KvK-API <details> <summary>Meer informatie </summary>URL van de KvK-API om het Handelsregister te bevragen. Dit is het pad voorafgaand aan het versienummer, bijvoorbeeld `https://api.kvk.nl/test/api` </details>   |
+| `KVK_API_KEY`                           | Key voor de KvK-API                                                                                                              |
+| `ELASTIC_BASE_URL`                      | De URL voor Elasticsearch <mark>Is dit Elasticsearch, of Kibana?</mark>  <details><summary>Meer informatie </summary>Bijvoorbeeld: `https://kiss-es-http:9200` </details> |
+| `ELASTIC_USERNAME`                      | Username om in te loggen op Elasticsearch <details> <summary>Meer informatie </summary> Dit kan de default root user `elastic` zijn, maar ook de username van een gebruiker die je zelf hebt aangemaakt.  </details>  |
+| `ELASTIC_PASSWORD`                      | Wachtwoord voor de bovenstaande user <details><summary>Meer informatie </summary> Als je gebruik maakt van [ECK](https://www.elastic.co/guide/en/cloud-on-k8s/2.8/k8s-overview.html), dan kun je het wachtwoord van de default user vinden, m.b.v. het commando `kubectl get secret kiss-es-elastic-user -o go-template='{{.data.elastic </details>   |
+| `ENTERPRISE_SEARCH_BASE_URL`            |  URL van de API waarop KISS de elastic instantie kan bevragen <details> <summary>Meer informatie </summary>Bijvoorbeeld `https://kiss-ent-http:3002` </details> |
+| `ENTERPRISE_SEARCH_PUBLIC_API_KEY`      | Public API key voor Elastic  API                                                                                                 |
+| `ENTERPRISE_SEARCH_PRIVATE_API_KEY`     | Private API key voor Elastic API <mark>Is deze vooral voor de synctool?</mark> <details> <summary>Meer informatie </summary> De API key die nodig is om de `engine`s bij te werken </details> |
+| `ENTERPRISE_SEARCH_ENGINE`              | De naam van de `meta-engine` engine die KISS gebruikt. Dit moet zijn: `KISS-engine`  <details> <summary>Meer informatie </summary> De KISS-Elastic-Sync maakt deze engine aan, als deze nog niet bestaat.  </details>   |
+| `KLANTEN_BASE_URL`                      | URL van de Klanten API van het gebruikte klantenregister <details> <summary>Meer informatie </summary>Bijvoorbeeld `https://klantenregister.mijngemeente.nl/klanten` </details>  |
+| `KLANTEN_CLIENT_ID`                     | ClientId voor de Klanten API van het gebruikte klantenregister                                                                   |
+| `KLANTEN_CLIENT_SECRET`                 | Secret voor de Klanten API <br /> **(min. 16 karakters)**                                                                        |
+| `NIETNATUURLIJKPERSOONIDENTIFIER`       | Identifier voor 'niet natuurlijke personen' <br/> (`rsin` of `kvkNummer`) <details> <summary>Meer informatie </summary> Afhankelijk van de gebruikte bron (bijvoorbeeld Open Klant of de e-Suite) kan je hiermee aangeven welk gegeven gebruikt wordt om KvK-gegevens van `niet natuurlijke persoon`en aan klanten in het klantregister te koppelen. Op dit moment kan je hiervoor het RSIN (`rsin`) of het KvK-nummer (`kvkNummer`) gebruiken. RSIN is de default: als deze variable leeg gelaten wordt of ontbreekt bij de installatie, zal `rsin` gebruikt worden. Als je de e-Suite als register gebruikt, moet je hier `kvkNummer` invullen. Let op, de spelling moet exact overeen komen met de spelling van het property in de [KvK-API's](https://developers.kvk.nl/apis) </details>                     |
+| `CONTACTMOMENTEN_BASE_URL`              | URL van de Contactmomenten API  <details> <summary>Meer informatie </summary>Bijvoorbeeld: `https://contactmomentenregister.mijngemeente.nl` </details>                  |
+| `CONTACTMOMENTEN_API_CLIENT_ID`         | ClientId voor de Contactmomenten API van het gebruikte Contactmomentenregister                                                   |
+| `CONTACTMOMENTEN_API_KEY`               | Key voor de Contactmomenten API  <br /> **(min. 16 karakters)**                                                                  |
+| `ZAKEN_BASE_URL`                        | URL van de ZGW API's      <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://zaaksysteem.mijngemeente.nl`  </details>                                  |
+| `ZAKEN_API_CLIENT_ID`                   | ClientId voor de ZGW API's                                                                                                       |
+| `ZAKEN_API_KEY`                         | API Key voor de ZGW API's <br /> **(min. 16 karakters)**                                                                         |
+| `ZAAKSYSTEEM_DEEPLINK_URL`              | Basisurl om te deeplinken naar een Zaak in het zaaksysteem (optioneel) <details> <summary>Meer informatie </summary> Bijvoorbeeld: ``https://zaaksysteem.mijngemeente.nl/mp/zaak/` <br /> Deze variabele moet altijd gebruikt worden in combinatie met `ZAAKSYSTEEM_DEEPLINK_PROPERTY`. Als deze variabelen beiden worden ingevuld, zal er in KISS een link in het zaakdetailscherm staan, waarmee de KCM de betreffende zaak direct in het zaaksysteem opent.  LET OP: dit kan alleen bij zaaksystemen die een vaste url hebben voor zaakdetails, waarbij alleen één property van de zaak, bijv. het zaaknummer áchter die URL geplaatst hoeft te worden.  </details>                                                                             |
+| `ZAAKSYSTEEM_DEEPLINK_PROPERTY`         | Property om naar een zaak te kunnen deeplinken (optioneel) <details> <summary>Meer informatie </summary> Deze variabele moet altijd gebruikt worden in combinatie met `ZAAKSYSTEEM_DEEPLINK_URL`. De waarde uit dit property van een specifieke zaak wordt achter `ZAAKSYSTEEM_DEEPLINK_URL` geplaatst om de link te laten werken. Bijvoorbeeld: `identificatie` </details>  |
+| `AFDELINGEN_BASE_URL`                   | URL van de Objecten API voor afdelingen.  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>                     |
+| `AFDELINGEN_OBJECT_TYPE_URL`            | URL van het Objecttype Afdeling   <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>      |
+| `AFDELINGEN_TOKEN`                      | Token voor Objecten API voor afdelingen                                                                                           |
+| `GROEPEN_BASE_URL`                      | URL van de Objecten API voor groepen.    <details> <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details> </details>                          |
+| `GROEPEN_OBJECT_TYPE_URL`               | URL van het Objecttype Groep             <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>    |
+| `GROEPEN_TOKEN`                         | Token van de Objecten API voor groepen                                                                                            |
+| `INTERNE_TAAK_BASE_URL`                 | URL van de Objecten API voor Interne Taken  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>            |
+| `INTERNE_TAAK_OBJECT_TYPE_URL`          | URL van het Objecttype Interne Taak         <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details> |
+| `INTERNE_TAAK_TYPE_VERSION`             | Versienummer van het Objecttype Interne Taak   <details> <summary>Meer informatie </summary> Bijvoorbeeld `2` <br /> KISS schrijft InterneTaken in het Objectenregister. Hierbij moet je altijd de versie van het objecttype meegeven. Omdat het per gemeente kan verschillen welke versie de meest recente is, moet je hier invullen welk versienummer KISS moet meegeven. </details>                                                          |
+| `INTERNE_TAAK_TOKEN`                    | Token voor de Objecten API voor Interne Taken  <br/> **(niet te gebruiken met `CLIENT_SECRET` en `CLIENT_ID`)** <details> <summary>Meer informatie </summary>In de meeste gevallen identificeert KISS zich bij een Objectenregistratie m.b.v. een `TOKEN`. In sommige gevallen is het nodig om de authenticatie in de Objecten API, voor Afdelingen, Groepen en Interne Taken, Medewerkers in te regelen m.b.v. een `client secret` en een `client id`. Dit is bv. het geval als je KISS gebruikt i.c.m. de e-Suite. Afhankelijk van de situatie moet je dus een Token inregelen, en in andere gevallen een id+secret. **NOOIT ALLEBEI!** </details> |
+| `INTERNE_TAAK_CLIENT_SECRET`            | Client Secret voor de Interne Taken API <br/> **(niet te gebruiken in combinatie met `INTERNE_TAAK_TOKEN`)**                      |
+| `INTERNE_TAAK_CLIENT_ID`                | Client ID voor de Interne Taken API <br/> **(niet te gebruiken in combinatie met `INTERNE_TAAK_TOKEN`)**                          |
 
 #### KISS-Elastic-Sync
+<details> <summary>Meer informatie </summary>KISS-Elastic-Sync is het component dat zorgt dat de gekoppelde bronnen die via Elasticsearch ontsloten worden in KISS, naar de juiste Indexen worden gepushed, met de benodigde gegevens hieraan toegevoegd. Onderstaande environment variabelen gaan over de bronnen die gekoppeld zijn aan de KISS-Elastic-Sync. </details>
 
-| Variabele                           | Uitleg                                                                                                   |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `enterprise_search_url`             | URL van de API voor de elastic instantie                                                                 |
-| `enterprise_search_private_api`     | Private API key voor Elastic                                                                             |
-| `MEDEWERKER_OBJECTEN_BASE_URL`      | URL van de Objecten API voor medewerkers                                                                 |
-| `MEDEWERKER_OBJECTEN_TOKEN`         | Token voor de Objecten API voor medewerkers <br/> **(niet te gebruiken met CLIENT_SECRET en CLIENT_ID)** |
-| `MEDEWERKER_OBJECTEN_CLIENT_ID`     | Client ID voor de Objecten API voor medewerkers <br/> **(niet te gebruiken met TOKEN)**                  |
-| `MEDEWERKER_OBJECTEN_CLIENT_SECRET` | Client Secret voor de Objecten API voor medewerkers <br/> **(niet te gebruiken met TOKEN)**              |
-| `MEDEWERKER_OBJECTTYPES_BASE_URL`   | URL van de Objecttype API voor 'Medewerker'                                                              |
-| `MEDEWERKER_OBJECTTYPES_TOKEN`      | Token voor de Objecttype API voor 'Medewerker'                                                           |
-| `VAC_OBJECTEN_BASE_URL`             | URL van de Objecten API voor VAC's                                                                       |
-| `VAC_OBJECTEN_TOKEN`                | Token voor de Objecten API voor VAC's                                                                    |
-| `VAC_OBJECTTYPES_BASE_URL`          | URL van de Objecttype API voor 'VAC'                                                                     |
-| `VAC_OBJECTTYPES_TOKEN`             | Token voor de Objecttype API voor 'VAC'                                                                  |
-| `SDG_BASE_URL`                      | URL van de API voor Kennisartikelen                                                                      |
-| `SDG_API_KEY`                       | Key voor de API voor Kennisartikelen                                                                     |
+
+| Variabele                            | Uitleg                                                                                                    |
+| -------------------------------------| --------------------------------------------------------------------------------------------------------  |
+| `ENTERPRISE_SEARCH_BASE_URL`         | URL van de API voor de elastic instantie                                                                  |
+| `ENTERPRISE_SEARCH_PRIVATE_API_KEY`  | Private API key voor Elastic                                                                              |
+| `MEDEWERKER_OBJECTEN_BASE_URL`       | URL van de Objecten API voor medewerkers   <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>                                                               |
+| `MEDEWERKER_OBJECTEN_TOKEN`          | Token voor de Objecten API voor medewerkers <br/> **(niet te gebruiken i.c.m. CLIENT_SECRET en CLIENT_ID)** <details> <summary>Meer informatie </summary>In de meeste gevallen identificeert KISS zich bij een Objectenregistratie m.b.v. een `TOKEN`. In sommige gevallen is het nodig om de authenticatie in de Objecten API, voor Afdelingen, Groepen en Interne Taken, Medewerkers in te regelen m.b.v. een `client secret` en een `client id`. Dit is bv. het geval als je KISS gebruikt i.c.m. de e-Suite. Afhankelijk van de situatie moet je dus een Token inregelen, en in andere gevallen een id+secret. **NOOIT ALLEBEI!** </details> | 
+| `MEDEWERKER_OBJECTEN_CLIENT_ID`      | Client ID voor de Objecten API voor medewerkers <br/> **(niet te gebruiken i.c.m. TOKEN)**                |
+| `MEDEWERKER_OBJECTEN_CLIENT_SECRET`  | Client Secret voor de Objecten API voor medewerkers <br/> **(niet te gebruiken i.c.m. TOKEN)**            |
+| `MEDEWERKER_OBJECT_TYPE_URL`         | URL van het Objecttype Medewerker  <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>  |
+| `VAC_OBJECTEN_BASE_URL`              | URL van de Objecten API voor VAC's  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>                                                                     |
+| `VAC_OBJECTEN_TOKEN`                 | Token voor de Objecten API voor VAC's                                                                     |
+| `VAC_OBJECT_TYPE_URL`                | URL van het  Objecttype VAC    <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>                                                                 |
+| `SDG_BASE_URL`                       | URL van de API voor Kennisartikelen  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>  |
+| `SDG_OBJECTEN_TOKEN`                 | Key voor de API voor Kennisartikelen                                                                      |
+| `SDG_OBJECT_TYPE_URL`                | URL van het Objecttype Kennisartikel <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>      |
 
 ## Installatie
 
@@ -184,8 +207,6 @@ De installatie kan uitgevoerd worden middels het PowerShell script. Handmatig ui
 
 [install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/install_kiss.ps1)
 
-#### Aanpassingen
-Hoe een config en/of secrets moeten worden aangepast staat beschreven in MAINTENANCE.md
 
 #### KISS-Elastic-Sync
 KISS-Elastic-Sync is het component dat zorgt voor het creëren van de benodigde engines in een Elasticsearch-installatie, zodat gekoppelde bronnen eenvoudig door KISS doorzoekbaar zijn. Het ondersteunt zowel websites als gestructureerde bronnen door respectievelijk een crawler en een index te gebruiken.
