@@ -82,9 +82,9 @@ Hieronder staan de benodigde environment variabelen per onderdeel van KISS.
 
 | Variabele                                | Uitleg                                                    |
 | ---------------------------------------- | --------------------------------------------------------- |
-| `oidcAuthority`                          | URL van de OpenID Connect Identity Provider                 |
-| `oidcClientId`                           | Voor toegang tot de OpenID Connect Identity Provider      |
-| `oidcClientSecret`                       | Secret voor de OpenID Connect Identity Provider           |
+| `OIDC_AUTHORITY`                          | URL van de OpenID Connect Identity Provider                 |
+| `OIDC_CLIENT_ID`                           | Voor toegang tot de OpenID Connect Identity Provider      |
+| `OIDC_CLIENT_SECRET`                       | Secret voor de OpenID Connect Identity Provider           |
 | `OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM`    | Identificatie van de medewerker in regsiters <br/> (default waarde is `email`) <details> <summary>Meer informatie </summary> Bij het wegschrijven van gegevens naar bv. Open Klant of Open Zaak is een `medewerkerIdentificatie.identificatie` verplicht. Verschillende gemeenten gebruiken hier verschillende waardes voor. Bij een koppeling met bv. de e-Suite is het van belang dat hier de e-Suite gebruikersnaam in staat van de ingelogde KCM. </details>|
 | `OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE` | Optioneel afkappen van de claim <br/> (bijv. `24`) <details> <summary>Meer informatie </summary> Binnen ZGW mag een `medewerkerIdentificatie.identificatie` niet langer zijn dan 24 karakters. Met deze variabele kun je ervoor zorgen dat de uiteindelijk waarde wordt afgekapt na 24 tekens. </details>       |
 |  |  |
@@ -93,9 +93,9 @@ Hieronder staan de benodigde environment variabelen per onderdeel van KISS.
 
 | Variabele          | Uitleg                                |
 | ------------------ | ------------------------------------- |
-| `postgresDb`       | Naam van de database bij KISS         |
-| `postgresUser`     | Gebruikersnaam voor toegang van KISS tot de DB |
-| `postgresPassword` | Wachtwoord van de postgresUser        |
+| `POSTGRES_DB`       | Naam van de database bij KISS         |
+| `POSTGRES_USER`     | Gebruikersnaam voor toegang van KISS tot de DB |
+| `POSTGRES_PASSWORD` | Wachtwoord van de postgresUser        |
 |  |  |
 
 ### Organisatie RSIN
@@ -137,8 +137,6 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 
 | Variabele                               | Uitleg                                                                                                                           |
 | ---------------------------------       | --------------------------------------------------------------------------------------------                                     |
-| `imageTag`                              | Verwijzing naar de Build-versie van de KISS-frontend                                                                             |
-| `HOST`                                  | <mark> wat is dit precies </mark> <details> <summary>Meer informatie </summary> bijvoorbeeld `kiss.mijngemeente.nl` </details>   |
 | `HAAL_CENTRAAL_BASE_URL`                | URL van de Haal Centraal API  <details> <summary>Meer informatie </summary>Bijvoorbeeld: `https://proefomgeving.haalcentraal.nl/haalcentraal/api` </details> |
 | `HAAL_CENTRAAL_API_KEY`                 | Key voor de Haal Centraal API                                                                                                    |
 | `KVK_BASE_URL`                          | URL van de KvK-API <details> <summary>Meer informatie </summary>URL van de KvK-API om het Handelsregister te bevragen. Dit is het pad voorafgaand aan het versienummer, bijvoorbeeld `https://api.kvk.nl/test/api` </details>   |
