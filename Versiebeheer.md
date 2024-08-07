@@ -68,8 +68,20 @@ flowchart TD
   style F fill:red
 ```
 # Automatisering
+Automatisering van semantic versioning en release notes werkt meestal op basis van conventional commits. 
+
+## Release Please
+- Werkt obv Github Action
+- Werkt alleen als je code op Github staat
+[Hier lees je meer over Release Please]()
+
+## Semantic Release
+- Werkt obv npm packages
+- Onafhankelijk van of je code op Github staat of ergens anders
+[Hier lees je meer over Semantic Release](https://semantic-release.gitbook.io/)
 
 
 # Wat doen andere ontwikkelpartners
-- Maykin heeft een losse 
+## Maykin
+## INFO
 
