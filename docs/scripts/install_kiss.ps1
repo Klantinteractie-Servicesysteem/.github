@@ -69,10 +69,10 @@ kubectl create configmap kiss-config `
     --from-literal=SDG_OBJECT_TYPE_URL=$(SDG_OBJECT_TYPE_URL) `
     --from-literal=VAC_OBJECTEN_BASE_URL=$(VAC_OBJECTEN_BASE_URL) `
     --from-literal=VAC_OBJECTTYPES_BASE_URL=$(VAC_OBJECTTYPES_BASE_URL) `
-    --from-literal=ZAKEN_API_CLIENT_ID=$(ZAKEN_API_CLIENT_ID) `
-    --from-literal=ZAKEN_BASE_URL=$(ZAKEN_BASE_URL) `
-    --from-literal=ZAAKSYSTEEM_DEEPLINK_URL=$(ZAAKSYSTEEM_DEEPLINK_URL) `
-    --from-literal=ZAAKSYSTEEM_DEEPLINK_PROPERTY=$(ZAAKSYSTEEM_DEEPLINK_PROPERTY) `
+    --from-literal=ZAAKSYSTEEM__0__API_CLIENT_ID=$(ZAAKSYSTEEM__0__API_CLIENT_ID) `
+    --from-literal=ZAAKSYSTEEM__0__BASE_URL=$(ZAAKSYSTEEM__0__BASE_URL) `
+    --from-literal=ZAAKSYSTEEM__0__DEEPLINK_URL=$(ZAAKSYSTEEM__0__DEEPLINK_URL) `
+    --from-literal=ZAAKSYSTEEM__0__DEEPLINK_PROPERTY=$(ZAAKSYSTEEM__0__DEEPLINK_PROPERTY) `
     --dry-run=client -o yaml | kubectl apply -f -
 # Add secrets
 kubectl create secret generic kiss-secrets `
@@ -94,7 +94,7 @@ kubectl create secret generic kiss-secrets `
     --from-literal=SDG_OBJECTEN_TOKEN=$(SDG_OBJECTEN_TOKEN) `
     --from-literal=VAC_OBJECTEN_TOKEN=$(VAC_OBJECTEN_TOKEN) `
     --from-literal=VAC_OBJECTTYPES_TOKEN=$(VAC_OBJECTTYPES_TOKEN) `
-    --from-literal=ZAKEN_API_KEY=$(ZAKEN_API_KEY) `
+    --from-literal=ZAAKSYSTEEM__0__API_KEY=$(ZAAKSYSTEEM__0__API_KEY) `
     --dry-run=client -o yaml | kubectl apply -f -
 
 helm upgrade --install kiss-ci-release kiss-repo-ci/kiss-frontend --version 1.0.51 `
