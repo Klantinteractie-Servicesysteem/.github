@@ -55,10 +55,12 @@ flowchart TD
   B --> C{Feedback?}
   C -->|Ja| A
   C -->|Nee| L[Merge PR naar main branch]
-  L --> E{PR bevat wijziging Helm chart?}
+  L --> E{Wijziging chart?}
   E -->|Ja| F>Nieuwe versie Helm chart]
-  E -->|Nee| D
-  F --> D>Nieuwe versie container]
+  L --> M{Wijziging code?}
+  M -->|Ja| D>Nieuwe versie container]
+  D>Nieuwe versie container]
+  F --> G
   D --> G[Deploy naar testomgeving]
   G --> H[Testen]
   H --> I{Bevindingen?}
