@@ -53,6 +53,7 @@ kubectl create configmap kiss-config `
     --from-literal=INTERNE_TAAK_OBJECT_TYPE_URL=$(INTERNE_TAAK_OBJECT_TYPE_URL) `
     --from-literal=KLANTEN_BASE_URL=$(KLANTEN_BASE_URL) `
     --from-literal=KLANTEN_CLIENT_ID=$(KLANTEN_CLIENT_ID) `
+    --from-literal=KLANTINTERACTIES_BASE_URL=$(KLANTINTERACTIES_BASE_URL) `
     --from-literal=KVK_BASE_URL=$(KVK_BASE_URL) `
     --from-literal=MEDEWERKER_OBJECTEN_BASE_URL=$(MEDEWERKER_OBJECTEN_BASE_URL) `
     --from-literal=MEDEWERKER_OBJECTTYPES_BASE_URL=$(MEDEWERKER_OBJECTTYPES_BASE_URL) `
@@ -73,6 +74,7 @@ kubectl create configmap kiss-config `
     --from-literal=ZAAKSYSTEEM__0__BASE_URL=$(ZAAKSYSTEEM__0__BASE_URL) `
     --from-literal=ZAAKSYSTEEM__0__DEEPLINK_URL=$(ZAAKSYSTEEM__0__DEEPLINK_URL) `
     --from-literal=ZAAKSYSTEEM__0__DEEPLINK_PROPERTY=$(ZAAKSYSTEEM__0__DEEPLINK_PROPERTY) `
+    --from-literal=ZAAKSYSTEEM__0__NIETNATUURLIJKPERSOONIDENTIFIER=$(ZAAKSYSTEEM__0__NIETNATUURLIJKPERSOONIDENTIFIER) `
     --dry-run=client -o yaml | kubectl apply -f -
 # Add secrets
 kubectl create secret generic kiss-secrets `
@@ -86,6 +88,7 @@ kubectl create secret generic kiss-secrets `
     --from-literal=HAAL_CENTRAAL_API_KEY=$(HAAL_CENTRAAL_API_KEY) `
     --from-literal=INTERNE_TAAK_TOKEN=$(INTERNE_TAAK_TOKEN) `
     --from-literal=KLANTEN_CLIENT_SECRET=$(KLANTEN_CLIENT_SECRET) `
+    --from-literal=KLANTINTERACTIES_TOKEN=$(KLANTINTERACTIES_TOKEN) `
     --from-literal=KVK_API_KEY=$(KVK_API_KEY) `
     --from-literal=MEDEWERKER_OBJECTEN_TOKEN=$(MEDEWERKER_OBJECTEN_TOKEN) `
     --from-literal=MEDEWERKER_OBJECTTYPES_TOKEN=$(MEDEWERKER_OBJECTTYPES_TOKEN) `
