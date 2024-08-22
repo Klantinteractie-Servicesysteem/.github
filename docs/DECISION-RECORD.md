@@ -108,6 +108,11 @@ De Actor die we opslaan bij het Klantcontact, vullen we op basis van de gegevens
 - codeRegister=msei (Documenteren)
 - codeSoortObjectId=email (Documenteren)
 
-
+### Klantcontact
+De volgende properties uit het Klantcontact vullen we hard in met de volgende waarden: 
+- `indicatieContactGelukt`: altijd  true
+- `taal`: altijd nld 
+- `vertrouwelijk`: altijd false
+- `plaatsgevondenOp`: altijd de datum van registratie van het klantcontact.
 
 
