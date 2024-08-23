@@ -150,9 +150,6 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 | `ENTERPRISE_SEARCH_PUBLIC_API_KEY`      | Public API key voor Elastic  API                                                                                                 |
 | `ENTERPRISE_SEARCH_PRIVATE_API_KEY`     | Private API key voor Elastic API <details> <summary>Meer informatie </summary> De API key die nodig is om de `engine`s bij te werken </details> |
 | `ENTERPRISE_SEARCH_ENGINE`              | De naam van de `meta-engine` engine die KISS gebruikt. Dit moet zijn: `KISS-engine`  <details> <summary>Meer informatie </summary> De KISS-Elastic-Sync maakt deze engine aan, als deze nog niet bestaat.  </details>   |
-| `KLANTEN_BASE_URL`                      | URL van de Klanten API van het gebruikte klantenregister <details> <summary>Meer informatie </summary>Bijvoorbeeld `https://klantenregister.mijngemeente.nl/klanten` </details>  |
-| `KLANTEN_CLIENT_ID`                     | ClientId voor de Klanten API van het gebruikte klantenregister                                                                   |
-| `KLANTEN_CLIENT_SECRET`                 | Secret voor de Klanten API <br /> **(min. 16 karakters)**                                                                        |
 | `KLANTINTERACTIES_BASE_URL`                      | URL van de Klantinteractie API van het gebruikte klantinteractieregister (bijvoorbeeld Open Klant 2) <details> <summary>Meer informatie </summary>Bijvoorbeeld `https://klantinteractieregister.mijngemeente.nl/klantinteracties` </details>  |
 | `KLANTINTERACTIES_TOKEN`                     | Token voor de Klantinteractie API van het gebruikte klantinteractieregister                                                                   |
 | `CONTACTMOMENTEN_BASE_URL`              | URL van de Contactmomenten API  <details> <summary>Meer informatie </summary>Bijvoorbeeld: `https://contactmomentenregister.mijngemeente.nl` </details>                  |
