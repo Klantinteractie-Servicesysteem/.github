@@ -100,6 +100,23 @@ Bij Partijen van het type Organisatie, die we uit het handelsregister ophalen sl
 - codeRegister: "hr" > verwijzing naar het handelsregister (voor vestigingsnummer,KvK-nummer en RSIN)
 - codeRegister: "msei" > verwijzing naar Microsoft EntraId, waar gegevens van de ingelogde gebruiker in staan. 
 
+### Digitale adressen
+Bij het ophalen en opslaan van telefoonnummers en e-maiadressen, gebruiken we bij `soortDigitaalAdres`de waarde van de Code uit een voorzet van referentielijsten. Bij Omschrijving gebruiken we de waarde van Naam uit die referentielijst, tenzij een andere naam is ingegeven. Bijvoorbeeld:
+
+```
+{
+"adres": "0622022020",
+"soortDigitaalAdres": "telnr",
+"omschrijving": "telefoonnummer"
+},
+{
+"adres": "icatttest+rachid@gmail.com",
+"soortDigitaalAdres": "email",
+"omschrijving": "e-mailadres"
+}
+```
+
+
 ### Actor-identificator
 
 De Actor die we opslaan bij het Klantcontact, vullen we op basis van de gegevens van de ingelogde gebruiker, waarbij we er in eerste instantie vanuit gaan dat dit altijd is o.b.v. e-mailadres: 
