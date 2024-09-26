@@ -125,6 +125,20 @@ De Actor die we opslaan bij het Klantcontact, vullen we op basis van de gegevens
 - codeRegister=msei (Documenteren)
 - codeSoortObjectId=email (Documenteren)
 
+Van de Actor die we opslaan bij een interne taak hebben we geen gegevens uit EntraID / OIDC maar alleen uit Objectenregister. Dus voorlopig slaan we bij deze Actoren ook vast in de code de Actor-identificator properties op, die verwijzen naar het Objectenregister: 
+
+Actor identificator als medewerker
+- codeObjecttype= mdw 
+- codeRegister=obj 
+- codeSoortObjectId=idf
+- objectId=(waarde van identificatie uit het medewerkerobject)
+
+Actor identificator als AFDELING of GROEP
+- codeObjecttype= afd  OF: codeObjecttype= grp 
+- codeRegister=obj 
+- codeSoortObjectId=idf
+- objectId=(waarde van identificatie uit het afdeling-object of het groep object)
+
 ### Klantcontact
 De volgende properties uit het Klantcontact vullen we hard in met de volgende waarden: 
 - `indicatieContactGelukt`: altijd  true
