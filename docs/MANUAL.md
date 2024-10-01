@@ -324,3 +324,22 @@ Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kana
 
 ## Zoeken in bronnen
 Binnen KISS kan een Klantcontactmedewerker zoeken in verschillende bronnen. KISS ondersteund op dit moment de volgende bronnen: de gemeentelijke website, in het smoelenboek van de gemeente, kennisartikelen in een Product-format en in Vraag-AntwoordCombinaties (VAC's). Het koppelen van deze bronnen moet gedaan worden door een technisch beheerder, in het kubernetescluster. Als de standaard installatieprocedure gevolgd is, draait er elk uur een taak (job) waardoor de bronnen worden gesyncrhoniseerd in de zoekindex. Bij onverwachte resultaten of foutmeldingen kan je de beheerder van het kubernetescluster vragen om de logging in te zien van de laatste synchronisatiepoging (job) van de [KISS-Elastic-Sync tool](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync). Daarin is terug te vinden hoe de synchronisatiepoging is verlopen.
+
+
+## Management informatie
+management informatie kan opgevraagd worden door rechtsreeks in de urlbalk van de browser naar
+[url van de website]/api/contactmomentendetails te gaan. Hij is alleen toegankelijk voor ingelogde gebruikers.
+
+Deze API haalt een lijst van contactmomentendetails op. Gebruik de onderstaande query parameters.
+
+### Query Parameters
+
+| Parameter  | Type   | Verplicht? | Standaard  | Omschrijving                                               |
+|------------|--------|------------|------------|------------------------------------------------------------|
+| `from`     | string | Ja         | -          | De startdatum in ISO 8601 formaat (bijv. `yyyy-MM-ddTHH:mm:ssZ`). |
+| `to`       | string | Ja         | -          | De einddatum in ISO 8601 formaat (bijv. `yyyy-MM-ddTHH:mm:ssZ`). |
+| `pageSize` | int    | Nee        | 5000       | Het aantal resultaten per pagina, maximaal 5000.             |
+| `page`     | int    | Nee        | 1          | De pagina van de resultaten die moet worden opgehaald.       |
+
+### Voorbeeld
+../api/contactmomentendetails?from=2023-09-01T00:00:00Z&to=2023-09-25T23:59:59Z&pageSize=100&page=1
