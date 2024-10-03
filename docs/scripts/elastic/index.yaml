@@ -3,7 +3,7 @@ entries:
   eck-operator:
   - apiVersion: v2
     appVersion: 2.9.0
-    created: "2024-07-11T17:45:37.9692462+02:00"
+    created: "2024-10-03T16:45:03.6828558+02:00"
     dependencies:
     - condition: installCRDs
       name: eck-operator-crds
@@ -29,12 +29,25 @@ entries:
     name: eck-operator
     type: application
     urls:
-    - https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/scripts/elastic/eck-operator-2.9.0.tgz
+    - eck-operator-2.9.0.tgz
     version: 2.9.0
   kiss-elastic:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-07-11T17:45:37.9757239+02:00"
+    created: "2024-10-03T16:45:03.6992381+02:00"
+    dependencies:
+    - name: eck-operator
+      repository: '@elastic'
+      version: ~2.9.0
+    description: A Helm chart for setting up everything in ECK that kiss needs
+    digest: c7b9db3685e3d65d47a9a31c685d51f74ee49ec53fe8d7944d638ec27661d35b
+    name: kiss-elastic
+    urls:
+    - eck/kiss-elastic-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-10-03T16:45:03.6912316+02:00"
     dependencies:
     - name: eck-operator
       repository: '@elastic'
@@ -43,16 +56,16 @@ entries:
     digest: 5aa55bdae2505af56eebc5407ca1b445e42cc8b2d74ac9d409f6172826fef4fc
     name: kiss-elastic
     urls:
-    - https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/scripts/elastic/kiss-elastic-1.0.0-alpha.1.tgz
+    - kiss-elastic-1.0.0-alpha.1.tgz
     version: 1.0.0-alpha.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-07-11T17:45:37.9697907+02:00"
+    created: "2024-10-03T16:45:03.6828558+02:00"
     description: A Helm chart for setting up everything in ECK that kiss needs
     digest: b457487d30b37f6dba37dd7c8ae2c2bac6553406b775bf3a7f6ab3415aade709
     name: kiss-elastic
     type: application
     urls:
-    - https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/scripts/elastic/kiss-elastic-0.1.0.tgz
+    - kiss-elastic-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-11T17:45:37.9654334+02:00"
+generated: "2024-10-03T16:45:03.6792409+02:00"
