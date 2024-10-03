@@ -1,0 +1,48 @@
+apiVersion: v1
+entries:
+  eck-operator:
+  - apiVersion: v2
+    appVersion: 2.9.0
+    created: "2024-10-03T16:31:42.6959264+02:00"
+    dependencies:
+    - condition: installCRDs
+      name: eck-operator-crds
+      repository: ""
+      version: 2.9.0
+    description: Elastic Cloud on Kubernetes (ECK) operator
+    digest: 005deefb0ad5ee17da204b70c2a55f5688e38224e310f81817a8809f6b463059
+    home: https://github.com/elastic/cloud-on-k8s
+    icon: https://helm.elastic.co/icons/eck.png
+    keywords:
+    - Logstash
+    - Elasticsearch
+    - Kibana
+    - APM Server
+    - Beats
+    - Enterprise Search
+    - Elastic Stack
+    - Operator
+    kubeVersion: '>=1.21.0-0'
+    maintainers:
+    - email: eck@elastic.co
+      name: Elastic
+    name: eck-operator
+    type: application
+    urls:
+    - charts/eck-operator-2.9.0.tgz
+    version: 2.9.0
+  kiss-elastic:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-10-03T16:31:42.6909761+02:00"
+    dependencies:
+    - name: eck-operator
+      repository: '@elastic'
+      version: ~2.9.0
+    description: A Helm chart for setting up everything in ECK that kiss needs
+    digest: c7b9db3685e3d65d47a9a31c685d51f74ee49ec53fe8d7944d638ec27661d35b
+    name: kiss-elastic
+    urls:
+    - kiss-elastic-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-10-03T16:31:42.6770483+02:00"
