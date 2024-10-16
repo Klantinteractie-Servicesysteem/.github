@@ -333,7 +333,7 @@ Binnen KISS is een API endpoint beschikbaar waarmee deze gegevens opgevraagd kun
 
 ### Authenticatie
 
-De ContactmomentenDetails API is beveiligd en vereist een JWT Bearer Token voor toegang. Dit token wordt gegenereerd op basis van een geheime sleutel (secret) die door ons wordt verstrekt aan de externe systemen.
+De Contactmomentendetails API is beveiligd en vereist een JWT Bearer Token voor toegang. Dit token wordt gegenereerd op basis van een geheime sleutel (secret) die door KISS wordt verstrekt aan de externe systemen. Dit secret is configureerbaar via de environment variabele `CONTACTMOMENTDETAILS_API_KEY`
 
 #### Voorbeeld JWT Token
 
@@ -392,8 +392,8 @@ Vervang `{JWT-Token}` door het daadwerkelijke token dat je hebt gegenereerd.
 
 ```
 GET /api/contactmomentendetails?from=2024-10-01T00:00:00Z&to=2024-10-10T23:59:59Z&pageSize=100&page=1
-Authorization: Bearer <JWT-Token>
+Authorization: Bearer {JWT-Token}
 ```
 
-Let op dat de `Authorization` header met de waarde `Bearer <JWT-Token>` moet worden toegevoegd bij elke request.
+Let erop dat de `Authorization` header met de waarde `Bearer {JWT-Token}` wordt toegevoegd bij elk request.
 
