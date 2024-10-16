@@ -87,6 +87,7 @@ Hieronder staan de benodigde environment variabelen per onderdeel van KISS.
 | `OIDC_CLIENT_SECRET`                       | Secret voor de OpenID Connect Identity Provider           |
 | `OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM`    | Identificatie van de medewerker in regsiters <br/> (default waarde is `email`) <details> <summary>Meer informatie </summary> Bij het wegschrijven van gegevens naar bv. Open Klant of Open Zaak is een `medewerkerIdentificatie.identificatie` verplicht. Verschillende gemeenten gebruiken hier verschillende waardes voor. Bij een koppeling met bv. de e-Suite is het van belang dat hier de e-Suite gebruikersnaam in staat van de ingelogde KCM. </details>|
 | `OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE` | Optioneel afkappen van de claim <br/> (bijv. `24`) <details> <summary>Meer informatie </summary> Binnen ZGW mag een `medewerkerIdentificatie.identificatie` niet langer zijn dan 24 karakters. Met deze variabele kun je ervoor zorgen dat de uiteindelijk waarde wordt afgekapt na 24 tekens. </details>       |
+| `CONTACTMOMENTDETAILS_API_KEY` | Secret dat KISS gebruikt om het <br/>JWT Token te genereren voor het opvragen van contactmomentdetails <details> <summary>Meer informatie </summary>Zie de [Handleiding beheer KISS, hoofdstuk managementinformatie](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/MANUAL.md#management-informatie) <br/>voor informatie over het gebruik van deze API.</details> |
 |  |  |
 
 ### Database
