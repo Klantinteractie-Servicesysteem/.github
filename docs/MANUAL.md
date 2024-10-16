@@ -326,12 +326,16 @@ Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kana
 Binnen KISS kan een Klantcontactmedewerker zoeken in verschillende bronnen. KISS ondersteund op dit moment de volgende bronnen: de gemeentelijke website, in het smoelenboek van de gemeente, kennisartikelen in een Product-format en in Vraag-AntwoordCombinaties (VAC's). Het koppelen van deze bronnen moet gedaan worden door een technisch beheerder, in het kubernetescluster. Als de standaard installatieprocedure gevolgd is, draait er elk uur een taak (job) waardoor de bronnen worden gesyncrhoniseerd in de zoekindex. Bij onverwachte resultaten of foutmeldingen kan je de beheerder van het kubernetescluster vragen om de logging in te zien van de laatste synchronisatiepoging (job) van de [KISS-Elastic-Sync tool](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync). Daarin is terug te vinden hoe de synchronisatiepoging is verlopen.
 
 
-## Management informatie
-## Authenticatie
+## Managementinformatie
+Bij het opslaan van Contactmomenten worden enkele gegevens, die geen plek hebben in de standaarden rondom Klantinteracties, opgeslagen binnen KISS zelf. (zie ook het [onderdeel Contactmomentdetails in Decision Record](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/DECISION-RECORD.md#contactmomentdetails)). Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. 
+
+Binnen KISS is een API endpoint beschikbaar waarmee deze gegevens opgevraagd kunnen worden. Dit endpoint is benaderbaar op: `https://www.kissbijdegemeente.nl/api/contactmomentendetails`.
+
+### Authenticatie
 
 De ContactmomentenDetails API is beveiligd en vereist een JWT Bearer Token voor toegang. Dit token wordt gegenereerd op basis van een geheime sleutel (secret) die door ons wordt verstrekt aan de externe systemen.
 
-### Voorbeeld JWT Token
+#### Voorbeeld JWT Token
 
 Een voorbeeld van een JWT-token dat gebruikt kan worden voor authenticatie is:
 
@@ -339,7 +343,7 @@ Een voorbeeld van een JWT-token dat gebruikt kan worden voor authenticatie is:
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiRXh0ZXJuU3lzdGVlbSIsIm5iZiI6MTcyODU4MDUzMSwiZXhwIjoxNzI4NTg3NzMxLCJpYXQiOjE3Mjg1ODA1MzF9.QQNWDwsX9IeqCtqf_wFmJUW5iUJqGSPjYtOHWZG1RDc
 ```
 
-### Structuur van de JWT
+#### Structuur van de JWT
 
 De JWT bestaat uit drie delen, gescheiden door punten:
 
@@ -363,7 +367,7 @@ De JWT bestaat uit drie delen, gescheiden door punten:
 
 3. **Signature**: De handtekening, gegenereerd op basis van de header, payload, en een geheime sleutel (secret) die wij verstrekken. Dit zorgt ervoor dat het token niet kan worden gewijzigd door een derde partij.
 
-### Headers voor de API-aanroep
+#### Headers voor de API-aanroep
 
 Zorg ervoor dat je de volgende headers meestuurt met elke API-aanroep:
 
@@ -375,7 +379,7 @@ Cache-Control: no-cache
 
 Vervang `{JWT-Token}` door het daadwerkelijke token dat je hebt gegenereerd.
 
-## Query Parameters
+### Query Parameters
 
 | Parameter  | Type   | Verplicht? | Standaard  | Omschrijving                                               |
 |------------|--------|------------|------------|------------------------------------------------------------|
