@@ -327,12 +327,55 @@ Binnen KISS kan een Klantcontactmedewerker zoeken in verschillende bronnen. KISS
 
 
 ## Management informatie
-management informatie kan opgevraagd worden door rechtsreeks in de urlbalk van de browser naar
-[url van de website]/api/contactmomentendetails te gaan. Hij is alleen toegankelijk voor ingelogde gebruikers.
+## Authenticatie
 
-Deze API haalt een lijst van contactmomentendetails op. Gebruik de onderstaande query parameters.
+De ContactmomentenDetails API is beveiligd en vereist een JWT Bearer Token voor toegang. Dit token wordt gegenereerd op basis van een geheime sleutel (secret) die door ons wordt verstrekt aan de externe systemen.
 
-### Query Parameters
+### Voorbeeld JWT Token
+
+Een voorbeeld van een JWT-token dat gebruikt kan worden voor authenticatie is:
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiRXh0ZXJuU3lzdGVlbSIsIm5iZiI6MTcyODU4MDUzMSwiZXhwIjoxNzI4NTg3NzMxLCJpYXQiOjE3Mjg1ODA1MzF9.QQNWDwsX9IeqCtqf_wFmJUW5iUJqGSPjYtOHWZG1RDc
+```
+
+### Structuur van de JWT
+
+De JWT bestaat uit drie delen, gescheiden door punten:
+
+1. **Header**: Bevat informatie over het algoritme dat gebruikt wordt om het token te ondertekenen, in dit geval HS256.
+    ```json
+    {
+      "alg": "HS256",
+      "typ": "JWT"
+    }
+    ```
+
+2. **Payload**: De gegevens van de gebruiker of het systeem dat toegang probeert te verkrijgen. Dit bevat onder andere de rol `ExternSysteem`.
+    ```json
+    {
+      "role": "ExternSysteem",
+      "nbf": 1728580531,
+      "exp": 1728587731,
+      "iat": 1728580531
+    }
+    ```
+
+3. **Signature**: De handtekening, gegenereerd op basis van de header, payload, en een geheime sleutel (secret) die wij verstrekken. Dit zorgt ervoor dat het token niet kan worden gewijzigd door een derde partij.
+
+### Headers voor de API-aanroep
+
+Zorg ervoor dat je de volgende headers meestuurt met elke API-aanroep:
+
+```plaintext
+Authorization: Bearer {JWT-Token}
+Accept: */*
+Cache-Control: no-cache
+```
+
+Vervang `{JWT-Token}` door het daadwerkelijke token dat je hebt gegenereerd.
+
+## Query Parameters
 
 | Parameter  | Type   | Verplicht? | Standaard  | Omschrijving                                               |
 |------------|--------|------------|------------|------------------------------------------------------------|
@@ -341,5 +384,12 @@ Deze API haalt een lijst van contactmomentendetails op. Gebruik de onderstaande 
 | `pageSize` | int    | Nee        | 5000       | Het aantal resultaten per pagina, maximaal 5000.             |
 | `page`     | int    | Nee        | 1          | De pagina van de resultaten die moet worden opgehaald.       |
 
-### Voorbeeld
-../api/contactmomentendetails?from=2023-09-01T00:00:00Z&to=2023-09-25T23:59:59Z&pageSize=100&page=1
+### Voorbeeld Request
+
+```
+GET /api/contactmomentendetails?from=2024-10-01T00:00:00Z&to=2024-10-10T23:59:59Z&pageSize=100&page=1
+Authorization: Bearer <JWT-Token>
+```
+
+Let op dat de `Authorization` header met de waarde `Bearer <JWT-Token>` moet worden toegevoegd bij elke request.
+
