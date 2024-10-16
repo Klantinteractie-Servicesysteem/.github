@@ -5,9 +5,7 @@ KISS is ontwikkeld met een eindgebruikersgroep van Klantcontactmedewerkers (KCMs
 ## Contactmomenten
 ### Contactmomentdetails
 Voor de onderstaande gegevens is tijdens fase 1C deze afweging gemaakt, en besloten de gegevens op te slaan binnen KISS zelf. Het gaat om gegevens van een contactoment die niet in het Contactmomentenregister passen. Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. Zie ook de issues  [#21](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/21),  [#111](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/111),  [#610](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/610), [#611](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/611).
-Ze worden opgeslagen binnen KISS, en zijn op te vragen via de Contactmomentdetails API. Deze API is in eerste insantie zeer rudimentair van opzet: 
-- de toegang is gebaseerd op de rol `redacteur` binnen KISS (zie ook: [CONFIGURATIE.md](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/CONFIGURATIE.md));
-- de API geeft altijd de laatste 1000 records terug. 
+Ze worden opgeslagen binnen KISS, en zijn op te vragen via de Contactmomentdetails API. Zie de [Handleiding beheer KISS, hoofdstuk managementinformate](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/MANUAL.md#management-informatie) voor informatie over het gebruik van deze API.
 
 | Property  | Type | Toelichting |
 |--------|--------|--------|
