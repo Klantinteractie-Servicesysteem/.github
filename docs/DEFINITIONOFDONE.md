@@ -32,7 +32,7 @@ Nieuwe unit tests worden toegevoegd:
 - WCAG wordt handmatig gecontroleerd m.b.v. lighthouse. De resultaten van deze test vindt u [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/WCAG-Lighthouse-Report-20231010.pdf)
 
 ### Pentest
-Pentests (frontend en backend) worden periodiek uitgevoerd (wekelijks). Een voorbeeld van een rapport staat [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/Website_Scanner-https___prod.kiss-demo.nl-20230628-0907.pdf).
+Pentests (frontend en backend) worden wekelijks uitgevoerd. Een voorbeeld van een rapport uit juli 2024 staat [hier](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/WebsiteScanner_30077801_771804-20240711-2302_0.pdf).
 
 ### Error logging
 Error logging is ingeregeld
