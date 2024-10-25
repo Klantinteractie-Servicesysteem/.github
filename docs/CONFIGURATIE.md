@@ -103,7 +103,7 @@ De eerste keer dat er via de synctool Kennisartikelen (PDC-producten), Medewerke
 - De velden die bij de bron horen: voor elk property in het schema van de bron, wordt een property aangemaakt binnen de KISS-engine, voorafgegaan door de waarde van `objectbron`. 
 
 ### Relevance Tuning
-Om de informatie uit de Kennisartikelen en websites doorzoekbaar te maken, moeten deze velden opgenomen zijn in het Engine Schema, en doorzoekbaar gezet in de Relevance tuning. Let op: zijn er nieuwe velden toegevoegd aan het Engine Schema, bijvoorbeeld omdat er een nieuw type bron wordt toegevoegd, dan moeten deze velden doorzoekbaar gemaakt worden, door op knop 'Update search settings' te klikken, op de pagina Manage engine schema. U kunt ook op de pagina Relevance Tuning aangeven dat een schemaveld doorzoekbaar moet zijn. 
+Om de informatie uit de Kennisartikelen en websites doorzoekbaar te maken, moeten deze velden opgenomen zijn in het Engine Schema, en doorzoekbaar gezet in de Relevance tuning. Let op: zijn er nieuwe velden toegevoegd aan het Engine Schema, bijvoorbeeld omdat er een nieuw type bron is toegevoegd? Dan moeten deze velden doorzoekbaar gemaakt worden, door op knop 'Update search settings' te klikken op de pagina Manage engine schema. U kunt ook op de pagina Relevance Tuning aangeven dat een schemaveld doorzoekbaar moet zijn. 
 
 Om de zoekresultaten te beïnvloeden, moet u vervolgens de Relevance Tuning instellen. [Zie ook de documentatie van Elasticsearch](https://www.elastic.co/guide/en/app-search/current/relevance-tuning-guide.html)
 
