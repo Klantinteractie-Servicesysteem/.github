@@ -3,7 +3,7 @@
 De aanpassingen staan op een devevelopmentomgeving [https://dev.kiss-demo.nl/](https://dev.kiss-demo.nl/) en productieomgeving [https://prod.kiss-demo.nl/](https://prod.kiss-demo.nl/) en voldoen aan alle acceptatiecriteria.
 
 ### De applicatie voldoet aan de ontwerpprincipes van Gebruiker Centraal
-De eindgebruiker is betrokken is gedurende het hele project betrokken bij ontwerp en specificatie. De applicatie wordt regelmatig getest door de gebruikers.
+De eindgebruiker is gedurende het hele project betrokken bij ontwerp en specificatie. De applicatie wordt regelmatig getest door de gebruikers.
 
 ### De applicatie voldoet aan de AVG
 Er is een DPIA opgesteld voor de applicatie. Deze kunt u [hier inzien](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/files/ICATT-KISS-Data-Processing-Impact-Assessment-(DPIA).pdf).
