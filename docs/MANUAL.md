@@ -351,9 +351,6 @@ De JWT bestaat uit drie delen, gescheiden door punten:
 2. **Payload**: De gegevens van de gebruiker of het systeem dat toegang probeert te verkrijgen. Dit bevat onder andere de rol `ExternSysteem`.
     ```json
     {
-      "role": "ExternSysteem",
-      "nbf": 1728580531,
-      "exp": 1728587731,
       "iat": 1728580531
     }
     ```
