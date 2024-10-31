@@ -47,6 +47,8 @@ Voor een aantal objecttype is de URL nog niet configureerbaar. In die gevallen z
 ## Configuratie van uw Identity Provider
 Bij de installatie van KISS regelt u de koppeling met uw OpenIDConnect Identity Provider. Daarnaast moet u in uw Identity Provider configureren dat gebruikers die in moeten kunnen loggen bij KISS in ieder geval een 'klantcontactmedewerker'-rol hebben. Een rol is in dit geval een claim van het type `role` of `roles` (beiden worden ondersteund). De waarde die correspondeert met een kiss-medewerker kunt u instellen tijdens de installatie. Standaard is dit `Klantcontactmedewerker`. Voor medewerkers die beheertaken op KISS uitvoeren, is een aparte rol ingeregeld. Ook de naam van deze rol kunt u instellen tijdens de installatie. Standaard is dit `Redacteur`. 
 
+Als een ingelogde gebruiker wel de startpagina ziet, maar vervolgens alleen maar spinners blijft zien, dan heeft deze gebruiker niet de juiste rollen. 
+
 ### Claims uit uw Identity provider
 KISS gebruikt de claims uit uw Identity Provider om de gegevens van de ingelogde Klantcontactmedewerker toe te voegen aan de Contactmomenten en Contactverzoeken die vanuit KISS worden geregistreerd.
 Zie [de installatiehandleiding](INSTALLATION.md#Authenticatie) voor hoe u dit configureert.
@@ -54,16 +56,16 @@ Zie [de installatiehandleiding](INSTALLATION.md#Authenticatie) voor hoe u dit co
 Er is in JWT geen standaard claim voor voorletters of voorvoegsel (tussenvoegsel). KISS gebruikt daarom deze mapping:
 - Voorletters => given_name
 - Achternaam => family_name indien beschikbaar, anders name indien beschikbaar, anders http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
-- Op dit moment doen we niets met Tussenvoegsel, omdat er geen voorvoegsel-claim bestaat. In de huidige implementatie komt tussenvoegsel alleen in het contactoment, als het onderdeel is van de Achternaam.
+- Op dit moment doen we niets met Tussenvoegsel, omdat er geen voorvoegsel-claim bestaat. In de huidige implementatie komt tussenvoegsel alleen in het contactmoment, als het onderdeel is van de Achternaam.
 
 
 ### Voorbeeldinrichting in Azure Active Directory
 Als u gebruik maakt van Azure Active Directory als Identity Provider, kunt u dit op de volgende manier inrichten.
+
 1. Bij de installatie van KISS heeft u een App Registration aangemaakt. Ga binnen Azure AD naar App registrations en klik op de applicatie.
 
-<img src="https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-01.png" />
+    ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-01.png)
 
-  
 1. Navigeer naar App roles, kies Create app role en vul de benodigde velden in. Belangrijk is dat u kiest voor Users/Groups bij Allowed member types en bij Value kiest voor de rol die u bij de installatie geconfigureerd hebt (standaard `Klantcontactmedewerker`).
 
     ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/AzureAD-02.png)
@@ -95,19 +97,20 @@ Op het moment dat de crawler de eerste keer gedraaid heeft, wordt het engine sch
 ### Syncen van bronnen
 De eerste keer dat er via de synctool Kennisartikelen (PDC-producten), Medewerkers of VACs worden geindexeerd in Elastic, wordt het Engine Schema uitgebreid met een aantal velden. Dit zijn: 
 - `object_bron`
+
 - `object_meta`
 
 - De velden die bij de bron horen: voor elk property in het schema van de bron, wordt een property aangemaakt binnen de KISS-engine, voorafgegaan door de waarde van `objectbron`. 
 
 ### Relevance Tuning
-Om de informatie uit de Kennisartikelen en websites doorzoekbaar te maken, moeten deze velden opgenomen zijn in het Engine Schema, en doorzoekbaar gezet in de Relevance tuning. Let op: zijn er nieuwe velden toegevoegd aan het Engine Schema, bijvoorbeeld omdat er een nieuw type bron wordt toegevoegd? Dan moeten deze velden doorzoekbaar gemaakt worden, door op knop 'Update search settings' te klikken, op de pagina Manage engine schema. U kunt ook op de pagina Relevance Tuning aangeven dat een schemaveld doorzoekbaar moet zijn. 
+Om de informatie uit de Kennisartikelen en websites doorzoekbaar te maken, moeten deze velden opgenomen zijn in het Engine Schema, en doorzoekbaar gezet in de Relevance tuning. Zijn er nieuwe velden toegevoegd aan het Engine Schema, bijvoorbeeld omdat er een nieuw type bron is toegevoegd? Dan moeten deze velden doorzoekbaar gemaakt worden, door op knop 'Update search settings' te klikken op de pagina Manage engine schema. U kunt ook op de pagina Relevance Tuning aangeven dat een schemaveld doorzoekbaar moet zijn. 
 
 Om de zoekresultaten te beïnvloeden, moet u vervolgens de Relevance Tuning instellen. [Zie ook de documentatie van Elasticsearch](https://www.elastic.co/guide/en/app-search/current/relevance-tuning-guide.html)
 
 Elasticsearch zal binnen de meta-engine voor elk property van een object (een VAC, een medewerker of een Kennisartikel) een property aanmaken. Bijvoorbeeld `Kennisartikel.vertalingen.bezwaarEnBeroep` of `VAC.trefwoorden.trefwoord`. Elasticsearch zal ook zelf voor deze property's aangeven of ze doorzoekbaar moeten zijn of niet. Websitepagina's worden door de crawler aan de meta-engine toegevoegd, en zijn vindbaar via de velden van [het crawler-schema](https://www.elastic.co/guide/en/app-search/8.9/web-crawler-reference.html#web-crawler-reference-web-crawler-schema).
 
-Door vervolgens de relevantie van specifieke velden hoger te zetten, kunt u ervoor zorgen dat deze zwaarder meetellen in het zoekresultaat. Door de properties `VAC.trefwoorden.trewoord`, en `Kennisartikel.vertalingen.trefwoorden.trefwoord` hogere relevantiescore te geven, zullen de trefwoorden zwaarder meetellen.  
+Door vervolgens de relevantie van specifieke velden hoger te zetten, kunt u ervoor zorgen dat deze zwaarder meetellen in het zoekresultaat. Door de properties `VAC.trefwoorden.trefwoord` en `Kennisartikel.vertalingen.trefwoorden.trefwoord` hogere relevantiescore te geven, zullen de trefwoorden zwaarder meetellen.  
 
-Doordat elke bron eigen properties krijgt in de meta-engine, kunt u specifieke bronnen zwaarder laten wegen. Als `VAC.trefwoorden.trewoord` een hogere relevantiescore heeft dan `Kennisartikel.vertalingen.trefwoorden.trefwoord`, zullen de VAC's hoger in het zoekresultaat staan.
+Doordat elke bron eigen properties krijgt in de meta-engine, kunt u specifieke bronnen zwaarder laten wegen. Als `VAC.trefwoorden.trefwoord` een hogere relevantiescore heeft dan `Kennisartikel.vertalingen.trefwoorden.trefwoord`, zullen de VAC's hoger in het zoekresultaat staan.
 
 Alle property's van het type text worden standaard doorzoekbaar gemaakt. Het is raadzaam deze standaard instellingen na te lopen. Vooral bij Kennisartikelen (waarvan het object gebaseerd is op de API van de SDG invoervoorziening) zijn er veel text property's, die niet relevant zijn voor de zoekresultaten.

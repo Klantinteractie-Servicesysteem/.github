@@ -212,7 +212,7 @@ Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit gespreksres
 
 
 ## Formulieren contactverzoek
-Bij ‘Formulieren contactverzoek’ kan een beheerder van KISS formuliertjes aanmaken, die kunnen worden gebruikt in Contactverzoeken. Het zijn eenvoudige formuliertjes, die een aantal extra vragen bevatten, waarmee je de KCM ondersteunt om al zoveel mogelijk relevante informatie mee geeft met het Contactverzoek. Dit zijn dus aanvullende vragen, op de vaste Contactverzoek-velden. 
+Bij ‘Formulieren contactverzoek’ kan een beheerder van KISS formuliertjes aanmaken, die kunnen worden gebruikt in Contactverzoeken. Het zijn eenvoudige formuliertjes, die een aantal extra vragen bevatten, waarmee je de KCM ondersteunt om al zoveel mogelijk relevante informatie mee te geven met het Contactverzoek. Dit zijn dus aanvullende vragen, op de vaste Contactverzoek-velden. 
 
 Met de Vaste Contactverzoek velden geeft een KCM aan: 
 
