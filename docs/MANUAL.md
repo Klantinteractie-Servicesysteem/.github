@@ -348,7 +348,7 @@ De JWT bestaat uit drie delen, gescheiden door punten:
     }
     ```
 
-2. **Payload**: De gegevens van de gebruiker of het systeem dat toegang probeert te verkrijgen. Dit bevat onder andere de rol `ExternSysteem`.
+2. **Payload**: De gegevens van de gebruiker of het systeem dat toegang probeert te verkrijgen. Deze hoeft alleen het veld iat te bevatten met de timestamp van het moment waarop het token is aangemaakt.
     ```json
     {
       "iat": 1728580531
