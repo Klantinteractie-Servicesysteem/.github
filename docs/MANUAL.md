@@ -326,11 +326,48 @@ Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kana
 Binnen KISS kan een Klantcontactmedewerker zoeken in verschillende bronnen. KISS ondersteund op dit moment de volgende bronnen: de gemeentelijke website, in het smoelenboek van de gemeente, kennisartikelen in een Product-format en in Vraag-AntwoordCombinaties (VAC's). Het koppelen van deze bronnen moet gedaan worden door een technisch beheerder, in het kubernetescluster. Als de standaard installatieprocedure gevolgd is, draait er elk uur een taak (job) waardoor de bronnen worden gesyncrhoniseerd in de zoekindex. Bij onverwachte resultaten of foutmeldingen kan je de beheerder van het kubernetescluster vragen om de logging in te zien van de laatste synchronisatiepoging (job) van de [KISS-Elastic-Sync tool](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync). Daarin is terug te vinden hoe de synchronisatiepoging is verlopen.
 
 
-## Management informatie
-management informatie kan opgevraagd worden door rechtsreeks in de urlbalk van de browser naar
-[url van de website]/api/contactmomentendetails te gaan. Hij is alleen toegankelijk voor ingelogde gebruikers.
+## Managementinformatie
+Bij het opslaan van Contactmomenten worden enkele gegevens, die geen plek hebben in de standaarden rondom Klantinteracties, opgeslagen binnen KISS zelf. (zie ook het [onderdeel Contactmomentdetails in Decision Record](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/DECISION-RECORD.md#contactmomentdetails)). Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. 
 
-Deze API haalt een lijst van contactmomentendetails op. Gebruik de onderstaande query parameters.
+Binnen KISS is een API endpoint beschikbaar waarmee deze gegevens opgevraagd kunnen worden. Dit endpoint is benaderbaar op: `https://www.kissbijdegemeente.nl/api/contactmomentendetails`.
+
+### Authenticatie
+
+De Contactmomentendetails API is beveiligd en vereist een JWT Bearer Token voor toegang. Dit token wordt gegenereerd op basis van een geheime sleutel (secret) die door KISS wordt verstrekt aan de externe systemen. Dit secret is configureerbaar via de environment variabele `MANAGEMENTINFORMATIE_API_KEY` (zie installatiehandleiding)
+
+
+#### Structuur van de JWT
+
+De JWT bestaat uit drie delen, gescheiden door punten:
+
+1. **Header**: Bevat informatie over het algoritme dat gebruikt wordt om het token te ondertekenen, in dit geval HS256.
+    ```json
+    {
+      "alg": "HS256",
+      "typ": "JWT"
+    }
+    ```
+
+2. **Payload**: De gegevens van de gebruiker of het systeem dat toegang probeert te verkrijgen. Deze hoeft alleen het veld iat te bevatten met de timestamp van het moment waarop het token is aangemaakt.
+    ```json
+    {
+      "iat": 1728580531
+    }
+    ```
+
+3. **Signature**: De handtekening, gegenereerd op basis van de header, payload, en een geheime sleutel (secret) die wij verstrekken. Dit zorgt ervoor dat het token niet kan worden gewijzigd door een derde partij.
+
+#### Headers voor de API-aanroep
+
+Zorg ervoor dat je de volgende headers meestuurt met elke API-aanroep:
+
+```plaintext
+Authorization: Bearer {JWT-Token}
+Accept: */*
+Cache-Control: no-cache
+```
+
+Vervang `{JWT-Token}` door het daadwerkelijke token dat je hebt gegenereerd.
 
 ### Query Parameters
 
@@ -341,5 +378,12 @@ Deze API haalt een lijst van contactmomentendetails op. Gebruik de onderstaande 
 | `pageSize` | int    | Nee        | 5000       | Het aantal resultaten per pagina, maximaal 5000.             |
 | `page`     | int    | Nee        | 1          | De pagina van de resultaten die moet worden opgehaald.       |
 
-### Voorbeeld
-../api/contactmomentendetails?from=2023-09-01T00:00:00Z&to=2023-09-25T23:59:59Z&pageSize=100&page=1
+### Voorbeeld Request
+
+```
+GET /api/contactmomentendetails?from=2024-10-01T00:00:00Z&to=2024-10-10T23:59:59Z&pageSize=100&page=1
+Authorization: Bearer {JWT-Token}
+```
+
+Let erop dat de `Authorization` header met de waarde `Bearer {JWT-Token}` wordt toegevoegd bij elk request.
+
