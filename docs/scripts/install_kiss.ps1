@@ -51,6 +51,8 @@ kubectl create configmap kiss-config `
     --from-literal=HAAL_CENTRAAL_BASE_URL=$(HAAL_CENTRAAL_BASE_URL) `
     --from-literal=INTERNE_TAAK_BASE_URL=$(INTERNE_TAAK_BASE_URL) `
     --from-literal=INTERNE_TAAK_OBJECT_TYPE_URL=$(INTERNE_TAAK_OBJECT_TYPE_URL) `
+    --from-literal=KLANTEN_BASE_URL=$(KLANTEN_BASE_URL) `
+    --from-literal=KLANTEN_CLIENT_ID=$(KLANTEN_CLIENT_ID) `
     --from-literal=KLANTINTERACTIES_BASE_URL=$(KLANTINTERACTIES_BASE_URL) `
     --from-literal=KVK_BASE_URL=$(KVK_BASE_URL) `
     --from-literal=MEDEWERKER_OBJECTEN_BASE_URL=$(MEDEWERKER_OBJECTEN_BASE_URL) `
@@ -85,6 +87,7 @@ kubectl create secret generic kiss-secrets `
     --from-literal=GROEPEN_TOKEN=$(GROEPEN_TOKEN) `
     --from-literal=HAAL_CENTRAAL_API_KEY=$(HAAL_CENTRAAL_API_KEY) `
     --from-literal=INTERNE_TAAK_TOKEN=$(INTERNE_TAAK_TOKEN) `
+    --from-literal=KLANTEN_CLIENT_SECRET=$(KLANTEN_CLIENT_SECRET) `
     --from-literal=KLANTINTERACTIES_TOKEN=$(KLANTINTERACTIES_TOKEN) `
     --from-literal=KVK_API_KEY=$(KVK_API_KEY) `
     --from-literal=MEDEWERKER_OBJECTEN_TOKEN=$(MEDEWERKER_OBJECTEN_TOKEN) `
