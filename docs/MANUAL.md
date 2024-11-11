@@ -322,6 +322,15 @@ Het toevoegen, wijzigen of verwijderen van kanalen gaat op een gelijksoortige ma
 Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kanalen aanwezig zijn (geconfigureerd of een vaste lijst kanalen), let dan goed op of het van belang is dat de schrijfwijze van een kanaal in KISS exact moet overeenkomen met kanaal in het bronregister. In dat geval moet je ook letten op hoofdletters, kleine, spaties en streepjes.
 
 
+## KISS beheer vullen met voorbeelddata voor Werkinstructies, Skills, Links en Gespreksresultaten
+
+Als er voor de categorieën Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten nog geen items zijn toegevoegd krijgt de gebruiker de optie om aan deze beheercategorieën initieel data toe te voegen. Deze optie zal dus in elk geval beschikbaar zijn na een nieuwe installatie van KISS. Zodra er op de startknop gedrukt wordt zal de database met voorbeelddata worden gevuld en verdwijnt de optie/knop om (nogmaals) te vullen.
+
+
+### Let op
+De optie is dus alleen beschikbaar als de lijsten van Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten echt leeg zijn. Een beheerder kan deze lijsten handmatig schonen, behalve die van Skills. Items die uit Skills worden verwijderd worden niet daadwerkelijk weggegooid, maar alleen logisch verwijderd. Dat wil zeggen dat verwijderde Skills nog onzichtbaar aanwezig zijn in de database, waardoor er geen initiële dataset geladen kan worden.
+
+
 ## Zoeken in bronnen
 Binnen KISS kan een Klantcontactmedewerker zoeken in verschillende bronnen. KISS ondersteund op dit moment de volgende bronnen: de gemeentelijke website, in het smoelenboek van de gemeente, kennisartikelen in een Product-format en in Vraag-AntwoordCombinaties (VAC's). Het koppelen van deze bronnen moet gedaan worden door een technisch beheerder, in het kubernetescluster. Als de standaard installatieprocedure gevolgd is, draait er elk uur een taak (job) waardoor de bronnen worden gesyncrhoniseerd in de zoekindex. Bij onverwachte resultaten of foutmeldingen kan je de beheerder van het kubernetescluster vragen om de logging in te zien van de laatste synchronisatiepoging (job) van de [KISS-Elastic-Sync tool](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync). Daarin is terug te vinden hoe de synchronisatiepoging is verlopen.
 
