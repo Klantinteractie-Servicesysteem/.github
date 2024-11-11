@@ -211,9 +211,9 @@ De installatie kan uitgevoerd worden middels het PowerShell script. Handmatig ui
 
 [install_kiss.ps1](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/scripts/install_kiss.ps1)
 
-**LET OP** Voordat een ingelogde gebruiker kan werken met KISS, moet deze gebruiker de juiste rol hebben in de gekoppelde Identity provider. Zie voor meer informatie het onderdeel [Configuratie van uw Identity Provider in de configuratie-handleiding](CONFIGURATIE.md#configuratie-van-uw-identity-provider).
-
-Om een betere indruk te krijgen van hoe KISS werkt, is het mogelijk om voorbeeldata (demodata) te laden. Zie hiervoor [de uitleg bij de Beheerhandleiding](MANUAL.md#kiss-beheer-vullen-met-voorbeelddata).
+**LET OP** 
+- Voordat een ingelogde gebruiker kan werken met KISS, moet deze gebruiker de juiste rol hebben in de gekoppelde Identity provider. Zie voor meer informatie het onderdeel [Configuratie van uw Identity Provider in de configuratie-handleiding](CONFIGURATIE.md#configuratie-van-uw-identity-provider).
+- Om een betere indruk te krijgen van hoe KISS werkt, is het mogelijk om **voorbeeldata (demodata)** te laden. Zie hiervoor [de uitleg bij de Beheerhandleiding](MANUAL.md#kiss-beheer-vullen-met-voorbeelddata).
 
 #### KISS-Elastic-Sync
 KISS-Elastic-Sync is het component dat zorgt voor het creëren van de benodigde engines in een Elasticsearch-installatie, zodat gekoppelde bronnen eenvoudig door KISS doorzoekbaar zijn. Het ondersteunt zowel websites als gestructureerde bronnen door respectievelijk een crawler en een index te gebruiken.
