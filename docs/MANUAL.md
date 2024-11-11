@@ -324,7 +324,7 @@ Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kana
 
 ## KISS beheer vullen met voorbeelddata voor Werkinstructies, Skills, Links en Gespreksresultaten
 
-Als er voor de categorieën Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten nog geen items zijn toegevoegd krijgt de gebruiker de optie om aan deze beheercategorieën initieel data toe te voegen. Deze optie zal dus in elk geval beschikbaar zijn na een nieuwe installatie van KISS. Zodra er op de startknop gedrukt wordt zal de database met voorbeelddata worden gevuld en verdwijnt de optie/knop om (nogmaals) te vullen.
+Als er voor de categorieën Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten nog geen items zijn toegevoegd krijgt de gebruiker de optie om aan deze beheercategorieën initieel data toe te voegen. Deze optie zal dus in elk geval beschikbaar zijn na een eerste installatie van KISS. Zodra er op de startknop gedrukt wordt zal de database met voorbeelddata worden gevuld en verdwijnt de optie/knop om (nogmaals) te vullen.
 
 
 ### Let op
