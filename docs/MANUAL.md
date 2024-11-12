@@ -10,6 +10,12 @@ Als beheerder van KISS kan je de volgende zaken beheren:
 
 Per onderwerp leggen wij uit wat de mogelijkheden zijn en hoe je de werkzaamheden uitvoert. Om deze taken te kunnen uitvoeren moet je de rol `Redacteur` hebben (zie ook [Configuratie](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/CONFIGURATIE.md)).
 
+### KISS beheer vullen met voorbeelddata 
+Als je KISS voor het eerst hebt geïnstalleerd, en er bij Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten nog geen items zijn toegevoegd, is het mogelijk om eenvoudig voorbeelddata voor deze onderdelen te laden. Die doe je m.b.v. de knop op de startpagina. Met een druk op die knop zal de database met voorbeelddata worden gevuld voor Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten. Zodra de voorbeelddata is geladen, verdwijnt de optie/knop om (nogmaals) te vullen.
+
+### Let op
+De optie is alléén beschikbaar als de lijsten van Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten echt leeg zijn. Een beheerder kan deze lijsten handmatig schonen, zodat ze weer leeg zijn. Skills vormen hierop een uitzondering: deze worden niet daadwerkelijk weggegooid, maar alleen verborgen voor de gebruiker. Dit om te voorkomen dat een Skill die al gekoppeld is aan een bericht, daarvan zal verdwijnen. Dit betekent dat verwijderde Skills nog onzichtbaar aanwezig zijn in de database, waardoor er geen initiële dataset geladen kan worden. Zodra je ee Skill hebt toegevoegd, is het dus niet meer mogelijk om voorbeelddata te laden. 
+
 
 ## Nieuws en werkinstructies
 Nieuwsberichten en werkinstructies zijn berichten die van belang kunnen zijn voor de klantcontactmedewerkers. Deze berichten komen voor de klantcontactmedewerkers op hun homepagina te staan.
@@ -320,6 +326,7 @@ KISS hanteert een standaardlijst Kanalen, waaruit je kunt kiezen bij het registr
 Het toevoegen, wijzigen of verwijderen van kanalen gaat op een gelijksoortige manier als het toevoegen, wijzigen of verwijderen van Skills of gespreksresultaten.  
 
 Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kanalen aanwezig zijn (geconfigureerd of een vaste lijst kanalen), let dan goed op of het van belang is dat de schrijfwijze van een kanaal in KISS exact moet overeenkomen met kanaal in het bronregister. In dat geval moet je ook letten op hoofdletters, kleine, spaties en streepjes.
+
 
 
 ## Zoeken in bronnen
