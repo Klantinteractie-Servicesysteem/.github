@@ -342,7 +342,6 @@ Binnen KISS is een API endpoint beschikbaar waarmee deze gegevens opgevraagd kun
 
 De Contactmomentendetails API is beveiligd en vereist een JWT Bearer Token voor toegang. Dit token wordt gegenereerd op basis van een geheime sleutel (secret) die door KISS wordt verstrekt aan de externe systemen. Dit secret is configureerbaar via de environment variabele `MANAGEMENTINFORMATIE_API_KEY` (zie installatiehandleiding)
 
-
 #### Structuur van de JWT
 
 De JWT bestaat uit drie delen, gescheiden door punten:
@@ -355,14 +354,21 @@ De JWT bestaat uit drie delen, gescheiden door punten:
     }
     ```
 
-2. **Payload**: De gegevens van de gebruiker of het systeem dat toegang probeert te verkrijgen. Deze hoeft alleen het veld iat te bevatten met de timestamp van het moment waarop het token is aangemaakt.
+2. **Payload**: De gegevens van de gebruiker of het systeem dat toegang probeert te verkrijgen. De payload bevat het `iat` (issued at) veld met de timestamp van het moment waarop het token is aangemaakt, en het `exp` (expiration) veld om de geldigheidsduur van het token te beperken.
+
     ```json
     {
-      "iat": 1728580531
+      "iat": 1728580531,
+      "exp": 1728666931
     }
     ```
 
+    - `iat`: Tijdstip van aanmaak van het token (in UNIX-timestamp).
+    - `exp`: Verloopdatum van het token (in UNIX-timestamp), na welke het token niet meer geldig is.
+
 3. **Signature**: De handtekening, gegenereerd op basis van de header, payload, en een geheime sleutel (secret) die wij verstrekken. Dit zorgt ervoor dat het token niet kan worden gewijzigd door een derde partij.
+
+> **Opmerking:** Het is aan te raden om de `exp` waarde zo in te stellen dat het token slechts een beperkte tijd geldig is, om het risico op misbruik te verkleinen.
 
 #### Headers voor de API-aanroep
 
@@ -393,4 +399,3 @@ Authorization: Bearer {JWT-Token}
 ```
 
 Let erop dat de `Authorization` header met de waarde `Bearer {JWT-Token}` wordt toegevoegd bij elk request.
-
