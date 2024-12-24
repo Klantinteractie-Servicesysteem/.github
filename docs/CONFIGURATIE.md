@@ -1,5 +1,5 @@
 # Configuratie
-Bij de installatie van KISS worden er een groot aantal dingen al geconfigureerd. Op deze pagina staan verschillende onderdelen van de configuratie toegelicht.
+Bij de installatie van KISSS worden er een groot aantal dingen al geconfigureerd. Op deze pagina staan verschillende onderdelen van de configuratie toegelicht.
 
 
 ## Configuratie t.b.v. Objecten API
