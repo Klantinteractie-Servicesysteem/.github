@@ -18,7 +18,7 @@ helm repo update
 helm upgrade --install --namespace kiss-namespace ingress-nginx-release ingress-nginx-repo/ingress-nginx `
  --set controller.service.externalTrafficPolicy=Local --set annotations.nginx.ingress.kubernetes.io/proxy-buffer-size=16k
 
- # create TLS secret
+# Create TLS secret
 kubectl create secret tls --cert $cert --key=$key wildcard-kiss-tls -n $namespace
 
 # Install elastic components
@@ -75,7 +75,9 @@ kubectl create configmap kiss-config `
     --from-literal=ZAAKSYSTEEM__0__DEEPLINK_URL=$(ZAAKSYSTEEM__0__DEEPLINK_URL) `
     --from-literal=ZAAKSYSTEEM__0__DEEPLINK_PROPERTY=$(ZAAKSYSTEEM__0__DEEPLINK_PROPERTY) `
     --from-literal=ZAAKSYSTEEM__0__NIETNATUURLIJKPERSOONIDENTIFIER=$(ZAAKSYSTEEM__0__NIETNATUURLIJKPERSOONIDENTIFIER) `
+    --from-literal=USE_KLANTINTERACTIES=$(USE_KLANTINTERACTIES) `
     --dry-run=client -o yaml | kubectl apply -f -
+
 # Add secrets
 kubectl create secret generic kiss-secrets `
     --from-literal=AFDELINGEN_TOKEN=$(AFDELINGEN_TOKEN) `
@@ -98,6 +100,7 @@ kubectl create secret generic kiss-secrets `
     --from-literal=VAC_OBJECTEN_TOKEN=$(VAC_OBJECTEN_TOKEN) `
     --from-literal=VAC_OBJECTTYPES_TOKEN=$(VAC_OBJECTTYPES_TOKEN) `
     --from-literal=ZAAKSYSTEEM__0__API_KEY=$(ZAAKSYSTEEM__0__API_KEY) `
+    --from-literal=MANAGEMENTINFORMATIE_API_KEY=$(MANAGEMENTINFORMATIE_API_KEY) `
     --dry-run=client -o yaml | kubectl apply -f -
 
 helm upgrade --install kiss-ci-release kiss-repo-ci/kiss-frontend --version 1.0.51 `
