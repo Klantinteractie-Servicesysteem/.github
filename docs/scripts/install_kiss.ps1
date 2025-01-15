@@ -69,8 +69,7 @@ kubectl create configmap kiss-config `
     --from-literal=SDG_OBJECTEN_BASE_URL=$(SDG_OBJECTEN_BASE_URL) `
     --from-literal=SDG_OBJECT_TYPE_URL=$(SDG_OBJECT_TYPE_URL) `
     --from-literal=VAC_OBJECTEN_BASE_URL=$(VAC_OBJECTEN_BASE_URL) `
-    --from-literal=VAC_OBJECT_TYPE_URL=$(VAC_OBJECT_TYPE_URL) `
-    --from-literal=VAC_OBJECT_TYPE_VERSION=$(VAC_OBJECT_TYPE_VERSION) `
+    --from-literal=VAC_OBJECTTYPES_BASE_URL=$(VAC_OBJECTTYPES_BASE_URL) `
     --from-literal=ZAAKSYSTEEM__0__API_CLIENT_ID=$(ZAAKSYSTEEM__0__API_CLIENT_ID) `
     --from-literal=ZAAKSYSTEEM__0__BASE_URL=$(ZAAKSYSTEEM__0__BASE_URL) `
     --from-literal=ZAAKSYSTEEM__0__DEEPLINK_URL=$(ZAAKSYSTEEM__0__DEEPLINK_URL) `
@@ -99,6 +98,7 @@ kubectl create secret generic kiss-secrets `
     --from-literal=POSTGRES_PASSWORD=$POSTGRES_PASSWORD `
     --from-literal=SDG_OBJECTEN_TOKEN=$(SDG_OBJECTEN_TOKEN) `
     --from-literal=VAC_OBJECTEN_TOKEN=$(VAC_OBJECTEN_TOKEN) `
+    --from-literal=VAC_OBJECTTYPES_TOKEN=$(VAC_OBJECTTYPES_TOKEN) `
     --from-literal=ZAAKSYSTEEM__0__API_KEY=$(ZAAKSYSTEEM__0__API_KEY) `
     --from-literal=MANAGEMENTINFORMATIE_API_KEY=$(MANAGEMENTINFORMATIE_API_KEY) `
     --dry-run=client -o yaml | kubectl apply -f -
