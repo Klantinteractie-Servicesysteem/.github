@@ -328,7 +328,7 @@ Het toevoegen, wijzigen of verwijderen van kanalen gaat op een gelijksoortige ma
 Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kanalen aanwezig zijn (geconfigureerd of een vaste lijst kanalen), let dan goed op of het van belang is dat de schrijfwijze van een kanaal in KISS exact moet overeenkomen met kanaal in het bronregister. In dat geval moet je ook letten op hoofdletters, kleine, spaties en streepjes.
 
 ## Vacs
-Op de pagina 'Vacs' kan je Vraag-Antwoord-Combinaties beheren die zijn opgeslagen in het bij de KISS-installatie geconfigureerde Objectenregister. De lijst op de Vac-overzichtspagina toont alle Vacs met status `actief`. Door middel van de toetsenbord combinatie `Ctrl + f` kun je in de lijst zoeken naar de vraag die bij de Vraag-Antwoord-Combinatie hoort.
+Op de pagina 'Vacs' kan je Vraag-Antwoord-Combinaties beheren die zijn opgeslagen in het bij de KISS-installatie geconfigureerde Objectenregister. De lijst op de Vac-overzichtspagina toont alle Vacs. Door middel van de toetsenbord combinatie `Ctrl + f` kun je in de lijst zoeken naar de vraag die bij de Vraag-Antwoord-Combinatie hoort.
 
 ### Vacs toevoegen, wijzigen en verwijderen
 Het toevoegen, wijzigen of verwijderen van Vacs gaat op een gelijksoortige manier als het toevoegen, wijzigen of verwijderen van Skills of gespreksresultaten. 
