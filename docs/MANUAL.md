@@ -217,8 +217,8 @@ Vervolgens komt er een pop-up, met de vraag: "Weet u zeker dat u dit gespreksres
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/Gespreksresultaten-beheer-verwijderen-popup.jpg)
 
 
-## Formulieren contactverzoek
-Bij ‘Formulieren contactverzoek’ kan een beheerder van KISS formuliertjes aanmaken, die kunnen worden gebruikt in Contactverzoeken. Het zijn eenvoudige formuliertjes, die een aantal extra vragen bevatten, waarmee je de KCM ondersteunt om al zoveel mogelijk relevante informatie mee te geven met het Contactverzoek. Dit zijn dus aanvullende vragen, op de vaste Contactverzoek-velden. 
+## Formulieren contactverzoeken voor afdelingen en groepen
+Bij ‘Formulieren contactverzoek afdelingen’ en ‘Formulieren contactverzoek groepen’ kan een beheerder van KISS formuliertjes aanmaken, die kunnen worden gebruikt in Contactverzoeken voor afdelingen en groepen. Het zijn eenvoudige formuliertjes, die een aantal extra vragen bevatten, waarmee je de KCM ondersteunt om al zoveel mogelijk relevante informatie mee te geven met het Contactverzoek. Dit zijn dus aanvullende vragen, op de vaste Contactverzoek-velden. 
 
 Met de Vaste Contactverzoek velden geeft een KCM aan: 
 
@@ -226,13 +226,14 @@ Met de Vaste Contactverzoek velden geeft een KCM aan:
 2.	Een omschrijving waarover het gaat: dit is een toelichtingenveld waar informatie in staat, die alléén voor de collega is. 
 3.	Met wie men contact moet opnemen: naam en contactgegevens van degene die teruggebeld (of teruggemaild, etc.) moet worden.
 
-Met een Contactverzoekformuliertje (of Vragenset) kan een KCM door een onderwerp te kiezen meer vragen stellen aan de klant, en zo een completer Contactverzoek invullen. Bijvoorbeeld: gaat een contactverzoek over een Parkeerbon? Dan is het handig om het nummer van de parkeerbon ook mee te geven. De klant voor wie het Contactverzoek wordt gemaakt, heeft dat meestal al bij de hand als hij contact opneemt met de gemeente. 
+Met een Contactverzoekformuliertje (of Vragenset) kan een KCM door een onderwerp te kiezen meer vragen stellen aan de klant, en zo een completer Contactverzoek invullen. Bijvoorbeeld: gaat een contactverzoek over een Parkeerbon? Dan is het handig om het nummer van de parkeerbon ook mee te geven. De klant voor wie het Contactverzoek wordt gemaakt, heeft dat meestal al bij de hand als hij contact opneemt met de gemeente.
 
-Bij beheer kun je deze formuliertjes (vragensets) aanmaken en beheren. 
-In het overzicht zie je de titel van het Contactverzoek, en de afdeling voor wie dit contactverzoek zou zijn. `
+Bij beheer kun je deze formuliertjes (vragensets) aanmaken en beheren.
+Hieronder volgt de handleiding voor het beheren van formulieren voor contactverzoeken voor afdelingen. Het beheren van van formulieren voor contactverzoeken voor groepen werkt op precies dezelfde manier.
+
+In het overzicht zie je de titel van het Contactverzoek, en de afdeling voor wie dit contactverzoek zou zijn.
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/Contactverzoek-beheren-01.png)
- 
 
 ### Formulier toevoegen
 Voeg een nieuw formulier toe door rechts bovenaan op de "Toevoegen" te drukken.
@@ -242,7 +243,7 @@ Voeg een nieuw formulier toe door rechts bovenaan op de "Toevoegen" te drukken.
 Je komt op onderstaand scherm
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/main/docs/images/Contactverzoek-beheren-03.png)
- 
+
 In dit scherm moet je de Titel van het formulier opgeven. Deze titel beschrijft het onderwerp van het contactverzoek. Bijvoorbeeld: WMO, of Vraag voor Werk en inkomen.
 Daaronder selecteer je de afdeling die bij deze contactverzoeken hoort. Deze lijst afdelingen, is dezelfde lijst afdelingen die een KCM gebruikt om aan te geven welke afdeling een Contactverzoek moet oppakken. 
 
@@ -327,11 +328,14 @@ Het toevoegen, wijzigen of verwijderen van kanalen gaat op een gelijksoortige ma
 
 Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kanalen aanwezig zijn (geconfigureerd of een vaste lijst kanalen), let dan goed op of het van belang is dat de schrijfwijze van een kanaal in KISS exact moet overeenkomen met kanaal in het bronregister. In dat geval moet je ook letten op hoofdletters, kleine, spaties en streepjes.
 
+## Vacs
+Op de pagina 'Vacs' kan je Vraag-Antwoord-Combinaties beheren die zijn opgeslagen in het bij de KISS-installatie geconfigureerde Objectenregister. De lijst op de Vac-overzichtspagina toont alle Vacs. Door middel van de toetsenbord combinatie `Ctrl + f` kun je in de lijst zoeken naar de vraag die bij de Vraag-Antwoord-Combinatie hoort.
 
+### Vacs toevoegen, wijzigen en verwijderen
+Het toevoegen, wijzigen of verwijderen van Vacs gaat op een gelijksoortige manier als het toevoegen, wijzigen of verwijderen van Skills of gespreksresultaten. 
 
 ## Zoeken in bronnen
 Binnen KISS kan een Klantcontactmedewerker zoeken in verschillende bronnen. KISS ondersteund op dit moment de volgende bronnen: de gemeentelijke website, in het smoelenboek van de gemeente, kennisartikelen in een Product-format en in Vraag-AntwoordCombinaties (VAC's). Het koppelen van deze bronnen moet gedaan worden door een technisch beheerder, in het kubernetescluster. Als de standaard installatieprocedure gevolgd is, draait er elk uur een taak (job) waardoor de bronnen worden gesyncrhoniseerd in de zoekindex. Bij onverwachte resultaten of foutmeldingen kan je de beheerder van het kubernetescluster vragen om de logging in te zien van de laatste synchronisatiepoging (job) van de [KISS-Elastic-Sync tool](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync). Daarin is terug te vinden hoe de synchronisatiepoging is verlopen.
-
 
 ## Managementinformatie
 Bij het opslaan van Contactmomenten worden enkele gegevens, die geen plek hebben in de standaarden rondom Klantinteracties, opgeslagen binnen KISS zelf. (zie ook het [onderdeel Contactmomentdetails in Decision Record](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/DECISION-RECORD.md#contactmomentdetails)). Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. 

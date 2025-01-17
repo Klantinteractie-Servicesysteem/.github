@@ -69,7 +69,8 @@ kubectl create configmap kiss-config `
     --from-literal=SDG_OBJECTEN_BASE_URL=$(SDG_OBJECTEN_BASE_URL) `
     --from-literal=SDG_OBJECT_TYPE_URL=$(SDG_OBJECT_TYPE_URL) `
     --from-literal=VAC_OBJECTEN_BASE_URL=$(VAC_OBJECTEN_BASE_URL) `
-    --from-literal=VAC_OBJECTTYPES_BASE_URL=$(VAC_OBJECTTYPES_BASE_URL) `
+    --from-literal=VAC_OBJECT_TYPE_URL=$(VAC_OBJECT_TYPE_URL) `
+    --from-literal=VAC_OBJECT_TYPE_VERSION=$(VAC_OBJECT_TYPE_VERSION) `
     --from-literal=ZAAKSYSTEEM__0__API_CLIENT_ID=$(ZAAKSYSTEEM__0__API_CLIENT_ID) `
     --from-literal=ZAAKSYSTEEM__0__BASE_URL=$(ZAAKSYSTEEM__0__BASE_URL) `
     --from-literal=ZAAKSYSTEEM__0__DEEPLINK_URL=$(ZAAKSYSTEEM__0__DEEPLINK_URL) `
