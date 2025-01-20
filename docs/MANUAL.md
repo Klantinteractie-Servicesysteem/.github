@@ -13,7 +13,7 @@ Per onderwerp leggen wij uit wat de mogelijkheden zijn en hoe je de werkzaamhede
 ### KISS beheer vullen met voorbeelddata 
 Als je KISS voor het eerst hebt geïnstalleerd, en er bij Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten nog geen items zijn toegevoegd, is het mogelijk om eenvoudig voorbeelddata voor deze onderdelen te laden. Die doe je m.b.v. de knop op de startpagina. Met een druk op die knop zal de database met voorbeelddata worden gevuld voor Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten. Zodra de voorbeelddata is geladen, verdwijnt de optie/knop om (nogmaals) te vullen.
 
-### Let op
+#### Let op
 De optie is alléén beschikbaar als de lijsten van Nieuws en Werkinstructies, Skills, Links en Gespreksresultaten echt leeg zijn. Een beheerder kan deze lijsten handmatig schonen, zodat ze weer leeg zijn. Skills vormen hierop een uitzondering: deze worden niet daadwerkelijk weggegooid, maar alleen verborgen voor de gebruiker. Dit om te voorkomen dat een Skill die al gekoppeld is aan een bericht, daarvan zal verdwijnen. Dit betekent dat verwijderde Skills nog onzichtbaar aanwezig zijn in de database, waardoor er geen initiële dataset geladen kan worden. Zodra je ee Skill hebt toegevoegd, is het dus niet meer mogelijk om voorbeelddata te laden. 
 
 
@@ -330,6 +330,9 @@ Let op: als je KISS gebruikt in combinatie met een bronregister, waarin ook kana
 
 ## Vacs
 Op de pagina 'Vacs' kan je Vraag-Antwoord-Combinaties beheren die zijn opgeslagen in het bij de KISS-installatie geconfigureerde Objectenregister. De lijst op de Vac-overzichtspagina toont alle Vacs. Door middel van de toetsenbord combinatie `Ctrl + f` kun je in de lijst zoeken naar de vraag die bij de Vraag-Antwoord-Combinatie hoort.
+
+#### Let op
+Deze optie is alleen beschikbaar, als deze is aangezet bij de installatie/configuratie van KISS. Dit gebeurt m.b.v. een Environment Variabele. Zie ook [de installatiehandleiding](INSTALLATION.md#kiss-frontend), bij USE_VACS
 
 ### Vacs toevoegen, wijzigen en verwijderen
 Het toevoegen, wijzigen of verwijderen van Vacs gaat op een gelijksoortige manier als het toevoegen, wijzigen of verwijderen van Skills of gespreksresultaten. 
