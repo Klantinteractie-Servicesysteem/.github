@@ -1,5 +1,5 @@
 # Managementinformatie
-Bij het opslaan van Contactmomenten worden enkele gegevens, die geen plek hebben in de standaarden rondom Klantinteracties, opgeslagen binnen KISS zelf. (zie ook het [onderdeel Contactmomentdetails in Decision Record](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/DECISION-RECORD.md#contactmomentdetails)). Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. 
+Bij het opslaan van Contactmomenten worden enkele gegevens, die geen plek hebben in de standaarden rondom Klantinteracties, opgeslagen binnen KISS zelf. (zie ook het [onderdeel Contactmomentdetails in Decision Record](../decision-record/contactmomenten.md#contactmomentdetails)). Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. 
 
 Binnen KISS is een API endpoint beschikbaar waarmee deze gegevens opgevraagd kunnen worden. Dit endpoint is benaderbaar op: `https://www.kissbijdegemeente.nl/api/contactmomentendetails`.
 
