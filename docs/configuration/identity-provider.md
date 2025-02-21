@@ -5,7 +5,7 @@ Als een ingelogde gebruiker wel de startpagina ziet, maar vervolgens alleen maar
 
 ## Claims uit uw Identity provider
 KISS gebruikt de claims uit uw Identity Provider om de gegevens van de ingelogde Klantcontactmedewerker toe te voegen aan de Contactmomenten en Contactverzoeken die vanuit KISS worden geregistreerd.
-Zie [de installatiehandleiding](INSTALLATION.md#Authenticatie) voor hoe u dit configureert.
+Zie [de installatiehandleiding](../installation/voorbereidingen.md#Authenticatie) voor hoe u dit configureert.
 
 Er is in JWT geen standaard claim voor voorletters of voorvoegsel (tussenvoegsel). KISS gebruikt daarom deze mapping:
 - Voorletters => given_name

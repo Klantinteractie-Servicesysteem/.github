@@ -1,5 +1,5 @@
 # Configuratie t.b.v. Objecten API
-KISS maakt voor de koppeling met verschillende registraties gebruik van de Objecten API. Om objecten van een bepaald objecttype op te kunnen halen, moet het de URL weten van dat objecttype in de Objecttype API. Zie ook [de Installatiehandleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/) en de [documentatie bij KISS-Elastic-Sync](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync/blob/main/README.md) 
+KISS maakt voor de koppeling met verschillende registraties gebruik van de Objecten API. Om objecten van een bepaald objecttype op te kunnen halen, moet het de URL weten van dat objecttype in de Objecttype API. Zie ook [de Installatiehandleiding](../installation/configuratie.md) en de [documentatie bij KISS-Elastic-Sync](https://github.com/Klantinteractie-Servicesysteem/KISS-Elastic-Sync/blob/main/README.md) 
 
 ## Authenticatie bij de Objecten API
 In de meeste gevallen identificeert KISS zich bij de Objectenregistratie m.b.v. een TOKEN.
