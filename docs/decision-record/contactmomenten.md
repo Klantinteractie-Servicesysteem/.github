@@ -1,0 +1,16 @@
+# Contactmomenten
+## Contactmomentdetails
+
+Voor de onderstaande gegevens is tijdens fase 1C deze afweging gemaakt, en besloten de gegevens op te slaan binnen KISS zelf. Het gaat om gegevens van een contactoment die niet in het Contactmomentenregister passen. Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. Zie ook de issues  [#21](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/21),  [#111](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/111),  [#610](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/610), [#611](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/611).
+Ze worden opgeslagen binnen KISS, en zijn op te vragen via de Contactmomentdetails API. Zie de [Handleiding beheer KISS, hoofdstuk managementinformatie](https://github.com/Klantinteractie-Servicesysteem/.github/blob/main/docs/MANUAL.md#management-informatie) voor informatie over het gebruik van deze API.
+
+
+| Property  | Type | Toelichting |
+|--------|--------|--------|
+| `vraag` | string (uri) | De URL's van geraadpleegde bronnen <br/>(Kennisbankartikelen / productpagina's, Vraag-<br/>Antwoord Combinaties (VAC) en <br />nieuws/werkinstructies) slaan we op in het property <br />`onderwerpLinks`. Voor Managementinformatie is dit <br />niet specifiek genoeg. Daarom kan een KCM één van de <br />bronnen selecteren bij "Vraag". De titel van deze <br />bron wordt opgeslagen in `vraag`. <br />Bij VAC's is dit de vraag. Bij Kennisartikelen / <br />productpagina's is dit de titel van het artikel plus <br />één van de geraadpleegde subonderdelen binnen het <br />artikel. Deze wordt in KISS ook gebruikt in de weergave <br />van Contactmomenten: hiermee kan een KCM zien wat <br />de vraag van de klant was. |
+| `specifiekeVraag` | string | In het afhandelscherm kan een KCM de eigenlijke <br/>klantvraag invullen. Bijvoorbeeld omdat de `vraag` de <br/>eigenlijke vraag niet echt dekt. Of omdat het een nieuwe <br/>vraag is, die nog niet in de bron is verwerkt (sticker in je <br/>paspoort). Ook deze informatie is in te zien door de <br/>KCM bij het bekijken van Contactmomenten. | 
+| `gespreksresultaat` | string  | Hierin slaan we het gespreksresultaat van het <br/>contactmoment op, bijvoorbeeld 'Doorverbonden' of <br/>'Zelfstandig afgehandeld'.  | 
+| `startdatum` | string (date-time) | De tijd waar op het Contactmoment is gestart. Samen <br/>met `einddatum` bepaaalt dit de gespreksduur. | 
+| `einddatum` | string (date-time) | De tijd waarop het Contactmoment is beëindigd. <br/>Samen met `startdatum` bepaaalt dit de gespreksduur. | 
+| `verantwoordelijkeAfdeling` | string | Dit is de afdeling voor wie het contactmoment is <br/>afgehandeld. Deze moet de KCM kiezen in het <br/>afhandelscherm. Waar mogelijk wordt deze <br/>vooringevuld vanuit de gekozen bron bij `vraag`. | 
+| `gespreksId` | string (uuid) | Een klant kan meerdere vragen stellen binnen één <br/>interactie met een Klantcontactmedewerker (KCM). <br/>Voor iedere vraag wordt een contactmoment <br/>aangemaakt. We hebben het property `gespreksId` <br/>toegevoegd. In het geval van 2 of meer vragen binnen één <br/>interactie, worden de vragen aan elkaar verbonden, <br/>doordat al deze contactmomenten hetzelfde `gespreksId` <br/>krijgen. | 
