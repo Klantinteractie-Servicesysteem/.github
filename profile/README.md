@@ -12,15 +12,15 @@ De doorontwikkeling van KISS ligt bij de gemeentelijke samenwerking. Neem bij in
 - Dino Zecic via d.zecic@deventer.nl
 - Hans Peters via hans.peters@haarlemmermeer.nl.
 
-## Documentatie
+## Documentatie 
 
 - [Documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/):
-  - [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/INSTALLATION/)
-  - [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/CONFIGURATIE/)
-  - [Handleiding beheer](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/MANUAL/)
-  - [Ontwerpbeslissingen](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/DECISION-RECORD/)
-  - [Definition of Done](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/DEFINITIONOFDONE/)
-  - [Security](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/latest/SECURITY/)
+  - [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v0.6.0/INSTALLATION/)  
+  - [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v0.6.0/CONFIGURATIE/)
+  - [Handleiding beheer](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v0.6.0/MANUAL/)
+  - [Ontwerpbeslissingen](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v0.6.0/DECISION-RECORD/)
+  - [Definition of Done](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v0.6.0/DEFINITIONOFDONE/)
+  - [Security](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v0.6.0/SECURITY/)
 
 
 ## Waaruit bestaat KISS-frontend
