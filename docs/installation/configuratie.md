@@ -67,7 +67,7 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande INTERNE_TAA
 
 | Variabele                               | Uitleg                                                                                                                           |
 | ---------------------------------       | --------------------------------------------------------------------------------------------                                     |
-|REGISTERS__N__IS_DEFAULT                 |true of false <details> <summary>Meer informatie </summary>Er moet exact 1 default registers set zijn. In deze registers worden gebruikt klanten en contactmomenten en dergelijke aangemaakt tenzij uit de context blijkt dat de gegevens in een specifiek register thuis horen. Bijvoorbeeld, als een contactmoment bij een zaak uit zaaksysteem X hoort, dan wordt het contactmoment opgeslagen in het bijbehorende contactmoment register. In andere gevallen wordt het contactmoment in het default register opgeslagen. </details>                                                            |
+|REGISTERS__N__IS_DEFAULT                 |true of false <details> <summary>Meer informatie </summary>Er moet exact 1 default registersset zijn. In de default registers worden  klanten en contactmomenten en dergelijke aangemaakt tenzij uit de context blijkt dat de gegevens in een specifiek register thuis horen. Bijvoorbeeld, als een contactmoment bij een zaak uit een bepaald zaaksysteem hoort, dan wordt het contactmoment opgeslagen in het contactmoment register dat deel uitmaakt van dezelfde REGISTERS__X__... set waar ook het zaaksysteem inzit. In andere gevallen wordt het contactmoment in het default register opgeslagen. </details>                                                            |
 |REGISTERS__N__ZAAKSYSTEEM_BASE_URL       |URL van de ZGW API's   <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://zaaksysteem.mijngemeente.nl`  </details>|
 |REGISTERS__N__ZAAKSYSTEEM_API_KEY        |API Key voor de ZGW API's <br /> **(min. 32 karakters)**                                                                            |
 |REGISTERS__N__ZAAKSYSTEEM_API_CLIENT_ID  |ClientId voor de ZGW API's                                                                                                          |
@@ -104,7 +104,7 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande INTERNE_TAA
 
 
 
-### KISS-frontend, bronnen
+### KISS-frontend, overige bronnen
 
 | Variabele                               | Uitleg                                                                                                                           |
 | ---------------------------------       | --------------------------------------------------------------------------------------------                                     |
