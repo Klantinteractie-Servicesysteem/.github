@@ -1,11 +1,12 @@
 /* override table width restrictions */
 @media screen and (min-width: 767px) {
 
-    .wy-table-responsive table td:first-child {
+    }
+  /*  .wy-table-responsive table td:first-child { */
         /* !important prevents the common CSS stylesheets from overriding
            this as on RTD they are loaded after this stylesheet */
-       /* white-space: nowrap !important;*/
-    }
+   /*     white-space: nowrap !important;*/
+     /* }*/
     .wy-table-responsive table td {
         white-space: normal !important;
      }

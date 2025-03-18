@@ -96,15 +96,14 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-
-
 # ik weet niet zo goed waar deze vandaan komt. En ik heb dus wel een theme_override.css
 # Ik weet niet helemaal wat die doet, maar ik ga m toch gebruiken. 
 # ik zet deze comment boven html_static, omdat copilot dat suggereert. 
 
 html_static_path = ["_static"]
+# override wide tables with word wrap by Maykin
 html_css_files = [
-    "theme_override.css",  # override wide tables with word wrap
+    "theme_override.css",  
 ]
 
 # deze komt ook uit openzaak
