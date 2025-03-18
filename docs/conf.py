@@ -41,11 +41,11 @@ copyright = "2024"
 # Volgens mij heb ik iig nodig: sphinx_rtd_theme, én myst_parser (voor markdown)
 # gekopieerd uit Openzaak: "sphinx.ext.todo","recommonmark","sphinx_markdown_tables","sphinx_tabs.tabs"
 
-extensions = [
-    "sphinx_rtd_theme",
-    "myst_parser",
-    "sphinx.ext.todo",
-]
+#extensions = [
+#    "sphinx_rtd_theme",
+#    "myst_parser",
+#    "sphinx.ext.todo",
+#]
 
 
 
@@ -106,8 +106,4 @@ html_css_files = [
     "theme_override.css",  
 ]
 
-# deze komt ook uit openzaak
-# maar zij gebruiken gegenereerde content. dus deze gebruik ik ook niet
-#
-# todo_include_todos = True
 
