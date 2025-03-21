@@ -16,6 +16,8 @@ Bij de opzet van deze objecten zijn we uitgegaan van een hierarchische relatie t
 
 Op plekken waar we naar afdelingen zoeken (bv. afdeling bij kennisartikelen, of bij medewerker) is de afdeling/groepsnaam gekozen als zoeksleutel. Dit is gedaan op basis van de toen beschikbare (test)data. Daarin was alleen naam altijd aanwezig, identificatie niet altijd. 
 
+<!-- SH 2025-03-20 TOT HIER BEN IK GEBLEVEN  TOT HIER BEN IK GEBLEVEN  -->
+
 
 ## Medewerkers en smoelenboek
 Een KCM wil kunnen zoeken in bronnen met informatie, maar ook kunnen zoeken naar informatie over collega’s [#96](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/96). Ook hier is nog geen standaard voor. In KISS Fase 1B is een voorzet gedaan voor een Medewerker API (gebaseerd op  de [HR-JSON-standaarden van HR Open Standards](https://www.hropenstandards.org/)). In KISS Fase 1C is deze verplaatst naar de Objecten API ( zie [de Community concepts](https://github.com/open-objecten/objecttypes/tree/main/community-concepts).) De objecten van het smoelenboek zijn geindexeerd in Elastic. Bij het doorzetten van een contactverzoek naar een medewerker, gebruiken we de gegevens uit Elastic.
