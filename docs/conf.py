@@ -26,7 +26,7 @@ sys.path.append(os.path.abspath("_ext"))
 # -- Project information -----------------------------------------------------
 
 project = "KISS documentatie"
-copyright = "2024"
+copyright = "2024, ICATT"
 # # author = objects.__author__
 
 # The full version, including alpha/beta/rc tags
@@ -44,7 +44,6 @@ copyright = "2024"
 extensions = [
     "sphinx_rtd_theme",
     "myst_parser",
-    "sphinx.ext.todo",
 ]
 
 
