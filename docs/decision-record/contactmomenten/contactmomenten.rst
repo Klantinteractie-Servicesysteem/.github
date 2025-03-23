@@ -14,7 +14,3 @@ KISS ondersteund alleen nog een aangepaste versie van de Contactmomenten API t.b
 
    contactmomentdetails.md
    contactmoment-post.md
-   contactverzoeken.md
-   zaken.md
-   logging-voor-verwerking.md
-   autorisatie.md

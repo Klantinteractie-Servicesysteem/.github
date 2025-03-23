@@ -10,7 +10,8 @@ Er was echter niet voor alle functionaliteiten al een standaard beschikbaar Daar
    :maxdepth: 2
    :hidden:
 
-   contactmomenten/contactmoment-post.md
+   contactmomenten/contactmoment
+   contactverzoeken.md
    klantinteracties-openklant.md
    zoeken-in-bronnen.md
    zaken.md
