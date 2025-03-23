@@ -42,9 +42,8 @@ copyright = "2024"
 # gekopieerd uit Openzaak: "sphinx.ext.todo","recommonmark","sphinx_markdown_tables","sphinx_tabs.tabs"
 
 extensions = [
-#    "sphinx_rtd_theme",
+    "sphinx_rtd_theme",
     "myst_parser",
-#    "sphinx.ext.todo",
 ]
 
 
