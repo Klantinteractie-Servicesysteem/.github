@@ -13,8 +13,9 @@ Er was echter niet voor alle functionaliteiten al een standaard beschikbaar Daar
    contactmomenten/contactmomenten
    contactverzoeken.md
    klantinteracties-openklant.md
-   zoeken-in-bronnen.md
    zaken.md
+   meerdere-registers.md
+   zoeken-in-bronnen.md
    logging-voor-verwerking.md
    autorisatie.md
 
