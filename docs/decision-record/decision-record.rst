@@ -9,11 +9,11 @@ Er was echter niet voor alle functionaliteiten al een standaard beschikbaar Daar
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
 
-   contactmomenten.rst
+   contactmomenten/contactmomenten.rst
+   klantinteracties-openklant.md
    zoeken-in-bronnen.md
    zaken.md
    logging-voor-verwerking.md
    autorisatie.md
-   klantinteracties-openklant.md
+
