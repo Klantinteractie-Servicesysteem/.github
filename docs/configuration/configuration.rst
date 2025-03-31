@@ -7,6 +7,6 @@ Bij de installatie van KISS worden er een groot aantal dingen al geconfigureerd.
    :maxdepth: 2
    :hidden:
 
+   identity-provider.md   
    objecten.md
-   identity-provider.md
    elastic.md
