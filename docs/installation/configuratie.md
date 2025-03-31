@@ -134,11 +134,13 @@ Proxy's voor de BRP en KvK, zoals bijvoorbeeld iConnect, vereisen vaak bepaalde 
 
 - Als de identificatie van de ingelogde gebruiker in een header doorgegeven moet worden, kan dit met `HAAL_CENTRAAL_USER_HEADER_NAME` en `KVK_USER_HEADER_NAME`. Als waarde wordt dan de geconfigureerde `OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM` meegegeven.
 - Als er statische informatie in headers meegegeven moet worden, kan dit volgens dit stramien: `HAAL_CENTRAAL_CUSTOM_HEADERS__headername=headervalue` en `KVK_CENTRAAL_CUSTOM_HEADERS__headername=headervalue`.
+- Als er statische informatie in de headers voor de BRP koppeling meegegeven moet worden, **specifiek voor een bepaald type zoekopdracht**, kan dit volgens het stramien: `HAAL_CENTRAAL_CUSTOM_HEADERS__headername__zoektype=headervalue`
 
 Een voorbeeld voor iConnect:
 ```bash
 HAAL_CENTRAAL_USER_HEADER_NAME=x-gebruiker
 HAAL_CENTRAAL_CUSTOM_HEADERS__x-doelbinding=BRPACT-ZoekenAlgemeen
+HAAL_CENTRAAL_CUSTOM_HEADERS__x-doelbinding__RaadpleegMetBurgerservicenummer=BRPACT-Totaal
 HAAL_CENTRAAL_CUSTOM_HEADERS__x-verwerking=Burgerzaken
 
 KVK_CUSTOM_HEADERS__x-origin-oin=00000000000000000000
