@@ -157,3 +157,19 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTER
 | `SDG_OBJECTEN_TOKEN`                 | Key voor de API voor Kennisartikelen                                                                      |
 | `SDG_OBJECT_TYPE_URL`                | URL van het Objecttype Kennisartikel <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>      |
 
+### Gebruik KISS met proxy voor BRP / KvK (bijvoorbeeld iConnect)
+Proxy's voor de BRP en KvK, zoals bijvoorbeeld iConnect, vereisen vaak bepaalde headers. KISS ondersteunt dit met behulp van omgevingsvariabelen: 
+
+- Als de identificatie van de ingelogde gebruiker in een header doorgegeven moet worden, kan dit met `HAAL_CENTRAAL_USER_HEADER_NAME` en `KVK_USER_HEADER_NAME`. Als waarde wordt dan de geconfigureerde `OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM` meegegeven.
+- Als er statische informatie in headers meegegeven moet worden, kan dit volgens dit stramien: `HAAL_CENTRAAL_CUSTOM_HEADERS__headername=headervalue` en `KVK_CENTRAAL_CUSTOM_HEADERS__headername=headervalue`.
+- Als er statische informatie in de headers voor de BRP koppeling meegegeven moet worden, **specifiek voor een bepaald type zoekopdracht**, kan dit volgens het stramien: `HAAL_CENTRAAL_CUSTOM_HEADERS__headername__zoektype=headervalue`
+
+Een voorbeeld voor iConnect:
+```bash
+HAAL_CENTRAAL_USER_HEADER_NAME=x-gebruiker
+HAAL_CENTRAAL_CUSTOM_HEADERS__x-doelbinding=BRPACT-ZoekenAlgemeen
+HAAL_CENTRAAL_CUSTOM_HEADERS__x-doelbinding__RaadpleegMetBurgerservicenummer=BRPACT-Totaal
+HAAL_CENTRAAL_CUSTOM_HEADERS__x-verwerking=Burgerzaken
+
+KVK_CUSTOM_HEADERS__x-origin-oin=00000000000000000000
+```
