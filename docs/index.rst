@@ -11,7 +11,8 @@ Het Klant Interactie Service Systeem (KISS) is een applicatie waarmee Klantconta
    installation/installation
    configuration/configuration
    manual/manual
-   architectuur/architectuur.md
    decision-record/decision-record
+   architectuur/architectuur.md
    definition-of-done/definition-of-done.md
    security/security.md
+
