@@ -1,5 +1,13 @@
-# Uitbreiding van de POST van een Contactmoment
+# Contactmoment: de uitgebreide POST
 
+_Onderstaande is alleen nog van toepassing op de koppeling met de e-Suite_
+
+Voordat KISS aangesloten is op Open Klant 2.x en de Klantinteracties API, schreef KISS de Contactmomenten weg m.b.v. de VNG Contactmomenten API zoals deze is geïmplementeerd in Open Klant v0.5-pre. In een eerdere versie van KISS waren de gegevens die nu in Contactmomentdetails zitten, onderdeel van het uitgebreide Contactmoment. Omdat in KISS 1C de weg is gekozen om bestaande standaarden niet uit te breiden, zijn deze gegevens verplaatst naar Contactmomentdetails. 
+
+Bij de overgang naar de VNG Contactmomentne API bleven deze gegevens onderdeel van de POST die KISS doet op deze API. Het ontvangende register negeeert deze onderdelen, en registreert alleen het object zoals gedefinieerde in de Contactmomenten API. 
+
+
+## Uitbreiding van de POST van een Contactmoment
 Bij de integratie met de e-Suite (in gebruikt bij Dimpact-gemeenten), in januari-februari 2024, was het uitgangspunt dat KISS zoveel mogelijk onveranderd zou blijven. Dit bleek voor de registratie van een Contactverzoek in de e-Suite helaas niet haalbaar. Daarom is de  POST-data van een Contactmoment vanuit KISS uitgebreid.
 
 ### Aanleiding
@@ -48,5 +56,8 @@ En de url uit de response wordt vervolgens wederom gebruikt om de Interne Taak t
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/add-decision-record/docs/images/contactmoment/uitbreidingcontactmoment-04.png)
 
 ![image](https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/.github/add-decision-record/docs/images/contactmoment/uitbreidingcontactmoment-05.png)
+
+
+
 
 
