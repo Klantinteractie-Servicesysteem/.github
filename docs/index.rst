@@ -5,8 +5,8 @@ Het Klant Interactie Service Systeem (KISS) is een applicatie waarmee Klantconta
 
 .. toctree::
    :caption: KISS Documentatie
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 1
+   
 
    installation/installation
    configuration/configuration

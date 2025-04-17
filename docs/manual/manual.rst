@@ -12,8 +12,8 @@ Als beheerder van KISS kan je de volgende zaken beheren:
 Per onderwerp leggen wij uit wat de mogelijkheden zijn en hoe je de werkzaamheden uitvoert. Om deze taken te kunnen uitvoeren moet je de rol `Redacteur` hebben (zie ook Configuratie).
 
 .. toctree::
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 1
+  
 
    voorbeelddata.md
    nieuws.md
