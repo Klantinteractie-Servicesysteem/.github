@@ -6,7 +6,7 @@ KISS draait in een Kubernetes cluster. Deze handleiding is gebaseerd op Azure Ku
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
 
    voorbereidingen.md
