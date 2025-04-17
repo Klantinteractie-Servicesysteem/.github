@@ -10,3 +10,5 @@ KISS draait in een Kubernetes cluster. Deze handleiding is gebaseerd op Azure Ku
    voorbereidingen.md
    configuratie.md
    installatie.md
+   trouble-shooting.md
+
