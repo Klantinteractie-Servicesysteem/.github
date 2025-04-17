@@ -94,18 +94,6 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTER
 
 
 
-
-
-### KISS-frontend, feature switches
-
-| Variabele                               | Uitleg                                                                                                                           |
-| ---------------------------------       | --------------------------------------------------------------------------------------------                                     |
-| `USE_VACS` | Deze variabele bepaalt of het navigatie-item voor het beheren van VAC's aanwezig is in de beheernavigatie. <details><summary>Meer informatie</summary> Als deze variabele op `true` staat, is het Vacs-item zichtbaar en kunnen beheerders gebruikmaken van de functionaliteit. Als de variabele niet op true staat, of niet is ingesteld, zal het item niet aanwezig zijn in de beheernavigatie.</details> |
-| `USE_MEDEWERKEREMAIL` | Deze variabele bepaalt of een contactverzoek voor een medewerker alléén op e-mailadres kan. <details><summary>Meer informatie</summary> Als deze variabele op `true` staat, zal in het contactverzoek-formulier, onder de geselecteerde afdeling of groep, een veld staan om het emailadres van een medewerker in te voeren. Direct een contactverzoek voor een medewerker maken kan in deze situatie niet. Het veld e-mailadres is niet verplicht. Als de variabele niet op `true` staat, geen waarde heeft of afwezig is, heb je in KISS wel de mogelijkheid om een Contactverzoek voor een medewerker te maken, en kun je in KISS de medewerker uit een lijst kiezen op naam. </details> |
-
-
-
-
 ### KISS-frontend, overige bronnen
 
 | Variabele                               | Uitleg                                                                                                                           |
@@ -120,7 +108,7 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTER
 | `ENTERPRISE_SEARCH_BASE_URL`            |  URL van de API waarop KISS de elastic instantie kan bevragen <details> <summary>Meer informatie </summary>Bijvoorbeeld `https://kiss-ent-http:3002` </details> |
 | `ENTERPRISE_SEARCH_PUBLIC_API_KEY`      | Public API key voor Elastic  API                                                                                                 |
 | `ENTERPRISE_SEARCH_PRIVATE_API_KEY`     | Private API key voor Elastic API <details> <summary>Meer informatie </summary> De API key die nodig is om de `engine`s bij te werken </details> |
-| `ENTERPRISE_SEARCH_ENGINE`              | De naam van de `meta-engine` engine die KISS gebruikt. Dit moet zijn: `KISS-engine`  <details> <summary>Meer informatie </summary> De KISS-Elastic-Sync maakt deze engine aan, als deze nog niet bestaat.  </details>   |
+| `ENTERPRISE_SEARCH_ENGINE`              | De naam van de `meta-engine` engine die KISS gebruikt. **Let op**: deze waarde moet **lowercase** zijn, bijvoorbeeld: `kiss-engine`  <details> <summary>Meer informatie </summary> De KISS-Elastic-Sync maakt deze engine aan, als deze nog niet bestaat.  </details>   |
 | `AFDELINGEN_BASE_URL`                   | URL van de Objecten API voor afdelingen.  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>                     |
 | `AFDELINGEN_OBJECT_TYPE_URL`            | URL van het Objecttype Afdeling   <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>      |
 | `AFDELINGEN_TOKEN`                      | Token voor Objecten API voor afdelingen                                                                                           |
@@ -131,8 +119,6 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTER
 | `VAC_OBJECT_TYPE_URL`                   | URL van het Objecttype VAC <details> <summary>Meer informatie</summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details> |
 | `VAC_OBJECT_TYPE_VERSION`             | Versienummer van het Objecttype VAC <details> <summary>Meer informatie</summary> Bijvoorbeeld `2` <br /> KISS schrijft Vacs in het Objectenregister. Hierbij moet je altijd de versie van het objecttype meegeven. Omdat het per gemeente kan verschillen welke versie de meest recente is, moet je hier invullen welk versienummer KISS moet meegeven. </details>                                                          |
 | `VAC_OBJECTEN_TOKEN`                    | Token voor de Objecten API voor VAC's <details> <summary>Meer informatie</summary> In het geval van Vacs identificeert KISS zich bij een Objectenregistratie m.b.v. een `TOKEN`. </details> |
-
-
 
 
 
@@ -173,3 +159,15 @@ HAAL_CENTRAAL_CUSTOM_HEADERS__x-verwerking=Burgerzaken
 
 KVK_CUSTOM_HEADERS__x-origin-oin=00000000000000000000
 ```
+
+
+
+## KISS-frontend, feature switches
+
+
+| Variabele                               | Uitleg                                                                                                                           |
+| ---------------------------------       | --------------------------------------------------------------------------------------------                                     |
+| `USE_VACS` | Deze variabele bepaalt of het navigatie-item voor het beheren van VAC's aanwezig is in de beheernavigatie. <details><summary>Meer informatie</summary> Als deze variabele op `true` staat, is het Vacs-item zichtbaar en kunnen beheerders gebruikmaken van de functionaliteit. Als de variabele niet op true staat, of niet is ingesteld, zal het item niet aanwezig zijn in de beheernavigatie.</details> |
+| `USE_MEDEWERKEREMAIL` | Deze variabele bepaalt of een contactverzoek voor een medewerker alléén op e-mailadres kan. <details><summary>Meer informatie</summary> Als deze variabele op `true` staat, zal in het contactverzoek-formulier, onder de geselecteerde afdeling of groep, een veld staan om het emailadres van een medewerker in te voeren. Direct een contactverzoek voor een medewerker maken kan in deze situatie niet. Het veld e-mailadres is niet verplicht. Als de variabele niet op `true` staat, geen waarde heeft of afwezig is, heb je in KISS wel de mogelijkheid om een Contactverzoek voor een medewerker te maken, en kun je in KISS de medewerker uit een lijst kiezen op naam. </details> |
+
+
