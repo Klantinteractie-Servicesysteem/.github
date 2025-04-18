@@ -1,6 +1,7 @@
 ## Contactmomentdetails
 
-KISS registreert bij Contactmomenten enkele gegevens, die geen plek hebben binnen de standaard voor Contactmomenten: de Klantcontaten binnen Klantinteracties. Voor de onderstaande gegevens is tijdens fase 1C de afweging gemaakt, en besloten de gegevens op te slaan binnen KISS zelf. Het gaat om gegevens van een contactoment die niet in het Contactmomentenregister passen. Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. Zie ook de issues  [#21](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/21),  [#111](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/111),  [#610](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/610), [#611](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/611).
+KISS registreert bij Contactmomenten enkele gegevens, die geen plek hebben binnen de standaard voor Contactmomenten: de Klantcontacten binnen Klantinteracties. Voor de onderstaande gegevens is tijdens fase 1C de afweging gemaakt, en besloten de gegevens op te slaan binnen KISS zelf. Het gaat om gegevens van een contactoment die niet in het Contactmomentenregister passen. Deze gegevens leveren managementinformatie over de werkzaamheden van het KCC. Zie ook de issues  [#21](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/21),  [#111](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/111),  [#610](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/610), [#611](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/611).
+
 
 Bij de overgang van de Contactmomenten API naar de Klantinteracties API is hier aan toegevoegd: de informatie over geraadpleegde bronnen.
 
@@ -22,5 +23,10 @@ Deze gegevens worden opgeslagen binnen KISS, en zijn op te vragen via de Contact
 |  |  |  | 
 
 
+### Vraag en specifieke vraag
+Binnen het `contactmoment` was geen aparte plek voor Vraag en Sepcifieke vraag. Dus zijn deze gegevens gescheiden opgenomen in de Contactmomentdetails. Binnen het `klantcontact` is er echter wel een property `onderwerp`. KISS schrijft nu de gegevens van Vraag en Specifieke vraag weg in het `onderwerp`. 
 
+1. Als er alleen een waarde is voor Vraag, staat alleen dit in het `onderwerp`.
+2. Als er alleen een waarde is voor Specifieke vraag, omdat er geen bron is aangewezen als Vraag, dan staat alleen de specifieke vraag in het `onderwerp`.
+3. Als er zowel een Vraag áls een specifieke vraag is, dan staan beide gegevens in het `onderwerp`: "`vraag` (`specifiekeVraag`)"
 

@@ -1,7 +1,7 @@
 # Skills
 Op de pagina 'Skills' kan je de skills beheren. Skills kunnen bijvoorbeeld de verschillende afdelingen binnen het klantcontactcentrum zijn, zoals 'burgerzaken' of 'werk en inkomen'.
 
-De skills die je hier aanmaakt kunnen vervolgens als filter gebruikt worden bij de nieuwsberichten en werkinstructies.
+De skills die je hier aanmaakt, kunnen vervolgens als filter gebruikt worden bij de nieuwsberichten en werkinstructies.
 
 Het kan zijn dat jouw gemeente niet werkt met skills. In dat geval hoef je hier niets te doen.
 

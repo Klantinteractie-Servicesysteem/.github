@@ -9,9 +9,11 @@ De volgende properties uit het Klantcontact vullen we hard in met de volgende wa
 - `plaatsgevondenOp`: altijd de datum van registratie van het klantcontact.
 
 
-## Partij-identificatorn
+## Partij-identificatoren
 
-Sinds de aansluiting op Open Klant 2.6 maakt KISS gebruik van partij-identificatoren op de manier zoals dit vanaf deze versie van Open Klant noodzakelijk is. Zie [#944](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/944)
+Sinds de aansluiting op Open Klant 2.7.0 maakt KISS gebruik van partij-identificatoren op de manier zoals dit vanaf deze versie van Open Klant noodzakelijk is. Zie [#944](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/issues/944)
+
+**Let op:** dit betekent dat KISS versies vóór 1.0.0 niet kunnen koppelen met Open Klant 2.6 of hoger. 
 
 
 ### Digitale adressen
@@ -35,10 +37,10 @@ De Actor die we opslaan bij het Klantcontact, vullen we op basis van de gegevens
 
 ```
 
-### Actor interne taak
-Van de Actor die we opslaan bij een interne taak hebben we geen gegevens uit EntraID / OIDC maar alleen uit Objectenregister. Dus voorlopig slaan we bij deze Actoren ook vast in de code de Actor-identificator properties op, die verwijzen naar het Objectenregister. Bij zowel Afdelingen, Groepen als Medewerkers gebruikt KISS als SoortObjectId de waarde van het property `identificatie`
+### Actor Contactverzoek (interneTaak)
+Van de Actor die we opslaan bij een interne taak hebben we geen gegevens uit EntraID / OIDC maar alleen uit Objectenregister. Dus voorlopig slaan we bij deze Actoren ook vast in de code de Actor-identificator properties op, die verwijzen naar het Objectenregister. Bij zowel Afdelingen, Groepen als Medewerkers gebruikt KISS als SoortObjectId de waarde van het property `identificatie`. 
 
-**Actor identificator als medewerker**
+**Actoridentificator als medewerker**
 ```
 "actoridentificator": {
     "objectId": "hassel006",
@@ -48,7 +50,24 @@ Van de Actor die we opslaan bij een interne taak hebben we geen gegevens uit Ent
     }
 ```
 
-**Actor identificator als AFDELING**
+**_Actoridentificator medewerker bij handmatig opgevoerd e-mailadres_**
+
+Op verzoek van de gemeente Utrecht is het mogelijk gemaakt om Contactverzoeken aan te maken voor medewerkers, zonder dat er een Smoelenboek is gekoppeld. Hiervoor is een feature-switch aanwezig (zie ook [Installatiehandleiding, onderdeel configuratie, bij Feature switches](../installation/configuratie.md#kiss-frontend-feature-switches))
+
+
+
+In dat geval wordt de actoridentificator op een iets andere manier opgebouwd.
+
+```
+"actoridentificator": {
+	"objectId": "surbhi.jha@info.nl",
+	"codeObjecttype": "mdw",
+	"codeRegister": "handmatig",
+	"codeSoortObjectId": "email"
+	}
+```
+
+**Actoridentificator als AFDELING**
 ```
 "actoridentificator": {
     "objectId": "PaBH",
@@ -57,7 +76,7 @@ Van de Actor die we opslaan bij een interne taak hebben we geen gegevens uit Ent
     "codeSoortObjectId": "idf"
     }
 ```
-**Actor identificator als GROEP**
+**Actoridentificator als GROEP**
 ```
 "actoridentificator": {
     "objectId": "VTH_OVG_ZV",
