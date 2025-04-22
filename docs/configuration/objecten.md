@@ -35,7 +35,7 @@ Voor een aantal objecttypen kunt u de URL van het objecttype instellen m.b.v. en
 
 
 ## URL nog niet configureerbaar
-Voor een aantal objecttype is de URL nog niet configureerbaar. In die gevallen zal KISS zelf de Objecttype API gaan bevragen om de URL op te halen. Hiervoor is het van belang dat de objecttypen in uw registratie de juiste naam hebben.
+Voor een aantal objecttypes is de URL nog niet configureerbaar. In die gevallen zal KISS zelf de Objecttype API gaan bevragen om de URL op te halen. Hiervoor is het van belang dat de objecttypen in uw registratie de juiste naam hebben.
 
 | Naam Objecttype |  Toelichting |
 |---|---|
