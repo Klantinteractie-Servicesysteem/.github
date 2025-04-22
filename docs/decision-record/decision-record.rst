@@ -1,6 +1,6 @@
 Ontwerpbeslissingen
 ===================
-KISS is ontwikkeld met een eindgebruikersgroep van Klantcontactmedewerkers (KCMs) van verschillende gemeenten. Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken. In het toepassen vand e standaarden en het omgaan met ontbrekende standaarden zijn diverse Ontwerpbeslissingen genomen. Deze staan hier vermeld.
+KISS is ontwikkeld met een eindgebruikersgroep van Klantcontactmedewerkers (KCMs) van verschillende gemeenten. Uitgangspunt bij de ontwikkeling van KISS was om de beschikbare standaarden uit de Common Ground te gebruiken. In het toepassen van de standaarden en het omgaan met ontbrekende standaarden zijn diverse Ontwerpbeslissingen genomen. Deze staan hier vermeld.
 
 **Beslisboom ontbrekende standaarden**
 
