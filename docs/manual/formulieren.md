@@ -4,7 +4,7 @@ Bij ‘Formulieren contactverzoek afdelingen’ en ‘Formulieren contactverzoek
 Met de Vaste Contactverzoek velden geeft een KCM aan: 
 
 1.	Voor wie het Contactverzoek is: een afdeling, een groep of een medewerker
-2.	Een omschrijving waarover het gaat: dit is een toelichtingenveld waar informatie in staat, die alléén voor de collega is. 
+2.	Een omschrijving waarover het gaat: dit is een toelichtingenveld voor de de collega die het contactverzoek gaat oppakken. De informatie die hier staat, zal de burger nooit zien, ook niet op een eventuele Persoonlijke Pagina in de Mijn-omgeving. 
 3.	Met wie men contact moet opnemen: naam en contactgegevens van degene die teruggebeld (of teruggemaild, etc.) moet worden.
 
 Met een Contactverzoekformuliertje (of Vragenset) kan een KCM door een onderwerp te kiezen meer vragen stellen aan de klant, en zo een completer Contactverzoek invullen. Bijvoorbeeld: gaat een contactverzoek over een Parkeerbon? Dan is het handig om het nummer van de parkeerbon ook mee te geven. De klant voor wie het Contactverzoek wordt gemaakt, heeft dat meestal al bij de hand als hij contact opneemt met de gemeente. 
