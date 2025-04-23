@@ -32,6 +32,7 @@ $ELASTIC_PASSWORD = kubectl get secret kiss-es-elastic-user -o go-template='{{.d
 # Add config
 kubectl create configmap kiss-config `
     --from-literal=AFDELINGEN_BASE_URL=$(AFDELINGEN_BASE_URL) `
+    --from-literal=AFDELINGEN_CLIENT_ID=$(AFDELINGEN_CLIENT_ID) `
     --from-literal=AFDELINGEN_OBJECT_TYPE_URL=$(AFDELINGEN_OBJECT_TYPE_URL) `
     --from-literal=ASPNETCORE_ENVIRONMENT=$(ASPNETCORE_ENVIRONMENT) `
     --from-literal=ELASTIC_BASE_URL=$(ELASTIC_BASE_URL) `
@@ -45,6 +46,7 @@ kubectl create configmap kiss-config `
     --from-literal=FEEDBACK_EMAIL_FROM=$(FEEDBACK_EMAIL_FROM) `
     --from-literal=FEEDBACK_EMAIL_TO=$(FEEDBACK_EMAIL_TO) `
     --from-literal=GROEPEN_BASE_URL=$(GROEPEN_BASE_URL) `
+    --from-literal=GROEPEN_CLIENT_ID=$(GROEPEN_CLIENT_ID) `
     --from-literal=GROEPEN_OBJECT_TYPE_URL=$(GROEPEN_OBJECT_TYPE_URL) `
     --from-literal=HAAL_CENTRAAL_BASE_URL=$(HAAL_CENTRAAL_BASE_URL) `
     --from-literal=KVK_BASE_URL=$(KVK_BASE_URL) `
@@ -52,11 +54,14 @@ kubectl create configmap kiss-config `
     --from-literal=MEDEWERKER_OBJECTTYPES_BASE_URL=$(MEDEWERKER_OBJECTTYPES_BASE_URL) `
     --from-literal=OIDC_AUTHORITY=$(OIDC_AUTHORITY) `
     --from-literal=OIDC_CLIENT_ID=$(OIDC_CLIENT_ID) `
+    --from-literal=OIDC_KLANTCONTACTMEDEWERKER_ROLE=$(OIDC_KLANTCONTACTMEDEWERKER_ROLE) `
     --from-literal=OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM=$(OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM) `
     --from-literal=OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE=$(OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE) `
+    --from-literal=OIDC_REDACTEUR_ROLE=$(OIDC_REDACTEUR_ROLE) `
     --from-literal=ORGANISATIE_IDS=$(ORGANISATIE_IDS) `
     --from-literal=POSTGRES_DB=$(POSTGRES_DB) `
     --from-literal=POSTGRES_HOST=$(POSTGRES_HOST) `
+    --from-literal=POSTGRES_PORT=$(POSTGRES_PORT) `
     --from-literal=POSTGRES_USER=$(POSTGRES_USER) `
     --from-literal=SDG_BASE_URL=$(SDG_BASE_URL) `
     --from-literal=SDG_OBJECTEN_BASE_URL=$(SDG_OBJECTEN_BASE_URL) `
@@ -89,16 +94,17 @@ kubectl create configmap kiss-config `
 
 # Add secrets
 kubectl create secret generic kiss-secrets `
+    --from-literal=AFDELINGEN_CLIENT_SECRET=$(AFDELINGEN_CLIENT_SECRET) `
     --from-literal=AFDELINGEN_TOKEN=$(AFDELINGEN_TOKEN) `
     --from-literal=ELASTIC_PASSWORD=$ELASTIC_PASSWORD `
     --from-literal=EMAIL_PASSWORD=$(EMAIL_PASSWORD) `
     --from-literal=ENTERPRISE_SEARCH_PRIVATE_API_KEY=$(ENTERPRISE_SEARCH_PRIVATE_API_KEY) `
     --from-literal=ENTERPRISE_SEARCH_PUBLIC_API_KEY=$(ENTERPRISE_SEARCH_PUBLIC_API_KEY) `
+    --from-literal=GROEPEN_CLIENT_SECRET=$(GROEPEN_CLIENT_SECRET) `
     --from-literal=GROEPEN_TOKEN=$(GROEPEN_TOKEN) `
     --from-literal=HAAL_CENTRAAL_API_KEY=$(HAAL_CENTRAAL_API_KEY) `
     --from-literal=KVK_API_KEY=$(KVK_API_KEY) `
     --from-literal=MEDEWERKER_OBJECTEN_TOKEN=$(MEDEWERKER_OBJECTEN_TOKEN) `
-    --from-literal=MEDEWERKER_OBJECTTYPES_TOKEN=$(MEDEWERKER_OBJECTTYPES_TOKEN) `
     --from-literal=OIDC_CLIENT_SECRET=$(OIDC_CLIENT_SECRET) `
     --from-literal=POSTGRES_PASSWORD=$POSTGRES_PASSWORD `
     --from-literal=SDG_OBJECTEN_TOKEN=$(SDG_OBJECTEN_TOKEN) `
