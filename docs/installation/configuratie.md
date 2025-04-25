@@ -63,7 +63,7 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 ### KISS-frontend, klanten, contactmomenten en zaken
 
 **Let op, voorheen waren er losse opzichzelf staande variabelelen voor verschillende registers. Nu moeten er setjes van klantregister + contactmomentregister + contactverzoekregister (interne taak) + zaaksysteem worden gemaakt.
-Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTERACTIES_BASE_URL` variabele, maar in plaats daarvan is er een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIE_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIE_BASE_URL`, etc. <mark>Lees de releasenotes van KISS voor een verdere toelichting tav de gewijzigde variabelen!</mark>**
+Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTERACTIE_BASE_URL` variabele, maar in plaats daarvan is er een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIE_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIE_BASE_URL`, etc. <mark>Lees de releasenotes van KISS voor een verdere toelichting tav de gewijzigde variabelen!</mark>**
 
 
 | Variabele                               | Uitleg                                                |
