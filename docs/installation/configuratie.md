@@ -63,7 +63,7 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 ### KISS-frontend, klanten, contactmomenten en zaken
 
 **Let op, voorheen waren er losse opzichzelf staande variabelelen voor verschillende registers. Nu moeten er setjes van klantregister + contactmomentregister + contactverzoekregister (interne taak) + zaaksysteem worden gemaakt.
-Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTERACTIES_BASE_URL` variabele, maar in plaats daarvan is er een `REGISTERS__0__KLANTINTERACTIES_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIES_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIES_BASE_URL`, etc. <mark>Lees de releasenotes van KISS voor een verdere toelichting tav de gewijzigde variabelen!</mark>**
+Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTERACTIES_BASE_URL` variabele, maar in plaats daarvan is er een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIE_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIE_BASE_URL`, etc. <mark>Lees de releasenotes van KISS voor een verdere toelichting tav de gewijzigde variabelen!</mark>**
 
 
 | Variabele                               | Uitleg                                                |
@@ -76,8 +76,8 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTER
 |REGISTERS__N__ZAAKSYSTEEM_DEEPLINK_PROPERTY   |Property om naar een zaak te kunnen deeplinken (optioneel) <details> <summary>Meer informatie </summary> Deze variabele **moet** altijd gebruikt worden **in combinatie met** `ZAAKSYSTEEM__N__DEEPLINK_URL`. De waarde uit dit property van een specifieke zaak wordt achter `ZAAKSYSTEEM_DEEPLINK_URL` geplaatst om de link te laten werken. Bijvoorbeeld: `identificatie` </details>  |
 |REGISTERS__N__REGISTRY_VERSION           |OpenKlant2 of OpenKlant1 <details> <summary>Meer informatie </summary> Gebruikt OpenKlant1 alléén als je wilt koppelen met de e-Suite. KISS ondersteunt de Klanten API, de Contactmomenten API en het objecttype Interne Taak. In andere gevallen vul hier OpenKlant2 in. </details>                                  | 
 |    **-------------------------**    |  **De volgende variabelen gebruik je alleen bij het gebruik van een Open Klant 2 omgeving. Je hebt dan dus bij REGISTERS__N__REGISTRY_VERSION 'OpenKlant2' ingevuld!**       | 
-|REGISTERS__N__KLANTINTERACTIES_BASE_URL   |URL van de Klantinteractie API van het gebruikte OpenKlant2 klantinteractieregister <details> <summary>Meer informatie </summary>Bijvoorbeeld `https://klantinteractieregister.mijngemeente.nl/klantinteracties` </details>  |
-|REGISTERS__N__KLANTINTERACTIES_TOKEN      |Token voor de Klantinteractie API van het gebruikte klantinteractieregister                                                         | 
+|REGISTERS__N__KLANTINTERACTIE_BASE_URL   |URL van de Klantinteractie API van het gebruikte OpenKlant2 klantinteractieregister <details> <summary>Meer informatie </summary>Bijvoorbeeld `https://klantinteractieregister.mijngemeente.nl/klantinteracties` </details>  |
+|REGISTERS__N__KLANTINTERACTIE_TOKEN      |Token voor de Klantinteractie API van het gebruikte klantinteractieregister                                                         | 
 |     **-------------------------**                       |**De volgende variabelen gebruik je alleen bij het gebruik van de e-Suite. Je hebt dan dus bij REGISTERS__N__REGISTRY_VERSION 'OpenKlant1' ingevuld!**          | 
 |REGISTERS__N__CONTACTMOMENTEN_BASE_URL   |URL van de Contactmomenten API van het gebruikte Contactmomentenregister. <details> <summary>Meer informatie </summary>Bijvoorbeeld: `https://contactmomentenregister.mijngemeente.nl` </details>        |
 |REGISTERS__N__CONTACTMOMENTEN_API_CLIENT_ID  |ClientId voor de Contactmomenten API van het gebruikte Contactmomentenregister.                                                   |
