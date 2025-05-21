@@ -23,4 +23,4 @@ Binnen de Klantinteracties API wordt de koppeling van een Zaak aan een klantcont
 
 ### Zaakinformatie in het Contactmoment
 
-KISS toont het Zaaknummer van de zaak die is gekoppeld aan een Contactmoment. Hiervoor kijkt KISS naar de waarde  `"codeObjecttype": "zgw-Zaak"`  én '"codeRegister": "openzaak"`. Dit om te voorkomen dat een uuid wordt gezocht dat niet bestaat in de gekoppelde Open Zaak instantie.
+KISS toont het Zaaknummer van de zaak die is gekoppeld aan een Contactmoment. Hiervoor kijkt KISS naar de waarde  `"codeObjecttype": "zgw-Zaak"`  én `"codeRegister": "openzaak"`. Dit om te voorkomen dat een uuid wordt gezocht dat niet bestaat in de gekoppelde Open Zaak instantie.
