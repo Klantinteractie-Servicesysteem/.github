@@ -8,7 +8,7 @@ In onderstaande afbeelding is gedocumenteerd welke gegevens uit de verschillende
 
 ## Koppeling van een zaak aan een Contactmoment
 
-Binnen de Klantinteracties API wordt de koppeling van een Zaak aan een klantcontact gelegd m.b.v. een `onderwerpobjectidentificator`. Op dit moment ondersteund KISS een koppeling met 1 Open Zaak instantie. Bij het leggen van de koppeling richt KISS het onderwerpobject als volgt in: 
+Binnen de Klantinteracties API wordt de koppeling van een Zaak aan een klantcontact gelegd m.b.v. een `onderwerpobjectidentificator`. Op dit moment ondersteund KISS, bij gebruik van 1 OpenKlant-register, een koppeling met 1 Open Zaak instantie. Bij het leggen van de koppeling richt KISS het onderwerpobject als volgt in: 
 
 ```json
 {
