@@ -36,3 +36,53 @@ Details need to be fleshed out in seperate md's in /security/docker/1-10
 | NodeJS | 18.16 | April 30, 2025 | https://nodejs.dev/en/about/releases/ |
 | .Net Core | 6 | November 12, 2024 | https://learn.microsoft.com/en-us/lifecycle/products/microsoft-net-and-net-core |
 | Kubernetes | 1.27 | July, 2024 | https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar |
+
+# Security Policy
+
+## 🛡️ Container Security
+
+### Automatische Security Updates
+Onze Docker containers worden automatisch voorzien van security patches tijdens het build proces via geautomatiseerde package updates in de Dockerfile.
+
+---
+
+## 🔍 Bekende Security Scan Issues
+
+### CVE-2023-45853: zlib1g Critical Vulnerability
+
+| **Aspect** | **Details** |
+|------------|-------------|
+| **Status** | ✅ **Geen risico** - False Positive |
+| **Scanner** | Snyk, Trivy en andere security scanners |
+| **Severity** | Critical (gerapporteerd) |
+| **Werkelijke impact** | Geen - Niet van toepassing |
+
+#### 📋 Probleem Omschrijving
+Security scanners rapporteren een Critical vulnerability in `zlib1g` voor CVE-2023-45853.
+
+#### 🔬 Technische Analyse
+
+**Waarom dit een false positive is:**
+
+| **Punt** | **Uitleg** |
+|----------|------------|
+| **Scope** | CVE betreft alleen het **MiniZip component** van zlib |
+| **Debian Policy** | MiniZip wordt **niet gebouwd of geleverd** met zlib1g in Debian Bookworm |
+| **Officiële Status** | Debian Security Team heeft deze CVE gemarkeerd als **"ignored"** |
+
+#### 📄 Officiële Debian Status
+```bash
+[bookworm] - zlib <ignored> (contrib/minizip not built and src:zlib not producing binary packages)
+```
+
+#### 📚 Verificatie Bronnen
+- 🔗 [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2023-45853)
+- 🔗 [Debian Package Information](https://packages.debian.org/zlib1g)  
+- 🔗 [Technical Discussion](https://github.com/aquasecurity/trivy/discussions/6722)
+
+#### ✅ Conclusie
+**Onze applicatie is niet kwetsbaar** voor deze CVE omdat:
+- De vulnerable MiniZip code niet aanwezig is in onze container
+- Onze zlib1g package bevat alleen de core zlib library en niet de MiniZip
+- MiniZip is afgesplits in een aparte package van Debian
+- Debian heeft dit officieel bevestigd door de CVE te markeren als "ignored"
