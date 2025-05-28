@@ -80,7 +80,7 @@ Security scanners rapporteren een Critical vulnerability in `zlib1g` voor CVE-20
 - 🔗 [Debian Package Information](https://packages.debian.org/zlib1g)  
 - 🔗 [Technical Discussion](https://github.com/aquasecurity/trivy/discussions/6722)
 
-#### ✅ Conclusie
+#### 📝 Samenvatting van Analyse
 **Onze applicatie is niet kwetsbaar** voor deze CVE omdat:
 - De vulnerable MiniZip code niet aanwezig is in onze container
 - Onze zlib1g package bevat alleen de core zlib library en niet de MiniZip
