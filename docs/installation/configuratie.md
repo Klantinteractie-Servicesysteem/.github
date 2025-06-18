@@ -92,7 +92,17 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTER
 |REGISTERS__N__KLANTEN_CLIENT_ID            |ClientId voor de Klanten API van het gebruikte Klantenregister.                                                                |
 |REGISTERS__N__KLANTEN_CLIENT_SECRET      |Secret voor de Klanten API van het gebruikte Klantenregister. <br /> **(min. 32 karakters)**                                   |
 
+### Flexible Zaaksysteem URL configuratie
 
+Voor ondersteuning van verschillende zaaksysteem URL formaten (OpenZaak en Rx.Mission) zijn de volgende optionele variabelen beschikbaar:
+
+| Variabele | Uitleg |
+|---|---|
+| `REGISTERS__N__ZAAKSYSTEEM_ZAKEN_BASE_URL` | Volledige base URL voor zaken API inclusief versie <br/> Bijvoorbeeld: `https://zaken.somezaaksysteem.nl/api/v2` |
+| `REGISTERS__N__ZAAKSYSTEEM_CATALOGI_BASE_URL` | Volledige base URL voor catalogi API inclusief versie <br/> Bijvoorbeeld: `https://catalogi.somezaaksysteem.nl/api/v2` |
+| `REGISTERS__N__ZAAKSYSTEEM_DOCUMENTEN_BASE_URL` | Volledige base URL voor documenten API inclusief versie <br/> Bijvoorbeeld: `https://documenten.somezaaksysteem.nl/api/v2` |
+
+**Backward Compatibility:** Als deze variabelen niet zijn ingesteld, valt KISS terug naar het traditionele OpenZaak formaat: `{ZAAKSYSTEEM_BASE_URL}/{api-type}/api/v1`
 
 ### KISS-frontend, overige bronnen
 
