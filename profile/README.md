@@ -8,7 +8,7 @@ Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontact
 
 KISS Fase 1 is in september 2023 opgeleverd. In deze [webinar](https://vimeo.com/886406377?share=copy) worden de functies van KISS gedemonstreerd.  
 De doorontwikkeling van KISS ligt bij de gemeentelijke samenwerking. Neem bij interesse voor deelname aan de samenwerking of voor overige vragen contact op met één van de volgende personen:
-- Marius van Dam (Product Owner) via marius.van.dam@utrecht.nl
+- Marius van Dam (Product Owner) via marius.van.dam2@utrecht.nl
 - Dino Zecic via d.zecic@deventer.nl
 - Hans Peters via hans.peters@haarlemmermeer.nl.
 
