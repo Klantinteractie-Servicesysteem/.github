@@ -62,7 +62,7 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 
 ### KISS-frontend, klanten, contactmomenten en zaken
 
-**Let op, KLANTINTERACTIE_BASE_URL id depricated** 
+**Let op, KLANTINTERACTIE_BASE_URL id deprecated** 
 
 Voorheen waren er losse opzichzelf staande variabelelen voor verschillende registers. Nu moeten er setjes van klantregister + contactmomentregister + contactverzoekregister (interne taak) + zaaksysteem worden gemaakt.
 Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTERACTIE_BASE_URL` variabele, maar in plaats daarvan is er een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIE_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIE_BASE_URL`, etc. <mark>Lees de releasenotes van KISS v1.0.0 (https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/releases/tag/v1.0.0) voor een verdere toelichting tav de gewijzigde variabelen!</mark>**
