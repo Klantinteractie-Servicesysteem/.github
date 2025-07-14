@@ -86,5 +86,21 @@ In dat geval wordt de actoridentificator op een iets andere manier opgebouwd.
     }
 ```
 
+## Onderwerp van het Klantcontact: maximale lengte
+Binnen KISS kan een KCM zowel een Vraag als een Specifieke vraag opgeven. Een Vraag is altijd de titel van een Kennisartikel, of de Vraag binnen een VAC. Een KCM kan daarbij een specifieke vraag opgeven. Als er géén Kennisartikel of VAC is geraadpleegd, of als er géén is geselecteerd als Vraag, dan is Specifieke vraag verplicht. 
 
+Deze twee gegevens worden bij het wegschrijven van een Contactmoment opgeslagen in het property `klantcontact.onderwerp`. Dit is een property met een maximale lengte van 200 tekens. We gaan een wijzigingsverzoek indienen bij OpenKlant, om te vragen of dit getal kan worden opgehoogd. 
 
+Tot die tijd geldt, dat de kans dat de gecombineerde lengte van de twee gegevens groter is dan 200, aanzienlijk is. Om te voorkomen dat een KCM het Contactmoment niet kan opslaan vanwege de lengte, zijn er in KISS de volgende restricties toegevoegd: 
+
+- Een KCM kan niet meer dan 180 tekens invoeren in het veld Specifieke vraag. 
+- De inhoud van Specifieke vraag wordt altijd in zijn geheel opgenomen in `klantcontact.onderwerp`.
+- De inhoud van Vraag wordt afgekapt, zodat de totale lengte niet meer dan 200 teken is. 
+- Als er alleen Vraag is, dan wordt Vraag afgekapt tot 197 tekens, en staan er 3 puntjes achter
+- Als er een Vraag én een Specifiek vraag is, dan worden er 6 tekens van Vraag afgehaald: 3 puntjes om aan te geven dat het is afgekapt, en daarna een spatie en de inhoud van Vraag tussen twee haakjes. 
+
+De reden dat we Vraag afkappen, is dat deze uiteindelijk altijd gevuld wordt vanuit een Bron. We gaan ervan uit dat men die bron altijd kan opzoeken. 
+We willen Specifieke vraag niet afkappen, omdat dit specifieke info is door de KCM ingevuld.  
+Vraag wordt altijd wel volledig opgeslagen in de [Contactmomentdetails](../manual/managementinformatie.md) in KISS zelf. 
+
+Als OpenKlant wordt aangepast, en de maximale lengte van `klantcontact.onderwerp` groter wordt, dan zullen deze restricties herzien. Omdat er zeer waarschijnlijk altijd een Maximalen lengte is, zal het principe waarbij we Vraag afkappen waarschijnlijk wel gehandhaafd blijven. 
