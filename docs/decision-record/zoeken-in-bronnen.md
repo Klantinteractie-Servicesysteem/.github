@@ -7,3 +7,10 @@ Een KCM wil kunnen zoeken in bronnen om de vraag van een klant te kunnen beantwo
 
 Beide objecten staan bij [de Community concepts Objectttypen](https://github.com/open-objecten/objecttypes/tree/main/community-concepts). 
 
+**Gebruik van HTML**
+Voor beide objecttypen verwacht KISS tekstopmaak in HTML-format. KISS ondersteunt de basale tags zoals headers, vet- en schuingedrukte tekst en tabellen. Enkele aandachtspunten: 
+
+1. De HTML wordt gesanitized zodat er geen ongewenst gedrag van bv. script tags kan optreden. 
+2. Inline styling wordt genegeerd. 
+3. De waarde van header-tags wordt bij import verkleind, om te zorgen dat de semantische waarden van het geheel in tact blijft. Dit betekent bijvoorbeeld dat een `<h2>` in de bron, binnen KISS als een `<h4>` weergegeven wordt. 
+4. Het is mogelijk om met behulp van de tags `<details>` en `<summary>` uitklapbare secties op te nemen 
