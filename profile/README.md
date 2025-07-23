@@ -15,10 +15,10 @@ De doorontwikkeling van KISS ligt bij de gemeentelijke samenwerking. Neem bij in
 ## Documentatie 
 
 - [Documentatie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/):
-  - [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v1.0.1/installation/installation.html)  
-  - [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v1.0.1/configuration/configuration.html)
-  - [Handleiding beheer](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v1.0.1/manual/manual.html)
-  - [Ontwerpbeslissingen](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v1.0.1/decision-record/decision-record.html)
+  - [Installatie handleiding](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v1.1.0/installation/installation.html)  
+  - [Configuratie](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v1.1.0/configuration/configuration.html)
+  - [Handleiding beheer](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v1.1.0/manual/manual.html)
+  - [Ontwerpbeslissingen](https://kiss-klantinteractie-servicesysteem.readthedocs.io/en/v1.1.0/decision-record/decision-record.html)
 
 
 ## Waaruit bestaat KISS-frontend
