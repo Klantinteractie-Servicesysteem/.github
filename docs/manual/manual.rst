@@ -25,3 +25,4 @@ Per onderwerp leggen wij uit wat de mogelijkheden zijn en hoe je de werkzaamhede
    vacs.md
    zoeken-in-bronnen.md
    managementinformatie.md
+   registers.md
