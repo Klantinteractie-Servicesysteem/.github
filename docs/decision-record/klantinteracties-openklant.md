@@ -89,7 +89,7 @@ In dat geval wordt de actoridentificator op een iets andere manier opgebouwd.
 ## Onderwerp van het Klantcontact: maximale lengte
 Binnen KISS kan een KCM zowel een Vraag als een Specifieke vraag opgeven. Een Vraag is altijd de titel van een Kennisartikel, of de Vraag binnen een VAC. Een KCM kan daarbij een specifieke vraag opgeven. Als er géén Kennisartikel of VAC is geraadpleegd, of als er géén is geselecteerd als Vraag, dan is Specifieke vraag verplicht. 
 
-Deze twee gegevens worden bij het wegschrijven van een Contactmoment opgeslagen in het property `klantcontact.onderwerp`. Dit is een property met een maximale lengte van 200 tekens. We hebben een wijzigingsverzoek indienen bij Open Klant, om te vragen of dit getal kan worden opgehoogd, zie: [Increase field sizes for klantcontact and interne taak · Issue #461](https://github.com/maykinmedia/open-klant/issues/461)].
+Deze twee gegevens worden bij het wegschrijven van een Contactmoment opgeslagen in het property `klantcontact.onderwerp`. Dit is een property met een maximale lengte van 200 tekens. We hebben een wijzigingsverzoek ingediend bij Open Klant, om te vragen of dit getal kan worden opgehoogd, zie: [Increase field sizes for klantcontact and interne taak · Issue #461](https://github.com/maykinmedia/open-klant/issues/461)].
 
 Tot die tijd geldt, dat de kans dat de gecombineerde lengte van de twee gegevens groter is dan 200, aanzienlijk is. Om te voorkomen dat een KCM het Contactmoment niet kan opslaan vanwege de lengte, zijn er in KISS de volgende restricties toegevoegd: 
 
@@ -113,6 +113,6 @@ Het veld Notitie komt terecht in `klantcontact.inhoud`. Dit veld heeft op dit mo
 Omdat we denken dat het vervelend is om die maximale lengte ook te hebben op het Kladblok, hebben we daar géén maximale lengte op gezet. Maar hiermee kan het veld Notitie dus vooringevuld worden met meer dan 1000 tekens.
 
 - In het afhandelingscherm kan een KCM hier nooit meer an 1000 tekens intypen.
-- Op het moment dat de inhoud van het veld, vanuit het Kladblok, meer dan 1000 tekens bevat, verschijnt er een foutmelding. Deze foutmelding geeft aan wat de maximale lengte is, hoeveel tekens er in het veld staan en hoeveel tekens er verwijder moeten worden voordat het Klantcontact kan worden opgeslagen. Deze foutmelding verdwijnt pas, als de inhoud 1000 tekens is of minder. 
+- Op het moment dat de inhoud van het veld, vanuit het Kladblok, meer dan 1000 tekens bevat, verschijnt er een validatiemelding. Deze foutmelding geeft aan wat de maximale lengte is, hoeveel tekens er in het veld staan en hoeveel tekens er verwijderd moeten worden voordat het Klantcontact kan worden opgeslagen. Deze foutmelding verdwijnt pas, als de inhoud 1000 tekens is of minder. 
 
 Tegelijkertijd hebben we een verzoek ingediend bij Open Klant of het mogelijk is de maximale lengte van `klantcontact.inhoud` op te hogen, zie: [Increase field sizes for klantcontact and interne taak · Issue #461](https://github.com/maykinmedia/open-klant/issues/461).
