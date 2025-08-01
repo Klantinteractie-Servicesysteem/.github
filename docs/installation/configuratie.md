@@ -137,8 +137,8 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTER
 | `MEDEWERKER_OBJECT_TYPE_URL`         | URL van het Objecttype Medewerker  <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>  |
 | `VAC_OBJECTEN_BASE_URL`              | URL van de Objecten API voor VAC's  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>                                                                     |
 | `VAC_OBJECT_TYPE_URL`                | URL van het  Objecttype VAC   <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>                                                                 |
-| `VAC_OBJECTEN_TOKEN`                    | Token voor de Objecten API voor VAC's <details> <summary>Meer informatie</summary> In het geval van Vacs identificeert KISS zich bij een Objectenregistratie m.b.v. een `TOKEN`. </details> |
-| `SDG_BASE_URL`                       | URL van de API voor Kennisartikelen  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>  |
+| `VAC_OBJECTEN_TOKEN`                 | Token voor de Objecten API voor VAC's <details> <summary>Meer informatie</summary> In het geval van Vacs identificeert KISS zich bij een Objectenregistratie m.b.v. een `TOKEN`. </details> |
+| `SDG_OBJECTEN_BASE_URL`              | URL van de API voor Kennisartikelen  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>  |
 | `SDG_OBJECTEN_TOKEN`                 | Key voor de API voor Kennisartikelen                                                                      |
 | `SDG_OBJECT_TYPE_URL`                | URL van het Objecttype Kennisartikel <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>      |
 
