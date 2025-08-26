@@ -62,7 +62,7 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 
 ### KISS-frontend, klanten, contactmomenten en zaken
 
-Let op er moeten setjes van klantregister + contactmomentregister + contactverzoekregister (interne taak) + zaaksysteem worden gemaakt.
+Let op, er moeten setjes van klantregister + contactmomentregister + contactverzoekregister (interne taak) + zaaksysteem worden gemaakt.
 Er is bijvoorbeeld sprake van een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIE_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIE_BASE_URL`, etc.
 
 
