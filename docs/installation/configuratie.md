@@ -62,8 +62,8 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 
 ### KISS-frontend, klanten, contactmomenten en zaken
 
-**Let op, voorheen waren er losse opzichzelf staande variabelelen voor verschillende registers. Nu moeten er setjes van klantregister + contactmomentregister + contactverzoekregister (interne taak) + zaaksysteem worden gemaakt.
-Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTERACTIE_BASE_URL` variabele, maar in plaats daarvan is er een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIE_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIE_BASE_URL`, etc. <mark>Lees de releasenotes van KISS voor een verdere toelichting tav de gewijzigde variabelen!</mark>**
+Let op, er moeten setjes van klantregister + contactmomentregister + contactverzoekregister (interne taak) + zaaksysteem worden gemaakt.
+Er is bijvoorbeeld sprake van een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIE_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIE_BASE_URL`, etc.
 
 
 | Variabele                               | Uitleg                                                |
@@ -119,6 +119,14 @@ Er is bijvoorbeeld niet meer sprake van een enkele opzichzelfstaande `KLANTINTER
 | `VAC_OBJECT_TYPE_VERSION`             | Versienummer van het Objecttype VAC <details> <summary>Meer informatie</summary> Bijvoorbeeld `2` <br /> KISS schrijft Vacs in het Objectenregister. Hierbij moet je altijd de versie van het objecttype meegeven. Omdat het per gemeente kan verschillen welke versie de meest recente is, moet je hier invullen welk versienummer KISS moet meegeven. </details>                                                          |
 | `VAC_OBJECTEN_TOKEN`                    | Token voor de Objecten API voor VAC's <details> <summary>Meer informatie</summary> In het geval van Vacs identificeert KISS zich bij een Objectenregistratie m.b.v. een `TOKEN`. </details> |
 
+### Logboek
+Het logboek bevat informatie over de afhandeling van een contactverzoek in ITA (Internetaak Afhandel Component). Deze informatie wordt in KISS bij de contactverzoeken van een klant getoond. Deze variabelen zijn niet verplicht. Als je nog geen gebruik maakt van ITA, dan mag je ze leeg laten. Als je er wel gebruik van maakt, vul ze dan alle vier in.
+| Variabele                               | Uitleg                                                                                                                                              |
+| ---------------------------------       | --------------------------------------------------------------------------------------------                                                        |
+| `LOGBOEK_BASE_URL`                      | URL van de Objecten API waarin het logboek is opgeslagen                                                                                            |
+| `LOGBOEK_TOKEN`                         | Token voor de Objecten API voor Logboeken                                                                                                           |
+| `LOGBOEK_OBJECT_TYPE_URL`               | URL van het Objecttype Logboek. Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/12345678-5ddb-4b1a-a347-e20092031399`. |
+| `LOGBOEK_OBJECT_TYPE_VERSION`           | Versienummer van het Objecttype Logboek. Bijvoorbeeld `1`                                                                                           |
 
 
 
