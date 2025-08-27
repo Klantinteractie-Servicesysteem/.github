@@ -118,10 +118,16 @@ Er is bijvoorbeeld sprake van een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en ev
 | `VAC_OBJECT_TYPE_URL`                   | URL van het Objecttype VAC <details> <summary>Meer informatie</summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details> |
 | `VAC_OBJECT_TYPE_VERSION`             | Versienummer van het Objecttype VAC <details> <summary>Meer informatie</summary> Bijvoorbeeld `2` <br /> KISS schrijft Vacs in het Objectenregister. Hierbij moet je altijd de versie van het objecttype meegeven. Omdat het per gemeente kan verschillen welke versie de meest recente is, moet je hier invullen welk versienummer KISS moet meegeven. </details>                                                          |
 | `VAC_OBJECTEN_TOKEN`                    | Token voor de Objecten API voor VAC's <details> <summary>Meer informatie</summary> In het geval van Vacs identificeert KISS zich bij een Objectenregistratie m.b.v. een `TOKEN`. </details> |
-| `LOGBOEK_BASE_URL`                    | URL van de Objecten API waarin het logboek is opgeslagen <details> <summary>Meer informatie</summary> Het logboek bevat informatie over de afhandeling van het contactverzoek in ITA. </details> |
-| `LOGBOEK_TOKEN`                    | Token voor Objecten API voor Logboeken  |
-| `LOGBOEK_OBJECT_TYPE_URL`                    | URL van het Objecttype Logboek <details> <summary>Meer informatie</summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/12345678-5ddb-4b1a-a347-e20092031399`. </details> |
-| `LOGBOEK_OBJECT_TYPE_VERSION`                    | Versienummer van het Objecttype Logboek <details> <summary>Meer informatie</summary> Bijvoorbeeld `1`</details>                                                         |
+
+### Logboek
+Het logboek bevat informatie over de afhandeling van een contactverzoek in ITA (Internetaak Afhandel Component). Deze informatie wordt in KISS bij de contactverzoeken van een klant getoond. Deze variabelen zijn niet verplicht. Als je nog geen gebruik maakt van ITA, dan mag je ze leeg laten. Als je er wel gebruik van maakt, vul ze dan alle vier in.
+| Variabele                               | Uitleg                                                                                                                                              |
+| ---------------------------------       | --------------------------------------------------------------------------------------------                                                        |
+| `LOGBOEK_BASE_URL`                      | URL van de Objecten API waarin het logboek is opgeslagen                                                                                            |
+| `LOGBOEK_TOKEN`                         | Token voor de Objecten API voor Logboeken                                                                                                           |
+| `LOGBOEK_OBJECT_TYPE_URL`               | URL van het Objecttype Logboek. Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/12345678-5ddb-4b1a-a347-e20092031399`. |
+| `LOGBOEK_OBJECT_TYPE_VERSION`           | Versienummer van het Objecttype Logboek. Bijvoorbeeld `1`                                                                                           |
+
 
 
 ### KISS-Elastic-Sync
