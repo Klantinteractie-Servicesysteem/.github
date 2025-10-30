@@ -1,43 +1,26 @@
-# Voorbereidingen
-
-## Domein
-
-Bij gebruik van Helm-Charts: zorg voor een domeinnaam met wild-card certificaat. Gebruik `.crt` en `.key` bestanden zoals hieronder:
-
-> `-----BEGIN CERTIFICATE-----`<br/>
-> inhoud public certificate<br/>
-> `-----END CERTIFICATE-----`<br/>
-> <br/>
-> `-----BEGIN CERTIFICATE-----`<br/>
-> inhoud intermediate certificaten mits aanwezig<br/>
-> `-----END CERTIFICATE-----`<br/>
-> <br/>
-> `-----BEGIN CERTIFICATE-----`<br/>
-> inhoud certificate authority certificate<br/>
-> `-----END CERTIFICATE-----`
-
-Het private certificate dient los als .key bestand opgeslagen te worden.
-
-## Tools
-
-Installeer de volgende tools:
-
-- [kubectl](https://kubernetes.io/docs/tasks/tools/)
-- [Helm](https://helm.sh/docs/intro/install/)
-- [Haven](https://haven.commonground.nl/techniek/compliancy-checker)
-- [Powershell](https://learn.microsoft.com/en-us/powershell/)
-
-## Haven
-
-KISS kan op een haven-compliant cluster geïnstallleerd worden. Referentie-implementaties van haven-compliant clusters zijn te vinden op de [Haven](https://haven.commonground.nl/techniek/aan-de-slag) site.
-
-Bij het volgen van de [Azure](https://haven.commonground.nl/techniek/aan-de-slag/azure) referentie moet men rekening houden met de volgende extra zaken:
-
-- Minimaal 3 nodes
-- High availability aanzetten
-- Local logins met RBAC gebruiken, GEEN Azure Active Directory!
-
+# Voorbereidingen / Benodigdheden
 
 ## Authenticatie
 
 De authenticatie van gebruikers binnen KISS gebeurt m.b.v. een OIDC koppeling met bijvoorbeeld Azure Active Directory.
+
+## Postgresql Database
+
+KISS heeft een postgresql database nodig voor het bijhouden van verschillende interne gegevens. De helm chart biedt een mogelijkheid om voor ontwikkeldoeleinden een postgresql database mee te installeren maar dit is niet bedoeld voor productieomgevingen. [Zie ook de documentatie bij de helm chart](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/tree/main/helm/kiss-frontend#requirements).
+
+## Elasticsearch, Kibana en Enterprise Search
+
+KISS gebruikt Elasticsearch om verschillende gegevens doorzoekbaar te maken, zoals bijvoorbeeld medewerkers, afdelingen en groepen. Enterprise Search wordt gebruikt om gemeentelijke websites te crawlen. Kibana kan gebruikt worden om de weging van zoekresultaten te finetunen. Om historische redenen hebben we in het verleden [een eigen helm chart](https://github.com/Klantinteractie-Servicesysteem/.github/tree/main/docs/scripts/elastic) aangeboden om deze applicaties in een kubernetes cluster te installeren. Deze wordt echter niet langer onderhouden en we raden aan om gebruik te maken van [de officiele helm charts van Elasticsearch](https://github.com/elastic/cloud-on-k8s).
+
+## Registers
+
+KISS maakt verder gebruik van verschillende registers:
+
+- Een zaakregister dat voldoet aan de ZGW-standaard (of de eSuite)
+- Een contactmoment/contactverzoek register dat voldoet aan de klantinteractie-standaard (of de eSuite)
+- Een BRP-register dat voldoet aan de HaalCentraal-standaard
+- Een KvK-register dat voldoet aan de KvK-API-standaard
+
+## Helm / Kubernetes
+
+KISS is ontwikkeld om in een Kubernetes cluster te draaien. We gaan er in de handleiding van uit dat je dat hebt, en dat je weet hoe je een helm chart installeert. Er is een [helm chart](https://github.com/Klantinteractie-Servicesysteem/KISS-frontend/tree/main/helm/kiss-frontend#requirements) beschikbaar die je kunt gebruiken, rechtstreeks of ter inspiratie.
