@@ -62,14 +62,32 @@ Daarnaast zijn er bronnen die binnen KISS doorzocht moeten worden.
 
 ### KISS-frontend, klanten, contactmomenten en zaken
 
+**Let op, KLANTINTERACTIE_BASE_URL id deprecated** 
+
 Let op, er moeten setjes van klantregister + contactmomentregister + contactverzoekregister (interne taak) + zaaksysteem worden gemaakt.
 Er is bijvoorbeeld sprake van een `REGISTERS__0__KLANTINTERACTIE_BASE_URL` en eventueel een `REGISTERS__1__KLANTINTERACTIE_BASE_URL`, een `REGISTERS__2__KLANTINTERACTIE_BASE_URL`, etc.
+
+
+
+**Let op, REGISTERS__N__ZAAKSYSTEEM_BASE_URL is deprecated**
+
+Gebruik als alternatief deze drie nieuwe variabelen 
+- REGISTERS__N__ZAAKSYSTEEM_ZAKEN_BASE_URL,
+- REGISTERS__N__ZAAKSYSTEEM_CATALOGI_BASE_URL,
+- REGISTERS__N__ZAAKSYSTEEM_DOCUMENTEN_BASE_URL
+
+Het wordt aangeraden REGISTERS__N__ZAAKSYSTEEM_BASE_URL niet meer te gebruiken en te vervangen door de drie bovenstaande (vergeet niet de oude REGISTERS__N__ZAAKSYSTEEM_BASE_URL dan weg te halen: gebruik het oude en nieuwe format **niet** door elkaar heen).<br />Om over te gaan van de oude situatie met één variabele naar de nieuwe situatie met drie variabelen vervang je bijvoorbeeld 'https://openzaak.dev.kiss-demo.nl' door respectievelijk 'https://zaken.mijnzaaksysteem.nl/api/v1', 'https://documenten.mijnzaaksysteem.nl/api/v1' en 'https://catalogi.mijnzaaksysteem.nl/api/v1' als je een zaaksysteem gebruikt waarbij elke api op een eigen subdomein draait.<br/>Als je een zaaksysteem gebruikt waarbij alle api's op dezelfde url draaien, kan je ook over naar het nieuwe format. Dan vul je drie keer hetzelfde in, bijvoorbeeld: 'https://openzaak.dev.kiss-demo.nl/zaken/api/v1',  'https://openzaak.dev.kiss-demo.nl/catalogi/api/v1' en 'https://openzaak.dev.kiss-demo.nl/documenten/api/v1'. <br/>Let op, in beide gevallen neem je nu dus het versienummer mee in de url.
+ 
+
 
 
 | Variabele                               | Uitleg                                                |
 | ---------------------------------       | --------------------------------------------------------------------------------------------                                     |
 |REGISTERS__N__IS_DEFAULT                 |true of false <details> <summary>Meer informatie </summary>Er moet exact 1 default register-set zijn. Klanten, contactmomenten en contactverzoeken worden in dit defaultregister aangemaakt, tenzij uit de context blijkt dat de gegevens in een specifiek register thuis horen. Bijvoorbeeld, als een contactmoment bij een zaak uit een bepaald zaaksysteem hoort, dan wordt het contactmoment opgeslagen in het contactmomentregister dat hoort bij dat Zaaksysteem. Dit is het het zaaksysteem dat deel uitmaakt van dezelfde REGISTERS__X__...-set waar ook het zaaksysteem inzit. <br /> </details>                     |
-|REGISTERS__N__ZAAKSYSTEEM_BASE_URL       |URL van de ZGW API's   <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://zaaksysteem.mijngemeente.nl`  </details>|
+|REGISTERS__N__ZAAKSYSTEEM_ZAKEN_BASE_URL | Volledige base URL voor zaken API inclusief versie <br/> Bijvoorbeeld: `https://zaken.somezaaksysteem.nl/api/v2` |
+|REGISTERS__N__ZAAKSYSTEEM_CATALOGI_BASE_URL | Volledige base URL voor catalogi API inclusief versie <br/> Bijvoorbeeld: `https://catalogi.somezaaksysteem.nl/api/v2` |
+|REGISTERS__N__ZAAKSYSTEEM_DOCUMENTEN_BASE_URL | Volledige base URL voor documenten API inclusief versie <br/> Bijvoorbeeld: `https://documenten.somezaaksysteem.nl/api/v2` |
+|REGISTERS__N__ZAAKSYSTEEM_BASE_URL       |URL van de ZGW API's <mark>Let op, deprecated. Lees de toelichting hierboven.</mark>  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://zaaksysteem.mijngemeente.nl`.</details>|
 |REGISTERS__N__ZAAKSYSTEEM_API_KEY        |API Key voor de ZGW API's <br /> **(min. 32 karakters)**                                                                            |
 |REGISTERS__N__ZAAKSYSTEEM_API_CLIENT_ID  |ClientId voor de ZGW API's                                                                                                          |
 |REGISTERS__N__ZAAKSYSTEEM_DEEPLINK_URL   |Basisurl om te deeplinken naar een Zaak in het zaaksysteem (optioneel) <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://zaaksysteem.mijngemeente.nl/mp/zaak/` <br /> Deze variabele **moet** altijd gebruikt worden **in combinatie met** `ZAAKSYSTEEM__N__DEEPLINK_PROPERTY`. Als deze variabelen beiden worden ingevuld, zal er in KISS een link in het zaakdetailscherm staan, waarmee de KCM de betreffende zaak direct in het zaaksysteem opent.  LET OP: dit kan alleen bij zaaksystemen die een vaste url hebben voor zaakdetails, waarbij alleen één property van de zaak, bijv. het zaaknummer, áchter die URL geplaatst hoeft te worden.  </details>                                                                             |
