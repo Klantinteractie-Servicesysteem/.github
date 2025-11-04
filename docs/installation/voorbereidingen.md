@@ -20,6 +20,7 @@ KISS maakt verder gebruik van verschillende registers:
 - Een contactmoment/contactverzoek register dat voldoet aan de klantinteractie-standaard (of de eSuite)
 - Een BRP-register dat voldoet aan de HaalCentraal-standaard
 - Een KvK-register dat voldoet aan de KvK-API-standaard
+- Een Objectenregister dat voldoet aan de api specs van de [Objects Api](https://github.com/maykinmedia/objects-api)
 
 ## Helm / Kubernetes
 
