@@ -4,6 +4,23 @@ elasticVersion: 8.9.0
 elasticsearchCount: 3
 nodeSelector: {}
 
+# Resource limits and requests for Elasticsearch containers
+resources: {}
+  # limits:
+  #   cpu: 2
+  #   memory: 4Gi
+  # requests:
+  #   cpu: 1
+  #   memory: 2Gi
+
+# Persistence configuration for Elasticsearch
+persistence:
+  enabled: true
+  storageClassName: ""
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+
 eck-operator:
   enabled: true
   createClusterScopedResources: false

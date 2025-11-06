@@ -16,8 +16,28 @@ spec:
     name: default
     podTemplate:
       spec:
+        {{- with .Values.resources }}
+        containers:
+        - name: elasticsearch
+          resources:
+            {{- toYaml . | nindent 12 }}
+        {{- end }}
         {{- with .Values.nodeSelector }}
         nodeSelector:
           {{- toYaml . | nindent 10 }}
         {{- end }}
-  version: {{ .Values.elasticVersion }}
+    {{- if .Values.persistence.enabled }}
+    volumeClaimTemplates:
+    - metadata:
+        name: elasticsearch-data
+      spec:
+        accessModes:
+        {{- range .Values.persistence.accessModes }}
+        - {{ . }}
+        {{- end }}
+        resources:
+          requests:
+            storage: {{ .Values.persistence.size }}
+        storageClassName: {{ .Values.persistence.storageClassName }}
+    {{- end }}
+  version: {{ .Values.elasticVersion }}  
