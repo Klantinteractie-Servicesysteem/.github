@@ -16,10 +16,10 @@ resources: {}
 # Persistence configuration for Elasticsearch
 persistence:
   enabled: true
-  storageClassName: ""
+  storageClassName: "azurefile-csi" # <<--- example, set as appropriate for your cluster
   accessModes:
     - ReadWriteOnce
-  size: 10Gi
+  size: 10Gi # <<--- example, set as appropriate for your cluster
 
 eck-operator:
   enabled: true
