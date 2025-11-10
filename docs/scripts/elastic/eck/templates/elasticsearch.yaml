@@ -40,4 +40,4 @@ spec:
             storage: {{ .Values.persistence.size }}
         storageClassName: {{ .Values.persistence.storageClassName }}
     {{- end }}
-  version: {{ .Values.elasticVersion }}  
+  version: {{ .Values.elasticVersion }}
