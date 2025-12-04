@@ -14,6 +14,14 @@ Hieronder staan de benodigde environment variabelen per onderdeel van KISS.
 | `MANAGEMENTINFORMATIE_API_KEY` | Secret dat KISS gebruikt om het JWT Token <br/>te valideren bij het opvragen van <br/>contactmomentdetails <details> <summary>Meer informatie </summary>Zie de [Handleiding beheer KISS, hoofdstuk <br/> managementinformatie](../manual/managementinformatie.md) voor informatie over <br/>het gebruik van deze API.</details> |
 |  |  |
 
+## Autorisatie
+
+| Variabele                          | Uitleg                                                                                                                                                                                        |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OIDC_KLANTCONTACTMEDEWERKER_ROLE` | Naam van de rol voor een Klant Contact Medewerker. Deze moet overeenkomen met de naam van rol zoals die geconfigureerd is/wordt bij de Identity Provider. Standaard: `Klantcontactmedewerker` <details> <summary>Meer informatie </summary> Een medewerker met deze rol kan Contactmomenten en Contactverzoeken registreren, en zoeken in bronnen. </details>  |
+| `OIDC_REDACTEUR_ROLE`              | Naam van de rol voor een Redacteur. Deze moet overeenkomen met de naam van rol zoals die geconfigureerd is/wordt bij de Identity Provider. Standaard: `Redacteur` <details> <summary>Meer informatie </summary> Een medewerker met deze rol kan de inhoud bewerken die beschikbaar is achter Beheer. Zie de [Handleiding beheer KISS](../manual/manual.rst). </details>                            |
+| `OIDC_KENNISBANK_ROLE`             | Naam van de rol voor een Kennisbank medewerker. Deze moet overeenkomen met de naam van rol zoals die geconfigureerd is/wordt bij de Identity Provider. Standaard: `Kennisbank` <details> <summary>Meer informatie </summary> Een medewerker met deze rol kan alléén zoeken in de geconfigureerde bronnen zoals Kennisbank, VAC, Smoelenboek en websites.  </details>               |
+
 ## Database
 
 | Variabele          | Uitleg                                |
