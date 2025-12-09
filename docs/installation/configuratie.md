@@ -177,10 +177,10 @@ Het logboek bevat informatie over de afhandeling van een contactverzoek in ITA (
 | `SDG_OBJECTEN_BASE_URL`              | URL van de API voor Kennisartikelen  <details> <summary>Meer informatie </summary> Bijvoorbeeld: `https://objectenregister.mijngemeente.nl` </details>  |
 | `SDG_OBJECTEN_TOKEN`                 | Key voor de API voor Kennisartikelen                                                                      |
 | `SDG_OBJECT_TYPE_URL`                | URL van het Objecttype Kennisartikel <details> <summary>Meer informatie </summary> Bijvoorbeeld `https://objecttypenregister.mijngemeente.nl/api/v2/objecttypes/f83fdc48-5ddb-4b1a-a347-e20092031399` </details>      |
+| `SHAREPOINT_CLIENT_ID`          | Client ID (application ID) van de SharePoint-app-registratie. <br/> Deze app registratie heeft de API-permissie permissie `Sites.Read.All` nodig. Voorbeeld: `0166786a-df05-4e1c-a75c-7c3317002ad8`. |
 | `SHAREPOINT_TENANT_ID`          | Azure AD tenant-ID voor de SharePoint-app-registratie (GUID). <br/> Voorbeeld: `bd7f67dd-fc8c-4a9d-a1aa-c2e4d687b18f` |
-| `SHAREPOINT_CLIENT_ID`          | Client ID (application ID) van de SharePoint-app-registratie. <br/> Voorbeeld: `0166786a-df05-4e1c-a75c-7c3317002ad8` |
 | `SHAREPOINT_CLIENT_SECRET`      | Client secret voor de SharePoint-app-registratie. *(Gevoelig)* |
-| `SHAREPOINT_SITE_URL`           | Volledige SharePoint-site-URL die gecrawld of gesynchroniseerd moet worden. <details><summary>Meer informatie</summary>Voorbeeld: `https://my-tenant.sharepoint.com/sites/my-site`</details> |
+| `SHAREPOINT_SITE_URL`           | Volledige SharePoint-site-URL die gecrawld moet worden. <details><summary>Meer informatie</summary>Als dit een Hubsite is, of als deze site subsites heeft, worden alle onderliggende / gerelateerd sites ook geindexeerd. KISS biedt ondersteuning voor 'moderne' sitepages en traditionele wikipages. Voorbeeld: `https://my-tenant.sharepoint.com/sites/my-site`</details> |
 | `SHAREPOINT_SOURCE_NAME`        | Een mensvriendelijke naam voor de SharePoint-bron zoals die zichtbaar wordt in de zoekbalk in KISS. <details><summary>Meer informatie</summary>Voorbeeld: *ICATT SharePoint Test Site*</details> |
 
 ### Gebruik KISS met proxy voor BRP / KvK (bijvoorbeeld iConnect)
