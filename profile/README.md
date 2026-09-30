@@ -10,7 +10,7 @@ KISS Fase 1 is in september 2023 opgeleverd. In deze [webinar](https://vimeo.com
 De doorontwikkeling van KISS ligt bij de gemeentelijke samenwerking. Neem bij interesse voor deelname aan de samenwerking of voor overige vragen contact op met één van de volgende personen:
 - Marius van Dam (Product Owner) via contact@mariusvandam.com
 - Dino Zecic via d.zecic@deventer.nl
-- Hans Peters via hans.peters@haarlemmermeer.nl.
+- Marcel Schreurs via m.schreurs@utrecht.nl
 
 ## Documentatie 
 
