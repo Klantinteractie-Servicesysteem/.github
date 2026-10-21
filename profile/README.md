@@ -1,16 +1,12 @@
 
 # Klantinteractie Servicesysteem (KISS)
 
-Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontactmedewerkers (KCM) optimaal worden ondersteund in hun werk: het informeren en helpen van burgers en ondernemers die contact opnemen met de gemeente. Doel van KISS is om alle informatie die een KCM nodig heeft voor die taak, zoveel mogelijk binnen KISS zelf te ontsluiten. Het is ontwikkeld als een [Common Ground component](https://commonground.nl/groups/view/07b18e2c-471b-4874-80b5-020dfe4ad52e/team-kiss) in opdracht van de gemeente Utrecht en Dimpact.
+Het Klantinteractie Servicesysteem (KISS) is een applicatie waarmee Klantcontactmedewerkers (KCM) optimaal worden ondersteund in hun werk: het informeren en helpen van burgers en ondernemers die contact opnemen met de gemeente. Het doel van KISS is om alle informatie die een KCM nodig heeft voor die taak, zoveel mogelijk binnen KISS zelf te ontsluiten. Het is ontwikkeld als een [Common Ground component](https://commonground.nl/groups/view/07b18e2c-471b-4874-80b5-020dfe4ad52e/team-kiss) met een actieve community.
 
 
 ## Roadmap en doorontwikkeling
 
-KISS Fase 1 is in september 2023 opgeleverd. In deze [webinar](https://vimeo.com/886406377?share=copy) worden de functies van KISS gedemonstreerd.  
-De doorontwikkeling van KISS ligt bij de gemeentelijke samenwerking. Neem bij interesse voor deelname aan de samenwerking of voor overige vragen contact op met één van de volgende personen:
-- Marius van Dam (Product Owner) via contact@mariusvandam.com
-- Dino Zecic via d.zecic@deventer.nl
-- Hans Peters via hans.peters@haarlemmermeer.nl.
+KISS is in september 2023 opgeleverd en sindsdien flink doorontwikkeld. De doorontwikkeling van KISS ligt bij de KISS community, een actieve gemeentelijke samenwerking. Meer informatie over KISS, de roadmap en doorontwikkeling van de applicatie? Kijk op https://www.kiss-klantcontact.nl/
 
 ## Documentatie 
 
@@ -44,7 +40,7 @@ Daar waar de API-standaarden ontoereikend zijn of ontbreken breiden we de API's 
 
 
 ## Bouw
-KISS wordt ontwikkeld door ICATT menselijk digitaal, in opdracht van Utrecht en Dimpact. 
+KISS wordt ontwikkeld door ICATT menselijk digitaal in opdracht van de KISS community.
 
 ## Licentie
 [European Union Public License](https://opensource.org/licenses/EUPL-1.2)
